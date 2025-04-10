@@ -155,30 +155,3 @@ img {
   color: #FFD700;
   cursor: pointer;
 }
-
-@media screen and (max-width: 768px) {
-  nav ul {
-    display: none;
-    flex-direction: column;
-    background: #111;
-    position: absolute;
-    top: 80px;
-    right: 20px;
-    width: 200px;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(255, 215, 0, 0.2);
-  }
-
-  nav ul.active {
-    display: flex;
-  }
-
-  .menu-toggle {
-    display: block;
-  }
-
-  header {
-    flex-wrap: wrap;
-  }
-}
