@@ -65,9 +65,10 @@
       color: #FFD700;
       cursor: pointer;
     }
+    /* Mobile Menu Toggle Behavior */
     @media screen and (max-width: 768px) {
       nav ul {
-        display: none;
+        display: none; /* Default hidden on mobile */
         flex-direction: column;
         background: #111;
         position: absolute;
@@ -79,10 +80,23 @@
         box-shadow: 0 0 10px rgba(255, 215, 0, 0.2);
       }
       nav ul.active {
-        display: flex;
+        display: flex; /* Show on toggle click */
       }
       .menu-toggle {
         display: block;
+      }
+      /* Ensure header stays visible on mobile load */
+      header {
+        display: flex; /* Keep header visible */
+      }
+    }
+    /* Desktop Behavior */
+    @media screen and (min-width: 769px) {
+      nav ul {
+        display: flex !important; /* Always show nav on desktop */
+      }
+      .menu-toggle {
+        display: none;
       }
     }
     section {
@@ -140,7 +154,7 @@
     }
   </style>
 </head>
-<body>
+<body onload="document.getElementById('home').scrollIntoView();">
   <header>
     <div class="logo">
       <a href="#home"><img src="https://i.imgur.com/dOw3ffQ.png" alt="Logo"></a>
@@ -149,7 +163,7 @@
       <h1>Kamal Meena</h1>
       <p>A Brand Designer</p>
     </div>
-    <div class="menu-toggle" id="menu-toggle">
+    <div class="menu-toggle" id="menu-toggle" onclick="toggleMenu()">
       <i class="fas fa-bars"></i>
     </div>
     <nav>
@@ -165,3 +179,36 @@
 
   <main>
     <section id="home">
+      <h2>Welcome to My Portfolio</h2>
+      <div class="category">
+        <h3>Recent Designs</h3>
+        <div class="images">
+          <!-- Add your images here -->
+          <img src="https://i.imgur.com/sample1.jpg" alt="Design 1">
+          <img src="https://i.imgur.com/sample2.jpg" alt="Design 2">
+          <!-- Add more images as needed -->
+        </div>
+      </div>
+      <div class="thanks">Thanks for visiting!</div>
+    </section>
+    <section id="contact">
+      <h2>Contact Me</h2>
+      <div class="contact-info">
+        <p><i class="fas fa-envelope"></i><a href="mailto:kamalmeena@example.com">kamalmeena@example.com</a></p>
+        <p><i class="fab fa-linkedin"></i><a href="https://linkedin.com/in/kamalmeena" target="_blank">linkedin.com/in/kamalmeena</a></p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Kamal Meena. All rights reserved.</p>
+  </footer>
+
+  <script>
+    function toggleMenu() {
+      const navList = document.getElementById('nav-list');
+      navList.classList.toggle('active');
+    }
+  </script>
+</body>
+</html>
