@@ -68,7 +68,7 @@
     /* Mobile Menu Toggle Behavior */
     @media screen and (max-width: 768px) {
       nav ul {
-        display: none; /* Default hidden on mobile */
+        display: none;
         flex-direction: column;
         background: #111;
         position: absolute;
@@ -80,20 +80,19 @@
         box-shadow: 0 0 10px rgba(255, 215, 0, 0.2);
       }
       nav ul.active {
-        display: flex; /* Show on toggle click */
+        display: flex;
       }
       .menu-toggle {
         display: block;
       }
-      /* Ensure header stays visible on mobile load */
       header {
-        display: flex; /* Keep header visible */
+        display: flex;
       }
     }
     /* Desktop Behavior */
     @media screen and (min-width: 769px) {
       nav ul {
-        display: flex !important; /* Always show nav on desktop */
+        display: flex !important;
       }
       .menu-toggle {
         display: none;
@@ -109,18 +108,38 @@
       font-size: 32px;
       color: #FFD700;
     }
-    .images {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 20px;
+    .slideshow-container {
+      max-width: 100%;
+      position: relative;
+      margin: auto;
     }
-    .images img {
+    .slide-pair {
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+      width: 100%;
+    }
+    .mySlides {
+      display: none;
+      width: 48%; /* Adjust to fit two slides side by side */
+    }
+    .mySlides img {
       width: 100%;
       border-radius: 12px;
+      cursor: pointer;
       transition: transform 0.3s;
     }
-    .images img:hover {
+    .mySlides img:hover {
       transform: scale(1.05);
+    }
+    /* Fading Animation */
+    .fade {
+      animation-name: fade;
+      animation-duration: 1.5s;
+    }
+    @keyframes fade {
+      from {opacity: .4}
+      to {opacity: 1}
     }
     .thanks {
       text-align: center;
@@ -135,15 +154,17 @@
       color: #aaa;
     }
     .contact-info {
-      font-size: 18px;
+      font-size: 24px;
+      text-align: center;
     }
     .contact-info i {
-      margin-right: 10px;
+      margin: 0 15px;
       color: #FFD700;
+      cursor: pointer;
+      transition: transform 0.3s;
     }
-    .contact-info a {
-      color: #fff;
-      text-decoration: none;
+    .contact-info i:hover {
+      transform: scale(1.2);
     }
     .category {
       margin-bottom: 40px;
@@ -154,7 +175,7 @@
     }
   </style>
 </head>
-<body onload="document.getElementById('home').scrollIntoView();">
+<body onload="document.getElementById('home').scrollIntoView(); startSlideshow();">
   <header>
     <div class="logo">
       <a href="#home"><img src="https://i.imgur.com/dOw3ffQ.png" alt="Logo"></a>
@@ -182,11 +203,19 @@
       <h2>Welcome to My Portfolio</h2>
       <div class="category">
         <h3>Recent Designs</h3>
-        <div class="images">
-          <!-- Add your images here -->
-          <img src="https://i.imgur.com/sample1.jpg" alt="Design 1">
-          <img src="https://i.imgur.com/sample2.jpg" alt="Design 2">
-          <!-- Add more images as needed -->
+        <div class="slideshow-container">
+          <div class="slide-pair mySlides fade">
+            <img src="https://i.imgur.com/sample1.jpg" alt="Design 1" onclick="window.open('https://i.imgur.com/sample1.jpg', '_blank');">
+            <img src="https://i.imgur.com/sample2.jpg" alt="Design 2" onclick="window.open('https://i.imgur.com/sample2.jpg', '_blank');">
+          </div>
+          <div class="slide-pair mySlides fade">
+            <img src="https://i.imgur.com/sample3.jpg" alt="Design 3" onclick="window.open('https://i.imgur.com/sample3.jpg', '_blank');">
+            <img src="https://i.imgur.com/sample4.jpg" alt="Design 4" onclick="window.open('https://i.imgur.com/sample4.jpg', '_blank');">
+          </div>
+          <div class="slide-pair mySlides fade">
+            <img src="https://i.imgur.com/sample5.jpg" alt="Design 5" onclick="window.open('https://i.imgur.com/sample5.jpg', '_blank');">
+            <img src="https://i.imgur.com/sample1.jpg" alt="Design 1" onclick="window.open('https://i.imgur.com/sample1.jpg', '_blank');"> <!-- Loop back for 2 images -->
+          </div>
         </div>
       </div>
       <div class="thanks">Thanks for visiting!</div>
@@ -194,14 +223,15 @@
     <section id="contact">
       <h2>Contact Me</h2>
       <div class="contact-info">
-        <p><i class="fas fa-envelope"></i><a href="mailto:kamalmeena@example.com">kamalmeena@example.com</a></p>
-        <p><i class="fab fa-linkedin"></i><a href="https://linkedin.com/in/kamalmeena" target="_blank">linkedin.com/in/kamalmeena</a></p>
+        <a href="mailto:kk4380037@gmail.com"><i class="fas fa-envelope"></i></a>
+        <a href="tel:+918440048355"><i class="fas fa-phone"></i></a>
+        <a href="https://instagram.com/kamal.prp" target="_blank"><i class="fab fa-instagram"></i></a>
       </div>
     </section>
   </main>
 
   <footer>
-    <p>&copy; 2025 Kamal Meena. All rights reserved.</p>
+    <p>© 2025 Kamal Meena. All rights reserved.</p>
   </footer>
 
   <script>
@@ -209,6 +239,19 @@
       const navList = document.getElementById('nav-list');
       navList.classList.toggle('active');
     }
+
+    let slideIndex = 0;
+    function startSlideshow() {
+      let slides = document.getElementsByClassName("mySlides");
+      for (let i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+      }
+      slideIndex++;
+      if (slideIndex > slides.length) { slideIndex = 1 }
+      slides[slideIndex - 1].style.display = "flex";
+      setTimeout(startSlideshow, 5000); // Change image every 5 seconds
+    }
+    startSlideshow();
   </script>
 </body>
 </html>
