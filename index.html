@@ -3,183 +3,92 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Kamal Meena | Brand Designer</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=audiowide:wght@600&display=swap" rel="stylesheet">
-  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-  <style>
-    * {
-      margin: 0; padding: 0; box-sizing: border-box;
-    }
-    body {
-      font-family: 'Inter', sans-serif;
-      background: linear-gradient(135deg, #003366, #2D3748);
-      color: white;
-      line-height: 1.6;
-    }
-    header {
-      padding: 4rem 2rem 2rem;
-      text-align: center;
-      background-image: url('banner.jpg');
-      background-size: cover;
-      background-position: center;
-      color: white;
-    }
-    header h1 {
-      font-family: 'Poppins', sans-serif;
-      font-size: 3rem;
-      color: #e6ffff;
-      text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.6);
-    }
-    header p {
-      font-size: 1.2rem;
-      color: #E2E8F0;
-    }
-    nav {
-      display: flex;
-      justify-content: center;
-      gap: 2rem;
-      background-color: #1A202C;
-      padding: 1rem 0;
-      box-shadow: 0 4px 6px rgba(0,0,0,0.2);
-    }
-    nav a {
-      color: #A0AEC0;
-      text-decoration: none;
-      font-weight: 600;
-      transition: color 0.3s;
-    }
-    nav a:hover {
-      color: #0BC5EA;
-    }
-    section {
-      padding: 4rem 2rem;
-    }
-    .about {
-      text-align: center;
-    }
-    .about img {
-      max-width: 160px;
-      border-radius: 9999px;
-      margin-bottom: 1.5rem;
-      box-shadow: 0 10px 20px rgba(0,0,0,0.3);
-    }
-    .about p {
-      max-width: 600px;
-      margin: auto;
-      font-size: 1.1rem;
-      color: #E2E8F0;
-    }
-    .portfolio {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 2rem;
-    }
-    .portfolio-card {
-      background-color: #2D3748;
-      border-radius: 1rem;
-      overflow: hidden;
-      transition: transform 0.3s, box-shadow 0.3s;
-    }
-    .portfolio-card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 12px 24px rgba(0, 0, 0, 0.4);
-    }
-    .portfolio-card img {
-      width: 100%;
-      height: 200px;
-      object-fit: cover;
-    }
-    .portfolio-card h3 {
-      padding: 1rem;
-      font-size: 1.1rem;
-      color: #0BC5EA;
-    }
-    .contact {
-      text-align: center;
-    }
-    .contact a {
-      color: #0BC5EA;
-      text-decoration: none;
-    }
-    .cta {
-      margin-top: 2rem;
-    }
-    .cta a {
-      padding: 0.8rem 1.5rem;
-      background-color: #0BC5EA;
-      color: #1A202C;
-      border-radius: 9999px;
-      text-decoration: none;
-      font-weight: 600;
-      transition: background 0.3s;
-    }
-    .cta a:hover {
-      background-color: #38B2AC;
-    }
-    footer {
-      text-align: center;
-      padding: 2rem;
-      background-color: #2D3748;
-      font-size: 0.9rem;
-      color: #A0AEC0;
-    }
-  </style>
+  <title>Kamal Meena - Brand Designer</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <header data-aos="fade-down">
-    <h1>Kamal</h1>
-    <p>Brand Designer</p>
+  <header>
+    <div class="navbar">
+      <div class="logo"> <img src="images/logo.png" alt="Logo" /> </div>
+      <div class="title">
+        <h1>Kamal Meena</h1>
+        <p>A Brand Designer</p>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="#about">About</a></li>
+          <li><a href="#portfolio">Portfolio</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <li><a href="resume.pdf" download>Resume</a></li>
+        </ul>
+      </nav>
+    </div>
   </header>
 
-  <nav>
-    <a href="#about">About</a>
-    <a href="#portfolio">Portfolio</a>
-    <a href="#contact">Contact</a>
-  </nav>
+  <main>
+    <section id="about">
+      <h2>About Me</h2>
+      <p>Yahan par teri full personal and professional info aayegi. Tu jo content chahta hai, wo mujhe bhej de.</p>
+    </section>
 
-  <section id="about" class="about" data-aos="fade-up">
-    <img src="image.png" alt="Panda" />
-    <p>Namaste! I'm Kamal, a passionate graphic designer with a keen eye for visuals. I turn ideas into creative visuals that speak louder than words. My journey in the world of design has been full of color, creativity, and continuous learning.</p>
-  </section>
+    <section id="portfolio">
+      <h2>Portfolio</h2>
+      <a href="portfolio.pdf" target="_blank">View My Full Portfolio (PDF)</a>
 
-  <section id="portfolio" data-aos="zoom-in">
-    <h2 style="color: #0BC5EA; margin-bottom: 2rem; text-align: center; font-size: 2rem;">Portfolio</h2>
-    <div class="portfolio">
-      <div class="portfolio-card">
-        <img src="design1.jpg" alt="Design 1">
-        <h3>Event Poster</h3>
+      <div class="portfolio-section">
+        <h3>Event Posters</h3>
+        <div class="images">
+          <img src="images/poster1.jpg" alt="Poster 1" />
+          <img src="images/poster2.jpg" alt="Poster 2" />
+          <img src="images/poster3.jpg" alt="Poster 3" />
+          <img src="images/poster4.jpg" alt="Poster 4" />
+        </div>
       </div>
-      <div class="portfolio-card">
-        <img src="design2.jpg" alt="Design 2">
+
+      <div class="portfolio-section">
         <h3>Sports Branding</h3>
+        <div class="images">
+          <img src="images/sport1.jpg" alt="Sport 1" />
+          <img src="images/sport2.jpg" alt="Sport 2" />
+          <img src="images/sport3.jpg" alt="Sport 3" />
+          <img src="images/sport4.jpg" alt="Sport 4" />
+        </div>
       </div>
-      <div class="portfolio-card">
-        <img src="design3.jpg" alt="Design 3">
-        <h3>Logo Design</h3>
-      </div>
-      <div class="portfolio-card">
-        <img src="design4.jpg" alt="Design 4">
-        <h3>Creative Social Post</h3>
-      </div>
-    </div>
-  </section>
 
-  <section id="contact" class="contact" data-aos="fade-up">
-    <h2 style="color: #0BC5EA; margin-bottom: 1rem; font-size: 2rem;">Contact</h2>
-    <p>Email: <a href="mailto:kamal.design@email.com">kamal.design@email.com</a></p>
-    <p>Instagram: <a href="https://instagram.com/kamal.prp" target="_blank">@kamal_creative</a></p>
-    <div class="cta">
-      <a href="resume.pdf" target="_blank">Download Resume</a>
+      <div class="portfolio-section">
+        <h3>Logo Designs</h3>
+        <div class="images">
+          <img src="images/logo1.jpg" alt="Logo 1" />
+          <img src="images/logo2.jpg" alt="Logo 2" />
+          <img src="images/logo3.jpg" alt="Logo 3" />
+          <img src="images/logo4.jpg" alt="Logo 4" />
+        </div>
+      </div>
+
+      <div class="portfolio-section">
+        <h3>Social Media Posts</h3>
+        <div class="images">
+          <img src="images/social1.jpg" alt="Social 1" />
+          <img src="images/social2.jpg" alt="Social 2" />
+          <img src="images/social3.jpg" alt="Social 3" />
+          <img src="images/social4.jpg" alt="Social 4" />
+        </div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <h2>Contact Me</h2>
+      <p>Email: yourmail@example.com</p>
+      <p>Instagram: @yourhandle</p>
+    </section>
+
+    <div class="thanks">
+      <p>Thank you for visiting!</p>
     </div>
-  </section>
+  </main>
 
   <footer>
-    &copy; 2025 Kamal | Designed with ❤️
+    <p>&copy; 2025 Kamal Meena. All rights reserved.</p>
   </footer>
-
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-  <script>
-    AOS.init();
-  </script>
 </body>
 </html>
