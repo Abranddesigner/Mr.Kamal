@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Kamal Meena - Brand Designer</title>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-pQ0jBxXGVRv5pRrD5ujnZsvmMUTcQYmuD+ZqbfC9d3S7fXh/jwLUF4kaoYmcRlmGuY4J1efwVlRQ9m5HkZ5zKg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
   <style>
     * {
       margin: 0;
@@ -28,12 +28,14 @@
       position: sticky;
       top: 0;
       z-index: 100;
+      flex-wrap: wrap;
     }
     .logo img {
       height: 50px;
     }
     .title {
       text-align: center;
+      flex: 1;
     }
     .title h1 {
       font-size: 30px;
@@ -56,6 +58,32 @@
     }
     nav ul li a:hover {
       color: #FFD700;
+    }
+    .menu-toggle {
+      display: none;
+      font-size: 28px;
+      color: #FFD700;
+      cursor: pointer;
+    }
+    @media screen and (max-width: 768px) {
+      nav ul {
+        display: none;
+        flex-direction: column;
+        background: #111;
+        position: absolute;
+        top: 80px;
+        right: 20px;
+        width: 200px;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(255, 215, 0, 0.2);
+      }
+      nav ul.active {
+        display: flex;
+      }
+      .menu-toggle {
+        display: block;
+      }
     }
     section {
       padding: 60px 40px;
@@ -114,13 +142,18 @@
 </head>
 <body>
   <header>
-    <div class="logo"><img src="https://i.imgur.com/dOw3ffQ.png" alt="Logo"></div>
+    <div class="logo">
+      <a href="#home"><img src="https://i.imgur.com/dOw3ffQ.png" alt="Logo"></a>
+    </div>
     <div class="title">
       <h1>Kamal Meena</h1>
       <p>A Brand Designer</p>
     </div>
+    <div class="menu-toggle" id="menu-toggle">
+      <i class="fas fa-bars"></i>
+    </div>
     <nav>
-      <ul>
+      <ul id="nav-list">
         <li><a href="#home">Home</a></li>
         <li><a href="about.html">About</a></li>
         <li><a href="https://drive.google.com/file/d/1Os9fcZf-2Zth27v9UccVAAslLQTffVuL/view" target="_blank">Portfolio</a></li>
@@ -132,62 +165,3 @@
 
   <main>
     <section id="home">
-      <h2>Welcome</h2>
-      <p style="margin-bottom: 30px; font-size: 18px; color: #ccc; animation: fadeIn 2s ease-in-out;">Creative visuals that speak louder than words. From bold event posters to standout branding — let's turn your vision into impactful designs!</p>
-
-      <div class="category">
-        <h3>Event Posters</h3>
-        <div class="images">
-          <img src="images/event1.jpg" alt="Event 1">
-          <img src="images/event2.jpg" alt="Event 2">
-          <img src="images/event3.jpg" alt="Event 3">
-          <img src="images/event4.jpg" alt="Event 4">
-        </div>
-      </div>
-      <div class="category">
-        <h3>Sports Branding</h3>
-        <div class="images">
-          <img src="images/sports1.jpg" alt="Sports 1">
-          <img src="images/sports2.jpg" alt="Sports 2">
-          <img src="images/sports3.jpg" alt="Sports 3">
-          <img src="images/sports4.jpg" alt="Sports 4">
-        </div>
-      </div>
-      <div class="category">
-        <h3>Logo Designs</h3>
-        <div class="images">
-          <img src="images/logo1.jpg" alt="Logo 1">
-          <img src="images/logo2.jpg" alt="Logo 2">
-          <img src="images/logo3.jpg" alt="Logo 3">
-          <img src="images/logo4.jpg" alt="Logo 4">
-        </div>
-      </div>
-      <div class="category">
-        <h3>Social Media Posts</h3>
-        <div class="images">
-          <img src="images/social1.jpg" alt="Social 1">
-          <img src="images/social2.jpg" alt="Social 2">
-          <img src="images/social3.jpg" alt="Social 3">
-          <img src="images/social4.jpg" alt="Social 4">
-        </div>
-      </div>
-    </section>
-
-    <section id="contact">
-      <h2>Contact Me</h2>
-      <div class="contact-info">
-        <p><i class="fas fa-envelope"></i> <a href="mailto:kk4380037@gmail.com">kk4380037@gmail.com</a></p>
-        <p><i class="fab fa-instagram"></i> <a href="https://www.instagram.com/kamal.prp" target="_blank">@kamal.prp</a></p>
-      </div>
-    </section>
-
-    <div class="thanks">
-      <p>Thank you for visiting my portfolio!</p>
-    </div>
-  </main>
-
-  <footer>
-    <p>&copy; 2025 Kamal Meena. All rights reserved.</p>
-  </footer>
-</body>
-</html>
