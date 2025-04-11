@@ -82,6 +82,33 @@
     <!-- Aur bhi design cards add kar sakte ho niche isi format me -->
 
   </div>
+<script>
+  function startTimer(button, type) {
+    let amount = (type === "ELECTION") ? 999 : 499;
+    const upiLink = `upi://pay?pa=8440048355@ybl&pn=Kamal&am=${amount}&cu=INR`;
+    window.location.href = upiLink;
 
+    let timeLeft = 5 * 60;
+    button.disabled = true;
+
+    const timer = setInterval(() => {
+      const minutes = Math.floor(timeLeft / 60);
+      const seconds = timeLeft % 60;
+      button.textContent = `⏳ ${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
+      timeLeft--;
+
+      if (timeLeft < 0) {
+        clearInterval(timer);
+        button.textContent = "📷 Send Screenshot on WhatsApp";
+        button.disabled = false;
+        button.onclick = function () {
+          const msg = `Hello, I have paid for the ${type} CDR file. Please check screenshot.`;
+          const link = `https://wa.me/918440048355?text=${encodeURIComponent(msg)}`;
+          window.open(link, "_blank");
+        };
+      }
+    }, 1000);
+  }
+</script>
 </body>
 </html>
