@@ -1,202 +1,22 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Mr. Kamal Designer</title>
-  <style>
-    body {
-      margin: 0;
-      padding: 0;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background-color: #000;
-      color: white;
-    }
-    header {
-      background-color: #111;
-      padding: 20px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      flex-wrap: wrap;
-    }
-    .logo {
-      display: flex;
-      align-items: center;
-      gap: 15px;
-    }
-    .logo img {
-      height: 40px;
-    }
-    .title {
-      display: flex;
-      flex-direction: column;
-    }
-    header h1 {
-      color: #ffc107;
-      margin: 0;
-    }
-    header .tagline {
-      font-size: 14px;
-      color: white;
-    }
-    header nav a {
-      color: white;
-      margin: 0 10px;
-      text-decoration: none;
-      font-weight: bold;
-    }
-    header nav a:hover,
-    header nav a.active {
-      color: #ffc107;
-    }
-    main {
-      text-align: center;
-      padding: 40px 20px;
-    }
-    .welcome {
-      margin-bottom: 40px;
-    }
-    .welcome h2 {
-      color: #ffc107;
-    }
-    .slider {
-      overflow: hidden;
-      position: relative;
-      height: 220px;
-      margin-bottom: 40px;
-    }
-    .slider-track {
-      display: flex;
-      animation: slide 30s linear infinite;
-      gap: 20px;
-      width: max-content;
-    }
-    .slider-track img {
-      height: 200px;
-      width: 200px;
-      object-fit: cover;
-      border-radius: 10px;
-      background: #333;
-    }
-    @keyframes slide {
-      0% { transform: translateX(0); }
-      100% { transform: translateX(-50%); }
-    }
-    .gallery {
-      display: none;
-      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-      gap: 20px;
-      padding: 20px;
-      max-width: 1000px;
-      margin: 0 auto 40px;
-    }
-    .gallery img {
-      width: 100%;
-      height: 150px;
-      object-fit: cover;
-      border-radius: 10px;
-      background: #333;
-    }
-    footer {
-      text-align: center;
-      padding: 20px;
-      background: #111;
-      color: #aaa;
-      font-size: 14px;
-    }
-    .contact {
-      font-weight: bold;
-      color: #ffc107;
-      margin: 20px 0;
-    }
-    .icons {
-      display: flex;
-      justify-content: center;
-      gap: 20px;
-      font-size: 24px;
-    }
-    @media (max-width: 768px) {
-      .slider-track {
-        animation-duration: 60s;
-      }
-    }
-  </style>
-</head>
-<body>
-  <header>
-    <div class="logo">
-      <img src="https://via.placeholder.com/40x40?text=KD" alt="Logo">
-      <div class="title">
-        <h1>Mr. Kamal Designer</h1>
-        <div class="tagline">A Brand Designer</div>
-      </div>
-    </div>
-    <nav>
-      <a href="#" class="active">Home</a>
-      <a href="#">About</a>
-      <a href="#">Portfolio</a>
-      <a href="#">Resume</a>
-      <a href="#" onclick="showGallery()">Gallery</a>
-    </nav>
-  </header>
-  <main>
-    <div class="welcome">
-      <h2>WELCOME</h2>
-      <p>"Transforming your vision into stunning designs."</p>
-      <p>"Creativity meets clarity with every project."</p>
-      <p>"Let's create something extraordinary together!"</p>
-    </div>
-    <h3 style="color: #ffc107;">Recent Designs</h3>
-    <div class="slider">
-      <div class="slider-track">
-        <img src="https://via.placeholder.com/200x200?text=Design+1" alt="Design 1">
-        <img src="https://via.placeholder.com/200x200?text=Design+2" alt="Design 2">
-        <img src="https://via.placeholder.com/200x200?text=Design+3" alt="Design 3">
-        <img src="https://via.placeholder.com/200x200?text=Design+4" alt="Design 4">
-        <img src="https://via.placeholder.com/200x200?text=Design+5" alt="Design 5">
-        <img src="https://via.placeholder.com/200x200?text=Design+1" alt="Design 1">
-        <img src="https://via.placeholder.com/200x200?text=Design+2" alt="Design 2">
-        <img src="https://via.placeholder.com/200x200?text=Design+3" alt="Design 3">
-        <img src="https://via.placeholder.com/200x200?text=Design+4" alt="Design 4">
-        <img src="https://via.placeholder.com/200x200?text=Design+5" alt="Design 5">
-      </div>
+<section id="about" style="padding: 40px 20px; background-color: #111; color: white;">
+  <h2 style="text-align: center; color: #ffc107; margin-bottom: 30px;">About Me</h2>
+  <div style="display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 40px;">
+    
+    <!-- Image section -->
+    <img src="https://via.placeholder.com/250x250?text=Kamal" alt="Kamal's Photo" 
+         style="border-radius: 20px; width: 250px; height: 250px; object-fit: cover; box-shadow: 0 0 10px rgba(255,193,7,0.5);">
+
+    <!-- Bio section -->
+    <div style="max-width: 500px; font-size: 16px; line-height: 1.6;">
+      <p><strong>Name:</strong> Kamal Meena</p>
+      <p><strong>DOB:</strong> 15 March 2000</p>
+      <p><strong>Address:</strong> Parasrampura, Teh Nawalgarh, Dist. Jhunjhunu, Rajasthan</p>
+      <p>I started my design career in 2019 and have since worked on a wide range of creative projects.</p>
+      <p>My passion lies in transforming ideas into powerful visual identities that connect with people.</p>
+      <p>I believe in minimal yet effective design that communicates clearly and looks elegant.</p>
+      <p>From logos to social media graphics, I focus on building a brand's unique presence.</p>
+      <p>Always learning and evolving, I’m here to help your brand stand out in a crowded world.</p>
     </div>
 
-    <p>Thanks for visiting!</p>
-    <div class="contact">Contact Now</div>
-    <div class="icons">
-      <span>📧</span>
-      <span>📞</span>
-      <span>📸</span>
-    </div>
-
-    <div id="gallerySection" class="gallery">
-      <img src="https://via.placeholder.com/300x150?text=Gallery+1" alt="Gallery 1">
-      <img src="https://via.placeholder.com/300x150?text=Gallery+2" alt="Gallery 2">
-      <img src="https://via.placeholder.com/300x150?text=Gallery+3" alt="Gallery 3">
-      <img src="https://via.placeholder.com/300x150?text=Gallery+4" alt="Gallery 4">
-      <img src="https://via.placeholder.com/300x150?text=Gallery+5" alt="Gallery 5">
-      <img src="https://via.placeholder.com/300x150?text=Gallery+6" alt="Gallery 6">
-      <img src="https://via.placeholder.com/300x150?text=Gallery+7" alt="Gallery 7">
-      <img src="https://via.placeholder.com/300x150?text=Gallery+8" alt="Gallery 8">
-      <img src="https://via.placeholder.com/300x150?text=Gallery+9" alt="Gallery 9">
-      <img src="https://via.placeholder.com/300x150?text=Gallery+10" alt="Gallery 10">
-    </div>
-  </main>
-  <footer>
-    © 2025 Kamal Meena. All rights reserved.
-  </footer>
-  <script>
-    function showGallery() {
-      const gallery = document.getElementById('gallerySection');
-      if (gallery.style.display === 'grid') {
-        gallery.style.display = 'none';
-      } else {
-        gallery.style.display = 'grid';
-        window.scrollTo({ top: gallery.offsetTop - 50, behavior: 'smooth' });
-      }
-    }
-  </script>
-</body>
-</html>
+  </div>
+</section>
