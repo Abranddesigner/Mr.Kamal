@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Gallery</title>
+  <style>
+    body {
+      background-color: #000;
+      color: white;
+      font-family: sans-serif;
+      text-align: center;
+      padding: 20px;
+    }
+    .back-home {
+      display: inline-block;
+      margin-bottom: 20px;
+      padding: 10px 20px;
+      background-color: #ffc107;
+      color: #000;
+      text-decoration: none;
+      border-radius: 5px;
+      font-weight: bold;
+    }
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      padding: 20px;
+    }
+    .gallery-grid img {
+      width: 100%;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+    }
+  </style>
+</head>
+<body>
+
+  <a class="back-home" href="index.html">← Back to Home</a>
+  <h2>📸 My Design Gallery</h2>
+
+  <div class="gallery-grid">
+        <img src="https://raw.githubusercontent.com/ideogram682/Mr.Kamal/refs/heads/main/001%20(1).jpeg" onclick="openImage(this.src)">
+        <img src="https://raw.githubusercontent.com/ideogram682/Mr.Kamal/refs/heads/main/001%20(2).jpeg" onclick="openImage(this.src)">
+        <img src="https://raw.githubusercontent.com/ideogram682/Mr.Kamal/refs/heads/main/001%20(3).jpeg" onclick="openImage(this.src)">
+        <img src="https://raw.githubusercontent.com/ideogram682/Mr.Kamal/refs/heads/main/001%20(4).jpeg" onclick="openImage(this.src)">
+        <img src="https://raw.githubusercontent.com/ideogram682/Mr.Kamal/refs/heads/main/001%20(5).jpeg" onclick="openImage(this.src)">
+        <img src="https://raw.githubusercontent.com/ideogram682/Mr.Kamal/refs/heads/main/001%20(1).jpeg" onclick="openImage(this.src)">
+        <img src="https://raw.githubusercontent.com/ideogram682/Mr.Kamal/refs/heads/main/001%20(2).jpeg" onclick="openImage(this.src)">
+        <img src="https://raw.githubusercontent.com/ideogram682/Mr.Kamal/refs/heads/main/001%20(3).jpeg" onclick="openImage(this.src)">
+        <img src="https://raw.githubusercontent.com/ideogram682/Mr.Kamal/refs/heads/main/001%20(4).jpeg" onclick="openImage(this.src)">
+        <img src="https://raw.githubusercontent.com/ideogram682/Mr.Kamal/refs/heads/main/001%20(5).jpeg" onclick="openImage(this.src)">
+  </div>
+
+</body>
+</html>
