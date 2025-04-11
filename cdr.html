@@ -3,62 +3,85 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>CDR File - School Admission</title>
-  <link rel="stylesheet" href="style.css" /> <!-- apne css ka path lagao -->
+  <title>CDR Design Files</title>
+  <link rel="stylesheet" href="style.css" />
   <style>
     body {
       background-color: #000;
       color: #fff;
       font-family: sans-serif;
-      padding: 40px 20px;
+      padding: 30px 15px;
+    }
+    h2 {
       text-align: center;
+      margin-bottom: 30px;
+      color: #ffc107;
     }
-    .box {
-      max-width: 600px;
+    .design-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+      max-width: 1000px;
       margin: auto;
+    }
+    .design-card {
       background-color: #111;
-      padding: 30px;
-      border-radius: 15px;
-      box-shadow: 0 0 10px rgba(255,255,255,0.1);
-    }
-    .box img {
-      width: 200px;
-      margin: 20px 0;
+      padding: 20px;
       border-radius: 10px;
+      text-align: center;
+      box-shadow: 0 0 8px rgba(255, 255, 255, 0.05);
     }
-    .box a {
-      display: inline-block;
-      background-color: #25D366;
-      color: #fff;
-      padding: 12px 24px;
-      margin-top: 20px;
-      border-radius: 5px;
-      text-decoration: none;
-      font-weight: bold;
+    .design-card img {
+      width: 180px;
+      border-radius: 10px;
+      margin-bottom: 15px;
+    }
+    .design-card h3 {
+      margin-bottom: 10px;
     }
     .price {
       color: #ffc107;
-      font-size: 18px;
+      font-weight: bold;
+    }
+    .design-card a {
+      display: inline-block;
+      margin-top: 10px;
+      padding: 10px 20px;
+      background-color: #25D366;
+      color: white;
+      text-decoration: none;
+      border-radius: 5px;
+      font-weight: bold;
     }
   </style>
 </head>
 <body>
-  <h2 style="color:#ffc107;">🎓 School Admission</h2>
 
-  <div class="box">
-    <h3>School Admission Design CDR File</h3>
+  <h2>📁 CDR Design Files for Sale</h2>
 
-    <img src="https://raw.githubusercontent.com/Abranddesigner/Mr.Kamal/refs/heads/main/QR%20Code.jpg" alt="QR Code" />
+  <div class="design-grid">
 
-    <p class="price">Price: ₹499</p>
-    <p>Pay via UPI: <strong>8440048355@ybl</strong></p>
+    <!-- School Admission Card -->
+    <div class="design-card">
+      <img src="https://abranddesigner.github.io/Mr.Kamal/qr.png" alt="QR Code">
+      <h3>School Admission Design</h3>
+      <p class="price">Price: ₹499</p>
+      <p>UPI: 8440048355@ybl</p>
+      <a href="https://wa.me/918440048355?text=Hello%2C%20I%20have%20paid%20for%20the%20SCHOOL%20ADMISSION%20CDR%20file.%20Please%20check%20screenshot.">Buy Now</a>
+    </div>
 
-    <a href="https://wa.me/918440048355?text=Hello%2C%20I%20have%20paid%20for%20the%20CDR%20file.%20Please%20check%20the%20screenshot."
-       target="_blank">
-      📩 Send Payment Screenshot on WhatsApp
-    </a>
+    <!-- Politician Election Card -->
+    <div class="design-card">
+      <img src="https://abranddesigner.github.io/Mr.Kamal/qr.png" alt="QR Code">
+      <h3>Politician Election Design</h3>
+      <p class="price">Price: ₹499</p>
+      <p>UPI: 8440048355@ybl</p>
+      <a href="https://wa.me/918440048355?text=Hello%2C%20I%20have%20paid%20for%20the%20ELECTION%20CDR%20file.%20Please%20check%20screenshot.">Buy Now</a>
+    </div>
 
-    <p style="color: #aaa; margin-top: 10px;">You’ll receive the file on WhatsApp after payment.</p>
+    <!-- Aur bhi design cards add kar sakte ho niche isi format me -->
+
   </div>
+
 </body>
 </html>
