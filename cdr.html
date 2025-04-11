@@ -43,15 +43,20 @@
       color: #ffc107;
       font-weight: bold;
     }
-    .design-card a {
+    .buy-btn {
       display: inline-block;
       margin-top: 10px;
       padding: 10px 20px;
       background-color: #25D366;
       color: white;
-      text-decoration: none;
+      border: none;
       border-radius: 5px;
       font-weight: bold;
+      cursor: pointer;
+    }
+    .buy-btn:disabled {
+      background-color: #888;
+      cursor: not-allowed;
     }
   </style>
 </head>
@@ -67,7 +72,7 @@
       <h3>School Admission Design</h3>
       <p class="price">Price: ₹499</p>
       <p>UPI: 8440048355@ybl</p>
-      <a href="https://wa.me/918440048355?text=Hello%2C%20I%20have%20paid%20for%20the%20SCHOOL%20ADMISSION%20CDR%20file.%20Please%20check%20screenshot.">Buy Now</a>
+      <button class="buy-btn" onclick="startTimer(this, 'SCHOOL ADMISSION')">Buy Now</button>
     </div>
 
     <!-- Politician Election Card -->
@@ -76,12 +81,11 @@
       <h3>Politician Election Design</h3>
       <p class="price">Price: ₹999</p>
       <p>UPI: 8440048355@ybl</p>
-      <a href="https://wa.me/918440048355?text=Hello%2C%20I%20have%20paid%20for%20the%20ELECTION%20CDR%20file.%20Please%20check%20screenshot.">Buy Now</a>
+      <button class="buy-btn" onclick="startTimer(this, 'ELECTION')">Buy Now</button>
     </div>
 
-    <!-- Aur bhi design cards add kar sakte ho niche isi format me -->
-
   </div>
+
 <script>
   function startTimer(button, type) {
     let amount = (type === "ELECTION") ? 999 : 499;
@@ -110,5 +114,6 @@
     }, 1000);
   }
 </script>
+
 </body>
 </html>
