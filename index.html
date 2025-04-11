@@ -11,11 +11,11 @@
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       background-color: #000;
       color: white;
-      transition: background 0.3s, color 0.3s;
+      transition: background-color 0.3s, color 0.3s;
     }
-    .dark-mode {
-      background-color: #fff;
-      color: #000;
+    .light-mode {
+      background-color: white;
+      color: black;
     }
     header {
       background-color: #111;
@@ -70,12 +70,12 @@
       position: relative;
       height: 220px;
       margin-bottom: 40px;
+      white-space: nowrap;
     }
     .slider-track {
-      display: flex;
+      display: inline-flex;
       animation: slide 30s linear infinite;
       gap: 20px;
-      width: max-content;
     }
     .slider-track img {
       height: 200px;
@@ -122,35 +122,26 @@
       font-size: 24px;
     }
     .icons a {
-      color: #ffc107;
+      color: white;
       text-decoration: none;
     }
     .whatsapp-button {
       position: fixed;
       bottom: 20px;
       right: 20px;
-      background-color: #25d366;
+      background-color: #25D366;
       color: white;
+      border: none;
       border-radius: 50%;
-      width: 50px;
-      height: 50px;
+      width: 60px;
+      height: 60px;
       display: flex;
       align-items: center;
       justify-content: center;
-      font-size: 24px;
-      z-index: 1000;
-      box-shadow: 0 0 10px rgba(0,0,0,0.5);
-    }
-    .dark-light-toggle {
-      position: fixed;
-      top: 20px;
-      right: 20px;
-      background: #ffc107;
-      color: black;
-      border: none;
-      padding: 10px 15px;
-      border-radius: 20px;
+      font-size: 28px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.3);
       cursor: pointer;
+      z-index: 1000;
     }
     @media (max-width: 768px) {
       .slider-track {
@@ -158,10 +149,12 @@
       }
     }
   </style>
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </head>
 <body>
-  <div class="whatsapp-button" onclick="window.open('https://wa.me/918440048355','_blank')">📱</div>
-  <button class="dark-light-toggle" onclick="toggleDarkMode()">Toggle Mode</button>
+  <button class="whatsapp-button" onclick="window.open('https://wa.me/918440048355','_blank')">
+    <i class="fab fa-whatsapp"></i>
+  </button>
 
   <header>
     <div class="logo">
@@ -189,45 +182,45 @@
     <h3 style="color: #ffc107;">Recent Designs</h3>
     <div class="slider">
       <div class="slider-track">
-        <img src="https://via.placeholder.com/200x200?text=Design+1">
-        <img src="https://via.placeholder.com/200x200?text=Design+2">
-        <img src="https://via.placeholder.com/200x200?text=Design+3">
-        <img src="https://via.placeholder.com/200x200?text=Design+4">
-        <img src="https://via.placeholder.com/200x200?text=Design+5">
-        <img src="https://via.placeholder.com/200x200?text=Design+1">
-        <img src="https://via.placeholder.com/200x200?text=Design+2">
-        <img src="https://via.placeholder.com/200x200?text=Design+3">
-        <img src="https://via.placeholder.com/200x200?text=Design+4">
-        <img src="https://via.placeholder.com/200x200?text=Design+5">
+        <img src="https://via.placeholder.com/200x200?text=Design+1" alt="Design 1">
+        <img src="https://via.placeholder.com/200x200?text=Design+2" alt="Design 2">
+        <img src="https://via.placeholder.com/200x200?text=Design+3" alt="Design 3">
+        <img src="https://via.placeholder.com/200x200?text=Design+4" alt="Design 4">
+        <img src="https://via.placeholder.com/200x200?text=Design+5" alt="Design 5">
+        <img src="https://via.placeholder.com/200x200?text=Design+1" alt="Design 1">
+        <img src="https://via.placeholder.com/200x200?text=Design+2" alt="Design 2">
+        <img src="https://via.placeholder.com/200x200?text=Design+3" alt="Design 3">
+        <img src="https://via.placeholder.com/200x200?text=Design+4" alt="Design 4">
+        <img src="https://via.placeholder.com/200x200?text=Design+5" alt="Design 5">
       </div>
     </div>
 
     <section id="about">
-      <h2 style="color: #ffc107;">About Me</h2>
-      <p style="max-width: 800px; margin: auto; font-size: 18px; line-height: 1.6;">
-        I'm Kamal Meena, a passionate brand designer from Parasrampura, Teh Nawalgarh, Jhunjhunu, Rajasthan. Born on 15 March 2000, I began my design journey in 2019 and have since created impactful visuals that bring ideas to life. I specialize in clean, effective design that tells stories and connects with people. Whether it's logos or full brand identities, I focus on building strong creative solutions. I’m constantly learning, evolving, and striving to craft designs that leave a lasting impression.
+      <h2 style="color:#ffc107">About Me</h2>
+      <p style="max-width:800px; margin: 0 auto; font-size:17px; line-height:1.7">
+        I am Kamal Meena, a passionate graphic designer born on 15th March 2000, based in Parasrampura, Teh Nawalgarh, Dist. Jhunjhunu, Rajasthan. Since 2019, I have been helping brands and individuals visually express their identity through creative design. I specialize in building brand aesthetics that are both compelling and unique. With a strong foundation in visual communication, I aim to design with purpose and passion. My goal is always to create designs that resonate and make a lasting impression.
       </p>
     </section>
 
     <p>Thanks for visiting!</p>
     <div class="contact">Contact Now</div>
     <div class="icons">
-      <a href="mailto:kk4380037@gmail.com" title="Email">📧</a>
-      <a href="tel:6350262865" title="Call">📞</a>
-      <a href="https://instagram.com/Kamal.prp" target="_blank" title="Instagram">📸</a>
+      <a href="mailto:kk4380037@gmail.com" title="Email"><i class="fas fa-envelope"></i></a>
+      <a href="tel:+916350262865" title="Call"><i class="fas fa-phone"></i></a>
+      <a href="https://instagram.com/Kamal.prp" title="Instagram" target="_blank"><i class="fab fa-instagram"></i></a>
     </div>
 
     <div id="gallerySection" class="gallery">
-      <img src="https://via.placeholder.com/300x150?text=Gallery+1">
-      <img src="https://via.placeholder.com/300x150?text=Gallery+2">
-      <img src="https://via.placeholder.com/300x150?text=Gallery+3">
-      <img src="https://via.placeholder.com/300x150?text=Gallery+4">
-      <img src="https://via.placeholder.com/300x150?text=Gallery+5">
-      <img src="https://via.placeholder.com/300x150?text=Gallery+6">
-      <img src="https://via.placeholder.com/300x150?text=Gallery+7">
-      <img src="https://via.placeholder.com/300x150?text=Gallery+8">
-      <img src="https://via.placeholder.com/300x150?text=Gallery+9">
-      <img src="https://via.placeholder.com/300x150?text=Gallery+10">
+      <img src="https://via.placeholder.com/300x150?text=Gallery+1" alt="Gallery 1">
+      <img src="https://via.placeholder.com/300x150?text=Gallery+2" alt="Gallery 2">
+      <img src="https://via.placeholder.com/300x150?text=Gallery+3" alt="Gallery 3">
+      <img src="https://via.placeholder.com/300x150?text=Gallery+4" alt="Gallery 4">
+      <img src="https://via.placeholder.com/300x150?text=Gallery+5" alt="Gallery 5">
+      <img src="https://via.placeholder.com/300x150?text=Gallery+6" alt="Gallery 6">
+      <img src="https://via.placeholder.com/300x150?text=Gallery+7" alt="Gallery 7">
+      <img src="https://via.placeholder.com/300x150?text=Gallery+8" alt="Gallery 8">
+      <img src="https://via.placeholder.com/300x150?text=Gallery+9" alt="Gallery 9">
+      <img src="https://via.placeholder.com/300x150?text=Gallery+10" alt="Gallery 10">
     </div>
   </main>
   <footer>
@@ -236,14 +229,12 @@
   <script>
     function showGallery() {
       const gallery = document.getElementById('gallerySection');
-      gallery.style.display = gallery.style.display === 'grid' ? 'none' : 'grid';
       if (gallery.style.display === 'grid') {
+        gallery.style.display = 'none';
+      } else {
+        gallery.style.display = 'grid';
         window.scrollTo({ top: gallery.offsetTop - 50, behavior: 'smooth' });
       }
-    }
-
-    function toggleDarkMode() {
-      document.body.classList.toggle('dark-mode');
     }
   </script>
 </body>
