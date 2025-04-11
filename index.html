@@ -303,5 +303,35 @@
     <span class="close">&times;</span>
     <img class="modal-content" id="modalImg">
   </div>
+  <section id="cdr" style="padding: 40px 20px; text-align: center;">
+  <h2 style="color: #ffc107; margin-bottom: 30px;">🎓 School Admission</h2>
+
+  <div style="max-width: 600px; margin: 0 auto; background-color: #111; border-radius: 15px; padding: 20px; box-shadow: 0 0 10px rgba(255,255,255,0.1);">
+    <h3 style="color: #fff; margin-bottom: 10px;">School Admission Design CDR File</h3>
+
+    <!-- QR Code -->
+    <img src="https://abranddesigner.github.io/Mr.Kamal/qr.png" alt="QR Code" style="width: 200px; margin: 20px 0; border-radius: 10px;">
+
+    <p style="color: #aaa; font-size: 16px;">Pay ₹499 to UPI ID: <strong style="color: #ffc107;">8440048355@ybl</strong></p>
+
+    <!-- I've Paid button -->
+    <button onclick="showDownload()" style="padding: 10px 20px; background-color: #ffc107; color: black; border: none; border-radius: 5px; margin-top: 20px; font-weight: bold;">
+      I've Paid, Show Download Link
+    </button>
+
+    <!-- Hidden download link -->
+    <div id="downloadLink" style="display: none; margin-top: 20px;">
+      <a href="https://yourdomain.com/files/school_admission.cdr" download style="color: #00ffcc; text-decoration: underline; font-weight: bold;">
+        👉 Click here to Download CDR File
+      </a>
+    </div>
+  </div>
+</section>
+
+<script>
+  function showDownload() {
+    document.getElementById("downloadLink").style.display = "block";
+  }
+</script>
 </body>
 </html>
