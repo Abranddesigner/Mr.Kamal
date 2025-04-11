@@ -1,13 +1,15 @@
-<section id="about" style="padding: 40px 20px; background-color: #111; color: white;">
-  <h2 style="text-align: center; color: #ffc107; margin-bottom: 30px;">About Me</h2>
-  <div style="display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 40px;">
+<section id="about" style="padding: 60px 20px; background-color: #111; color: white;">
+  <h2 style="text-align: center; color: #ffc107; margin-bottom: 40px; font-size: 32px;">About Me</h2>
+  <div style="display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 50px;">
     
-    <!-- Image section -->
-    <img src="https://via.placeholder.com/250x250?text=Kamal" alt="Kamal's Photo" 
-         style="border-radius: 20px; width: 250px; height: 250px; object-fit: cover; box-shadow: 0 0 10px rgba(255,193,7,0.5);">
+    <!-- Image Section -->
+    <div style="animation: glow 2s infinite alternate;">
+      <img src="https://via.placeholder.com/250x250?text=Kamal" alt="Kamal's Photo" 
+           style="border-radius: 50%; width: 250px; height: 250px; object-fit: cover; box-shadow: 0 0 15px #ffc107;">
+    </div>
 
-    <!-- Bio section -->
-    <div style="max-width: 500px; font-size: 16px; line-height: 1.6;">
+    <!-- Bio Section -->
+    <div style="max-width: 500px; font-size: 17px; line-height: 1.7; animation: fadeInUp 1.5s ease;">
       <p><strong>Name:</strong> Kamal Meena</p>
       <p><strong>DOB:</strong> 15 March 2000</p>
       <p><strong>Address:</strong> Parasrampura, Teh Nawalgarh, Dist. Jhunjhunu, Rajasthan</p>
@@ -20,3 +22,22 @@
 
   </div>
 </section>
+
+<!-- CSS Animations -->
+<style>
+@keyframes glow {
+  from { box-shadow: 0 0 10px #ffc107; }
+  to { box-shadow: 0 0 25px #ffc107, 0 0 40px #ffeb3b; }
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+</style>
