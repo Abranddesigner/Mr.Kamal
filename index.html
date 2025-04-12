@@ -3,22 +3,24 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Mr. Kamal Designer</title>
+  <meta name="description" content="Portfolio of Kamal Meena, a brand designer specializing in logos, posters, and UI/UX designs." />
+  <title>Mr. Kamal Designer - Brand Designer</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
   <style>
     body {
-       margin: 0;
-  padding: 0;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background-color: #fff;  /* Light mode default */
-  color: #000;
-  transition: background-color 0.3s, color 0.3s;
-}
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #fff;
+      color: #000;
+      transition: background-color 0.3s, color 0.3s;
+    }
 
-.dark-mode {
-  background-color: #000;  /* Dark mode */
-  color: #fff;
-}
+    .dark-mode {
+      background-color: #000;
+      color: #fff;
+    }
+
     header {
       background-color: #111;
       padding: 20px;
@@ -26,49 +28,65 @@
       align-items: center;
       justify-content: space-between;
       flex-wrap: wrap;
-      position: relative;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
     }
+
     .logo {
       display: flex;
       align-items: center;
       gap: 25px;
     }
+
     .logo img {
       height: 60px;
+      border-radius: 50%;
     }
+
     .title {
       display: flex;
       flex-direction: column;
     }
+
     header h1 {
       color: #ffc107;
       margin: 0;
+      font-size: 1.8rem;
     }
+
     header .tagline {
       font-size: 14px;
       color: white;
     }
+
     nav {
       display: flex;
       gap: 10px;
     }
+
     header nav a {
       color: white;
-      margin: 0 10px;
+      margin: 0 15px;
       text-decoration: none;
       font-weight: bold;
+      font-size: 1rem;
+      transition: color 0.3s;
     }
+
     header nav a:hover,
     header nav a.active {
       color: #ffc107;
     }
+
     .menu-toggle {
       display: none;
       font-size: 24px;
       cursor: pointer;
       color: #ffc107;
-      margin-left: auto; /* 👈 pushes icon to the right side */
+      margin-left: auto;
     }
+
     @media (max-width: 768px) {
       .menu-toggle {
         display: block;
@@ -82,54 +100,162 @@
       nav.show {
         display: flex;
       }
+      header nav a {
+        margin: 10px 0;
+      }
     }
+
     main {
       text-align: center;
       padding: 40px 20px;
     }
+
     .welcome {
       margin-bottom: 40px;
     }
+
     .welcome h2 {
       color: #ffc107;
+      font-size: 2.2rem;
+      margin-bottom: 15px;
     }
+
+    .welcome p {
+      font-size: 1.1rem;
+      max-width: 600px;
+      margin: 10px auto;
+      color: #555;
+    }
+
+    .dark-mode .welcome p {
+      color: #ccc;
+    }
+
     .slider {
       overflow-x: auto;
       white-space: nowrap;
       padding-bottom: 10px;
+      margin-bottom: 40px;
     }
+
     .slider-track {
       display: inline-flex;
       animation: slide 15s linear infinite;
       gap: 20px;
     }
+
     .slider-track img {
       height: 200px;
       width: 200px;
       object-fit: cover;
       border-radius: 10px;
-      background: #333;
       cursor: pointer;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+      transition: transform 0.3s;
     }
+
+    .slider-track img:hover {
+      transform: scale(1.05);
+    }
+
     @keyframes slide {
       0% { transform: translateX(0); }
       100% { transform: translateX(-50%); }
     }
+
     .gallery {
       display: none;
-      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
       gap: 20px;
       padding: 20px;
       max-width: 1000px;
       margin: 0 auto 40px;
     }
+
     .gallery img {
       width: 100%;
       height: 150px;
       object-fit: cover;
       border-radius: 10px;
-      background: #333;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+      transition: transform 0.3s;
     }
+
+    .gallery img:hover {
+      transform: scale(1.05);
+    }
+
+    /* About Section */
+    #about {
+      padding: 40px 20px;
+      background-color: #f9f9f9;
+      border-radius: 10px;
+      max-width: 900px;
+      margin: 40px auto;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease;
+    }
+
+    .dark-mode #about {
+      background-color: #222;
+      box-shadow: 0 4px 10px rgba(255, 255, 255, 0.1);
+    }
+
+    #about:hover {
+      transform: translateY(-5px);
+    }
+
+    #about h2 {
+      color: #ffc107;
+      font-size: 2.2rem;
+      margin-bottom: 10px;
+    }
+
+    #about .subtitle {
+      font-size: 1.1rem;
+      color: #555;
+      margin-bottom: 20px;
+    }
+
+    .dark-mode #about .subtitle {
+      color: #ccc;
+    }
+
+    #about img {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      margin-bottom: 20px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    }
+
+    #about p {
+      font-size: 1rem;
+      line-height: 1.7;
+      max-width: 700px;
+      margin: 0 auto 20px;
+      color: #333;
+    }
+
+    .dark-mode #about p {
+      color: #ddd;
+    }
+
+    .cta-btn {
+      display: inline-block;
+      padding: 10px 20px;
+      background-color: #ffc107;
+      color: #111;
+      text-decoration: none;
+      border-radius: 5px;
+      font-weight: bold;
+      transition: background-color 0.3s;
+    }
+
+    .cta-btn:hover {
+      background-color: #e0a800;
+    }
+
     footer {
       text-align: center;
       padding: 20px;
@@ -137,6 +263,7 @@
       color: #aaa;
       font-size: 14px;
     }
+
     .contact-icons {
       margin: 20px 0;
       display: flex;
@@ -144,10 +271,17 @@
       gap: 20px;
       font-size: 24px;
     }
+
     .contact-icons a {
       color: #ffc107;
       text-decoration: none;
+      transition: color 0.3s;
     }
+
+    .contact-icons a:hover {
+      color: #e0a800;
+    }
+
     .whatsapp-btn {
       position: fixed;
       bottom: 20px;
@@ -162,17 +296,31 @@
       align-items: center;
       justify-content: center;
       text-decoration: none;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+      transition: transform 0.3s;
     }
+
+    .whatsapp-btn:hover {
+      transform: scale(1.1);
+    }
+
     .mode-toggle {
       background: none;
       border: 2px solid #ffc107;
-      padding: 5px 10px;
+      padding: 5px 15px;
       color: #ffc107;
       border-radius: 5px;
       cursor: pointer;
-      margin-top: 20px;
+      margin: 20px auto;
+      display: block;
+      transition: background-color 0.3s, color 0.3s;
     }
+
+    .mode-toggle:hover {
+      background-color: #ffc107;
+      color: #111;
+    }
+
     .modal {
       display: none;
       position: fixed;
@@ -183,15 +331,18 @@
       width: 100%;
       height: 100%;
       overflow: auto;
-      background-color: rgba(0,0,0,0.9);
+      background-color: rgba(0, 0, 0, 0.9);
     }
+
     .modal-content {
       margin: auto;
       display: block;
       max-width: 90%;
       max-height: 80%;
       border-radius: 10px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
     }
+
     .close {
       position: absolute;
       top: 20px;
@@ -200,16 +351,41 @@
       font-size: 40px;
       font-weight: bold;
       cursor: pointer;
+      transition: color 0.3s;
+    }
+
+    .close:hover {
+      color: #ffc107;
+    }
+
+    @media (max-width: 600px) {
+      .welcome h2 {
+        font-size: 1.8rem;
+      }
+      .slider-track img {
+        width: 150px;
+        height: 150px;
+      }
+      #about img {
+        width: 120px;
+        height: 120px;
+      }
+      #about h2 {
+        font-size: 1.8rem;
+      }
     }
   </style>
 </head>
 <body>
+  <!-- WhatsApp Button -->
   <a href="https://wa.me/918440048355" class="whatsapp-btn" target="_blank" title="Chat on WhatsApp">
-    <img src="https://img.icons8.com/ios-filled/50/ffffff/whatsapp.png" alt="WhatsApp" style="width: 24px; height: 24px;">
+    <img src="https://img.icons8.com/ios-filled/50/ffffff/whatsapp.png" alt="WhatsApp Icon" style="width: 24px; height: 24px;" />
   </a>
+
+  <!-- Header -->
   <header>
     <div class="logo">
-      <img src="https://raw.githubusercontent.com/ideogram682/Mr.Kamal/refs/heads/main/k.png" alt="Logo" />
+      <img src="https://raw.githubusercontent.com/ideogram682/Mr.Kamal/refs/heads/main/k.png" alt="Kamal Meena Logo" />
       <div class="title">
         <h1>Mr. Kamal Designer</h1>
         <div class="tagline">A Brand Designer</div>
@@ -218,64 +394,103 @@
     <div class="menu-toggle" onclick="toggleMenu()">☰</div>
     <nav id="navbar">
       <a href="#" class="active">Home</a>
-            <a href="https://drive.google.com/file/d/1Os9fcZf-2Zth27v9UccVAAslLQTffVuL/view?usp=drivesdk" target="_blank">Portfolio</a>
+      <a href="https://drive.google.com/file/d/1Os9fcZf-2Zth27v9UccVAAslLQTffVuL/view?usp=drivesdk" target="_blank">Portfolio</a>
       <a href="https://github.com/ideogram682/Mr.Kamal/blob/main/Mr.%20Kamal%20Resume.jpeg?raw=true" target="_blank">Resume</a>
       <a href="gallery.html">Gallery</a>
-      <li><a href="cdr.html" target="_blank">CDR</a></li>
+      <a href="cdr.html">CDR</a>
     </nav>
   </header>
+
+  <!-- Main Content -->
   <main>
     <div class="welcome">
-      <h2>WELCOME</h2>
-      <p>"Transforming your vision into stunning designs."</p>
-      <p>"Creativity meets clarity with every project."</p>
-      <p>"Let's create something extraordinary together!"</p>
-      <button id="modeBtn" class="mode-toggle" onclick="toggleMode()">Switch to Dark Mode</button>
-      <button class="mode-toggle" onclick="window.open('https://wa.me/918440048355?text=Hi%20Kamal%2C%20I%20want%20to%20hire%20you%20for%20a%20design%20project', '_blank')">Hire Me</button>
+      <h2>Welcome to My World of Design</h2>
+      <p>Transforming your vision into stunning visuals.</p>
+      <p>Creativity meets clarity in every project.</p>
+      <p>Let’s create something extraordinary together!</p>
+      <a href="https://wa.me/918440048355?text=Hi%20Kamal%2C%20I%20want%20to%20hire%20you%20for%20a%20design%20project" class="cta-btn" target="_blank">Hire Me</a>
     </div>
+
+    <!-- Recent Designs Slider -->
     <h3 style="color: #ffc107;">Recent Designs</h3>
     <div class="slider">
       <div class="slider-track">
-        <img src="https://raw.githubusercontent.com/ideogram682/Mr.Kamal/refs/heads/main/001%20(1).jpeg" onclick="openImage(this.src)">
-        <img src="https://raw.githubusercontent.com/ideogram682/Mr.Kamal/refs/heads/main/001%20(2).jpeg" onclick="openImage(this.src)">
-        <img src="https://raw.githubusercontent.com/ideogram682/Mr.Kamal/refs/heads/main/001%20(3).jpeg" onclick="openImage(this.src)">
-        <img src="https://raw.githubusercontent.com/ideogram682/Mr.Kamal/refs/heads/main/001%20(4).jpeg" onclick="openImage(this.src)">
-        <img src="https://raw.githubusercontent.com/ideogram682/Mr.Kamal/refs/heads/main/001%20(5).jpeg" onclick="openImage(this.src)">
-        <img src="https://raw.githubusercontent.com/ideogram682/Mr.Kamal/refs/heads/main/001%20(1).jpeg" onclick="openImage(this.src)">
-        <img src="https://raw.githubusercontent.com/ideogram682/Mr.Kamal/refs/heads/main/001%20(2).jpeg" onclick="openImage(this.src)">
-        <img src="https://raw.githubusercontent.com/ideogram682/Mr.Kamal/refs/heads/main/001%20(3).jpeg" onclick="openImage(this.src)">
-        <img src="https://raw.githubusercontent.com/ideogram682/Mr.Kamal/refs/heads/main/001%20(4).jpeg" onclick="openImage(this.src)">
-        <img src="https://raw.githubusercontent.com/ideogram682/Mr.Kamal/refs/heads/main/001%20(5).jpeg" onclick="openImage(this.src)">
+        <img src="https://raw.githubusercontent.com/ideogram682/Mr.Kamal/refs/heads/main/001%20(1).jpeg" alt="Design 1 by Kamal Meena" loading="lazy" onclick="openImage(this.src)" />
+        <img src="https://raw.githubusercontent.com/ideogram682/Mr.Kamal/refs/heads/main/001%20(2).jpeg" alt="Design 2 by Kamal Meena" loading="lazy" onclick="openImage(this.src)" />
+        <img src="https://raw.githubusercontent.com/ideogram682/Mr.Kamal/refs/heads/main/001%20(3).jpeg" alt="Design 3 by Kamal Meena" loading="lazy" onclick="openImage(this.src)" />
+        <img src="https://raw.githubusercontent.com/ideogram682/Mr.Kamal/refs/heads/main/001%20(4).jpeg" alt="Design 4 by Kamal Meena" loading="lazy" onclick="openImage(this.src)" />
+        <img src="https://raw.githubusercontent.com/ideogram682/Mr.Kamal/refs/heads/main/001%20(5).jpeg" alt="Design 5 by Kamal Meena" loading="lazy" onclick="openImage(this.src)" />
+        <img src="https://raw.githubusercontent.com/ideogram682/Mr.Kamal/refs/heads/main/001%20(1).jpeg" alt="Design 1 by Kamal Meena" loading="lazy" onclick="openImage(this.src)" />
+        <img src="https://raw.githubusercontent.com/ideogram682/Mr.Kamal/refs/heads/main/001%20(2).jpeg" alt="Design 2 by Kamal Meena" loading="lazy" onclick="openImage(this.src)" />
+        <img src="https://raw.githubusercontent.com/ideogram682/Mr.Kamal/refs/heads/main/001%20(3).jpeg" alt="Design 3 by Kamal Meena" loading="lazy" onclick="openImage(this.src)" />
+        <img src="https://raw.githubusercontent.com/ideogram682/Mr.Kamal/refs/heads/main/001%20(4).jpeg" alt="Design 4 by Kamal Meena" loading="lazy" onclick="openImage(this.src)" />
+        <img src="https://raw.githubusercontent.com/ideogram682/Mr.Kamal/refs/heads/main/001%20(5).jpeg" alt="Design 5 by Kamal Meena" loading="lazy" onclick="openImage(this.src)" />
       </div>
     </div>
+
+    <!-- About Section -->
     <section id="about">
-      <h2 style="color: #ffc107;">About Me</h2>
-      <p style="max-width: 800px; margin: auto; font-size: 17px; line-height: 1.7;">
-        I’m Kamal Meena, born on 15 March 2000, based in Parasrampura, Teh Nawalgarh, Dist. Jhunjhunu, Rajasthan. I started my design journey in 2019, turning creativity into a professional path. My passion lies in creating unique brand visuals that connect emotionally and communicate clearly. With an eye for aesthetics and detail, I craft designs that leave lasting impressions. I believe in constantly learning and improving, always ready to bring your ideas to life with meaningful visuals.
+      <h2>About Me</h2>
+      <p class="subtitle">Crafting Brands with Creativity & Precision</p>
+      <img src="https://via.placeholder.com/150" alt="Kamal Meena Profile Picture" />
+      <p>
+        I’m Kamal Meena, a brand designer based in Rajasthan, India. Since starting my journey in 2019, I’ve been passionate about turning ideas into unique visuals that connect and inspire. Specializing in logos, posters, and UI/UX, I use tools like Adobe Photoshop, Illustrator, and CorelDRAW to create designs that leave a lasting impression.
       </p>
+      <p>
+        My philosophy? Blend creativity with clarity to tell your story. When I’m not designing, you’ll find me exploring new trends or sketching ideas for the next big project. Ready to bring your vision to life? Let’s make it happen!
+      </p>
+      <a href="gallery.html" class="cta-btn">View My Work</a>
     </section>
-    <div id="gallerySection" class="gallery">
-      <img src="https://raw.githubusercontent.com/Abranddesigner/Mr.Kamal/refs/heads/main/002%20(1).jpeg">
-      <img src="https://raw.githubusercontent.com/Abranddesigner/Mr.Kamal/refs/heads/main/002%20(3).jpeg">
-      <img src="https://raw.githubusercontent.com/Abranddesigner/Mr.Kamal/refs/heads/main/002%20(4).jpeg">
-      <img src="https://raw.githubusercontent.com/Abranddesigner/Mr.Kamal/refs/heads/main/002%20(5).jpeg">
-      <img src="https://raw.githubusercontent.com/Abranddesigner/Mr.Kamal/refs/heads/main/002%20(8).jpeg">
-      <img src="https://raw.githubusercontent.com/Abranddesigner/Mr.Kamal/refs/heads/main/002%20(10).jpeg">
-      <img src="https://raw.githubusercontent.com/Abranddesigner/Mr.Kamal/refs/heads/main/002%20(13).jpeg">
-      <img src="https://raw.githubusercontent.com/Abranddesigner/Mr.Kamal/refs/heads/main/002%20(6).jpeg">
-      <img src="https://raw.githubusercontent.com/Abranddesigner/Mr.Kamal/refs/heads/main/002%20(9).jpeg">
-      <img src="https://raw.githubusercontent.com/Abranddesigner/Mr.Kamal/refs/heads/main/002%20(2).jpeg">
-    </div>
+
+    <!-- Gallery Section -->
+    <section id="gallerySection" class="gallery">
+      <img src="https://raw.githubusercontent.com/Abranddesigner/Mr.Kamal/refs/heads/main/002%20(1).jpeg" alt="Gallery Design 1 by Kamal Meena" loading="lazy" />
+      <img src="https://raw.githubusercontent.com/Abranddesigner/Mr.Kamal/refs/heads/main/002%20(3).jpeg" alt="Gallery Design 2 by Kamal Meena" loading="lazy" />
+      <img src="https://raw.githubusercontent.com/Abranddesigner/Mr.Kamal/refs/heads/main/002%20(4).jpeg" alt="Gallery Design 3 by Kamal Meena" loading="lazy" />
+      <img src="https://raw.githubusercontent.com/Abranddesigner/Mr.Kamal/refs/heads/main/002%20(5).jpeg" alt="Gallery Design 4 by Kamal Meena" loading="lazy" />
+      <img src="https://raw.githubusercontent.com/Abranddesigner/Mr.Kamal/refs/heads/main/002%20(8).jpeg" alt="Gallery Design 5 by Kamal Meena" loading="lazy" />
+      <img src="https://raw.githubusercontent.com/Abranddesigner/Mr.Kamal/refs/heads/main/002%20(10).jpeg" alt="Gallery Design 6 by Kamal Meena" loading="lazy" />
+      <img src="https://raw.githubusercontent.com/Abranddesigner/Mr.Kamal/refs/heads/main/002%20(13).jpeg" alt="Gallery Design 7 by Kamal Meena" loading="lazy" />
+      <img src="https://raw.githubusercontent.com/Abranddesigner/Mr.Kamal/refs/heads/main/002%20(6).jpeg" alt="Gallery Design 8 by Kamal Meena" loading="lazy" />
+      <img src="https://raw.githubusercontent.com/Abranddesigner/Mr.Kamal/refs/heads/main/002%20(9).jpeg" alt="Gallery Design 9 by Kamal Meena" loading="lazy" />
+      <img src="https://raw.githubusercontent.com/Abranddesigner/Mr.Kamal/refs/heads/main/002%20(2).jpeg" alt="Gallery Design 10 by Kamal Meena" loading="lazy" />
+    </section>
+
+    <!-- Contact Icons -->
     <div class="contact-icons">
-      <a href="mailto:kk4380037@gmail.com" title="Email"><i class="fas fa-envelope"></i></a>
-      <a href="tel:+916350262865" title="Call"><i class="fas fa-phone"></i></a>
-      <a href="https://instagram.com/Kamal.prp" title="Instagram" target="_blank"><i class="fab fa-instagram"></i></a>
+      <a href="mailto:kk4380037@gmail.com" title="Email" aria-label="Email Kamal Meena"><i class="fas fa-envelope"></i></a>
+      <a href="tel:+916350262865" title="Call" aria-label="Call Kamal Meena"><i class="fas fa-phone"></i></a>
+      <a href="https://instagram.com/Kamal.prp" title="Instagram" target="_blank" aria-label="Kamal Meena’s Instagram"><i class="fab fa-instagram"></i></a>
     </div>
+
+    <!-- Dark/Light Mode Toggle -->
+    <button class="mode-toggle" onclick="toggleMode()">Switch to Dark Mode</button>
   </main>
+
+  <!-- Footer -->
   <footer>
     © 2025 Kamal Meena. All rights reserved.
   </footer>
+
+  <!-- Image Modal -->
+  <div id="imageModal" class="modal" onclick="closeImage()">
+    <span class="close">×</span>
+    <img class="modal-content" id="modalImg" alt="Selected Design" />
+  </div>
+
   <script>
+    function toggleMenu() {
+      document.getElementById('navbar').classList.toggle('show');
+    }
+
+    function toggleMode() {
+      document.body.classList.toggle('dark-mode');
+      const button = document.querySelector('.mode-toggle');
+      button.textContent = document.body.classList.contains('dark-mode')
+        ? 'Switch to Light Mode'
+        : 'Switch to Dark Mode';
+    }
+
     function showGallery() {
       const gallery = document.getElementById('gallerySection');
       gallery.style.display = gallery.style.display === 'grid' ? 'none' : 'grid';
@@ -283,26 +498,17 @@
         window.scrollTo({ top: gallery.offsetTop - 50, behavior: 'smooth' });
       }
     }
-    function toggleMode() {
-      document.body.classList.toggle('dark-mode');
-    }
-    function toggleMenu() {
-      document.getElementById('navbar').classList.toggle('show');
-    }
+
     function openImage(src) {
-      const modal = document.getElementById("imageModal");
-      const modalImg = document.getElementById("modalImg");
-      modal.style.display = "block";
+      const modal = document.getElementById('imageModal');
+      const modalImg = document.getElementById('modalImg');
+      modal.style.display = 'block';
       modalImg.src = src;
     }
+
     function closeImage() {
-      document.getElementById("imageModal").style.display = "none";
+      document.getElementById('imageModal').style.display = 'none';
     }
   </script>
-  <!-- Image Modal -->
-  <div id="imageModal" class="modal" onclick="closeImage()">
-    <span class="close">&times;</span>
-    <img class="modal-content" id="modalImg">
-  </div>
 </body>
 </html>
