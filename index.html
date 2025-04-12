@@ -582,13 +582,7 @@
                 <img src="client1.jpg" alt="Client 1">
                 <h3>John Doe</h3>
                 <p class="company">ABC Corp</p>
-                <p>"Working with this team has been an amazing experience! They really understood our needs and delivered fantastic results."</p>
-                <div class="points">
-                    <span class="point bold">1</span>
-                    <span class="point">2</span>
-                    <span class="point">3</span>
-                    <span class="point">4</span>
-                    <span class="point">5</span>
+                <p>"Working with this team has been an amazing experience! They really understood our needs and delivered fantastic results."</p
                 </div>
             </div>
 
@@ -597,14 +591,8 @@
                 <img src="client2.jpg" alt="Client 2">
                 <h3>Jane Smith</h3>
                 <p class="company">XYZ Ltd.</p>
-                <p>"The creativity and professionalism displayed in the design were exceptional. We're thrilled with the outcome!"</p>
-                <div class="points">
-                    <span class="point">1</span>
-                    <span class="point bold">2</span>
-                    <span class="point">3</span>
-                    <span class="point">4</span>
-                    <span class="point">5</span>
-                </div>
+                <p>"The creativity and professionalism displayed in the design were exceptional. We're thrilled with the outcome!"</
+            </div>
             </div>
 
             <!-- Testimonial 3 -->
@@ -613,12 +601,6 @@
                 <h3>Michael Brown</h3>
                 <p class="company">Tech Innovations</p>
                 <p>"They exceeded our expectations at every step. Their designs have elevated our brand significantly!"</p>
-                <div class="points">
-                    <span class="point">1</span>
-                    <span class="point">2</span>
-                    <span class="point bold">3</span>
-                    <span class="point">4</span>
-                    <span class="point">5</span>
                 </div>
             </div>
 
@@ -628,12 +610,6 @@
                 <h3>Linda Johnson</h3>
                 <p class="company">Creative Solutions</p>
                 <p>"A fantastic experience! The attention to detail and commitment to excellence are unmatched."</p>
-                <div class="points">
-                    <span class="point">1</span>
-                    <span class="point">2</span>
-                    <span class="point">3</span>
-                    <span class="point bold">4</span>
-                    <span class="point">5</span>
                 </div>
             </div>
 
@@ -643,16 +619,45 @@
                 <h3>David Lee</h3>
                 <p class="company">Global Enterprises</p>
                 <p>"The team's work has truly transformed our brand. We've received endless compliments!"</p>
-                <div class="points">
-                    <span class="point">1</span>
-                    <span class="point">2</span>
-                    <span class="point">3</span>
-                    <span class="point">4</span>
-                    <span class="point bold">5</span>
-                </div>
-            </div>
         </div>
     </div>
+      <div class="dots" id="dots"></div>
+  </div>
+
+  <script>
+    const carousel = document.getElementById("carousel");
+    const dotsContainer = document.getElementById("dots");
+    const testimonials = document.querySelectorAll(".testimonial");
+    let currentIndex = 0;
+
+    // Create dots
+    testimonials.forEach((_, i) => {
+      const dot = document.createElement("span");
+      dot.classList.add("dot");
+      if (i === 0) dot.classList.add("active");
+      dot.addEventListener("click", () => goToSlide(i));
+      dotsContainer.appendChild(dot);
+    });
+
+    const updateDots = () => {
+      document.querySelectorAll(".dot").forEach((d, i) => {
+        d.classList.toggle("active", i === currentIndex);
+      });
+    };
+
+    const goToSlide = (index) => {
+      currentIndex = index;
+      carousel.style.transform = `translateX(-${index * 100}%)`;
+      updateDots();
+    };
+
+    // Optional: auto-slide
+    setInterval(() => {
+      currentIndex = (currentIndex + 1) % testimonials.length;
+      goToSlide(currentIndex);
+    }, 5000);
+  </script>
+
 
     <!-- About Section -->
     <section id="about">
