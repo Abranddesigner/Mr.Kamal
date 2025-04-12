@@ -447,6 +447,212 @@
         <img src="https://raw.githubusercontent.com/ideogram682/Mr.Kamal/refs/heads/main/001%20(5).jpeg" alt="Design 5 by Kamal Meena" loading="lazy" onclick="openImage(this.src)" />
       </div>
     </div>
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Client Testimonials</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Roboto', sans-serif;
+        }
+        body {
+            background-color: #f4f4f4;
+            color: #444;
+            font-size: 16px;
+        }
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 60px 20px;
+        }
+        h2 {
+            text-align: center;
+            font-size: 48px;
+            font-weight: 700;
+            color: #333;
+            margin-bottom: 60px;
+            letter-spacing: 2px;
+        }
+        .testimonials {
+            display: flex;
+            justify-content: flex-start;
+            gap: 30px;
+            overflow-x: scroll;
+            padding-bottom: 20px;
+        }
+        .testimonial {
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+            padding: 30px;
+            width: 250px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            flex-shrink: 0;
+        }
+        .testimonial:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.15);
+        }
+        .testimonial img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 20px;
+            border: 4px solid #ff6f61;
+            transition: transform 0.3s ease;
+        }
+        .testimonial:hover img {
+            transform: scale(1.1);
+        }
+        .testimonial h3 {
+            font-size: 20px;
+            font-weight: 600;
+            color: #333;
+            margin-bottom: 10px;
+        }
+        .testimonial .company {
+            font-size: 14px;
+            color: #7a7a7a;
+            margin-bottom: 15px;
+        }
+        .testimonial p {
+            font-size: 16px;
+            color: #555;
+            font-style: italic;
+            line-height: 1.5;
+        }
+        .testimonial::before {
+            content: "“";
+            font-size: 60px;
+            color: #ff6f61;
+            position: absolute;
+            top: 20px;
+            left: 20px;
+        }
+        .testimonial::after {
+            content: "”";
+            font-size: 60px;
+            color: #ff6f61;
+            position: absolute;
+            bottom: 20px;
+            right: 20px;
+        }
+        .points {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 20px;
+        }
+        .point {
+            font-size: 18px;
+            color: #7a7a7a;
+        }
+        .point.bold {
+            font-weight: bold;
+            color: #333;
+        }
+        @media (max-width: 768px) {
+            .testimonials {
+                flex-direction: column;
+                align-items: center;
+            }
+            .testimonial {
+                width: 80%;
+                margin-bottom: 30px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>What Our Clients Say</h2>
+        <div class="testimonials">
+            <!-- Testimonial 1 -->
+            <div class="testimonial">
+                <img src="client1.jpg" alt="Client 1">
+                <h3>John Doe</h3>
+                <p class="company">ABC Corp</p>
+                <p>"Working with this team has been an amazing experience! They really understood our needs and delivered fantastic results."</p>
+                <div class="points">
+                    <span class="point bold">1</span>
+                    <span class="point">2</span>
+                    <span class="point">3</span>
+                    <span class="point">4</span>
+                    <span class="point">5</span>
+                </div>
+            </div>
+
+            <!-- Testimonial 2 -->
+            <div class="testimonial">
+                <img src="client2.jpg" alt="Client 2">
+                <h3>Jane Smith</h3>
+                <p class="company">XYZ Ltd.</p>
+                <p>"The creativity and professionalism displayed in the design were exceptional. We're thrilled with the outcome!"</p>
+                <div class="points">
+                    <span class="point">1</span>
+                    <span class="point bold">2</span>
+                    <span class="point">3</span>
+                    <span class="point">4</span>
+                    <span class="point">5</span>
+                </div>
+            </div>
+
+            <!-- Testimonial 3 -->
+            <div class="testimonial">
+                <img src="client3.jpg" alt="Client 3">
+                <h3>Michael Brown</h3>
+                <p class="company">Tech Innovations</p>
+                <p>"They exceeded our expectations at every step. Their designs have elevated our brand significantly!"</p>
+                <div class="points">
+                    <span class="point">1</span>
+                    <span class="point">2</span>
+                    <span class="point bold">3</span>
+                    <span class="point">4</span>
+                    <span class="point">5</span>
+                </div>
+            </div>
+
+            <!-- Testimonial 4 -->
+            <div class="testimonial">
+                <img src="client4.jpg" alt="Client 4">
+                <h3>Linda Johnson</h3>
+                <p class="company">Creative Solutions</p>
+                <p>"A fantastic experience! The attention to detail and commitment to excellence are unmatched."</p>
+                <div class="points">
+                    <span class="point">1</span>
+                    <span class="point">2</span>
+                    <span class="point">3</span>
+                    <span class="point bold">4</span>
+                    <span class="point">5</span>
+                </div>
+            </div>
+
+            <!-- Testimonial 5 -->
+            <div class="testimonial">
+                <img src="client5.jpg" alt="Client 5">
+                <h3>David Lee</h3>
+                <p class="company">Global Enterprises</p>
+                <p>"The team's work has truly transformed our brand. We've received endless compliments!"</p>
+                <div class="points">
+                    <span class="point">1</span>
+                    <span class="point">2</span>
+                    <span class="point">3</span>
+                    <span class="point">4</span>
+                    <span class="point bold">5</span>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <!-- About Section -->
     <section id="about">
@@ -530,153 +736,6 @@
       document.getElementById('imageModal').style.display = 'none';
     }
   </script>
-  <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Client Testimonials</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Poppins', sans-serif;
-        }
-        body {
-            background-color: #f3f3f3;
-            color: #333;
-        }
-        .container {
-            width: 90%;
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 60px 20px;
-        }
-        h2 {
-            font-size: 40px;
-            text-align: center;
-            color: #2C3E50;
-            margin-bottom: 50px;
-            font-weight: 700;
-        }
-        .testimonials {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-between;
-            gap: 30px;
-        }
-        .testimonial {
-            width: 30%;
-            background: linear-gradient(145deg, #ffffff, #f9f9f9);
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-            border-radius: 15px;
-            padding: 35px;
-            position: relative;
-            transition: all 0.3s ease;
-            overflow: hidden;
-            text-align: center;
-        }
-        .testimonial:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.1);
-        }
-        .testimonial img {
-            width: 120px;
-            height: 120px;
-            border-radius: 50%;
-            object-fit: cover;
-            margin-bottom: 20px;
-            border: 5px solid #FF6F61;
-            transition: transform 0.3s ease;
-        }
-        .testimonial:hover img {
-            transform: scale(1.1);
-        }
-        .testimonial h3 {
-            font-size: 22px;
-            font-weight: 600;
-            color: #2C3E50;
-            margin-bottom: 10px;
-        }
-        .testimonial .company {
-            font-size: 14px;
-            color: #7F8C8D;
-            margin-bottom: 20px;
-        }
-        .testimonial p {
-            font-size: 16px;
-            color: #555;
-            line-height: 1.5;
-            font-style: italic;
-        }
-        .testimonial::before {
-            content: "“";
-            font-size: 80px;
-            color: #FF6F61;
-            position: absolute;
-            top: -20px;
-            left: 20px;
-        }
-        .testimonial::after {
-            content: "”";
-            font-size: 80px;
-            color: #FF6F61;
-            position: absolute;
-            bottom: -20px;
-            right: 20px;
-        }
-        @media screen and (max-width: 1024px) {
-            .testimonial {
-                width: 45%;
-            }
-        }
-        @media screen and (max-width: 768px) {
-            .testimonial {
-                width: 100%;
-                margin-bottom: 20px;
-            }
-        }
-    </style>
-</head>
-<body>
-
-    <div class="container">
-        <h2>Client Testimonials</h2>
-
-        <div class="testimonials">
-            <div class="testimonial">
-                <img src="client1.jpg" alt="Client 1">
-                <h3>John Doe</h3>
-                <p class="company">ABC Corp</p>
-                <p>"Absolutely thrilled with the results! The team understood our needs and provided outstanding designs that elevated our brand."</p>
-            </div>
-            <div class="testimonial">
-                <img src="client2.jpg" alt="Client 2">
-                <h3>Jane Smith</h3>
-                <p class="company">XYZ Ltd.</p>
-                <p>"The creativity and attention to detail are amazing. Every design element was perfectly aligned with our brand vision!"</p>
-            </div>
-            <div class="testimonial">
-                <img src="client3.jpg" alt="Client 3">
-                <h3>Michael Brown</h3>
-                <p class="company">Tech Innovations</p>
-                <p>"Working with them was a breeze. Their team is professional and they delivered exceptional work on time!"</p>
-            </div>
-            <div class="testimonial">
-                <img src="client4.jpg" alt="Client 4">
-                <h3>Linda Johnson</h3>
-                <p class="company">Creative Solutions</p>
-                <p>"Their attention to detail and creativity is top-notch. We've seen remarkable growth thanks to their designs!"</p>
-            </div>
-            <div class="testimonial">
-                <img src="client5.jpg" alt="Client 5">
-                <h3>David Lee</h3>
-                <p class="company">Global Enterprises</p>
-                <p>"They brought our brand to life with their designs. We’ve received countless compliments and increased engagement!"</p>
-            </div>
-        </div>
-    </div>
 
 </body>
 </html>
