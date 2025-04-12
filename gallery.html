@@ -2,40 +2,146 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Gallery</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Explore Kamal Meena’s design gallery featuring logos, posters, and UI/UX projects." />
+  <title>Kamal Meena’s Design Gallery</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
   <style>
     body {
-      background-color: #000;
-      color: white;
-      font-family: sans-serif;
-      text-align: center;
-      padding: 20px;
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #fff;
+      color: #000;
+      transition: background-color 0.3s, color 0.3s;
     }
 
-    .back-home {
-      display: inline-block;
-      margin-bottom: 20px;
-      padding: 10px 20px;
-      background-color: #ffc107;
-      color: #000;
+    .dark-mode {
+      background-color: #000;
+      color: #fff;
+    }
+
+    header {
+      background-color: #111;
+      padding: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 25px;
+    }
+
+    .logo img {
+      height: 60px;
+      border-radius: 50%;
+    }
+
+    .title {
+      display: flex;
+      flex-direction: column;
+    }
+
+    header h1 {
+      color: #ffc107;
+      margin: 0;
+      font-size: 1.8rem;
+    }
+
+    header .tagline {
+      font-size: 14px;
+      color: white;
+    }
+
+    nav {
+      display: flex;
+      gap: 10px;
+    }
+
+    header nav a {
+      color: white;
+      margin: 0 15px;
       text-decoration: none;
-      border-radius: 5px;
       font-weight: bold;
+      font-size: 1rem;
+      transition: color 0.3s;
+    }
+
+    header nav a:hover,
+    header nav a.active {
+      color: #ffc107;
+    }
+
+    .menu-toggle {
+      display: none;
+      font-size: 24px;
+      cursor: pointer;
+      color: #ffc107;
+      margin-left: auto;
+    }
+
+    @media (max-width: 768px) {
+      .menu-toggle {
+        display: block;
+      }
+      nav {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        margin-top: 10px;
+      }
+      nav.show {
+        display: flex;
+      }
+      header nav a {
+        margin: 10px 0;
+      }
+    }
+
+    .gallery-section {
+      text-align: center;
+      padding: 40px 20px;
+    }
+
+    .gallery-section h2 {
+      color: #ffc107;
+      font-size: 2.2rem;
+      margin-bottom: 10px;
+    }
+
+    .gallery-section .subtitle {
+      font-size: 1.1rem;
+      color: #555;
+      margin-bottom: 30px;
+    }
+
+    .dark-mode .gallery-section .subtitle {
+      color: #ccc;
     }
 
     .gallery-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
       gap: 20px;
+      max-width: 1000px;
+      margin: auto;
       padding: 20px;
     }
 
     .gallery-grid img {
       width: 100%;
+      height: 150px;
+      object-fit: cover;
       border-radius: 10px;
       cursor: pointer;
-      box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
       transition: transform 0.3s;
     }
 
@@ -43,55 +149,156 @@
       transform: scale(1.05);
     }
 
-    /* Popup Styles */
     .popup {
       position: fixed;
       top: 0;
       left: 0;
       width: 100%;
       height: 100%;
-      background: rgba(0,0,0,0.8);
+      background: rgba(0, 0, 0, 0.9);
       display: none;
       justify-content: center;
       align-items: center;
-      z-index: 999;
+      z-index: 9999;
     }
 
     .popup img {
       max-width: 90%;
-      max-height: 90%;
+      max-height: 80%;
       border-radius: 10px;
-      box-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
     }
 
-    .popup:active {
-      display: none;
+    .popup .close {
+      position: absolute;
+      top: 20px;
+      right: 35px;
+      color: #fff;
+      font-size: 40px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: color 0.3s;
+    }
+
+    .popup .close:hover {
+      color: #ffc107;
+    }
+
+    .whatsapp-btn {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background-color: #25d366;
+      color: white;
+      padding: 12px;
+      border-radius: 50px;
+      font-size: 24px;
+      z-index: 1000;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-decoration: none;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+      transition: transform 0.3s;
+    }
+
+    .whatsapp-btn:hover {
+      transform: scale(1.1);
+    }
+
+    .mode-toggle {
+      background: none;
+      border: 2px solid #ffc107;
+      padding: 5px 15px;
+      color: #ffc107;
+      border-radius: 5px;
+      cursor: pointer;
+      margin: 20px auto;
+      display: block;
+      transition: background-color 0.3s, color 0.3s;
+    }
+
+    .mode-toggle:hover {
+      background-color: #ffc107;
+      color: #111;
+    }
+
+    @media (max-width: 600px) {
+      .gallery-grid {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      }
+      .gallery-section h2 {
+        font-size: 1.8rem;
+      }
+      .popup img {
+        max-width: 95%;
+      }
     }
   </style>
 </head>
 <body>
+  <!-- WhatsApp Button -->
+  <a href="https://wa.me/918440048355" class="whatsapp-btn" target="_blank" title="Chat on WhatsApp">
+    <img src="https://img.icons8.com/ios-filled/50/ffffff/whatsapp.png" alt="WhatsApp Icon" style="width: 24px; height: 24px;" />
+  </a>
 
-  <a class="back-home" href="index.html">← Back to Home</a>
-  <h2>📸 My Design Gallery</h2>
+  <!-- Header -->
+  <header>
+    <div class="logo">
+      <img src="https://raw.githubusercontent.com/ideogram682/Mr.Kamal/refs/heads/main/k.png" alt="Kamal Meena Logo" />
+      <div class="title">
+        <h1>Mr. Kamal Designer</h1>
+        <div class="tagline">A Brand Designer</div>
+      </div>
+    </div>
+    <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+    <nav id="navbar">
+      <a href="index.html">Home</a>
+      <a href="https://drive.google.com/file/d/1Os9fcZf-2Zth27v9UccVAAslLQTffVuL/view?usp=drivesdk" target="_blank">Portfolio</a>
+      <a href="https://github.com/ideogram682/Mr.Kamal/blob/main/Mr.%20Kamal%20Resume.jpeg?raw=true" target="_blank">Resume</a>
+      <a href="#" class="active">Gallery</a>
+      <a href="cdr.html">CDR</a>
+    </nav>
+  </header>
 
-  <div class="gallery-grid">
-      <img src="https://raw.githubusercontent.com/Abranddesigner/Mr.Kamal/refs/heads/main/002%20(1).jpeg">
-      <img src="https://raw.githubusercontent.com/Abranddesigner/Mr.Kamal/refs/heads/main/002%20(3).jpeg">
-      <img src="https://raw.githubusercontent.com/Abranddesigner/Mr.Kamal/refs/heads/main/002%20(4).jpeg">
-      <img src="https://raw.githubusercontent.com/Abranddesigner/Mr.Kamal/refs/heads/main/002%20(5).jpeg">
-      <img src="https://raw.githubusercontent.com/Abranddesigner/Mr.Kamal/refs/heads/main/002%20(8).jpeg">
-      <img src="https://raw.githubusercontent.com/Abranddesigner/Mr.Kamal/refs/heads/main/002%20(10).jpeg">
-      <img src="https://raw.githubusercontent.com/Abranddesigner/Mr.Kamal/refs/heads/main/002%20(13).jpeg">
-      <img src="https://raw.githubusercontent.com/Abranddesigner/Mr.Kamal/refs/heads/main/002%20(6).jpeg">
-      <img src="https://raw.githubusercontent.com/Abranddesigner/Mr.Kamal/refs/heads/main/002%20(9).jpeg">
-      <img src="https://raw.githubusercontent.com/Abranddesigner/Mr.Kamal/refs/heads/main/002%20(2).jpeg">
-  </div>
+  <!-- Gallery Section -->
+  <section class="gallery-section">
+    <h2>My Design Gallery</h2>
+    <p class="subtitle">Explore a collection of my creative works</p>
+    <div class="gallery-grid">
+      <img src="https://raw.githubusercontent.com/Abranddesigner/Mr.Kamal/refs/heads/main/002%20(1).jpeg" alt="Design 1 by Kamal Meena" loading="lazy" onclick="openPopup(this.src)" />
+      <img src="https://raw.githubusercontent.com/Abranddesigner/Mr.Kamal/refs/heads/main/002%20(3).jpeg" alt="Design 2 by Kamal Meena" loading="lazy" onclick="openPopup(this.src)" />
+      <img src="https://raw.githubusercontent.com/Abranddesigner/Mr.Kamal/refs/heads/main/002%20(4).jpeg" alt="Design 3 by Kamal Meena" loading="lazy" onclick="openPopup(this.src)" />
+      <img src="https://raw.githubusercontent.com/Abranddesigner/Mr.Kamal/refs/heads/main/002%20(5).jpeg" alt="Design 4 by Kamal Meena" loading="lazy" onclick="openPopup(this.src)" />
+      <img src="https://raw.githubusercontent.com/Abranddesigner/Mr.Kamal/refs/heads/main/002%20(8).jpeg" alt="Design 5 by Kamal Meena" loading="lazy" onclick="openPopup(this.src)" />
+      <img src="https://raw.githubusercontent.com/Abranddesigner/Mr.Kamal/refs/heads/main/002%20(10).jpeg" alt="Design 6 by Kamal Meena" loading="lazy" onclick="openPopup(this.src)" />
+      <img src="https://raw.githubusercontent.com/Abranddesigner/Mr.Kamal/refs/heads/main/002%20(13).jpeg" alt="Design 7 by Kamal Meena" loading="lazy" onclick="openPopup(this.src)" />
+      <img src="https://raw.githubusercontent.com/Abranddesigner/Mr.Kamal/refs/heads/main/002%20(6).jpeg" alt="Design 8 by Kamal Meena" loading="lazy" onclick="openPopup(this.src)" />
+      <img src="https://raw.githubusercontent.com/Abranddesigner/Mr.Kamal/refs/heads/main/002%20(9).jpeg" alt="Design 9 by Kamal Meena" loading="lazy" onclick="openPopup(this.src)" />
+      <img src="https://raw.githubusercontent.com/Abranddesigner/Mr.Kamal/refs/heads/main/002%20(2).jpeg" alt="Design 10 by Kamal Meena" loading="lazy" onclick="openPopup(this.src)" />
+    </div>
+    <button class="mode-toggle" onclick="toggleMode()">Switch to Dark Mode</button>
+  </section>
 
-  <div class="popup" id="popup" onclick="closePopup()">
-    <img id="popupImg" src="" alt="Popup Image">
+  <!-- Popup -->
+  <div class="popup" id="popup">
+    <span class="close" onclick="closePopup()">×</span>
+    <img id="popupImg" src="" alt="Selected Design" />
   </div>
 
   <script>
+    function toggleMenu() {
+      document.getElementById('navbar').classList.toggle('show');
+    }
+
+    function toggleMode() {
+      document.body.classList.toggle('dark-mode');
+      const button = document.querySelector('.mode-toggle');
+      button.textContent = document.body.classList.contains('dark-mode')
+        ? 'Switch to Light Mode'
+        : 'Switch to Dark Mode';
+    }
+
     function openPopup(src) {
       document.getElementById('popupImg').src = src;
       document.getElementById('popup').style.display = 'flex';
@@ -101,6 +308,5 @@
       document.getElementById('popup').style.display = 'none';
     }
   </script>
-
 </body>
 </html>
