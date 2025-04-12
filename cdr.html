@@ -2,118 +2,389 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>CDR Design Files</title>
-  <link rel="stylesheet" href="style.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Buy premium CDR design files for school admissions, election campaigns, and more by Kamal Meena." />
+  <title>Kamal Meena’s Premium CDR Design Files</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
   <style>
     body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #fff;
+      color: #000;
+      transition: background-color 0.3s, color 0.3s;
+    }
+
+    .dark-mode {
       background-color: #000;
       color: #fff;
-      font-family: sans-serif;
-      padding: 30px 15px;
     }
-    h2 {
-      text-align: center;
-      margin-bottom: 30px;
+
+    header {
+      background-color: #111;
+      padding: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 25px;
+    }
+
+    .logo img {
+      height: 60px;
+      border-radius: 50%;
+    }
+
+    .title {
+      display: flex;
+      flex-direction: column;
+    }
+
+    header h1 {
+      color: #ffc107;
+      margin: 0;
+      font-size: 1.8rem;
+    }
+
+    header .tagline {
+      font-size: 14px;
+      color: white;
+    }
+
+    nav {
+      display: flex;
+      gap: 10px;
+    }
+
+    header nav a {
+      color: white;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 1rem;
+      transition: color 0.3s;
+    }
+
+    header nav a:hover,
+    header nav a.active {
       color: #ffc107;
     }
+
+    .menu-toggle {
+      display: none;
+      font-size: 24px;
+      cursor: pointer;
+      color: #ffc107;
+      margin-left: auto;
+    }
+
+    @media (max-width: 768px) {
+      .menu-toggle {
+        display: block;
+      }
+      nav {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        margin-top: 10px;
+      }
+      nav.show {
+        display: flex;
+      }
+      header nav a {
+        margin: 10px 0;
+      }
+    }
+
+    .cdr-section {
+      padding: 40px 15px;
+      text-align: center;
+    }
+
+    .cdr-section h2 {
+      color: #ffc107;
+      font-size: 2.2rem;
+      margin-bottom: 10px;
+    }
+
+    .cdr-section .subtitle {
+      font-size: 1.1rem;
+      color: #555;
+      margin-bottom: 30px;
+    }
+
+    .dark-mode .cdr-section .subtitle {
+      color: #ccc;
+    }
+
     .design-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
       gap: 20px;
       max-width: 1000px;
       margin: auto;
     }
+
     .design-card {
       background-color: #111;
       padding: 20px;
       border-radius: 10px;
       text-align: center;
-      box-shadow: 0 0 8px rgba(255, 255, 255, 0.05);
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
+
+    .dark-mode .design-card {
+      box-shadow: 0 4px 10px rgba(255, 255, 255, 0.1);
+    }
+
+    .design-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+    }
+
+    .dark-mode .design-card:hover {
+      box-shadow: 0 6px 15px rgba(255, 255, 255, 0.2);
+    }
+
     .design-card img {
-      width: 180px;
+      max-width: 100%;
+      height: auto;
       border-radius: 10px;
       margin-bottom: 15px;
     }
+
     .design-card h3 {
+      font-size: 1.2rem;
+      margin-bottom: 10px;
+      color: #fff;
+    }
+
+    .design-card p {
+      font-size: 0.9rem;
+      color: #aaa;
       margin-bottom: 10px;
     }
+
     .price {
       color: #ffc107;
       font-weight: bold;
+      font-size: 1.1rem;
     }
+
     .buy-btn {
       display: inline-block;
       margin-top: 10px;
       padding: 10px 20px;
-      background-color: #25D366;
+      background-color: #25d366;
       color: white;
       border: none;
       border-radius: 5px;
       font-weight: bold;
       cursor: pointer;
+      transition: background-color 0.3s;
     }
+
+    .buy-btn:hover {
+      background-color: #20b356;
+    }
+
     .buy-btn:disabled {
       background-color: #888;
       cursor: not-allowed;
     }
+
+    .whatsapp-btn {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background-color: #25d366;
+      color: white;
+      padding: 12px;
+      border-radius: 50px;
+      font-size: 24px;
+      z-index: 1000;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-decoration: none;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+      transition: transform 0.3s;
+    }
+
+    .whatsapp-btn:hover {
+      transform: scale(1.1);
+    }
+
+    .mode-toggle {
+      background: none;
+      border: 2px solid #ffc107;
+      padding: 5px 15px;
+      color: #ffc107;
+      border-radius: 5px;
+      cursor: pointer;
+      margin: 20px auto;
+      display: block;
+      transition: background-color 0.3s, color 0.3s;
+    }
+
+    .mode-toggle:hover {
+      background-color: #ffc107;
+      color: #111;
+    }
+
+    .payment-info {
+      max-width: 800px;
+      margin: 30px auto;
+      text-align: center;
+      font-size: 0.9rem;
+      color: #555;
+    }
+
+    .dark-mode .payment-info {
+      color: #ccc;
+    }
+
+    .payment-info p {
+      margin: 5px 0;
+    }
+
+    @media (max-width: 600px) {
+      .design-grid {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      }
+      .design-card img {
+        max-width: 80%;
+      }
+      .cdr-section h2 {
+        font-size: 1.8rem;
+      }
+    }
   </style>
 </head>
 <body>
+  <!-- WhatsApp Button -->
+  <a href="https://wa.me/918440048355" class="whatsapp-btn" target="_blank" title="Chat on WhatsApp">
+    <img src="https://img.icons8.com/ios-filled/50/ffffff/whatsapp.png" alt="WhatsApp Icon" style="width: 24px; height: 24px;" />
+  </a>
 
-  <h2>📁 CDR Design Files for Sale</h2>
+  <!-- Header -->
+  <header>
+    <div class="logo">
+      <img src="https://raw.githubusercontent.com/ideogram682/Mr.Kamal/refs/heads/main/k.png" alt="Kamal Meena Logo" />
+      <div class="title">
+        <h1>Mr. Kamal Designer</h1>
+        <div class="tagline">A Brand Designer</div>
+      </div>
+    </div>
+    <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+    <nav id="navbar">
+      <a href="index.html">Home</a>
+      <a href="https://drive.google.com/file/d/1Os9fcZf-2Zth27v9UccVAAslLQTffVuL/view?usp=drivesdk" target="_blank">Portfolio</a>
+      <a href="https://github.com/ideogram682/Mr.Kamal/blob/main/Mr.%20Kamal%20Resume.jpeg?raw=true" target="_blank">Resume</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="#" class="active">CDR</a>
+    </nav>
+  </header>
 
-  <div class="design-grid">
+  <!-- CDR Section -->
+  <section class="cdr-section">
+    <h2>Premium CDR Design Files</h2>
+    <p class="subtitle">Editable CorelDRAW files for professional use</p>
 
-    <!-- School Admission Card -->
-    <div class="design-card">
-      <img src="https://raw.githubusercontent.com/Abranddesigner/Mr.Kamal/refs/heads/main/QR%20Code.jpg" alt="QR Code">
-      <h3>School Admission Design</h3>
-      <p class="price">Price: ₹499</p>
-      <p>UPI: 8440048355@ybl</p>
-      <button class="buy-btn" onclick="startTimer(this, 'SCHOOL ADMISSION')">Buy Now</button>
+    <div class="design-grid">
+      <!-- School Admission Card -->
+      <div class="design-card">
+        <img src="https://via.placeholder.com/200x150?text=School+Admission+Design" alt="School Admission CDR Design by Kamal Meena" loading="lazy" />
+        <h3>School Admission Design</h3>
+        <p>Fully editable CDR file for school admission posters with vibrant colors and modern layout.</p>
+        <p class="price">Price: ₹499</p>
+        <button class="buy-btn" onclick="confirmPurchase(this, 'SCHOOL ADMISSION', 499)" aria-label="Buy School Admission Design for ₹499">Buy Now</button>
+      </div>
+
+      <!-- Politician Election Card -->
+      <div class="design-card">
+        <img src="https://via.placeholder.com/200x150?text=Election+Design" alt="Politician Election CDR Design by Kamal Meena" loading="lazy" />
+        <h3>Politician Election Design</h3>
+        <p>Customizable CDR file for election campaign banners with bold typography and dynamic visuals.</p>
+        <p class="price">Price: ₹999</p>
+        <button class="buy-btn" onclick="confirmPurchase(this, 'ELECTION', 999)" aria-label="Buy Politician Election Design for ₹999">Buy Now</button>
+      </div>
+
+      <!-- Placeholder for Future Design -->
+      <div class="design-card">
+        <img src="https://via.placeholder.com/200x150?text=Coming+Soon" alt="Upcoming CDR Design by Kamal Meena" loading="lazy" />
+        <h3>Coming Soon</h3>
+        <p>Stay tuned for more premium CDR designs!</p>
+        <p class="price">Price: TBD</p>
+        <button class="buy-btn" disabled aria-label="Coming Soon - Not Available Yet">Notify Me</button>
+      </div>
     </div>
 
-    <!-- Politician Election Card -->
-    <div class="design-card">
-      <img src="https://raw.githubusercontent.com/Abranddesigner/Mr.Kamal/refs/heads/main/QR%20Code.jpg" alt="QR Code">
-      <h3>Politician Election Design</h3>
-      <p class="price">Price: ₹999</p>
-      <p>UPI: 8440048355@ybl</p>
-      <button class="buy-btn" onclick="startTimer(this, 'ELECTION')">Buy Now</button>
+    <!-- Payment Instructions -->
+    <div class="payment-info">
+      <p><strong>How to Buy:</strong> Click "Buy Now," pay via UPI (8440048355@ybl), and send the payment screenshot to WhatsApp (+918440048355).</p>
+      <p>You’ll receive the CDR file within 24 hours after verification.</p>
+      <p><strong>Note:</strong> All files are editable in CorelDRAW and include commercial use rights.</p>
     </div>
 
-  </div>
+    <!-- Dark/Light Mode Toggle -->
+    <button class="mode-toggle" onclick="toggleMode()">Switch to Dark Mode</button>
+  </section>
 
-<script>
-  function startTimer(button, type) {
-    let amount = (type === "ELECTION") ? 999 : 499;
-    const upiLink = `upi://pay?pa=8440048355@ybl&pn=Kamal&am=${amount}&cu=INR`;
-    window.location.href = upiLink;
+  <script>
+    function toggleMenu() {
+      document.getElementById('navbar').classList.toggle('show');
+    }
 
-    let timeLeft = 2 * 60;
-    button.disabled = true;
+    function toggleMode() {
+      document.body.classList.toggle('dark-mode');
+      const button = document.querySelector('.mode-toggle');
+      button.textContent = document.body.classList.contains('dark-mode')
+        ? 'Switch to Light Mode'
+        : 'Switch to Dark Mode';
+    }
 
-    const timer = setInterval(() => {
-      const minutes = Math.floor(timeLeft / 60);
-      const seconds = timeLeft % 60;
-      button.textContent = `⏳ ${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
-      timeLeft--;
+    function confirmPurchase(button, type, amount) {
+      if (confirm(`Proceed to pay ₹${amount} for ${type} CDR file?`)) {
+        const upiLink = `upi://pay?pa=8440048355@ybl&pn=Kamal&am=${amount}&cu=INR`;
+        window.location.href = upiLink;
 
-      if (timeLeft < 0) {
-        clearInterval(timer);
-        button.textContent = "📷 Send Screenshot on WhatsApp";
-        button.disabled = false;
-        button.onclick = function () {
-          const msg = `Hello, I have paid for the ${type} CDR file. Please check screenshot.`;
-          const link = `https://wa.me/918440048355?text=${encodeURIComponent(msg)}`;
-          window.open(link, "_blank");
-        };
+        let timeLeft = 5 * 60; // 5 minutes
+        button.disabled = true;
+
+        const timer = setInterval(() => {
+          const minutes = Math.floor(timeLeft / 60);
+          const seconds = timeLeft % 60;
+          button.textContent = `⏳ ${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
+          timeLeft--;
+
+          if (timeLeft < 0) {
+            clearInterval(timer);
+            button.textContent = 'Buy Now';
+            button.disabled = false;
+            const whatsappBtn = document.createElement('a');
+            whatsappBtn.className = 'buy-btn';
+            whatsappBtn.href = `https://wa.me/918440048355?text=${encodeURIComponent(
+              `Hello, I have paid for the ${type} CDR file. Please check screenshot.`
+            )}`;
+            whatsappBtn.target = '_blank';
+            whatsappBtn.textContent = 'Send Screenshot';
+            whatsappBtn.style.marginLeft = '10px';
+            button.parentNode.appendChild(whatsappBtn);
+          }
+        }, 1000);
       }
-    }, 1000);
-  }
-</script>
-
+    }
+  </script>
 </body>
 </html>
