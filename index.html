@@ -629,10 +629,164 @@
     const dotsContainer = document.getElementById("dots");
     const testimonials = document.querySelectorAll(".testimonial");
     let currentIndex = 0;
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Client Testimonials</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Roboto', sans-serif;
+    }
+    body {
+      background-color: #f4f4f4;
+      color: #444;
+      font-size: 16px;
+    }
+    .container {
+      width: 90%;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 60px 20px;
+      text-align: center;
+    }
+    h2 {
+      font-size: 48px;
+      font-weight: 700;
+      color: #333;
+      margin-bottom: 40px;
+    }
+    .carousel-wrapper {
+      position: relative;
+      overflow: hidden;
+    }
+    .testimonials {
+      display: flex;
+      transition: transform 0.5s ease-in-out;
+      width: 100%;
+    }
+    .testimonial {
+      min-width: 100%;
+      background-color: #fff;
+      border-radius: 10px;
+      box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+      padding: 30px;
+      text-align: center;
+    }
+    .testimonial img {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 4px solid #ff6f61;
+      margin-bottom: 20px;
+    }
+    .testimonial h3 {
+      font-size: 20px;
+      font-weight: 600;
+      color: #333;
+      margin-bottom: 10px;
+    }
+    .testimonial .company {
+      font-size: 14px;
+      color: #7a7a7a;
+      margin-bottom: 15px;
+    }
+    .testimonial p {
+      font-size: 16px;
+      color: #555;
+      font-style: italic;
+      line-height: 1.5;
+    }
+    .testimonial::before,
+    .testimonial::after {
+      font-size: 60px;
+      color: #ff6f61;
+      position: absolute;
+    }
+    .testimonial::before {
+      content: "“";
+      top: 20px;
+      left: 20px;
+    }
+    .testimonial::after {
+      content: "”";
+      bottom: 20px;
+      right: 20px;
+    }
+
+    .dots {
+      display: flex;
+      justify-content: center;
+      margin-top: 20px;
+      gap: 10px;
+    }
+    .dot {
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      background-color: #bbb;
+      transition: background-color 0.3s ease;
+      cursor: pointer;
+    }
+    .dot.active {
+      background-color: #333;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>What Our Clients Say</h2>
+    <div class="carousel-wrapper">
+      <div class="testimonials" id="carousel">
+        <div class="testimonial">
+          <img src="client1.jpg" alt="Client 1"/>
+          <h3>John Doe</h3>
+          <p class="company">ABC Corp</p>
+          <p>"Working with this team has been an amazing experience! They really understood our needs and delivered fantastic results."</p>
+        </div>
+        <div class="testimonial">
+          <img src="client2.jpg" alt="Client 2"/>
+          <h3>Jane Smith</h3>
+          <p class="company">XYZ Ltd.</p>
+          <p>"The creativity and professionalism displayed in the design were exceptional. We're thrilled with the outcome!"</p>
+        </div>
+        <div class="testimonial">
+          <img src="client3.jpg" alt="Client 3"/>
+          <h3>Michael Brown</h3>
+          <p class="company">Tech Innovations</p>
+          <p>"They exceeded our expectations at every step. Their designs have elevated our brand significantly!"</p>
+        </div>
+        <div class="testimonial">
+          <img src="client4.jpg" alt="Client 4"/>
+          <h3>Linda Johnson</h3>
+          <p class="company">Creative Solutions</p>
+          <p>"A fantastic experience! The attention to detail and commitment to excellence are unmatched."</p>
+        </div>
+        <div class="testimonial">
+          <img src="client5.jpg" alt="Client 5"/>
+          <h3>David Lee</h3>
+          <p class="company">Global Enterprises</p>
+          <p>"The team's work has truly transformed our brand. We've received endless compliments!"</p>
+        </div>
+      </div>
+    </div>
+    <div class="dots" id="dots"></div>
+  </div>
+
+  <script>
+    const carousel = document.getElementById("carousel");
+    const dotsContainer = document.getElementById("dots");
+    const testimonials = document.querySelectorAll(".testimonial");
+    let currentIndex = 0;
 
     // Create dots
     testimonials.forEach((_, i) => {
-      const dot = document.createElement("span");
+      const dot = document.createElement("div");
       dot.classList.add("dot");
       if (i === 0) dot.classList.add("active");
       dot.addEventListener("click", () => goToSlide(i));
@@ -651,7 +805,7 @@
       updateDots();
     };
 
-    // Optional: auto-slide
+    // Auto slide
     setInterval(() => {
       currentIndex = (currentIndex + 1) % testimonials.length;
       goToSlide(currentIndex);
