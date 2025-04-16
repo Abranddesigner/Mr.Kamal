@@ -41,40 +41,42 @@
     </div>
     <div class="menu-toggle" onclick="toggleMenu()">☰</div>
     <nav id="navbar">
-      <a href="#" class="active">Home</a>
+      <a href="#home" class="active">Home</a>
+      <a href="#about">About</a>
+      <a href="#gallery">Gallery</a>
+      <a href="#cdr">CDR</a>
       <a href="https://drive.google.com/file/d/1Os9fcZf-2Zth27v9UccVAAslLQTffVuL/view?usp=drivesdk" target="_blank">Portfolio</a>
       <a href="https://github.com/ideogram682/Mr.Kamal/blob/main/Mr.%20Kamal%20Resume.jpeg?raw=true" target="_blank">Resume</a>
-      <a href="gallery.html">Gallery</a>
-      <a href="cdr.html">CDR</a>
     </nav>
   </header>
 
   <!-- Main Content -->
-  <main class="section">
-    <div class="welcome">
-      <h2>Welcome to My World of Design</h2>
-      <p>Transforming your vision into stunning visuals.</p>
-      <p>Creativity meets clarity in every project.</p>
-      <p>Let’s create something extraordinary together!</p>
-      <a href="https://wa.me/918440048355?text=Hi%20Kamal%2C%20I%20want%20to%20hire%20you%20for%20a%20design%20project" class="btn btn-primary" target="_blank">Hire Me</a>
-    </div>
-
-    <!-- Recent Designs Slider -->
-    <h3>Recent Designs</h3>
-    <div class="slider">
-      <div class="slider-track">
-        <img src="https://raw.githubusercontent.com/ideogram682/Mr.Kamal/refs/heads/main/001%20(1).jpeg" alt="Design 1 by Kamal Meena" loading="lazy" onclick="openImage(this.src)" />
-        <img src="https://raw.githubusercontent.com/ideogram682/Mr.Kamal/refs/heads/main/001%20(2).jpeg" alt="Design 2 by Kamal Meena" loading="lazy" onclick="openImage(this.src)" />
-        <img src="https://raw.githubusercontent.com/ideogram682/Mr.Kamal/refs/heads/main/001%20(3).jpeg" alt="Design 3 by Kamal Meena" loading="lazy" onclick="openImage(this.src)" />
-        <img src="https://raw.githubusercontent.com/ideogram682/Mr.Kamal/refs/heads/main/001%20(4).jpeg" alt="Design 4 by Kamal Meena" loading="lazy" onclick="openImage(this.src)" />
-        <img src="https://raw.githubusercontent.com/ideogram682/Mr.Kamal/refs/heads/main/001%20(5).jpeg" alt="Design 5 by Kamal Meena" loading="lazy" onclick="openImage(this.src)" />
+  <main>
+    <!-- Home Section -->
+    <section id="home" class="section">
+      <div class="welcome">
+        <h2>Welcome to My World of Design</h2>
+        <p>Transforming your vision into stunning visuals.</p>
+        <p>Creativity meets clarity in every project.</p>
+        <p>Let’s create something extraordinary together!</p>
+        <a href="https://wa.me/918440048355?text=Hi%20Kamal%2C%20I%20want%20to%20hire%20you%20for%20a%20design%20project" class="btn btn-primary" target="_blank">Hire Me</a>
       </div>
-    </div>
 
-    <!-- Testimonials -->
-    <div class="container">
-      <h2>What Our Clients Say</h2>
+      <!-- Recent Designs Slider -->
+      <h3>Recent Designs</h3>
+      <div class="slider">
+        <div class="slider-track">
+          <img src="https://raw.githubusercontent.com/ideogram682/Mr.Kamal/refs/heads/main/001%20(1).jpeg" alt="Design 1 by Kamal Meena" loading="lazy" onclick="openPopup(this.src)" />
+          <img src="https://raw.githubusercontent.com/ideogram682/Mr.Kamal/refs/heads/main/001%20(2).jpeg" alt="Design 2 by Kamal Meena" loading="lazy" onclick="openPopup(this.src)" />
+          <img src="https://raw.githubusercontent.com/ideogram682/Mr.Kamal/refs/heads/main/001%20(3).jpeg" alt="Design 3 by Kamal Meena" loading="lazy" onclick="openPopup(this.src)" />
+          <img src="https://raw.githubusercontent.com/ideogram682/Mr.Kamal/refs/heads/main/001%20(4).jpeg" alt="Design 4 by Kamal Meena" loading="lazy" onclick="openPopup(this.src)" />
+          <img src="https://raw.githubusercontent.com/ideogram682/Mr.Kamal/refs/heads/main/001%20(5).jpeg" alt="Design 5 by Kamal Meena" loading="lazy" onclick="openPopup(this.src)" />
+        </div>
+      </div>
+
+      <!-- Testimonials -->
       <div class="carousel-wrapper">
+        <h2>What Our Clients Say</h2>
         <div class="testimonials" id="carousel">
           <div class="testimonial">
             <img src="https://via.placeholder.com/100?text=Client1" alt="John Doe" />
@@ -95,27 +97,66 @@
             <p>"Elevated our brand with stunning visuals."</p>
           </div>
         </div>
+        <div class="dots" id="dots"></div>
       </div>
-      <div class="dots" id="dots"></div>
-    </div>
+    </section>
 
     <!-- About Section -->
-    <section id="about" class="section">
+    <section id="about" class="section about">
       <h2>About Me</h2>
       <p class="subtitle">Crafting Brands with Creativity & Precision</p>
-      <img src="https://raw.githubusercontent.com/Abranddesigner/Mr.Kamal/refs/heads/main/Mrkamalmeena.jpg" alt="Kamal Meena Profile Picture" />
-      <p>I’m Kamal Meena, a brand designer based in Rajasthan, India. Since starting my journey in 2019, I’ve been passionate about turning ideas into unique visuals that connect and inspire.</p>
-      <p>Specializing in logos, posters, I use tools like Adobe Photoshop and CorelDRAW to create designs that leave a lasting impression. Ready to bring your vision to life? Let’s make it happen!</p>
-      <a href="gallery.html" class="btn btn-primary">View My Work</a>
+      <div class="about-content">
+        <img src="https://raw.githubusercontent.com/Abranddesigner/Mr.Kamal/refs/heads/main/Mrkamalmeena.jpg" alt="Kamal Meena Profile Picture" class="about-img" />
+        <div class="bio">
+          <p><strong>Name:</strong> Kamal Meena</p>
+          <p><strong>DOB:</strong> 15 March 2000</p>
+          <p><strong>Address:</strong> Parasrampura, Teh Nawalgarh, Dist. Jhunjhunu, Rajasthan</p>
+          <p>I started my design career in 2019 and have since worked on a wide range of creative projects.</p>
+          <p>My passion lies in transforming ideas into powerful visual identities that connect with people.</p>
+          <p>From logos to social media graphics, I focus on building a brand's unique presence.</p>
+          <a href="#gallery" class="btn btn-primary">View My Work</a>
+        </div>
+      </div>
     </section>
 
     <!-- Gallery Section -->
-    <section id="gallerySection" class="section portfolio-grid">
-      <h2>Gallery</h2>
-      <img src="https://raw.githubusercontent.com/Abranddesigner/Mr.Kamal/refs/heads/main/002%20(1).jpeg" alt="Gallery Design 1 by Kamal Meena" loading="lazy" onclick="openImage(this.src)" />
-      <img src="https://raw.githubusercontent.com/Abranddesigner/Mr.Kamal/refs/heads/main/002%20(3).jpeg" alt="Gallery Design 2 by Kamal Meena" loading="lazy" onclick="openImage(this.src)" />
-      <img src="https://raw.githubusercontent.com/Abranddesigner/Mr.Kamal/refs/heads/main/002%20(4).jpeg" alt="Gallery Design 3 by Kamal Meena" loading="lazy" onclick="openImage(this.src)" />
-      <img src="https://raw.githubusercontent.com/Abranddesigner/Mr.Kamal/refs/heads/main/002%20(5).jpeg" alt="Gallery Design 4 by Kamal Meena" loading="lazy" onclick="openImage(this.src)" />
+    <section id="gallery" class="section portfolio-grid">
+      <h2>My Design Gallery</h2>
+      <p class="subtitle">Explore a collection of my creative works</p>
+      <div class="gallery-grid">
+        <img src="https://raw.githubusercontent.com/Abranddesigner/Mr.Kamal/refs/heads/main/002%20(1).jpeg" alt="Design 1 by Kamal Meena" loading="lazy" onclick="openPopup(this.src)" />
+        <img src="https://raw.githubusercontent.com/Abranddesigner/Mr.Kamal/refs/heads/main/002%20(3).jpeg" alt="Design 2 by Kamal Meena" loading="lazy" onclick="openPopup(this.src)" />
+        <img src="https://raw.githubusercontent.com/Abranddesigner/Mr.Kamal/refs/heads/main/002%20(4).jpeg" alt="Design 3 by Kamal Meena" loading="lazy" onclick="openPopup(this.src)" />
+        <img src="https://raw.githubusercontent.com/Abranddesigner/Mr.Kamal/refs/heads/main/002%20(5).jpeg" alt="Design 4 by Kamal Meena" loading="lazy" onclick="openPopup(this.src)" />
+        <img src="https://raw.githubusercontent.com/Abranddesigner/Mr.Kamal/refs/heads/main/002%20(8).jpeg" alt="Design 5 by Kamal Meena" loading="lazy" onclick="openPopup(this.src)" />
+        <img src="https://raw.githubusercontent.com/Abranddesigner/Mr.Kamal/refs/heads/main/002%20(10).jpeg" alt="Design 6 by Kamal Meena" loading="lazy" onclick="openPopup(this.src)" />
+      </div>
+    </section>
+
+    <!-- CDR Section -->
+    <section id="cdr" class="section">
+      <h2>Premium CDR Design Files</h2>
+      <p class="subtitle">Editable CorelDRAW files for professional use</p>
+      <div class="portfolio-grid">
+        <div class="portfolio-card">
+          <img src="https://raw.githubusercontent.com/Abranddesigner/Mr.Kamal/refs/heads/main/002%20(1).jpeg" alt="School Admission CDR Design" loading="lazy" />
+          <h3>School Admission Design</h3>
+          <p>Fully editable CDR file for school admission posters.</p>
+          <p class="price">Price: ₹499</p>
+          <a href="https://wa.me/918440048355?text=I%20want%20to%20buy%20School%20Admission%20CDR%20for%20₹499" class="btn btn-primary">Buy Now</a>
+        </div>
+        <div class="portfolio-card">
+          <img src="https://raw.githubusercontent.com/Abranddesigner/Mr.Kamal/refs/heads/main/002%20(2).jpeg" alt="Election CDR Design" loading="lazy" />
+          <h3>Politician Election Design</h3>
+          <p>Customizable CDR file for election campaign banners.</p>
+          <p class="price">Price: ₹999</p>
+          <a href="https://wa.me/918440048355?text=I%20want%20to%20buy%20Election%20CDR%20for%20₹999" class="btn btn-primary">Buy Now</a>
+        </div>
+      </div>
+      <div class="payment-info">
+        <p><strong>How to Buy:</strong> Click "Buy Now," pay via UPI (8440048355@ybl), and send the payment screenshot to WhatsApp (+918440048355).</p>
+        <p>You’ll receive the CDR file within 24 hours after verification.</p>
+      </div>
     </section>
   </main>
 
@@ -126,56 +167,16 @@
       <a href="tel:+916350262865" title="Call" aria-label="Call Kamal Meena"><i class="fas fa-phone"></i></a>
       <a href="https://instagram.com/Kamal.prp" title="Instagram" target="_blank" aria-label="Kamal Meena’s Instagram"><i class="fab fa-instagram"></i></a>
     </div>
+    <button class="mode-toggle" onclick="toggleMode()">Switch to Dark Mode</button>
     <p>© 2025 Kamal Meena. All rights reserved.</p>
   </footer>
 
-  <!-- Image Modal -->
-  <div id="imageModal" class="modal" onclick="closeImage()">
-    <span class="close">×</span>
-    <img class="modal-content" id="modalImg" alt="Selected Design" />
+  <!-- Popup -->
+  <div class="popup" id="popup">
+    <span class="close" onclick="closePopup()">×</span>
+    <img id="popupImg" src="" alt="Selected Design" />
   </div>
 
-  <script>
-    function toggleMenu() {
-      document.getElementById('navbar').classList.toggle('show');
-    }
-    function toggleMode() {
-      document.body.classList.toggle('dark-mode');
-      document.querySelector('.mode-toggle').textContent = document.body.classList.contains('dark-mode') ? 'Switch to Light Mode' : 'Switch to Dark Mode';
-    }
-    function openImage(src) {
-      const modal = document.getElementById('imageModal');
-      const modalImg = document.getElementById('modalImg');
-      modal.style.display = 'block';
-      modalImg.src = src;
-    }
-    function closeImage() {
-      document.getElementById('imageModal').style.display = 'none';
-    }
-    function scrollToTop() {
-      window.scrollTo({ top: 0, behavior: 'smooth' });
-    }
-    window.addEventListener('scroll', () => {
-      document.querySelector('.back-to-top').classList.toggle('show', window.scrollY > 300);
-    });
-    const carousel = document.getElementById("carousel");
-    const testimonials = document.querySelectorAll(".testimonial");
-    const dotsContainer = document.getElementById("dots");
-    testimonials.forEach((_, i) => {
-      const dot = document.createElement("div");
-      dot.classList.add("dot");
-      if (i === 0) dot.classList.add("active");
-      dot.addEventListener("click", () => {
-        carousel.scrollTo({ left: testimonials[i].offsetLeft, behavior: 'smooth' });
-      });
-      dotsContainer.appendChild(dot);
-    });
-    carousel.addEventListener("scroll", () => {
-      const scrollLeft = carousel.scrollLeft;
-      const width = testimonials[0].offsetWidth + 20;
-      const index = Math.round(scrollLeft / width);
-      document.querySelectorAll(".dot").forEach((d, i) => d.classList.toggle("active", i === index));
-    });
-  </script>
+  <script src="scripts.js"></script>
 </body>
 </html>
