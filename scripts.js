@@ -66,4 +66,27 @@ document.addEventListener('DOMContentLoaded', () => {
       link.classList.remove('active');
     }
   });
+
+  // Gallery Filter
+  const filterButtons = document.querySelectorAll('.filter-btn');
+  const masonryItems = document.querySelectorAll('.masonry-item');
+  if (filterButtons.length && masonryItems.length) {
+    filterButtons.forEach(button => {
+      button.addEventListener('click', () => {
+        // Update active button
+        filterButtons.forEach(btn => btn.classList.remove('active'));
+        button.classList.add('active');
+        
+        // Filter items
+        const filter = button.getAttribute('data-filter');
+        masonryItems.forEach(item => {
+          if (filter === 'all' || item.classList.contains(filter)) {
+            item.classList.remove('hidden');
+          } else {
+            item.classList.add('hidden');
+          }
+        });
+      });
+    });
+  }
 });
