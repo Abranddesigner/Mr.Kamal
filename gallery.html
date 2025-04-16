@@ -53,16 +53,42 @@
   <!-- Main Content -->
   <main>
     <!-- Gallery Section -->
-    <section id="gallery" class="section portfolio-grid">
+    <section id="gallery" class="section">
       <h2>My Design Gallery</h2>
       <p class="subtitle">Explore a collection of my creative works</p>
-      <div class="gallery-grid">
-        <img src="https://raw.githubusercontent.com/Abranddesigner/Mr.Kamal/refs/heads/main/002%20(1).jpeg" alt="Design 1 by Kamal Meena" loading="lazy" onclick="openPopup(this.src)" />
-        <img src="https://raw.githubusercontent.com/Abranddesigner/Mr.Kamal/refs/heads/main/002%20(3).jpeg" alt="Design 2 by Kamal Meena" loading="lazy" onclick="openPopup(this.src)" />
-        <img src="https://raw.githubusercontent.com/Abranddesigner/Mr.Kamal/refs/heads/main/002%20(4).jpeg" alt="Design 3 by Kamal Meena" loading="lazy" onclick="openPopup(this.src)" />
-        <img src="https://raw.githubusercontent.com/Abranddesigner/Mr.Kamal/refs/heads/main/002%20(5).jpeg" alt="Design 4 by Kamal Meena" loading="lazy" onclick="openPopup(this.src)" />
-        <img src="https://raw.githubusercontent.com/Abranddesigner/Mr.Kamal/refs/heads/main/002%20(8).jpeg" alt="Design 5 by Kamal Meena" loading="lazy" onclick="openPopup(this.src)" />
-        <img src="https://raw.githubusercontent.com/Abranddesigner/Mr.Kamal/refs/heads/main/002%20(10).jpeg" alt="Design 6 by Kamal Meena" loading="lazy" onclick="openPopup(this.src)" />
+      <!-- Filter Buttons -->
+      <div class="filter-buttons">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="sports">Sports</button>
+        <button class="filter-btn" data-filter="logos">Logos</button>
+        <button class="filter-btn" data-filter="banners">Banners</button>
+      </div>
+      <!-- Masonry Grid -->
+      <div class="masonry-grid">
+        <div class="masonry-item sports">
+          <img src="https://raw.githubusercontent.com/Abranddesigner/Mr.Kamal/refs/heads/main/002%20(1).jpeg" alt="Sports Design 1" loading="lazy" onclick="openPopup(this.src)" />
+          <div class="overlay">Sports Design 1</div>
+        </div>
+        <div class="masonry-item logos">
+          <img src="https://raw.githubusercontent.com/Abranddesigner/Mr.Kamal/refs/heads/main/002%20(3).jpeg" alt="Logo Design 1" loading="lazy" onclick="openPopup(this.src)" />
+          <div class="overlay">Logo Design 1</div>
+        </div>
+        <div class="masonry-item banners">
+          <img src="https://raw.githubusercontent.com/Abranddesigner/Mr.Kamal/refs/heads/main/002%20(4).jpeg" alt="Banner Design 1" loading="lazy" onclick="openPopup(this.src)" />
+          <div class="overlay">Banner Design 1</div>
+        </div>
+        <div class="masonry-item sports">
+          <img src="https://raw.githubusercontent.com/Abranddesigner/Mr.Kamal/refs/heads/main/002%20(5).jpeg" alt="Sports Design 2" loading="lazy" onclick="openPopup(this.src)" />
+          <div class="overlay">Sports Design 2</div>
+        </div>
+        <div class="masonry-item logos">
+          <img src="https://raw.githubusercontent.com/Abranddesigner/Mr.Kamal/refs/heads/main/002%20(8).jpeg" alt="Logo Design 2" loading="lazy" onclick="openPopup(this.src)" />
+          <div class="overlay">Logo Design 2</div>
+        </div>
+        <div class="masonry-item banners">
+          <img src="https://raw.githubusercontent.com/Abranddesigner/Mr.Kamal/refs/heads/main/002%20(10).jpeg" alt="Banner Design 2" loading="lazy" onclick="openPopup(this.src)" />
+          <div class="overlay">Banner Design 2</div>
+        </div>
       </div>
     </section>
   </main>
