@@ -33,6 +33,7 @@ window.addEventListener('scroll', () => {
 });
 
 document.addEventListener('DOMContentLoaded', () => {
+  // Carousel Logic
   const carousel = document.getElementById('carousel');
   if (carousel) {
     const testimonials = document.querySelectorAll('.testimonial');
@@ -53,4 +54,16 @@ document.addEventListener('DOMContentLoaded', () => {
       document.querySelectorAll('.dot').forEach((d, i) => d.classList.toggle('active', i === index));
     });
   }
+
+  // Active Nav Link
+  const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+  const navLinks = document.querySelectorAll('#navbar a');
+  navLinks.forEach(link => {
+    const href = link.getAttribute('href');
+    if (href === currentPage || (href.includes('#') && currentPage === 'index.html')) {
+      link.classList.add('active');
+    } else {
+      link.classList.remove('active');
+    }
+  });
 });
