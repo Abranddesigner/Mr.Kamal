@@ -211,6 +211,22 @@ nav a.active {
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 20px;
 }
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+.gallery-grid img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+.gallery-grid img:hover {
+  transform: scale(1.05);
+}
 .portfolio-card {
   background-color: #f8fafc;
   border-radius: 10px;
@@ -426,7 +442,8 @@ footer {
   }
 }
 @media (max-width: 600px) {
-  .portfolio-grid {
+  .portfolio-grid,
+  .gallery-grid {
     grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
   }
   .section h2 {
