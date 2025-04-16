@@ -66,41 +66,4 @@ document.addEventListener('DOMContentLoaded', () => {
       link.classList.remove('active');
     }
   });
-
-  // Gallery Pagination
-  const galleryCards = document.getElementById('galleryCards');
-  if (galleryCards) {
-    const cards = document.querySelectorAll('.gallery-card');
-    const itemsPerPage = 6;
-    let currentPage = 1;
-
-    function showPage(page) {
-      cards.forEach((card, index) => {
-        card.classList.toggle('hidden', 
-          index < (page - 1) * itemsPerPage || index >= page * itemsPerPage
-        );
-      });
-
-      const prevButton = document.getElementById('prevPage');
-      const nextButton = document.getElementById('nextPage');
-      prevButton.disabled = page === 1;
-      nextButton.disabled = page * itemsPerPage >= cards.length;
-    }
-
-    document.getElementById('prevPage').addEventListener('click', () => {
-      if (currentPage > 1) {
-        currentPage--;
-        showPage(currentPage);
-      }
-    });
-
-    document.getElementById('nextPage').addEventListener('click', () => {
-      if (currentPage * itemsPerPage < cards.length) {
-        currentPage++;
-        showPage(currentPage);
-      }
-    });
-
-    showPage(currentPage);
-  }
 });
