@@ -89,7 +89,7 @@ header {
 }
 .dark-mode header {
     background: rgba(0, 0, 0, 0.20); /* Slightly darker overlay for dark mode */
-    background-image: url('https://raw.githubusercontent.com/Abranddesigner/Mr.Kamal/refs/heads/main/Header...jpg'); /* Same image for dark mode */
+    background-image: url('https://raw.githubusercontent.com/Abranddesigner/Mr.Kamal/refs/heads/main/Header2.jpg'); /* Same image for dark mode */
     background-size: cover;
     background-position: center;
     backdrop-filter: blur(20px);
