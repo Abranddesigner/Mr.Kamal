@@ -6,14 +6,14 @@
 }
 body {
   font-family: 'Poppins', sans-serif;
-  background-color: #ffffff;
-  color: #0F172A;
+  background-color: #F3F4F6; /* Light gray background */
+  color: #1E3A8A; /* Deep blue text */
   line-height: 1.6;
   transition: all 0.3s ease;
 }
 .dark-mode {
-  background-color: #0F172A;
-  color: #F1F5F9;
+  background-color: #172554; /* Dark blue for dark mode */
+  color: #CFFAFE; /* Light cyan text */
 }
 
 /* Common Classes */
@@ -26,15 +26,15 @@ body {
   transition: background-color 0.3s ease, transform 0.3s ease;
 }
 .btn-primary {
-  background-color: #ffc107;
-  color: #111;
+  background-color: #06B6D4; /* Cyan for buttons */
+  color: #1E3A8A; /* Deep blue text */
 }
 .btn-primary:hover {
-  background-color: #e0a800;
+  background-color: #0891B2; /* Darker cyan on hover */
   transform: scale(1.05);
 }
 .btn-whatsapp {
-  background-color: #25d366;
+  background-color: #25D366; /* Keep WhatsApp green */
   color: white;
   padding: 12px;
   border-radius: 50px;
@@ -55,29 +55,29 @@ body {
   text-align: center;
 }
 .section h2 {
-  color: #ffc107;
+  color: #06B6D4; /* Cyan for headings */
   font-size: 2.2rem;
   margin-bottom: 1rem;
 }
 .dark-mode .section h2 {
-  color: #ffeb3b;
+  color: #22D3EE; /* Brighter cyan for dark mode */
 }
 .subtitle {
   font-size: 1.1rem;
-  color: #555;
+  color: #4B5EAA; /* Lighter blue for subtitles */
   margin-bottom: 1.5rem;
 }
 .dark-mode .subtitle {
-  color: #ccc;
+  color: #A5B4FC; /* Light purple for dark mode */
 }
 
 /* Header */
 header {
-    background: rgba(0, 0, 0, 0.15); /* Semi-transparent black overlay */
-    background-image: url('https://raw.githubusercontent.com/Abranddesigner/Mr.Kamal/refs/heads/main/Header...jpg'); /* Your provided image */
+    background: rgba(30, 58, 138, 0.7); /* Deep blue overlay */
+    background-image: url('https://raw.githubusercontent.com/Abranddesigner/Mr.Kamal/refs/heads/main/Header....jpg'); /* Your provided image */
     background-size: cover; /* Cover the entire header */
     background-position: center; /* Center the image */
-    backdrop-filter: blur(15px); /* Blur effect for background image */
+    backdrop-filter: blur(20px); /* 20px blur as requested */
     padding: 1.5rem 1rem;
     display: flex;
     align-items: center;
@@ -88,8 +88,8 @@ header {
     z-index: 1000;
 }
 .dark-mode header {
-    background: rgba(0, 0, 0, 0.20); /* Slightly darker overlay for dark mode */
-    background-image: url('https://raw.githubusercontent.com/Abranddesigner/Mr.Kamal/refs/heads/main/Header2.jpg'); /* Same image for dark mode */
+    background: rgba(23, 37, 84, 0.8); /* Darker blue for dark mode */
+    background-image: url('https://raw.githubusercontent.com/Abranddesigner/Mr.Kamal/refs/heads/main/Header2.jpg'); /* Same image */
     background-size: cover;
     background-position: center;
     backdrop-filter: blur(20px);
@@ -106,14 +106,14 @@ header {
     border-radius: 50%;
 }
 .title h1 {
-    color: #ffc107;
+    color: #06B6D4; /* Cyan for title */
     font-size: 1.8rem;
     margin: 0;
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8); /* Shadow for readability */
 }
 .title .tagline {
     font-size: 14px;
-    color: white;
+    color: #CFFAFE; /* Light cyan for tagline */
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8); /* Shadow for readability */
 }
 
@@ -123,7 +123,7 @@ nav {
   gap: 10px;
 }
 nav a {
-  color: white;
+  color: #CFFAFE; /* Light cyan for nav links */
   margin: 0 15px;
   text-decoration: none;
   font-weight: bold;
@@ -135,13 +135,13 @@ nav a {
 }
 nav a:hover,
 nav a.active {
-  color: #ffc107;
+  color: #22D3EE; /* Brighter cyan on hover/active */
 }
 .menu-toggle {
   display: none;
   font-size: 24px;
   cursor: pointer;
-  color: #ffc107;
+  color: #06B6D4; /* Cyan for menu toggle */
   position: relative;
   z-index: 1; /* Ensure menu toggle is above blurred background */
 }
@@ -186,12 +186,12 @@ nav a.active {
 
 /* About Section */
 .about {
-  background-color: #f9f9f9;
+  background-color: #E5E7EB; /* Lighter gray for about section */
   border-radius: 10px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 .dark-mode .about {
-  background-color: #222;
+  background-color: #1E3A8A; /* Deep blue for dark mode */
 }
 .about-content {
   display: flex;
@@ -204,7 +204,7 @@ nav a.active {
   width: 200px;
   height: 200px;
   border-radius: 50%;
-  box-shadow: 0 0 10px #ffc107;
+  box-shadow: 0 0 10px #06B6D4; /* Cyan glow */
   animation: glow 2s ease-in-out infinite alternate;
 }
 .bio {
@@ -214,8 +214,8 @@ nav a.active {
   animation: fadeInUp 1.5s ease;
 }
 @keyframes glow {
-  from { box-shadow: 0 0 5px #ffc107; }
-  to { box-shadow: 0 0 15px #ffc107; }
+  from { box-shadow: 0 0 5px #06B6D4; }
+  to { box-shadow: 0 0 15px #06B6D4; }
 }
 @keyframes fadeInUp {
   0% { opacity: 0; transform: translateY(20px); }
@@ -242,17 +242,17 @@ nav a.active {
   cursor: pointer;
   transition: transform 0.3s ease;
 }
- gallery-grid img:hover {
+.gallery-grid img:hover {
   transform: scale(1.05);
 }
 .portfolio-card {
-  background-color: #f8fafc;
+  background-color: #E5E7EB; /* Light gray for cards */
   border-radius: 10px;
   overflow: hidden;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 .dark-mode .portfolio-card {
-  background-color: #1E293B;
+  background-color: #1E3A8A; /* Deep blue for dark mode */
 }
 .portfolio-card:hover {
   transform: translateY(-6px);
@@ -266,10 +266,10 @@ nav a.active {
 .portfolio-card h3 {
   padding: 1rem;
   font-size: 1.1rem;
-  color: #ffc107;
+  color: #06B6D4; /* Cyan for card titles */
 }
 .price {
-  color: #ffc107;
+  color: #06B6D4; /* Cyan for price */
   font-weight: bold;
   font-size: 1.1rem;
   margin: 0.5rem 0;
@@ -295,42 +295,42 @@ nav a.active {
   min-width: 80%;
   flex: 0 0 auto;
   scroll-snap-align: center;
-  background-color: #fff;
+  background-color: #E5E7EB; /* Light gray for testimonials */
   border-radius: 10px;
   box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
   padding: 30px;
   text-align: center;
 }
 .dark-mode .testimonial {
-  background-color: #1E293B;
+  background-color: #1E3A8A; /* Deep blue for dark mode */
 }
 .testimonial img {
   width: 100px;
   height: 100px;
   border-radius: 50%;
   object-fit: cover;
-  border: 4px solid #ffc107;
+  border: 4px solid #06B6D4; /* Cyan border */
   margin-bottom: 20px;
 }
 .testimonial h3 {
   font-size: 20px;
-  color: #333;
+  color: #1E3A8A; /* Deep blue for names */
 }
 .dark-mode .testimonial h3 {
-  color: #F1F5F9;
+  color: #CFFAFE; /* Light cyan for dark mode */
 }
 .testimonial .company {
   font-size: 14px;
-  color: #7a7a7a;
+  color: #4B5EAA; /* Lighter blue for company */
   margin-bottom: 15px;
 }
 .testimonial p {
   font-size: 16px;
-  color: #555;
+  color: #4B5EAA; /* Lighter blue for text */
   font-style: italic;
 }
 .dark-mode .testimonial p {
-  color: #ccc;
+  color: #A5B4FC; /* Light purple for dark mode */
 }
 .dots {
   display: flex;
@@ -342,11 +342,11 @@ nav a.active {
   width: 12px;
   height: 12px;
   border-radius: 50%;
-  background-color: #bbb;
+  background-color: #4B5EAA; /* Lighter blue for dots */
   cursor: pointer;
 }
 .dot.active {
-  background-color: #333;
+  background-color: #1E3A8A; /* Deep blue for active dot */
 }
 
 /* CDR Section */
@@ -354,10 +354,10 @@ nav a.active {
   max-width: 800px;
   margin: 2rem auto;
   font-size: 1rem;
-  color: #555;
+  color: #4B5EAA; /* Lighter blue for text */
 }
 .dark-mode .payment-info {
-  color: #ccc;
+  color: #A5B4FC; /* Light purple for dark mode */
 }
 
 /* Popup */
@@ -367,7 +367,7 @@ nav a.active {
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.9);
+  background: rgba(30, 58, 138, 0.9); /* Deep blue overlay */
   display: none;
   justify-content: center;
   align-items: center;
@@ -382,12 +382,12 @@ nav a.active {
   position: absolute;
   top: 20px;
   right: 35px;
-  color: #fff;
+  color: #CFFAFE; /* Light cyan for close button */
   font-size: 40px;
   cursor: pointer;
 }
 .popup .close:hover {
-  color: #ffc107;
+  color: #22D3EE; /* Brighter cyan on hover */
 }
 
 /* Back to Top */
@@ -395,8 +395,8 @@ nav a.active {
   position: fixed;
   bottom: 80px;
   right: 20px;
-  background-color: #ffc107;
-  color: #111;
+  background-color: #06B6D4; /* Cyan for button */
+  color: #1E3A8A; /* Deep blue text */
   padding: 10px;
   border-radius: 50%;
   font-size: 20px;
@@ -410,9 +410,9 @@ nav a.active {
 
 /* Footer */
 footer {
-  background: #111;
+  background: #1E3A8A; /* Deep blue for footer */
   padding: 2rem;
-  color: #aaa;
+  color: #A5B4FC; /* Light purple for text */
   font-size: 0.9rem;
 }
 .contact-icons {
@@ -423,11 +423,11 @@ footer {
   font-size: 24px;
 }
 .contact-icons a {
-  color: #ffc107;
+  color: #06B6D4; /* Cyan for icons */
   transition: color 0.3s;
 }
 .contact-icons a:hover {
-  color: #e0a800;
+  color: #22D3EE; /* Brighter cyan on hover */
 }
 
 /* Responsive */
