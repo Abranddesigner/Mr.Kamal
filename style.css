@@ -73,7 +73,9 @@ body {
 
 /* Header */
 header {
-    background: rgba(0, 0, 0, 0.5); /* Semi-transparent black overlay */
+    background: rgba(0, 0, 0, 0.10); /* Header ke liye */
+.dark-mode header {
+    background: rgba(0, 0, 0, 0.15); /* Dark mode ke liye */
     background-image: url('https://raw.githubusercontent.com/Abranddesigner/Mr.Kamal/refs/heads/main/Header.jpg'); /* Your provided image */
     background-size: cover; /* Cover the entire header */
     background-position: center; /* Center the image */
