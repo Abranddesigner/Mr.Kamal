@@ -89,10 +89,6 @@ header {
 }
 body.dark-mode header {
   background: rgba(10, 10, 10, 0.8); /* Darker overlay for dark mode */
-  background-image: url('https://raw.githubusercontent.com/Abranddesigner/Mr.Kamal/refs/heads/main/Head.png');
-  background-size: cover;
-  background-position: center;
-  backdrop-filter: blur(20px);
 }
 .logo {
   display: flex;
@@ -146,7 +142,7 @@ nav a.active {
   z-index: 1;
 }
 nav.show {
-  display: flex !important; /* Ensure nav shows on toggle */
+  display: flex;
   flex-direction: column;
   width: 100%;
   background: rgba(18, 18, 18, 0.9); /* Dark gray background for mobile nav */
@@ -447,13 +443,13 @@ footer {
     margin-left: auto;
   }
   nav {
-    display: none; /* Hidden by default on mobile */
+    display: none;
     flex-direction: column;
     width: 100%;
     margin-top: 10px;
   }
   nav.show {
-    display: flex; /* Show when toggled */
+    display: flex;
   }
   nav a {
     margin: 10px 0;
