@@ -7,11 +7,11 @@ function toggleMenu() {
 }
 
 function toggleMode() {
-  document.body.classList.toggle('dark-mode');
+  document.body.classList.toggle('dark-theme');
   const button = document.querySelector('.mode-toggle');
-  const isDarkMode = document.body.classList.contains('dark-mode');
-  button.textContent = isDarkMode ? 'Switch to Light Mode' : 'Switch to Dark Mode';
-  localStorage.setItem('theme', isDarkMode ? 'dark' : 'light');
+  const isDarkTheme = document.body.classList.contains('dark-theme');
+  button.textContent = isDarkTheme ? 'Switch to Light Mode' : 'Switch to Dark Mode';
+  localStorage.setItem('theme', isDarkTheme ? 'dark' : 'light');
 }
 
 function openPopup(src) {
@@ -39,8 +39,11 @@ window.addEventListener('scroll', () => {
 document.addEventListener('DOMContentLoaded', () => {
   // Restore theme from localStorage
   const savedTheme = localStorage.getItem('theme');
-  if (savedTheme === 'dark') {
-    document.body.classList.add('dark-mode');
+  if (savedTheme === 'light') {
+    document.body.classList.add('light-theme');
+    document.querySelector('.mode-toggle').textContent = 'Switch to Dark Mode';
+  } else {
+    document.body.classList.add('dark-theme');
     document.querySelector('.mode-toggle').textContent = 'Switch to Light Mode';
   }
 
