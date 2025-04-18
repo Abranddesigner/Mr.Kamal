@@ -145,6 +145,16 @@ nav a.active {
   position: relative;
   z-index: 1;
 }
+nav.show {
+  display: flex !important; /* Ensure nav shows on toggle */
+  flex-direction: column;
+  width: 100%;
+  background: rgba(18, 18, 18, 0.9); /* Dark gray background for mobile nav */
+  position: absolute;
+  top: 100%;
+  left: 0;
+  padding: 1rem;
+}
 
 /* Welcome Section */
 .welcome {
@@ -437,16 +447,17 @@ footer {
     margin-left: auto;
   }
   nav {
-    display: none;
+    display: none; /* Hidden by default on mobile */
     flex-direction: column;
     width: 100%;
     margin-top: 10px;
   }
   nav.show {
-    display: flex;
+    display: flex; /* Show when toggled */
   }
   nav a {
     margin: 10px 0;
+    text-align: center;
   }
   .section {
     padding: 2rem 1rem;
