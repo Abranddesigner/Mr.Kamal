@@ -21,7 +21,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
   <link rel="stylesheet" href="style.css" />
 </head>
-<body class="dark-theme">
+<body class="light-theme">
   <!-- WhatsApp Button -->
   <a href="https://wa.me/918440048355" class="btn btn-whatsapp" target="_blank" title="Chat on WhatsApp">
     <i class="fab fa-whatsapp"></i>
@@ -70,7 +70,6 @@
           <p class="price">Price: ₹999</p>
           <a href="https://wa.me/918440048355?text=I%20want%20to%20buy%20Election%20CDR%20for%20₹999" class="btn btn-primary">Buy Now</a>
         </div>
-        <!-- Placeholder for Future Design -->
         <div class="design-card">
           <img src="https://via.placeholder.com/200x150?text=Coming+Soon" alt="Upcoming CDR Design by Kamal Meena" loading="lazy" />
           <h3>Coming Soon</h3>
@@ -79,7 +78,6 @@
           <button class="buy-btn" disabled aria-label="Coming Soon - Not Available Yet">Notify Me</button>
         </div>
       </div>
-      <!-- Payment Instructions (No Change as Per Request) -->
       <div class="payment-info">
         <p><strong>How to Buy:</strong> Click "Buy Now," pay via UPI (8440048355@ybl), and send the payment screenshot to WhatsApp (+918440048355).</p>
         <p>You’ll receive the CDR file within 24 hours after verification.</p>
@@ -99,29 +97,4 @@
     <p>© 2025 Kamal Meena. All rights reserved.</p>
   </footer>
 
-  <!-- Popup -->
-  <div class="popup" id="popup">
-    <span class="close" onclick="closePopup()">×</span>
-    <img id="popupImg" src="" alt="Selected Design" />
-  </div>
-
-  <script src="scripts.js">
-    // Ensure intersection observer works
-    document.addEventListener('DOMContentLoaded', () => {
-      const sections = document.querySelectorAll('.section');
-      const observer = new IntersectionObserver((entries, observer) => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('in-view');
-            observer.unobserve(entry.target); // Stop observing once visible
-          }
-        });
-      }, { threshold: 0.1 });
-
-      sections.forEach(section => {
-        observer.observe(section);
-      });
-    });
-  </script>
-</body>
-</html>
+  <script src="scripts.js"></script>
