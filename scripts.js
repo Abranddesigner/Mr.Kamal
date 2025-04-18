@@ -34,6 +34,20 @@ window.addEventListener('scroll', () => {
   if (backToTop) {
     backToTop.classList.toggle('show', window.scrollY > 300);
   }
+
+  // Intersection Observer for section animations
+  const sections = document.querySelectorAll('.section, .about, .portfolio-grid, .gallery-grid, .carousel-wrapper, .payment-info, footer');
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('in-view');
+      }
+    });
+  }, { threshold: 0.1 });
+
+  sections.forEach(section => {
+    observer.observe(section);
+  });
 });
 
 document.addEventListener('DOMContentLoaded', () => {
