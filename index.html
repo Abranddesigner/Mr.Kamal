@@ -154,6 +154,23 @@
     <img id="popupImg" src="" alt="Selected Design" />
   </div>
 
-  <script src="scripts.js"></script>
+  <script src="scripts.js">
+    // Ensure intersection observer works
+    document.addEventListener('DOMContentLoaded', () => {
+      const sections = document.querySelectorAll('.section');
+      const observer = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('in-view');
+            observer.unobserve(entry.target); // Stop observing once visible
+          }
+        });
+      }, { threshold: 0.1 });
+
+      sections.forEach(section => {
+        observer.observe(section);
+      });
+    });
+  </script>
 </body>
 </html>
