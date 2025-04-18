@@ -74,7 +74,7 @@ body {
 /* Header */
 header {
     background: rgba(30, 42, 68, 0.7); /* Midnight blue overlay */
-    background-image: url('https://raw.githubusercontent.com/Abranddesigner/Mr.Kamal/refs/heads/main/Header.jpg'); /* Your provided image */
+    background-image: url('https://raw.githubusercontent.com/Abranddesigner/Mr.Kamal/refs/heads/main/Head.png'); /* Your provided image */
     background-size: cover; /* Cover the entire header */
     background-position: center; /* Center the image */
     backdrop-filter: blur(20px); /* 20px blur */
@@ -89,7 +89,7 @@ header {
 }
 .dark-mode header {
     background: rgba(30, 42, 68, 0.8); /* Darker overlay for dark mode */
-    background-image: url('https://raw.githubusercontent.com/Abranddesigner/Mr.Kamal/refs/heads/main/Header.jpg'); /* Same image */
+    background-image: url('https://raw.githubusercontent.com/Abranddesigner/Mr.Kamal/refs/heads/main/Head.png'); /* Same image */
     background-size: cover;
     background-position: center;
     backdrop-filter: blur(20px);
