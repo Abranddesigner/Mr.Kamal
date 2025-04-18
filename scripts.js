@@ -1,13 +1,17 @@
 function toggleMenu() {
-  document.getElementById('navbar').classList.toggle('show');
+  const navbar = document.getElementById('navbar');
+  const menuToggle = document.querySelector('.menu-toggle');
+  navbar.classList.toggle('show');
+  const isExpanded = navbar.classList.contains('show');
+  menuToggle.setAttribute('aria-expanded', isExpanded);
 }
 
 function toggleMode() {
   document.body.classList.toggle('dark-mode');
   const button = document.querySelector('.mode-toggle');
-  if (button) {
-    button.textContent = document.body.classList.contains('dark-mode') ? 'Switch to Light Mode' : 'Switch to Dark Mode';
-  }
+  const isDarkMode = document.body.classList.contains('dark-mode');
+  button.textContent = isDarkMode ? 'Switch to Light Mode' : 'Switch to Dark Mode';
+  localStorage.setItem('theme', isDarkMode ? 'dark' : 'light');
 }
 
 function openPopup(src) {
@@ -33,6 +37,13 @@ window.addEventListener('scroll', () => {
 });
 
 document.addEventListener('DOMContentLoaded', () => {
+  // Restore theme from localStorage
+  const savedTheme = localStorage.getItem('theme');
+  if (savedTheme === 'dark') {
+    document.body.classList.add('dark-mode');
+    document.querySelector('.mode-toggle').textContent = 'Switch to Light Mode';
+  }
+
   // Carousel Logic
   const carousel = document.getElementById('carousel');
   if (carousel) {
@@ -64,50 +75,6 @@ document.addEventListener('DOMContentLoaded', () => {
       link.classList.add('active');
     } else {
       link.classList.remove('active');
-    }
-  }
-    function toggleMenu() {
-      document.getElementById('navbar').classList.toggle('show');
-    }
-
-    function toggleMode() {
-      document.body.classList.toggle('dark-mode');
-      const button = document.querySelector('.mode-toggle');
-      button.textContent = document.body.classList.contains('dark-mode')
-        ? 'Switch to Light Mode'
-        : 'Switch to Dark Mode';
-    }
-
-    function confirmPurchase(button, type, amount) {
-      if (confirm(Proceed to pay ₹${amount} for ${type} CDR file?)) {
-        const upiLink = upi://pay?pa=8440048355@ybl&pn=Kamal&am=${amount}&cu=INR;
-        window.location.href = upiLink;
-
-        let timeLeft = 1 * 60; // 1 minutes
-        button.disabled = true;
-
-        const timer = setInterval(() => {
-          const minutes = Math.floor(timeLeft / 60);
-          const seconds = timeLeft % 60;
-          button.textContent = ⏳ ${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')};
-          timeLeft--;
-
-          if (timeLeft < 0) {
-            clearInterval(timer);
-            button.textContent = 'Buy Now';
-            button.disabled = false;
-            const whatsappBtn = document.createElement('a');
-            whatsappBtn.className = 'buy-btn';
-            whatsappBtn.href = `https://wa.me/918440048355?text=${encodeURIComponent(
-              Hello, I have paid for the ${type} CDR file. Please check screenshot.
-            )}`;
-            whatsappBtn.target = '_blank';
-            whatsappBtn.textContent = 'Send Screenshot';
-            whatsappBtn.style.marginLeft = '10px';
-            button.parentNode.appendChild(whatsappBtn);
-          }
-        }, 1000);
-      }
     }
   });
 });
