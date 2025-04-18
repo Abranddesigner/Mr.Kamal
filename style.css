@@ -13,8 +13,8 @@ body {
   scroll-behavior: smooth; /* Smooth scrolling */
 }
 body.light-theme {
-  background-color: #1C2526; /* Dark gray for contrast */
-  color: #F5F5F5; /* Light gray text */
+  background-color: #E3F2FD; /* Light blue for light mode */
+  color: #212121; /* Dark gray text */
 }
 
 /* Common Classes */
@@ -27,16 +27,16 @@ body.light-theme {
   transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
 }
 .btn-primary {
-  background-color: #FFC107; /* Yellow from logo */
-  color: #000000; /* Black text */
+  background-color: #0288D1; /* Blue from logo vibe */
+  color: #FFFFFF; /* White text */
 }
 body.light-theme .btn-primary {
-  color: #FFFFFF; /* White text in light mode */
+  color: #212121; /* Dark gray text in light mode */
 }
 .btn-primary:hover {
-  background-color: #FFD54F; /* Lighter yellow on hover */
+  background-color: #039BE5; /* Lighter blue on hover */
   transform: scale(1.05);
-  box-shadow: 0 4px 15px rgba(255, 193, 7, 0.4);
+  box-shadow: 0 4px 15px rgba(2, 136, 209, 0.4);
 }
 .btn-whatsapp {
   background-color: #25D366; /* WhatsApp green */
@@ -68,20 +68,20 @@ body.light-theme .btn-primary {
   transform: translateY(0);
 }
 .section h2 {
-  color: #FF5722; /* Orange from logo */
+  color: #0288D1; /* Blue from logo vibe */
   font-size: 2.2rem;
   margin-bottom: 1rem;
 }
 body.light-theme .section h2 {
-  color: #FF5722; /* Orange in light mode */
+  color: #0288D1; /* Blue in light mode */
 }
 .subtitle {
   font-size: 1.1rem;
-  color: #B0B0B0; /* Light gray for subtitles */
+  color: #B0BEC5; /* Light blue-gray for subtitles */
   margin-bottom: 1.5rem;
 }
 body.light-theme .subtitle {
-  color: #D3D3D3; /* Light gray in light mode */
+  color: #78909C; /* Medium blue-gray in light mode */
 }
 
 /* Header */
@@ -102,7 +102,7 @@ header {
   animation: fadeIn 1s ease-out; /* Header fade-in */
 }
 body.light-theme header {
-  background: rgba(28, 37, 38, 0.9); /* Dark gray overlay */
+  background: rgba(227, 242, 253, 0.9); /* Light blue overlay */
 }
 @keyframes fadeIn {
   from { opacity: 0; }
@@ -119,7 +119,7 @@ main {
   animation: parallax 10s infinite linear; /* Subtle parallax effect */
 }
 body.light-theme main {
-  background: rgba(28, 37, 38, 0.7); /* Dark gray overlay */
+  background: rgba(227, 242, 253, 0.7); /* Light blue overlay */
 }
 @keyframes parallax {
   0% { background-position: center 0; }
@@ -142,22 +142,22 @@ body.light-theme main {
   border-radius: 50%;
 }
 .title h1 {
-  color: #FF5722; /* Orange from logo */
+  color: #0288D1; /* Blue from logo vibe */
   font-size: 1.8rem;
   margin: 0;
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
 }
 .title .tagline {
   font-size: 14px;
-  color: #B0B0B0; /* Light gray for tagline */
+  color: #B0BEC5; /* Light blue-gray for tagline */
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
 }
 body.light-theme .title h1 {
-  color: #FF5722;
+  color: #0288D1;
   text-shadow: none;
 }
 body.light-theme .title .tagline {
-  color: #D3D3D3;
+  color: #78909C;
 }
 @keyframes slideInLeft {
   from { opacity: 0; transform: translateX(-100px); }
@@ -170,7 +170,7 @@ nav {
   gap: 10px;
 }
 nav a {
-  color: #B0B0B0; /* Light gray for nav links */
+  color: #B0BEC5; /* Light blue-gray for nav links */
   margin: 0 15px;
   text-decoration: none;
   font-weight: bold;
@@ -182,25 +182,25 @@ nav a {
 }
 nav a:hover,
 nav a.active {
-  color: #FF5722; /* Orange from logo */
+  color: #0288D1; /* Blue from logo vibe */
 }
 body.light-theme nav a {
-  color: #D3D3D3;
+  color: #78909C;
 }
 body.light-theme nav a:hover,
 body.light-theme nav a.active {
-  color: #FF5722;
+  color: #0288D1;
 }
 .menu-toggle {
   display: none;
   font-size: 24px;
   cursor: pointer;
-  color: #B0B0B0; /* Light gray for menu toggle */
+  color: #B0BEC5; /* Light blue-gray for menu toggle */
   position: relative;
   z-index: 1;
 }
 body.light-theme .menu-toggle {
-  color: #D3D3D3;
+  color: #78909C;
 }
 nav.show {
   display: flex;
@@ -214,7 +214,7 @@ nav.show {
   animation: fadeIn 0.5s ease-out;
 }
 body.light-theme nav.show {
-  background: rgba(28, 37, 38, 0.9);
+  background: rgba(227, 242, 253, 0.9);
 }
 
 /* Welcome Section */
@@ -273,7 +273,7 @@ body.light-theme nav.show {
 
 /* About Section */
 .about {
-  background-color: #1C2526; /* Dark gray for sections */
+  background-color: #1A237E; /* Dark blue for sections */
   border-radius: 10px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   opacity: 0;
@@ -281,7 +281,7 @@ body.light-theme nav.show {
   transition: opacity 0.6s ease, transform 0.6s ease;
 }
 body.light-theme .about {
-  background-color: #2E3B3D; /* Slightly lighter gray */
+  background-color: #BBDEFB; /* Light blue in light mode */
 }
 .about.in-view {
   opacity: 1;
@@ -298,7 +298,7 @@ body.light-theme .about {
   width: 200px;
   height: 200px;
   border-radius: 50%;
-  box-shadow: 0 0 10px #FF5722; /* Orange glow */
+  box-shadow: 0 0 10px #0288D1; /* Blue glow */
   animation: glow 2s ease-in-out infinite alternate;
 }
 .bio {
@@ -308,8 +308,8 @@ body.light-theme .about {
   animation: fadeInUp 1.5s ease;
 }
 @keyframes glow {
-  from { box-shadow: 0 0 5px #FF5722; }
-  to { box-shadow: 0 0 15px #FF5722; }
+  from { box-shadow: 0 0 5px #0288D1; }
+  to { box-shadow: 0 0 15px #0288D1; }
 }
 @keyframes fadeInUp {
   0% { opacity: 0; transform: translateY(20px); }
@@ -354,13 +354,13 @@ body.light-theme .about {
   transform: scale(1.05);
 }
 .portfolio-card {
-  background-color: #1C2526; /* Dark gray for cards */
+  background-color: #1A237E; /* Dark blue for cards */
   border-radius: 10px;
   overflow: hidden;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 body.light-theme .portfolio-card {
-  background-color: #2E3B3D; /* Slightly lighter gray */
+  background-color: #BBDEFB; /* Light blue in light mode */
 }
 .portfolio-card:hover {
   transform: translateY(-6px);
@@ -374,16 +374,16 @@ body.light-theme .portfolio-card {
 .portfolio-card h3 {
   padding: 1rem;
   font-size: 1.1rem;
-  color: #FF5722; /* Orange from logo */
+  color: #0288D1; /* Blue from logo vibe */
 }
 .price {
-  color: #B0B0B0; /* Light gray for price */
+  color: #B0BEC5; /* Light blue-gray for price */
   font-weight: bold;
   font-size: 1.1rem;
   margin: 0.5rem 0;
 }
 body.light-theme .price {
-  color: #D3D3D3; /* Light gray in light mode */
+  color: #78909C; /* Medium blue-gray in light mode */
 }
 
 /* Testimonials */
@@ -413,34 +413,34 @@ body.light-theme .price {
   min-width: 80%;
   flex: 0 0 auto;
   scroll-snap-align: center;
-  background-color: #1C2526; /* Dark gray for testimonials */
+  background-color: #1A237E; /* Dark blue for testimonials */
   border-radius: 10px;
   box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
   padding: 30px;
   text-align: center;
 }
 body.light-theme .testimonial {
-  background-color: #2E3B3D; /* Slightly lighter gray */
+  background-color: #BBDEFB; /* Light blue in light mode */
 }
 .testimonial img {
   width: 100px;
   height: 100px;
   border-radius: 50%;
   object-fit: cover;
-  border: 4px solid #FF5722; /* Orange border */
+  border: 4px solid #0288D1; /* Blue border */
   margin-bottom: 20px;
 }
 .testimonial h3 {
   font-size: 20px;
-  color: #FF5722; /* Orange from logo */
+  color: #0288D1; /* Blue from logo vibe */
 }
 .testimonial .company {
   font-size: 14px;
-  color: #B0B0B0; /* Light gray for company */
+  color: #B0BEC5; /* Light blue-gray for company */
   margin-bottom: 15px;
 }
 body.light-theme .testimonial .company {
-  color: #D3D3D3; /* Light gray in light mode */
+  color: #78909C; /* Medium blue-gray in light mode */
 }
 .testimonial p {
   font-size: 16px;
@@ -448,7 +448,7 @@ body.light-theme .testimonial .company {
   font-style: italic;
 }
 body.light-theme .testimonial p {
-  color: #F5F5F5; /* Light gray in light mode */
+  color: #212121; /* Dark gray in light mode */
 }
 .dots {
   display: flex;
@@ -460,14 +460,14 @@ body.light-theme .testimonial p {
   width: 12px;
   height: 12px;
   border-radius: 50%;
-  background-color: #B0B0B0; /* Light gray for dots */
+  background-color: #B0BEC5; /* Light blue-gray for dots */
   cursor: pointer;
 }
 body.light-theme .dot {
-  background-color: #D3D3D3; /* Light gray in light mode */
+  background-color: #78909C; /* Medium blue-gray in light mode */
 }
 .dot.active {
-  background-color: #FF5722; /* Orange from logo */
+  background-color: #0288D1; /* Blue from logo vibe */
 }
 
 /* CDR Section */
@@ -485,7 +485,7 @@ body.light-theme .dot {
   transform: translateY(0);
 }
 body.light-theme .payment-info {
-  color: #F5F5F5; /* Light gray in light mode */
+  color: #212121; /* Dark gray in light mode */
 }
 
 /* Popup */
@@ -503,7 +503,7 @@ body.light-theme .payment-info {
   animation: fadeIn 0.5s ease-out;
 }
 body.light-theme .popup {
-  background: rgba(28, 37, 38, 0.9); /* Dark gray overlay */
+  background: rgba(227, 242, 253, 0.9); /* Light blue overlay */
 }
 .popup img {
   max-width: 90%;
@@ -514,15 +514,15 @@ body.light-theme .popup {
   position: absolute;
   top: 20px;
   right: 35px;
-  color: #B0B0B0; /* Light gray for close button */
+  color: #B0BEC5; /* Light blue-gray for close button */
   font-size: 40px;
   cursor: pointer;
 }
 body.light-theme .popup .close {
-  color: #D3D3D3; /* Light gray in light mode */
+  color: #78909C; /* Medium blue-gray in light mode */
 }
 .popup .close:hover {
-  color: #FF5722; /* Orange from logo */
+  color: #0288D1; /* Blue from logo vibe */
 }
 
 /* Back to Top */
@@ -530,8 +530,8 @@ body.light-theme .popup .close {
   position: fixed;
   bottom: 80px;
   right: 20px;
-  background-color: #FFC107; /* Yellow from logo */
-  color: #000000; /* Black text */
+  background-color: #0288D1; /* Blue from logo vibe */
+  color: #FFFFFF; /* White text */
   padding: 10px;
   border-radius: 50%;
   font-size: 20px;
@@ -541,14 +541,14 @@ body.light-theme .popup .close {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 body.light-theme .back-to-top {
-  color: #FFFFFF; /* White text in light mode */
+  color: #212121; /* Dark gray text in light mode */
 }
 .back-to-top.show {
   display: block;
 }
 .back-to-top:hover {
   transform: scale(1.1);
-  box-shadow: 0 4px 15px rgba(255, 193, 7, 0.4);
+  box-shadow: 0 4px 15px rgba(2, 136, 209, 0.4);
 }
 
 /* Footer */
@@ -566,8 +566,8 @@ footer.in-view {
   transform: translateY(0);
 }
 body.light-theme footer {
-  background: #1C2526; /* Dark gray for footer */
-  color: #F5F5F5; /* Light gray in light mode */
+  background: #E3F2FD; /* Light blue for footer */
+  color: #212121; /* Dark gray in light mode */
 }
 .contact-icons {
   margin: 1rem 0;
@@ -577,14 +577,14 @@ body.light-theme footer {
   font-size: 24px;
 }
 .contact-icons a {
-  color: #B0B0B0; /* Light gray for icons */
+  color: #B0BEC5; /* Light blue-gray for icons */
   transition: color 0.3s;
 }
 body.light-theme .contact-icons a {
-  color: #D3D3D3; /* Light gray in light mode */
+  color: #78909C; /* Medium blue-gray in light mode */
 }
 .contact-icons a:hover {
-  color: #FF5722; /* Orange from logo */
+  color: #0288D1; /* Blue from logo vibe */
 }
 
 /* Responsive */
