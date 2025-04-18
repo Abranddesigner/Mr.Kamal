@@ -74,7 +74,7 @@ body.dark-mode .section h2 {
 /* Header */
 header {
   background: rgba(18, 18, 18, 0.7);
-  background-image: url('https://raw.githubusercontent.com/Abranddesigner/Mr.Kamal/refs/heads/main/Head.png');
+  background-image: url('https://raw.githubusercontent.com/Abranddesigner/Mr.Kamal/refs/heads/main/Head1.png');
   background-size: cover;
   background-position: center;
   backdrop-filter: blur(20px);
@@ -94,7 +94,7 @@ body.dark-mode header {
 /* Main Background */
 main {
   background: rgba(18, 18, 18, 0.7);
-  background-image: url('https://raw.githubusercontent.com/Abranddesigner/Mr.Kamal/refs/heads/main/Head.png');
+  background-image: url('https://raw.githubusercontent.com/Abranddesigner/Mr.Kamal/refs/heads/main/Head1.png');
   background-size: cover;
   background-position: center;
   backdrop-filter: blur(20px);
