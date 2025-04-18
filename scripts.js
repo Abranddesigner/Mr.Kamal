@@ -44,6 +44,12 @@ document.addEventListener('DOMContentLoaded', () => {
     document.querySelector('.mode-toggle').textContent = 'Switch to Light Mode';
   }
 
+  // Typing animation for welcome text
+  const typingElements = document.querySelectorAll('.typing');
+  typingElements.forEach((el, index) => {
+    el.style.animationDelay = `${index * 3}s`;
+  });
+
   // Carousel Logic
   const carousel = document.getElementById('carousel');
   if (carousel) {
