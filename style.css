@@ -6,14 +6,14 @@
 }
 body {
   font-family: 'Poppins', sans-serif;
-  background-color: #121212; /* Dark gray background */
-  color: #E0E0E0; /* Light gray text */
+  background-color: #121212; /* Gray for light mode */
+  color: #000000; /* Black text for light mode */
   line-height: 1.6;
   transition: all 0.3s ease;
 }
 body.dark-mode {
-  background-color: #0A0A0A; /* Almost black for dark mode */
-  color: #E0E0E0; /* Light gray text */
+  background-color: #0A0A0A; /* Black for dark mode */
+  color: #FFFFFF; /* White text for dark mode */
 }
 
 /* Common Classes */
@@ -27,14 +27,17 @@ body.dark-mode {
 }
 .btn-primary {
   background-color: #B0B7C0; /* Silver for buttons */
-  color: #121212; /* Dark gray text */
+  color: #000000; /* Black text in light mode */
+}
+body.dark-mode .btn-primary {
+  color: #FFFFFF; /* White text in dark mode */
 }
 .btn-primary:hover {
   background-color: #CFD8DC; /* Lighter silver on hover */
   transform: scale(1.05);
 }
 .btn-whatsapp {
-  background-color: #25D366; /* WhatsApp green unchanged */
+  background-color: #25D366; /* WhatsApp green */
   color: white;
   padding: 12px;
   border-radius: 50px;
@@ -60,24 +63,21 @@ body.dark-mode {
   margin-bottom: 1rem;
 }
 body.dark-mode .section h2 {
-  color: #CFD8DC; /* Lighter silver for dark mode */
+  color: #B0B7C0; /* Silver in dark mode */
 }
 .subtitle {
   font-size: 1.1rem;
-  color: #B0BEC5; /* Blue-gray for subtitles */
+  color: #B0B7C0; /* Silver for subtitles */
   margin-bottom: 1.5rem;
-}
-body.dark-mode .subtitle {
-  color: #CFD8DC; /* Lighter silver for dark mode */
 }
 
 /* Header */
 header {
-  background: rgba(18, 18, 18, 0.7); /* Dark gray overlay */
+  background: rgba(18, 18, 18, 0.7);
   background-image: url('https://raw.githubusercontent.com/Abranddesigner/Mr.Kamal/refs/heads/main/Head.png');
   background-size: cover;
   background-position: center;
-  backdrop-filter: blur(20px); /* 20px blur intact */
+  backdrop-filter: blur(20px);
   padding: 1.5rem 1rem;
   display: flex;
   align-items: center;
@@ -88,8 +88,21 @@ header {
   z-index: 1000;
 }
 body.dark-mode header {
-  background: rgba(10, 10, 10, 0.8); /* Darker overlay for dark mode */
+  background: rgba(10, 10, 10, 0.8);
 }
+
+/* Main Background */
+main {
+  background: rgba(18, 18, 18, 0.7);
+  background-image: url('https://raw.githubusercontent.com/Abranddesigner/Mr.Kamal/refs/heads/main/Head.png');
+  background-size: cover;
+  background-position: center;
+  backdrop-filter: blur(20px);
+}
+body.dark-mode main {
+  background: rgba(10, 10, 10, 0.8);
+}
+
 .logo {
   display: flex;
   align-items: center;
@@ -109,7 +122,7 @@ body.dark-mode header {
 }
 .title .tagline {
   font-size: 14px;
-  color: #E0E0E0; /* Light gray for tagline */
+  color: #B0B7C0; /* Silver for tagline */
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
 }
 
@@ -119,7 +132,7 @@ nav {
   gap: 10px;
 }
 nav a {
-  color: #E0E0E0; /* Light gray for nav links */
+  color: #B0B7C0; /* Silver for nav links */
   margin: 0 15px;
   text-decoration: none;
   font-weight: bold;
@@ -131,7 +144,7 @@ nav a {
 }
 nav a:hover,
 nav a.active {
-  color: #B0B7C0; /* Silver on hover/active */
+  color: #CFD8DC; /* Lighter silver on hover/active */
 }
 .menu-toggle {
   display: none;
@@ -145,20 +158,38 @@ nav.show {
   display: flex;
   flex-direction: column;
   width: 100%;
-  background: rgba(18, 18, 18, 0.9); /* Dark gray background for mobile nav */
+  background: rgba(18, 18, 18, 0.9);
   position: absolute;
   top: 100%;
   left: 0;
   padding: 1rem;
+}
+body.dark-mode nav.show {
+  background: rgba(10, 10, 10, 0.9);
 }
 
 /* Welcome Section */
 .welcome {
   margin-bottom: 2rem;
 }
-.welcome p {
+.welcome p.typing {
   max-width: 600px;
   margin: 0.5rem auto;
+  overflow: hidden;
+  white-space: nowrap;
+  border-right: 2px solid #B0B7C0;
+  animation: typing 3s steps(40, end) forwards, blink 0.5s step-end infinite;
+}
+.welcome p.typing:nth-child(2) { animation-delay: 3s; }
+.welcome p.typing:nth-child(3) { animation-delay: 6s; }
+.welcome p.typing:nth-child(4) { animation-delay: 9s; }
+@keyframes typing {
+  from { width: 0; }
+  to { width: 100%; }
+}
+@keyframes blink {
+  from, to { border-color: transparent; }
+  50% { border-color: #B0B7C0; }
 }
 
 /* Slider */
@@ -192,12 +223,12 @@ nav.show {
 
 /* About Section */
 .about {
-  background-color: #1E1E1E; /* Lighter gray for about section */
+  background-color: #1E1E1E; /* Gray for light mode */
   border-radius: 10px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 body.dark-mode .about {
-  background-color: #0A0A0A; /* Almost black for dark mode */
+  background-color: #0A0A0A; /* Black for dark mode */
 }
 .about-content {
   display: flex;
@@ -210,7 +241,7 @@ body.dark-mode .about {
   width: 200px;
   height: 200px;
   border-radius: 50%;
-  box-shadow: 0 0 10px #B0B7C0; /* Silver glow */
+  box-shadow: 0 0 10px #B0B7C0;
   animation: glow 2s ease-in-out infinite alternate;
 }
 .bio {
@@ -252,13 +283,13 @@ body.dark-mode .about {
   transform: scale(1.05);
 }
 .portfolio-card {
-  background-color: #1E1E1E; /* Lighter gray for cards */
+  background-color: #1E1E1E; /* Gray for light mode */
   border-radius: 10px;
   overflow: hidden;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 body.dark-mode .portfolio-card {
-  background-color: #0A0A0A; /* Almost black for dark mode */
+  background-color: #0A0A0A; /* Black for dark mode */
 }
 .portfolio-card:hover {
   transform: translateY(-6px);
@@ -272,10 +303,10 @@ body.dark-mode .portfolio-card {
 .portfolio-card h3 {
   padding: 1rem;
   font-size: 1.1rem;
-  color: #B0B7C0; /* Silver for card titles */
+  color: #B0B7C0;
 }
 .price {
-  color: #B0B7C0; /* Silver for price */
+  color: #B0B7C0;
   font-weight: bold;
   font-size: 1.1rem;
   margin: 0.5rem 0;
@@ -301,42 +332,39 @@ body.dark-mode .portfolio-card {
   min-width: 80%;
   flex: 0 0 auto;
   scroll-snap-align: center;
-  background-color: #1E1E1E; /* Lighter gray for testimonials */
+  background-color: #1E1E1E; /* Gray for light mode */
   border-radius: 10px;
   box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
   padding: 30px;
   text-align: center;
 }
 body.dark-mode .testimonial {
-  background-color: #0A0A0A; /* Almost black for dark mode */
+  background-color: #0A0A0A; /* Black for dark mode */
 }
 .testimonial img {
   width: 100px;
   height: 100px;
   border-radius: 50%;
   object-fit: cover;
-  border: 4px solid #B0B7C0; /* Silver border */
+  border: 4px solid #B0B7C0;
   margin-bottom: 20px;
 }
 .testimonial h3 {
   font-size: 20px;
-  color: #E0E0E0; /* Light gray for names */
-}
-body.dark-mode .testimonial h3 {
-  color: #E0E0E0; /* Light gray for dark mode */
+  color: #B0B7C0;
 }
 .testimonial .company {
   font-size: 14px;
-  color: #B0BEC5; /* Blue-gray for company */
+  color: #B0B7C0;
   margin-bottom: 15px;
 }
 .testimonial p {
   font-size: 16px;
-  color: #B0BEC5; /* Blue-gray for text */
+  color: #000000; /* Black in light mode */
   font-style: italic;
 }
 body.dark-mode .testimonial p {
-  color: #CFD8DC; /* Lighter silver for dark mode */
+  color: #FFFFFF; /* White in dark mode */
 }
 .dots {
   display: flex;
@@ -348,11 +376,11 @@ body.dark-mode .testimonial p {
   width: 12px;
   height: 12px;
   border-radius: 50%;
-  background-color: #B0BEC5; /* Blue-gray for dots */
+  background-color: #B0B7C0;
   cursor: pointer;
 }
 .dot.active {
-  background-color: #B0B7C0; /* Silver for active dot */
+  background-color: #CFD8DC;
 }
 
 /* CDR Section */
@@ -360,10 +388,10 @@ body.dark-mode .testimonial p {
   max-width: 800px;
   margin: 2rem auto;
   font-size: 1rem;
-  color: #B0BEC5; /* Blue-gray for text */
+  color: #000000; /* Black in light mode */
 }
 body.dark-mode .payment-info {
-  color: #CFD8DC; /* Lighter silver for dark mode */
+  color: #FFFFFF; /* White in dark mode */
 }
 
 /* Popup */
@@ -373,11 +401,14 @@ body.dark-mode .payment-info {
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(18, 18, 18, 0.9); /* Dark gray overlay */
+  background: rgba(18, 18, 18, 0.9);
   display: none;
   justify-content: center;
   align-items: center;
   z-index: 9999;
+}
+body.dark-mode .popup {
+  background: rgba(10, 10, 10, 0.9);
 }
 .popup img {
   max-width: 90%;
@@ -388,12 +419,12 @@ body.dark-mode .payment-info {
   position: absolute;
   top: 20px;
   right: 35px;
-  color: #E0E0E0; /* Light gray for close button */
+  color: #B0B7C0;
   font-size: 40px;
   cursor: pointer;
 }
 .popup .close:hover {
-  color: #B0B7C0; /* Silver on hover */
+  color: #CFD8DC;
 }
 
 /* Back to Top */
@@ -401,8 +432,8 @@ body.dark-mode .payment-info {
   position: fixed;
   bottom: 80px;
   right: 20px;
-  background-color: #B0B7C0; /* Silver for button */
-  color: #121212; /* Dark gray text */
+  background-color: #B0B7C0;
+  color: #000000; /* Black in light mode */
   padding: 10px;
   border-radius: 50%;
   font-size: 20px;
@@ -410,16 +441,23 @@ body.dark-mode .payment-info {
   z-index: 1000;
   cursor: pointer;
 }
+body.dark-mode .back-to-top {
+  color: #FFFFFF; /* White in dark mode */
+}
 .back-to-top.show {
   display: block;
 }
 
 /* Footer */
 footer {
-  background: #121212; /* Dark gray for footer */
+  background: #121212; /* Gray for light mode */
   padding: 2rem;
-  color: #E0E0E0; /* Light gray for text */
+  color: #000000; /* Black for light mode */
   font-size: 0.9rem;
+}
+body.dark-mode footer {
+  background: #0A0A0A; /* Black for dark mode */
+  color: #FFFFFF; /* White for dark mode */
 }
 .contact-icons {
   margin: 1rem 0;
@@ -429,11 +467,11 @@ footer {
   font-size: 24px;
 }
 .contact-icons a {
-  color: #B0B7C0; /* Silver for icons */
+  color: #B0B7C0;
   transition: color 0.3s;
 }
 .contact-icons a:hover {
-  color: #CFD8DC; /* Lighter silver on hover */
+  color: #CFD8DC;
 }
 
 /* Responsive */
@@ -484,11 +522,5 @@ footer {
   .popup img {
     max-width: 95%;
     max-height: 70%;
-  }
-  .header-img {
-    width: 100%;
-    max-height: 300px;
-    object-fit: cover;
-    border-radius: 10px;
   }
 }
