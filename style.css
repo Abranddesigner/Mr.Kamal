@@ -6,14 +6,14 @@
 }
 body {
   font-family: 'Poppins', sans-serif;
-  background-color: #071426; /* Deep navy background */
-  color: #E6F1FF; /* Off-white text */
+  background-color: #121212; /* Dark gray background */
+  color: #E0E0E0; /* Light gray text */
   line-height: 1.6;
   transition: all 0.3s ease;
 }
-.dark-mode {
-  background-color: #030C1B; /* Almost black navy for dark mode */
-  color: #E6F1FF; /* Off-white text */
+body.dark-mode {
+  background-color: #0A0A0A; /* Almost black for dark mode */
+  color: #E0E0E0; /* Light gray text */
 }
 
 /* Common Classes */
@@ -26,11 +26,11 @@ body {
   transition: background-color 0.3s ease, transform 0.3s ease;
 }
 .btn-primary {
-  background-color: #00BCD4; /* Teal for buttons */
-  color: #071426; /* Deep navy text */
+  background-color: #B0B7C0; /* Silver for buttons */
+  color: #121212; /* Dark gray text */
 }
 .btn-primary:hover {
-  background-color: #26C6DA; /* Brighter teal on hover */
+  background-color: #CFD8DC; /* Lighter silver on hover */
   transform: scale(1.05);
 }
 .btn-whatsapp {
@@ -55,25 +55,25 @@ body {
   text-align: center;
 }
 .section h2 {
-  color: #00BCD4; /* Teal for headings */
+  color: #B0B7C0; /* Silver for headings */
   font-size: 2.2rem;
   margin-bottom: 1rem;
 }
-.dark-mode .section h2 {
-  color: #40C4FF; /* Lighter teal for dark mode */
+body.dark-mode .section h2 {
+  color: #CFD8DC; /* Lighter silver for dark mode */
 }
 .subtitle {
   font-size: 1.1rem;
-  color: #A3BFFA; /* Light blue-gray for subtitles */
+  color: #B0BEC5; /* Blue-gray for subtitles */
   margin-bottom: 1.5rem;
 }
-.dark-mode .subtitle {
-  color: #B3E5FC; /* Lighter blue for dark mode */
+body.dark-mode .subtitle {
+  color: #CFD8DC; /* Lighter silver for dark mode */
 }
 
 /* Header */
 header {
-  background: rgba(7, 20, 38, 0.7); /* Deep navy overlay */
+  background: rgba(18, 18, 18, 0.7); /* Dark gray overlay */
   background-image: url('https://raw.githubusercontent.com/Abranddesigner/Mr.Kamal/refs/heads/main/Head.png');
   background-size: cover;
   background-position: center;
@@ -87,8 +87,8 @@ header {
   top: 0;
   z-index: 1000;
 }
-.dark-mode header {
-  background: rgba(3, 12, 27, 0.8); /* Darker navy overlay for dark mode */
+body.dark-mode header {
+  background: rgba(10, 10, 10, 0.8); /* Darker overlay for dark mode */
   background-image: url('https://raw.githubusercontent.com/Abranddesigner/Mr.Kamal/refs/heads/main/Head.png');
   background-size: cover;
   background-position: center;
@@ -106,14 +106,14 @@ header {
   border-radius: 50%;
 }
 .title h1 {
-  color: #00BCD4; /* Teal for title */
+  color: #B0B7C0; /* Silver for title */
   font-size: 1.8rem;
   margin: 0;
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
 }
 .title .tagline {
   font-size: 14px;
-  color: #E6F1FF; /* Off-white for tagline */
+  color: #E0E0E0; /* Light gray for tagline */
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
 }
 
@@ -123,7 +123,7 @@ nav {
   gap: 10px;
 }
 nav a {
-  color: #E6F1FF; /* Off-white for nav links */
+  color: #E0E0E0; /* Light gray for nav links */
   margin: 0 15px;
   text-decoration: none;
   font-weight: bold;
@@ -135,13 +135,13 @@ nav a {
 }
 nav a:hover,
 nav a.active {
-  color: #00BCD4; /* Teal on hover/active */
+  color: #B0B7C0; /* Silver on hover/active */
 }
 .menu-toggle {
   display: none;
   font-size: 24px;
   cursor: pointer;
-  color: #00BCD4; /* Teal for menu toggle */
+  color: #B0B7C0; /* Silver for menu toggle */
   position: relative;
   z-index: 1;
 }
@@ -186,12 +186,12 @@ nav a.active {
 
 /* About Section */
 .about {
-  background-color: #14213D; /* Lighter navy for about section */
+  background-color: #1E1E1E; /* Lighter gray for about section */
   border-radius: 10px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
-.dark-mode .about {
-  background-color: #030C1B; /* Darker navy for dark mode */
+body.dark-mode .about {
+  background-color: #0A0A0A; /* Almost black for dark mode */
 }
 .about-content {
   display: flex;
@@ -204,7 +204,7 @@ nav a.active {
   width: 200px;
   height: 200px;
   border-radius: 50%;
-  box-shadow: 0 0 10px #00BCD4; /* Teal glow */
+  box-shadow: 0 0 10px #B0B7C0; /* Silver glow */
   animation: glow 2s ease-in-out infinite alternate;
 }
 .bio {
@@ -214,8 +214,8 @@ nav a.active {
   animation: fadeInUp 1.5s ease;
 }
 @keyframes glow {
-  from { box-shadow: 0 0 5px #00BCD4; }
-  to { box-shadow: 0 0 15px #00BCD4; }
+  from { box-shadow: 0 0 5px #B0B7C0; }
+  to { box-shadow: 0 0 15px #B0B7C0; }
 }
 @keyframes fadeInUp {
   0% { opacity: 0; transform: translateY(20px); }
@@ -246,13 +246,13 @@ nav a.active {
   transform: scale(1.05);
 }
 .portfolio-card {
-  background-color: #14213D; /* Lighter navy for cards */
+  background-color: #1E1E1E; /* Lighter gray for cards */
   border-radius: 10px;
   overflow: hidden;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
-.dark-mode .portfolio-card {
-  background-color: #030C1B; /* Darker navy for dark mode */
+body.dark-mode .portfolio-card {
+  background-color: #0A0A0A; /* Almost black for dark mode */
 }
 .portfolio-card:hover {
   transform: translateY(-6px);
@@ -266,10 +266,10 @@ nav a.active {
 .portfolio-card h3 {
   padding: 1rem;
   font-size: 1.1rem;
-  color: #00BCD4; /* Teal for card titles */
+  color: #B0B7C0; /* Silver for card titles */
 }
 .price {
-  color: #00BCD4; /* Teal for price */
+  color: #B0B7C0; /* Silver for price */
   font-weight: bold;
   font-size: 1.1rem;
   margin: 0.5rem 0;
@@ -295,42 +295,42 @@ nav a.active {
   min-width: 80%;
   flex: 0 0 auto;
   scroll-snap-align: center;
-  background-color: #14213D; /* Lighter navy for testimonials */
+  background-color: #1E1E1E; /* Lighter gray for testimonials */
   border-radius: 10px;
   box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
   padding: 30px;
   text-align: center;
 }
-.dark-mode .testimonial {
-  background-color: #030C1B; /* Darker navy for dark mode */
+body.dark-mode .testimonial {
+  background-color: #0A0A0A; /* Almost black for dark mode */
 }
 .testimonial img {
   width: 100px;
   height: 100px;
   border-radius: 50%;
   object-fit: cover;
-  border: 4px solid #00BCD4; /* Teal border */
+  border: 4px solid #B0B7C0; /* Silver border */
   margin-bottom: 20px;
 }
 .testimonial h3 {
   font-size: 20px;
-  color: #E6F1FF; /* Off-white for names */
+  color: #E0E0E0; /* Light gray for names */
 }
-.dark-mode .testimonial h3 {
-  color: #E6F1FF; /* Off-white for dark mode */
+body.dark-mode .testimonial h3 {
+  color: #E0E0E0; /* Light gray for dark mode */
 }
 .testimonial .company {
   font-size: 14px;
-  color: #A3BFFA; /* Light blue-gray for company */
+  color: #B0BEC5; /* Blue-gray for company */
   margin-bottom: 15px;
 }
 .testimonial p {
   font-size: 16px;
-  color: #A3BFFA; /* Light blue-gray for text */
+  color: #B0BEC5; /* Blue-gray for text */
   font-style: italic;
 }
-.dark-mode .testimonial p {
-  color: #B3E5FC; /* Lighter blue for dark mode */
+body.dark-mode .testimonial p {
+  color: #CFD8DC; /* Lighter silver for dark mode */
 }
 .dots {
   display: flex;
@@ -342,11 +342,11 @@ nav a.active {
   width: 12px;
   height: 12px;
   border-radius: 50%;
-  background-color: #A3BFFA; /* Light blue-gray for dots */
+  background-color: #B0BEC5; /* Blue-gray for dots */
   cursor: pointer;
 }
 .dot.active {
-  background-color: #00BCD4; /* Teal for active dot */
+  background-color: #B0B7C0; /* Silver for active dot */
 }
 
 /* CDR Section */
@@ -354,10 +354,10 @@ nav a.active {
   max-width: 800px;
   margin: 2rem auto;
   font-size: 1rem;
-  color: #A3BFFA; /* Light blue-gray for text */
+  color: #B0BEC5; /* Blue-gray for text */
 }
-.dark-mode .payment-info {
-  color: #B3E5FC; /* Lighter blue for dark mode */
+body.dark-mode .payment-info {
+  color: #CFD8DC; /* Lighter silver for dark mode */
 }
 
 /* Popup */
@@ -367,7 +367,7 @@ nav a.active {
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(7, 20, 38, 0.9); /* Deep navy overlay */
+  background: rgba(18, 18, 18, 0.9); /* Dark gray overlay */
   display: none;
   justify-content: center;
   align-items: center;
@@ -382,12 +382,12 @@ nav a.active {
   position: absolute;
   top: 20px;
   right: 35px;
-  color: #E6F1FF; /* Off-white for close button */
+  color: #E0E0E0; /* Light gray for close button */
   font-size: 40px;
   cursor: pointer;
 }
 .popup .close:hover {
-  color: #00BCD4; /* Teal on hover */
+  color: #B0B7C0; /* Silver on hover */
 }
 
 /* Back to Top */
@@ -395,8 +395,8 @@ nav a.active {
   position: fixed;
   bottom: 80px;
   right: 20px;
-  background-color: #00BCD4; /* Teal for button */
-  color: #071426; /* Deep navy text */
+  background-color: #B0B7C0; /* Silver for button */
+  color: #121212; /* Dark gray text */
   padding: 10px;
   border-radius: 50%;
   font-size: 20px;
@@ -410,9 +410,9 @@ nav a.active {
 
 /* Footer */
 footer {
-  background: #071426; /* Deep navy for footer */
+  background: #121212; /* Dark gray for footer */
   padding: 2rem;
-  color: #E6F1FF; /* Off-white for text */
+  color: #E0E0E0; /* Light gray for text */
   font-size: 0.9rem;
 }
 .contact-icons {
@@ -423,11 +423,11 @@ footer {
   font-size: 24px;
 }
 .contact-icons a {
-  color: #00BCD4; /* Teal for icons */
+  color: #B0B7C0; /* Silver for icons */
   transition: color 0.3s;
 }
 .contact-icons a:hover {
-  color: #26C6DA; /* Brighter teal on hover */
+  color: #CFD8DC; /* Lighter silver on hover */
 }
 
 /* Responsive */
