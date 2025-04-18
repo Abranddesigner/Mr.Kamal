@@ -6,14 +6,14 @@
 }
 body {
   font-family: 'Poppins', sans-serif;
-  background-color: #F1F3F5; /* Light gray background */
-  color: #1E2A44; /* Midnight blue text */
+  background-color: #071426; /* Deep navy background */
+  color: #E6F1FF; /* Off-white text */
   line-height: 1.6;
   transition: all 0.3s ease;
 }
 .dark-mode {
-  background-color: #0F172A; /* Darker blue for dark mode */
-  color: #FFFFFF; /* White text */
+  background-color: #030C1B; /* Almost black navy for dark mode */
+  color: #E6F1FF; /* Off-white text */
 }
 
 /* Common Classes */
@@ -26,15 +26,15 @@ body {
   transition: background-color 0.3s ease, transform 0.3s ease;
 }
 .btn-primary {
-  background-color: #B0B7C0; /* Silver for buttons */
-  color: #1E2A44; /* Midnight blue text */
+  background-color: #00BCD4; /* Teal for buttons */
+  color: #071426; /* Deep navy text */
 }
 .btn-primary:hover {
-  background-color: #9CA3AF; /* Darker silver on hover */
+  background-color: #26C6DA; /* Brighter teal on hover */
   transform: scale(1.05);
 }
 .btn-whatsapp {
-  background-color: #25D366; /* Keep WhatsApp green */
+  background-color: #25D366; /* WhatsApp green unchanged */
   color: white;
   padding: 12px;
   border-radius: 50px;
@@ -55,66 +55,66 @@ body {
   text-align: center;
 }
 .section h2 {
-  color: #B0B7C0; /* Silver for headings */
+  color: #00BCD4; /* Teal for headings */
   font-size: 2.2rem;
   margin-bottom: 1rem;
 }
 .dark-mode .section h2 {
-  color: #D1D5DB; /* Brighter silver for dark mode */
+  color: #40C4FF; /* Lighter teal for dark mode */
 }
 .subtitle {
   font-size: 1.1rem;
-  color: #1E2A44; /* Midnight blue for subtitles */
+  color: #A3BFFA; /* Light blue-gray for subtitles */
   margin-bottom: 1.5rem;
 }
 .dark-mode .subtitle {
-  color: #E2E8F0; /* Lighter blue for dark mode */
+  color: #B3E5FC; /* Lighter blue for dark mode */
 }
 
 /* Header */
 header {
-    background: rgba(30, 42, 68, 0.7); /* Midnight blue overlay */
-    background-image: url('https://raw.githubusercontent.com/Abranddesigner/Mr.Kamal/refs/heads/main/Head.png'); /* Your provided image */
-    background-size: cover; /* Cover the entire header */
-    background-position: center; /* Center the image */
-    backdrop-filter: blur(20px); /* 20px blur */
-    padding: 1.5rem 1rem;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
+  background: rgba(7, 20, 38, 0.7); /* Deep navy overlay */
+  background-image: url('https://raw.githubusercontent.com/Abranddesigner/Mr.Kamal/refs/heads/main/Head.png');
+  background-size: cover;
+  background-position: center;
+  backdrop-filter: blur(20px); /* 20px blur intact */
+  padding: 1.5rem 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
 }
 .dark-mode header {
-    background: rgba(30, 42, 68, 0.8); /* Darker overlay for dark mode */
-    background-image: url('https://raw.githubusercontent.com/Abranddesigner/Mr.Kamal/refs/heads/main/Head.png'); /* Same image */
-    background-size: cover;
-    background-position: center;
-    backdrop-filter: blur(20px);
+  background: rgba(3, 12, 27, 0.8); /* Darker navy overlay for dark mode */
+  background-image: url('https://raw.githubusercontent.com/Abranddesigner/Mr.Kamal/refs/heads/main/Head.png');
+  background-size: cover;
+  background-position: center;
+  backdrop-filter: blur(20px);
 }
 .logo {
-    display: flex;
-    align-items: center;
-    gap: 25px;
-    position: relative;
-    z-index: 1; /* Ensure logo stays above blurred background */
+  display: flex;
+  align-items: center;
+  gap: 25px;
+  position: relative;
+  z-index: 1;
 }
 .logo img {
-    height: 60px;
-    border-radius: 50%;
+  height: 60px;
+  border-radius: 50%;
 }
 .title h1 {
-    color: #B0B7C0; /* Silver for title */
-    font-size: 1.8rem;
-    margin: 0;
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8); /* Shadow for readability */
+  color: #00BCD4; /* Teal for title */
+  font-size: 1.8rem;
+  margin: 0;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
 }
 .title .tagline {
-    font-size: 14px;
-    color: #FFFFFF; /* White for tagline */
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8); /* Shadow for readability */
+  font-size: 14px;
+  color: #E6F1FF; /* Off-white for tagline */
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
 }
 
 /* Navbar */
@@ -123,27 +123,27 @@ nav {
   gap: 10px;
 }
 nav a {
-  color: #FFFFFF; /* White for nav links */
+  color: #E6F1FF; /* Off-white for nav links */
   margin: 0 15px;
   text-decoration: none;
   font-weight: bold;
   font-size: 1rem;
   transition: color 0.3s ease;
   position: relative;
-  z-index: 1; /* Ensure nav links are above blurred background */
-  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8); /* Shadow for readability */
+  z-index: 1;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
 }
 nav a:hover,
 nav a.active {
-  color: #B0B7C0; /* Silver on hover/active */
+  color: #00BCD4; /* Teal on hover/active */
 }
 .menu-toggle {
   display: none;
   font-size: 24px;
   cursor: pointer;
-  color: #B0B7C0; /* Silver for menu toggle */
+  color: #00BCD4; /* Teal for menu toggle */
   position: relative;
-  z-index: 1; /* Ensure menu toggle is above blurred background */
+  z-index: 1;
 }
 
 /* Welcome Section */
@@ -186,12 +186,12 @@ nav a.active {
 
 /* About Section */
 .about {
-  background-color: #F1F3F5; /* Light gray for about section */
+  background-color: #14213D; /* Lighter navy for about section */
   border-radius: 10px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 .dark-mode .about {
-  background-color: #0F172A; /* Darker blue for dark mode */
+  background-color: #030C1B; /* Darker navy for dark mode */
 }
 .about-content {
   display: flex;
@@ -204,7 +204,7 @@ nav a.active {
   width: 200px;
   height: 200px;
   border-radius: 50%;
-  box-shadow: 0 0 10px #B0B7C0; /* Silver glow */
+  box-shadow: 0 0 10px #00BCD4; /* Teal glow */
   animation: glow 2s ease-in-out infinite alternate;
 }
 .bio {
@@ -214,8 +214,8 @@ nav a.active {
   animation: fadeInUp 1.5s ease;
 }
 @keyframes glow {
-  from { box-shadow: 0 0 5px #B0B7C0; }
-  to { box-shadow: 0 0 15px #B0B7C0; }
+  from { box-shadow: 0 0 5px #00BCD4; }
+  to { box-shadow: 0 0 15px #00BCD4; }
 }
 @keyframes fadeInUp {
   0% { opacity: 0; transform: translateY(20px); }
@@ -246,13 +246,13 @@ nav a.active {
   transform: scale(1.05);
 }
 .portfolio-card {
-  background-color: #F1F3F5; /* Light gray for cards */
+  background-color: #14213D; /* Lighter navy for cards */
   border-radius: 10px;
   overflow: hidden;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 .dark-mode .portfolio-card {
-  background-color: #0F172A; /* Darker blue for dark mode */
+  background-color: #030C1B; /* Darker navy for dark mode */
 }
 .portfolio-card:hover {
   transform: translateY(-6px);
@@ -266,10 +266,10 @@ nav a.active {
 .portfolio-card h3 {
   padding: 1rem;
   font-size: 1.1rem;
-  color: #B0B7C0; /* Silver for card titles */
+  color: #00BCD4; /* Teal for card titles */
 }
 .price {
-  color: #B0B7C0; /* Silver for price */
+  color: #00BCD4; /* Teal for price */
   font-weight: bold;
   font-size: 1.1rem;
   margin: 0.5rem 0;
@@ -295,42 +295,42 @@ nav a.active {
   min-width: 80%;
   flex: 0 0 auto;
   scroll-snap-align: center;
-  background-color: #F1F3F5; /* Light gray for testimonials */
+  background-color: #14213D; /* Lighter navy for testimonials */
   border-radius: 10px;
   box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
   padding: 30px;
   text-align: center;
 }
 .dark-mode .testimonial {
-  background-color: #0F172A; /* Darker blue for dark mode */
+  background-color: #030C1B; /* Darker navy for dark mode */
 }
 .testimonial img {
   width: 100px;
   height: 100px;
   border-radius: 50%;
   object-fit: cover;
-  border: 4px solid #B0B7C0; /* Silver border */
+  border: 4px solid #00BCD4; /* Teal border */
   margin-bottom: 20px;
 }
 .testimonial h3 {
   font-size: 20px;
-  color: #1E2A44; /* Midnight blue for names */
+  color: #E6F1FF; /* Off-white for names */
 }
 .dark-mode .testimonial h3 {
-  color: #FFFFFF; /* White for dark mode */
+  color: #E6F1FF; /* Off-white for dark mode */
 }
 .testimonial .company {
   font-size: 14px;
-  color: #1E2A44; /* Midnight blue for company */
+  color: #A3BFFA; /* Light blue-gray for company */
   margin-bottom: 15px;
 }
 .testimonial p {
   font-size: 16px;
-  color: #1E2A44; /* Midnight blue for text */
+  color: #A3BFFA; /* Light blue-gray for text */
   font-style: italic;
 }
 .dark-mode .testimonial p {
-  color: #E2E8F0; /* Lighter blue for dark mode */
+  color: #B3E5FC; /* Lighter blue for dark mode */
 }
 .dots {
   display: flex;
@@ -342,11 +342,11 @@ nav a.active {
   width: 12px;
   height: 12px;
   border-radius: 50%;
-  background-color: #1E2A44; /* Midnight blue for dots */
+  background-color: #A3BFFA; /* Light blue-gray for dots */
   cursor: pointer;
 }
 .dot.active {
-  background-color: #B0B7C0; /* Silver for active dot */
+  background-color: #00BCD4; /* Teal for active dot */
 }
 
 /* CDR Section */
@@ -354,10 +354,10 @@ nav a.active {
   max-width: 800px;
   margin: 2rem auto;
   font-size: 1rem;
-  color: #1E2A44; /* Midnight blue for text */
+  color: #A3BFFA; /* Light blue-gray for text */
 }
 .dark-mode .payment-info {
-  color: #E2E8F0; /* Lighter blue for dark mode */
+  color: #B3E5FC; /* Lighter blue for dark mode */
 }
 
 /* Popup */
@@ -367,7 +367,7 @@ nav a.active {
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(30, 42, 68, 0.9); /* Midnight blue overlay */
+  background: rgba(7, 20, 38, 0.9); /* Deep navy overlay */
   display: none;
   justify-content: center;
   align-items: center;
@@ -382,12 +382,12 @@ nav a.active {
   position: absolute;
   top: 20px;
   right: 35px;
-  color: #FFFFFF; /* White for close button */
+  color: #E6F1FF; /* Off-white for close button */
   font-size: 40px;
   cursor: pointer;
 }
 .popup .close:hover {
-  color: #B0B7C0; /* Silver on hover */
+  color: #00BCD4; /* Teal on hover */
 }
 
 /* Back to Top */
@@ -395,8 +395,8 @@ nav a.active {
   position: fixed;
   bottom: 80px;
   right: 20px;
-  background-color: #B0B7C0; /* Silver for button */
-  color: #1E2A44; /* Midnight blue text */
+  background-color: #00BCD4; /* Teal for button */
+  color: #071426; /* Deep navy text */
   padding: 10px;
   border-radius: 50%;
   font-size: 20px;
@@ -410,9 +410,9 @@ nav a.active {
 
 /* Footer */
 footer {
-  background: #1E2A44; /* Midnight blue for footer */
+  background: #071426; /* Deep navy for footer */
   padding: 2rem;
-  color: #FFFFFF; /* White for text */
+  color: #E6F1FF; /* Off-white for text */
   font-size: 0.9rem;
 }
 .contact-icons {
@@ -423,11 +423,11 @@ footer {
   font-size: 24px;
 }
 .contact-icons a {
-  color: #B0B7C0; /* Silver for icons */
+  color: #00BCD4; /* Teal for icons */
   transition: color 0.3s;
 }
 .contact-icons a:hover {
-  color: #D1D5DB; /* Brighter silver on hover */
+  color: #26C6DA; /* Brighter teal on hover */
 }
 
 /* Responsive */
