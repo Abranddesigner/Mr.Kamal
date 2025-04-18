@@ -106,6 +106,7 @@ body.light-theme main {
   background: rgba(245, 245, 245, 0.7);
 }
 
+/* Logo */
 .logo {
   display: flex;
   align-items: center;
