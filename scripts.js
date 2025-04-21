@@ -35,48 +35,44 @@ document.addEventListener('DOMContentLoaded', () => {
     document.body.classList.toggle('light');
     localStorage.setItem('theme', document.body.classList.contains('dark-mode') ? 'dark' : 'light');
     const button = document.querySelector('.mode-toggle');
-    button.textContent = document.body.classList.contains('dark-mode') ? 'Switch to Light Mode' : 'Switch to Dark Mode';
+    button.textContent = document.body.classList.contains('dark-mode') ? 'Switch to Light Mode' : 'Switch to Light Mode'; // Fixed typo
   }
   if (localStorage.getItem('theme') === 'dark') toggleMode();
-});
 
-// Handle Buy Now Click
-function handleBuyNow(product, amount) {
-  const isMobile = /Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
-  const upiUrl = `upi://pay?pa=8440048355@ybl&pn=Kamal%20Meena&am=${amount}&cu=INR&tn=Purchase%20${encodeURIComponent(product)}`;
+  // Handle Buy Now Click
+  function handleBuyNow(product, amount) {
+    const isMobile = /Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
+    const upiUrl = `upi://pay?pa=8440048355@ybl&pn=Kamal%20Meena&am=${amount}&cu=INR&tn=Purchase%20${encodeURIComponent(product)}`;
 
-  if (isMobile) {
-    // Open UPI app on mobile
-    window.location.href = upiUrl;
-  } else {
-    // Show static QR code on PC
-    showQRPopup();
+    if (isMobile) {
+      window.location.href = upiUrl;
+    } else {
+      showQRPopup();
+    }
+
+    showSendSSButton(product);
   }
 
-  // Show "Send SS on WhatsApp" button after 2 minutes
-  showSendSSButton(product);
-}
+  // Show QR Code Popup
+  function showQRPopup() {
+    const qrPopup = document.getElementById('qrPopup');
+    const qrCodeImg = document.getElementById('qrCodeImg');
+    qrCodeImg.src = 'https://raw.githubusercontent.com/Abranddesigner/Mr.Kamal/refs/heads/main/QR%20Code.jpg';
+    qrPopup.style.display = 'flex';
+  }
 
-// Show QR Code Popup
-function showQRPopup() {
-  const qrPopup = document.getElementById('qrPopup');
-  const qrCodeImg = document.getElementById('qrCodeImg');
-  // Use static QR code image
-  qrCodeImg.src = 'https://raw.githubusercontent.com/Abranddesigner/Mr.Kamal/refs/heads/main/QR%20Code.jpg';
-  qrPopup.style.display = 'flex';
-}
+  // Close QR Code Popup
+  function closeQRPopup() {
+    const qrPopup = document.getElementById('qrPopup');
+    qrPopup.style.display = 'none';
+  }
 
-// Close QR Code Popup
-function closeQRPopup() {
-  const qrPopup = document.getElementById('qrPopup');
-  qrPopup.style.display = 'none';
-}
-
-// Show Send SS on WhatsApp Button after 2 minutes
-function showSendSSButton(product) {
-  const sendSSButton = document.getElementById('sendSSButton');
-  sendSSButton.href = `https://wa.me/918440048355?text=Hi%20Kamal,%20here’s%20the%20payment%20screenshot%20for%20${encodeURIComponent(product)}.`;
-  setTimeout(() => {
-    sendSSButton.style.display = 'block';
-  }, 120000); // 2 minutes
-}
+  // Show Send SS on WhatsApp Button after 2 minutes
+  function showSendSSButton(product) {
+    const sendSSButton = document.getElementById('sendSSButton');
+    sendSSButton.href = `https://wa.me/918440048355?text=Hi%20Kamal,%20here’s%20the%20payment%20screenshot%20for%20${encodeURIComponent(product)}.`;
+    setTimeout(() => {
+      sendSSButton.style.display = 'block';
+    }, 120000); // 2 minutes
+  }
+});
