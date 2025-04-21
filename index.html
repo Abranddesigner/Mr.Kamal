@@ -27,7 +27,12 @@
       background: url('https://raw.githubusercontent.com/Abranddesigner/Mr.Kamal/refs/heads/main/Head1.png') no-repeat center center fixed;
       background-size: cover;
       color: #333;
-      transition: background-color 0.3s;
+      transition: all 0.3s ease;
+      animation: bgZoom 15s infinite alternate;
+    }
+    @keyframes bgZoom {
+      0% { transform: scale(1); }
+      100% { transform: scale(1.1); }
     }
     header {
       background: rgba(0, 0, 0, 0.5);
@@ -36,6 +41,7 @@
       top: 0;
       z-index: 1000;
       padding: 10px 20px;
+      animation: fadeIn 0.8s ease;
     }
     .section {
       padding: 50px 20px;
@@ -46,24 +52,40 @@
     @keyframes fadeInUp {
       to { opacity: 1; transform: translateY(0); }
     }
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
     .testimonials-wrapper {
       text-align: center;
       padding: 50px 0;
       background: rgba(255, 255, 255, 0.8);
     }
     .testimonials {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      display: flex;
       gap: 20px;
-      justify-content: center;
+      overflow-x: auto;
+      scroll-behavior: smooth;
       padding: 20px;
+      scroll-snap-type: x mandatory;
+    }
+    .testimonials::-webkit-scrollbar {
+      display: none;
     }
     .testimonial {
+      min-width: 80%;
+      flex: 0 0 auto;
+      scroll-snap-align: center;
       background: #fff;
       padding: 20px;
       border-radius: 12px;
       box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
       transition: transform 0.3s;
+      animation: slideIn 0.5s ease;
+    }
+    @keyframes slideIn {
+      from { transform: translateX(-20px); opacity: 0; }
+      to { transform: translateX(0); opacity: 1; }
     }
     .testimonial:hover {
       transform: scale(1.05);
@@ -74,6 +96,17 @@
       max-width: 800px;
       margin: 15px auto;
       animation: fadeIn 1s forwards;
+    }
+    .slider-track img {
+      animation: fadeIn 0.5s ease;
+    }
+    .slider-track img:hover {
+      animation: pulse 0.5s infinite;
+    }
+    @keyframes pulse {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.05); }
+      100% { transform: scale(1); }
     }
     .dark-mode {
       background: #2F4156;
@@ -310,5 +343,5 @@
       });
     });
   </script>
-</body>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'933c7b2d9fff677e',t:'MTc0NTIzNDMxMS4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
 </html>
