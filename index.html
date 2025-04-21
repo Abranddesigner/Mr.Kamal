@@ -28,11 +28,11 @@
       background-size: cover;
       color: #333;
       transition: all 0.3s ease;
-      animation: bgZoom 15s infinite alternate;
+      animation: bgRotate 15s infinite linear;
     }
-    @keyframes bgZoom {
-      0% { transform: scale(1); }
-      100% { transform: scale(1.1); }
+    @keyframes bgRotate {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
     }
     header {
       background: rgba(0, 0, 0, 0.5);
@@ -62,20 +62,13 @@
       background: rgba(255, 255, 255, 0.8);
     }
     .testimonials {
-      display: flex;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
       gap: 20px;
-      overflow-x: auto;
-      scroll-behavior: smooth;
+      justify-content: center;
       padding: 20px;
-      scroll-snap-type: x mandatory;
-    }
-    .testimonials::-webkit-scrollbar {
-      display: none;
     }
     .testimonial {
-      min-width: 80%;
-      flex: 0 0 auto;
-      scroll-snap-align: center;
       background: #fff;
       padding: 20px;
       border-radius: 12px;
@@ -195,7 +188,7 @@
 
       <!-- Testimonials -->
       <div class="testimonials-wrapper">
-        <h2>KIND WORDS BY LOVELY PEOPLE</h2>
+        <h2>Client Testimonials</h2>
         <div class="testimonials">
           <div class="testimonial">
             <img src="https://raw.githubusercontent.com/Abranddesigner/Mr.Kamal/refs/heads/main/Miss%20Aaru.png" alt="Miss Aaru" />
