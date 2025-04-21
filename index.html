@@ -28,11 +28,12 @@
       background-size: cover;
       color: #333;
       transition: all 0.3s ease;
-      animation: bgRotate 15s infinite linear;
+      animation: bgWave 10s infinite ease-in-out;
     }
-    @keyframes bgRotate {
-      0% { transform: rotate(0deg); }
-      100% { transform: rotate(360deg); }
+    @keyframes bgWave {
+      0% { transform: translateY(0); }
+      50% { transform: translateY(-20px); }
+      100% { transform: translateY(0); }
     }
     header {
       background: rgba(0, 0, 0, 0.5);
