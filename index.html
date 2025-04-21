@@ -23,10 +23,11 @@
   <style>
     body {
       margin: 0;
-      font-family: Arial, sans-serif;
+      font-family: 'Arial', sans-serif;
       background: url('https://raw.githubusercontent.com/Abranddesigner/Mr.Kamal/refs/heads/main/Head1.png') no-repeat center center fixed;
       background-size: cover;
-      overflow-x: hidden;
+      color: #333;
+      transition: background-color 0.3s;
     }
     header {
       background: rgba(0, 0, 0, 0.5);
@@ -34,39 +35,77 @@
       position: sticky;
       top: 0;
       z-index: 1000;
+      padding: 10px 20px;
     }
     .section {
-      padding: 40px 20px;
+      padding: 50px 20px;
       opacity: 0;
-      animation: fadeIn 1s forwards;
+      transform: translateY(20px);
+      animation: fadeInUp 0.8s forwards 0.2s;
     }
-    @keyframes fadeIn {
-      to { opacity: 1; }
+    @keyframes fadeInUp {
+      to { opacity: 1; transform: translateY(0); }
     }
     .testimonials-wrapper {
       text-align: center;
-      padding: 40px 0;
+      padding: 50px 0;
+      background: rgba(255, 255, 255, 0.8);
     }
     .testimonials {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
       gap: 20px;
+      justify-content: center;
+      padding: 20px;
     }
     .testimonial {
-      background: rgba(255, 255, 255, 0.9);
+      background: #fff;
       padding: 20px;
-      border-radius: 10px;
-      width: 300px;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-      animation: slideUp 0.5s ease-out;
+      border-radius: 12px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s;
     }
-    @keyframes slideUp {
-      from { transform: translateY(20px); opacity: 0; }
-      to { transform: translateY(0); opacity: 1; }
+    .testimonial:hover {
+      transform: scale(1.05);
     }
-    .quote { color: #666; font-style: italic; }
-    .welcome p { animation: fadeIn 1s 0.5s forwards; }
+    .quote { color: #555; font-style: italic; margin: 10px 0; }
+    .welcome p {
+      font-size: 1rem;
+      max-width: 800px;
+      margin: 15px auto;
+      animation: fadeIn 1s forwards;
+    }
+    .dark-mode {
+      background: #2F4156;
+      color: #F5EFEB;
+    }
+    .dark-mode .testimonials-wrapper {
+      background: rgba(47, 65, 86, 0.9);
+    }
+    .dark-mode .testimonial {
+      background: #3A4D66;
+      color: #F5EFEB;
+    }
+    .dark-mode .quote { color: #B0B7C0; }
+    @media (max-width: 768px) {
+      #navbar {
+        display: none;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        right: 0;
+        background: rgba(0, 0, 0, 0.9);
+        flex-direction: column;
+      }
+      #navbar.show {
+        display: flex;
+      }
+      .menu-toggle {
+        display: block;
+        cursor: pointer;
+        font-size: 24px;
+      }
+    }
   </style>
 </head>
 <body class="light">
@@ -219,9 +258,12 @@
     function toggleMode() {
       document.body.classList.toggle('dark-mode');
       document.body.classList.toggle('light');
+      localStorage.setItem('theme', document.body.classList.contains('dark-mode') ? 'dark' : 'light');
       const button = document.querySelector('.mode-toggle');
       button.textContent = document.body.classList.contains('dark-mode') ? 'Switch to Light Mode' : 'Switch to Dark Mode';
     }
+
+    if (localStorage.getItem('theme') === 'dark') toggleMode();
 
     function scrollToTop() {
       window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -262,18 +304,10 @@
       backToTop.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
 
       const menuToggle = document.querySelector('.menu-toggle');
-      const navbar = document.querySelector('#navbar');
+      const navbar = document.getElementById('navbar');
       menuToggle.addEventListener('click', () => {
         navbar.classList.toggle('show');
-        menuToggle.setAttribute('aria-expanded', navbar.classList.contains('show'));
       });
-
-      function toggleMode() {
-        document.body.classList.toggle('dark-theme');
-        document.body.classList.toggle('light-theme');
-        localStorage.setItem('theme', document.body.classList.contains('dark-theme') ? 'dark' : 'light');
-      }
-      if (localStorage.getItem('theme') === 'dark') toggleMode();
     });
   </script>
 </body>
