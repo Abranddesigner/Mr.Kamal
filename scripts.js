@@ -56,36 +56,46 @@ document.addEventListener('DOMContentLoaded', () => {
   // Show QR Code Popup
   function showQRPopup() {
     const qrPopup = document.getElementById('qrPopup');
-    const qrCodeImg = document.getElementById('qrCodeImg');
-    qrCodeImg.src = 'https://raw.githubusercontent.com/Abranddesigner/Mr.Kamal/refs/heads/main/QR%20Code.jpg';
-    qrPopup.style.display = 'flex';
+    if (qrPopup) {
+      const qrCodeImg = document.getElementById('qrCodeImg');
+      qrCodeImg.src = 'https://raw.githubusercontent.com/Abranddesigner/Mr.Kamal/refs/heads/main/QR%20Code.jpg';
+      qrPopup.style.display = 'flex';
+    }
   }
 
   // Close QR Code Popup
   function closeQRPopup() {
     const qrPopup = document.getElementById('qrPopup');
-    qrPopup.style.display = 'none';
+    if (qrPopup) {
+      qrPopup.style.display = 'none';
+    }
   }
 
   // Show Send SS on WhatsApp Button after 2 minutes
   function showSendSSButton(product) {
     const sendSSButton = document.getElementById('sendSSButton');
-    sendSSButton.href = `https://wa.me/918440048355?text=Hi%20Kamal,%20here’s%20the%20payment%20screenshot%20for%20${encodeURIComponent(product)}.`;
-    setTimeout(() => {
-      sendSSButton.style.display = 'block';
-    }, 120000); // 2 minutes
+    if (sendSSButton) {
+      sendSSButton.href = `https://wa.me/918440048355?text=Hi%20Kamal,%20here’s%20the%20payment%20screenshot%20for%20${encodeURIComponent(product)}.`;
+      setTimeout(() => {
+        sendSSButton.style.display = 'block';
+      }, 120000); // 2 minutes
+    }
   }
 
   // Open Popup for Gallery Images
   function openPopup(src) {
     const popup = document.getElementById('popup');
     const popupImg = document.getElementById('popupImg');
-    popupImg.src = src;
-    popup.style.display = 'flex';
+    if (popup && popupImg) {
+      popupImg.src = src;
+      popup.style.display = 'flex';
+    }
   }
 
   function closePopup() {
     const popup = document.getElementById('popup');
-    popup.style.display = 'none';
+    if (popup) {
+      popup.style.display = 'none';
+    }
   }
 });
