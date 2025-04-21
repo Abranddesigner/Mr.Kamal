@@ -28,12 +28,6 @@
       background-size: cover;
       color: #333;
       transition: all 0.3s ease;
-      animation: fadeInOut 8s infinite ease-in-out;
-    }
-    @keyframes fadeInOut {
-      0% { opacity: 0.8; }
-      50% { opacity: 1; }
-      100% { opacity: 0.8; }
     }
     header {
       background: rgba(0, 0, 0, 0.5);
@@ -75,16 +69,27 @@
       padding: 20px;
       border-radius: 12px;
       box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-      transition: transform 0.3s;
+      transition: transform 0.3s, background 0.3s;
       animation: slideIn 0.5s ease;
-      min-width: 250px;
+    }
+    .testimonial:hover {
+      transform: scale(1.05);
+      background: #2F4156;
+      color: #F5EFEB;
+    }
+    .testimonial:hover .quote {
+      color: #B0B7C0;
+    }
+    .testimonial:hover.dark-mode {
+      background: #F5EFEB;
+      color: #2F4156;
+    }
+    .testimonial:hover.dark-mode .quote {
+      color: #333;
     }
     @keyframes slideIn {
       from { transform: translateX(-20px); opacity: 0; }
       to { transform: translateX(0); opacity: 1; }
-    }
-    .testimonial:hover {
-      transform: scale(1.05);
     }
     .quote { color: #555; font-style: italic; margin: 10px 0; }
     .welcome p {
@@ -92,6 +97,21 @@
       max-width: 800px;
       margin: 15px auto;
       animation: fadeIn 1s forwards;
+    }
+    .about-content p {
+      font-size: 1rem;
+      margin: 10px 0;
+      animation: flyIn 1s ease-out forwards;
+    }
+    @keyframes flyIn {
+      from {
+        opacity: 0;
+        transform: translateY(50px) rotate(10deg);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0) rotate(0deg);
+      }
     }
     .slider-track img {
       animation: fadeIn 0.5s ease;
