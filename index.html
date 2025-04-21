@@ -28,6 +28,12 @@
       background-size: cover;
       color: #333;
       transition: all 0.3s ease;
+      animation: slideWave 10s infinite linear;
+    }
+    @keyframes slideWave {
+      0% { background-position: 0 0; }
+      50% { background-position: 100% 0; }
+      100% { background-position: 0 0; }
     }
     header {
       background: rgba(0, 0, 0, 0.5);
@@ -55,22 +61,27 @@
       text-align: center;
       padding: 50px 0;
       background: rgba(255, 255, 255, 0.8);
+      overflow: hidden;
+      position: relative;
     }
     .testimonials {
       display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 20px;
-      padding: 20px;
+      animation: slideRightLeft 20s infinite linear;
+      width: max-content;
+    }
+    @keyframes slideRightLeft {
+      0% { transform: translateX(0); }
+      50% { transform: translateX(-50%); }
+      100% { transform: translateX(0); }
     }
     .testimonial {
-      flex: 0 0 calc(33.33% - 20px);
+      flex: 0 0 300px;
       background: #fff;
       padding: 20px;
       border-radius: 12px;
       box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+      margin: 0 10px;
       transition: transform 0.3s, background 0.3s;
-      animation: slideIn 0.5s ease;
     }
     .testimonial:hover {
       transform: scale(1.05);
@@ -86,10 +97,6 @@
     }
     .testimonial:hover.dark-mode .quote {
       color: #333;
-    }
-    @keyframes slideIn {
-      from { transform: translateX(-20px); opacity: 0; }
-      to { transform: translateX(0); opacity: 1; }
     }
     .quote { color: #555; font-style: italic; margin: 10px 0; }
     .welcome p {
@@ -156,6 +163,11 @@
       }
       .testimonial {
         flex: 0 0 100%;
+      }
+      .testimonials {
+        animation: none;
+        flex-wrap: wrap;
+        justify-content: center;
       }
     }
   </style>
