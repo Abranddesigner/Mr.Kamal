@@ -35,7 +35,7 @@ document.addEventListener('DOMContentLoaded', () => {
     document.body.classList.toggle('light');
     localStorage.setItem('theme', document.body.classList.contains('dark-mode') ? 'dark' : 'light');
     const button = document.querySelector('.mode-toggle');
-    button.textContent = document.body.classList.contains('dark-mode') ? 'Switch to Light Mode' : 'Switch to Light Mode'; // Fixed typo
+    button.textContent = document.body.classList.contains('dark-mode') ? 'Switch to Light Mode' : 'Switch to Light Mode';
   }
   if (localStorage.getItem('theme') === 'dark') toggleMode();
 
@@ -45,9 +45,9 @@ document.addEventListener('DOMContentLoaded', () => {
     const upiUrl = `upi://pay?pa=8440048355@ybl&pn=Kamal%20Meena&am=${amount}&cu=INR&tn=Purchase%20${encodeURIComponent(product)}`;
 
     if (isMobile) {
-      window.location.href = upiUrl;
+      window.location.href = upiUrl; // Direct UPI app open on mobile
     } else {
-      showQRPopup();
+      showQRPopup(); // QR popup on PC
     }
 
     showSendSSButton(product);
