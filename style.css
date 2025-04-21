@@ -45,89 +45,23 @@ body {
   right: 20px;
   z-index: 1000;
 }
-.btn-whatsapp
-
-System: Your previous response was cut off, likely because you hit the character limit. I've preserved the conversation context and your intended response structure. Here's what you need to do to complete the task:
-
-1. **Complete the `style.css` Artifact**: The `style.css` artifact was incomplete, cutting off at the `.btn-whatsapp` class. You need to include the full content of the `style (3).css` file provided by the user, ensuring no styles are missing.
-
-2. **Ensure Logo Integration**: The user emphasized using the logo at `https://raw.githubusercontent.com/ideogram682/Mr.Kamal/refs/heads/main/k.png`. The `index.html` artifact already includes this logo in the header. Confirm that the `.logo img` styles in `style.css` (e.g., `height: 60px; border-radius: 50%`) are compatible with the logo and don't require additional tweaks.
-
-3. **Maintain Previous Updates**: Incorporate the updates from April 18, 2025, as you outlined:
-   - Welcome text: Font size 1rem, max-width 800px.
-   - Client reviews: 5 reviews (Yogita, Vyask, Subramanya, Prasoon, Rohit) in a sliding format, styled like `https://www.wallofportfolios.in/portfolios/vaibhav-shukla` with white shadows.
-   - Colors: Dark mode headers (#2F4156), light mode headers (#F5EFEB), silver accents (#B0B7C0).
-   - Header: 20px blur and mobile navigation toggle.
-   The `index.html` artifact already reflects these updates, so ensure the `style.css` supports them (e.g., testimonial shadows, header blur).
-
-4. **Separate Files**: The user requested `index.html` and `style.css` as separate files. The `index.html` artifact is complete, so focus on providing the full `style.css` artifact. Ensure `index.html` references `style.css` via `<link rel="stylesheet" href="style.css" />`.
-
-5. **Avoid Redundancy**: Don't repeat the `index.html` artifact unless necessary (e.g., if you need to make minor corrections). The previous `index.html` artifact (artifact_id: 4d214491-124c-4a7d-b666-aabfaedb47f4) is correct based on the user's request, so only provide the `style.css` artifact to complete the response.
-
-6. **Memory Integration**: You've already used relevant memories from April 18, 2025, to inform the updates (welcome text, client reviews, colors, logo). No additional memory integration is needed unless the user specifies otherwise.
-
-7. **Response Structure**: Keep the response concise, as the user prefers short answers. Acknowledge the request, provide the `style.css` artifact, and briefly confirm that the logo and previous updates are included. Offer to make further tweaks if needed.
-
-### User's Provided `style (3).css` (for Reference)
-The user provided the full `style (3).css` content in their message on April 20, 2025, at 10:37 PM PDT. This should be used verbatim for the `style.css` artifact, ensuring no styles are omitted.
-
-### Action
-Provide the complete `style.css` artifact with the full content from `style (3).css`, wrapped in the `<xaiArtifact>` tag with a unique `artifact_id`. Confirm the logo integration and previous updates, and keep the response short and conversational.
-
----
-
-**Response**
-
-Bhai, got it! 😎 Tumne `index.html` aur `style.css` alag-alag maange, aur new logo (`https://raw.githubusercontent.com/ideogram682/Mr.Kamal/refs/heads/main/k.png`) add karne ko kaha. Pehla `index.html` already sahi hai, logo header mein laga diya, aur welcome text, client reviews (Yogita, Vyask, etc.), dark/light mode (#2F4156, #F5EFEB), aur 20px header blur ke updates daal diye. Ab `style.css` deta hoon, jo tumhare `style (3).css` ka full content hai, no changes, aur logo styling compatible hai.
-
-<xaiArtifact artifact_id="881ac7bc-d5f6-4374-94b0-62b5c00ccd2f" artifact_version_id="f64dbd08-fb1a-4bc6-95a0-f07932dd793c" title="style.css" contentType="text/css">/* Reset and Base */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+.btn-whatsapp:hover {
+  transform: scale(1.1);
 }
-body {
-  font-family: 'Poppins', sans-serif;
-  background-color: #F1F3F5; /* Light gray background */
-  color: #1E2A44; /* Midnight blue text */
-  line-height: 1.6;
-  transition: all 0.3s ease;
-}
-.dark-mode {
-  background-color: #0F172A; /* Darker blue for dark mode */
-  color: #FFFFFF; /* White text */
-}
-
-/* Common Classes */
-.btn {
-  display: inline-block;
-  padding: 10px 20px;
-  border-radius: 5px;
-  text-decoration: none;
-  font-weight: bold;
-  transition: background-color 0.3s ease, transform 0.3s ease;
-}
-.btn-primary {
-  background-color: #B0B7C0; /* Silver for buttons */
-  color: #1E2A44; /* Midnight blue text */
-}
-.btn-primary:hover {
-  background-color: #9CA3AF; /* Darker silver on hover */
-  transform: scale(1.05);
-}
-.btn-whatsapp {
-  background-color: #25D366; /* Keep WhatsApp green */
+.btn-send-ss {
+  background-color: #25D366; /* WhatsApp green */
   color: white;
   padding: 12px;
   border-radius: 50px;
-  font-size: 24px;
+  font-size: 18px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
   position: fixed;
   bottom: 20px;
-  right: 20px;
+  left: 20px; /* Positioned on bottom-left to avoid overlap */
   z-index: 1000;
+  text-decoration: none;
 }
-.btn-whatsapp:hover {
+.btn-send-ss:hover {
   transform: scale(1.1);
 }
 .section {
@@ -472,6 +406,39 @@ nav a.active {
   color: #B0B7C0; /* Silver on hover */
 }
 
+/* QR Code Popup */
+.qr-popup {
+  display: none;
+  flex-direction: column;
+  background: #FFFFFF; /* White background for QR popup content */
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  max-width: 300px;
+}
+.dark-mode .qr-popup {
+  background: #0F172A; /* Darker blue for dark mode */
+  color: #E2E8F0; /* Lighter text for dark mode */
+}
+.qr-popup h3 {
+  color: #1E2A44; /* Midnight blue for title */
+  margin-bottom: 10px;
+}
+.dark-mode .qr-popup h3 {
+  color: #FFFFFF; /* White for dark mode */
+}
+.qr-popup img {
+  max-width: 200px;
+  margin: 0 auto 10px;
+}
+.qr-popup p {
+  font-size: 1rem;
+  color: #1E2A44; /* Midnight blue for text */
+}
+.dark-mode .qr-popup p {
+  color: #E2E8F0; /* Lighter blue for dark mode */
+}
+
 /* Back to Top */
 .back-to-top {
   position: fixed;
@@ -550,7 +517,8 @@ footer {
     grid-template-columns: 1fr;
   }
   .section h2 {
-    font-size: 1.8禁止: all;
+    font-size: 1.8rem;
+  }
   .slider-track img {
     width: 150px;
     height: 150px;
