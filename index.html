@@ -28,12 +28,12 @@
       background-size: cover;
       color: #333;
       transition: all 0.3s ease;
-      animation: bgWave 10s infinite ease-in-out;
+      animation: fadeInOut 8s infinite ease-in-out;
     }
-    @keyframes bgWave {
-      0% { transform: translateY(0); }
-      50% { transform: translateY(-20px); }
-      100% { transform: translateY(0); }
+    @keyframes fadeInOut {
+      0% { opacity: 0.8; }
+      50% { opacity: 1; }
+      100% { opacity: 0.8; }
     }
     header {
       background: rgba(0, 0, 0, 0.5);
@@ -63,19 +63,21 @@
       background: rgba(255, 255, 255, 0.8);
     }
     .testimonials {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 20px;
+      display: flex;
+      flex-wrap: wrap;
       justify-content: center;
+      gap: 20px;
       padding: 20px;
     }
     .testimonial {
+      flex: 0 0 calc(33.33% - 20px);
       background: #fff;
       padding: 20px;
       border-radius: 12px;
       box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
       transition: transform 0.3s;
       animation: slideIn 0.5s ease;
+      min-width: 250px;
     }
     @keyframes slideIn {
       from { transform: translateX(-20px); opacity: 0; }
@@ -131,6 +133,9 @@
         display: block;
         cursor: pointer;
         font-size: 24px;
+      }
+      .testimonial {
+        flex: 0 0 100%;
       }
     }
   </style>
