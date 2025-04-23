@@ -28,7 +28,6 @@ document.addEventListener('DOMContentLoaded', () => {
   if (localStorage.getItem('darkMode') === 'true') {
     document.body.classList.add('dark-mode');
   }
-  // Slider
   const slides = document.querySelector('.slides');
   if (slides) {
     const images = slides.querySelectorAll('img');
@@ -42,7 +41,6 @@ document.addEventListener('DOMContentLoaded', () => {
       slides.style.transform = `translateX(-${currentSlide * 100}%)`;
     });
   }
-  // Testimonials
   const testimonials = document.querySelectorAll('.testimonial');
   let currentTestimonial = 0;
   function updateTestimonials() {
@@ -72,7 +70,6 @@ document.addEventListener('DOMContentLoaded', () => {
       updateTestimonials();
     });
   }
-  // Popup
   document.querySelectorAll('.slides img, .gallery-grid img').forEach(img => {
     img.addEventListener('click', () => {
       const popup = document.querySelector('.popup');
@@ -83,7 +80,6 @@ document.addEventListener('DOMContentLoaded', () => {
   document.querySelector('.close-popup').addEventListener('click', () => {
     document.querySelector('.popup').style.display = 'none';
   });
-  // Payment
   function showQRPopup(product, price) {
     console.log(`Showing QR for ${product} at ₹${price}`);
     const qrPopup = document.querySelector('.qr-popup');
@@ -100,7 +96,7 @@ document.addEventListener('DOMContentLoaded', () => {
         sendSSButton.style.display = 'block';
         console.log('Send SS button displayed');
         alert('Send SS button is now visible. Please send the payment screenshot.');
-      }, 120000); // 2 minutes
+      }, 120000);
     } else {
       console.error('Send SS button element not found');
       alert('Error: Send SS button not found. Please contact via WhatsApp.');
