@@ -3,32 +3,374 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="google-site-verification" content="D2kcy8KfcuZbNWKzvyXrQ4ukBy170cZU97H4cXsg0_8" />
-  <title>CDR Designs – Mr. Kamal Designer</title>
-  <meta name="description" content="Premium editable CorelDRAW (CDR) design files by Mr. Kamal for professional use." />
-  <meta name="keywords" content="CDR Designs, CorelDRAW Files, Graphic Design, Kamal Meena, Rajasthan Designer" />
-  <meta name="author" content="Kamal Meena" />
-  <meta property="og:title" content="CDR Designs – Mr. Kamal Designer" />
-  <meta property="og:description" content="Premium editable CorelDRAW (CDR) design files by Mr. Kamal for professional use." />
-  <meta property="og:image" content="https://abranddesigner.github.io/Mr.Kamal/assets/cover-image.jpg" />
-  <meta property="og:url" content="https://abranddesigner.github.io/Mr.Kamal/cdr.html" />
-  <meta property="og:type" content="website" />
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="CDR Designs – Mr. Kamal Designer" />
-  <meta name="twitter:description" content="Premium editable CorelDRAW (CDR) design files by Mr. Kamal for professional use." />
-  <meta name="twitter:image" content="https://abranddesigner.github.io/Mr.Kamal/assets/cover-image.jpg" />
+  <title>CDR – Mr. Kamal Designer</title>
+  <meta name="description" content="Purchase CDR files from Mr. Kamal – High-quality graphic design resources for your creative projects.">
+  <meta name="keywords" content="Graphic Designer, CDR Files, Logo Designer, Kamal Designer, Rajasthan Artist">
+  <meta name="author" content="Kamal Meena">
+  <meta property="og:title" content="CDR – Mr. Kamal Designer">
+  <meta property="og:description" content="Purchase CDR files from Mr. Kamal – High-quality graphic design resources for your creative projects.">
+  <meta property="og:image" content="https://abranddesigner.github.io/Mr.Kamal/assets/cover-image.jpg">
+  <meta property="og:url" content="https://abranddesigner.github.io/Mr.Kamal/cdr.html">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="CDR – Mr. Kamal Designer">
+  <meta name="twitter:description" content="Purchase CDR files from Mr. Kamal – High-quality graphic design resources for your creative projects.">
+  <meta name="twitter:image" content="https://abranddesigner.github.io/Mr.Kamal/assets/cover-image.jpg">
   <link rel="canonical" href="https://abranddesigner.github.io/Mr.Kamal/cdr.html" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
-  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    /* Reset and Base */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #F1F3F5;
+      color: #1E2A44;
+      line-height: 1.6;
+      transition: background-color 0.3s ease, color 0.3s ease;
+    }
+    .dark-mode {
+      background-color: #0F172A;
+      color: #FFFFFF;
+    }
+
+    /* Common Classes */
+    .btn {
+      display: inline-block;
+      padding: 10px 20px;
+      border-radius: 5px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: background-color 0.3s ease;
+    }
+    .btn-primary {
+      background-color: #B0B7C0;
+      color: #1E2A44;
+    }
+    .btn-primary:hover {
+      background-color: #9CA3AF;
+    }
+    .btn-whatsapp {
+      background-color: #25D366;
+      color: white;
+      padding: 12px;
+      border-radius: 50px;
+      font-size: 24px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      z-index: 1000;
+    }
+    .btn-whatsapp:hover {
+      background-color: #20b858;
+    }
+    .btn-send-ss {
+      background-color: #25D366;
+      color: white;
+      padding: 12px;
+      border-radius: 50px;
+      font-size: 18px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+      position: fixed;
+      bottom: 20px;
+      left: 20px;
+      z-index: 1000;
+      text-decoration: none;
+      display: none;
+    }
+    .btn-send-ss:hover {
+      background-color: #20b858;
+    }
+    .section {
+      padding: 3rem 1rem;
+      max-width: 1200px;
+      margin: auto;
+      text-align: center;
+    }
+    .section h2 {
+      color: #B0B7C0;
+      font-size: 2.2rem;
+      margin-bottom: 1rem;
+    }
+    .dark-mode .section h2 {
+      color: #D1D5DB;
+    }
+    .subtitle {
+      font-size: 1.1rem;
+      color: #1E2A44;
+      margin-bottom: 1.5rem;
+    }
+    .dark-mode .subtitle {
+      color: #E2E8F0;
+    }
+
+    /* Header */
+    header {
+      background: rgba(30, 42, 68, 0.7);
+      background-image: url('https://raw.githubusercontent.com/Abranddesigner/Mr.Kamal/refs/heads/main/Head.png');
+      background-size: cover;
+      background-position: center;
+      backdrop-filter: blur(20px);
+      padding: 1.5rem 1rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+    .dark-mode header {
+      background: rgba(30, 42, 68, 0.8);
+      background-image: url('https://raw.githubusercontent.com/Abranddesigner/Mr.Kamal/refs/heads/main/Head.png');
+      background-size: cover;
+      background-position: center;
+      backdrop-filter: blur(20px);
+    }
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 25px;
+      position: relative;
+      z-index: 1;
+    }
+    .logo img {
+      height: 60px;
+      border-radius: 50%;
+    }
+    .title h1 {
+      color: #B0B7C0;
+      font-size: 1.8rem;
+      margin: 0;
+      text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
+    }
+    .title .tagline {
+      font-size: 14px;
+      color: #FFFFFF;
+      text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
+    }
+
+    /* Navbar */
+    nav {
+      display: flex;
+      gap: 10px;
+    }
+    nav a {
+      color: #FFFFFF;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 1rem;
+      transition: color 0.3s ease;
+      position: relative;
+      z-index: 1;
+      text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
+    }
+    nav a:hover,
+    nav a.active {
+      color: #B0B7C0;
+    }
+    .menu-toggle {
+      display: none;
+      font-size: 24px;
+      cursor: pointer;
+      color: #B0B7C0;
+      position: relative;
+      z-index: 1;
+    }
+
+    /* CDR Section */
+    .portfolio-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+    .portfolio-card {
+      background-color: #F1F3F5;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+    .dark-mode .portfolio-card {
+      background-color: #0F172A;
+    }
+    .portfolio-card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+    .portfolio-card h3 {
+      padding: 1rem;
+      font-size: 1.1rem;
+      color: #B0B7C0;
+    }
+    .price {
+      color: #B0B7C0;
+      font-weight: bold;
+      font-size: 1.1rem;
+      margin: 0.5rem 0;
+    }
+    .payment-info {
+      max-width: 800px;
+      margin: 2rem auto;
+      font-size: 1rem;
+      color: #1E2A44;
+    }
+    .dark-mode .payment-info {
+      color: #E2E8F0;
+    }
+
+    /* Popup */
+    .popup {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(30, 42, 68, 0.9);
+      display: none;
+      justify-content: center;
+      align-items: center;
+      z-index: 9999;
+    }
+    .popup img {
+      max-width: 90%;
+      max-height: 80%;
+      border-radius: 10px;
+    }
+    .popup .close {
+      position: absolute;
+      top: 20px;
+      right: 35px;
+      color: #FFFFFF;
+      font-size: 40px;
+      cursor: pointer;
+    }
+    .popup .close:hover {
+      color: #B0B7C0;
+    }
+
+    /* QR Popup */
+    .qr-popup {
+      display: none;
+      flex-direction: column;
+      background: #FFFFFF;
+      padding: 20px;
+      border-radius: 10px;
+      text-align: center;
+      max-width: 300px;
+    }
+    .dark-mode .qr-popup {
+      background: #0F172A;
+      color: #E2E8F0;
+    }
+    .qr-popup h3 {
+      color: #1E2A44;
+      margin-bottom: 10px;
+    }
+    .dark-mode .qr-popup h3 {
+      color: #FFFFFF;
+    }
+    .qr-popup img {
+      max-width: 200px;
+      margin: 0 auto 10px;
+    }
+    .qr-popup p {
+      font-size: 1rem;
+      color: #1E2A44;
+    }
+    .dark-mode .qr-popup p {
+      color: #E2E8F0;
+    }
+
+    /* Back to Top */
+    .back-to-top {
+      position: fixed;
+      bottom: 80px;
+      right: 20px;
+      background-color: #B0B7C0;
+      color: #1E2A44;
+      padding: 10px;
+      border-radius: 50%;
+      font-size: 20px;
+      display: none;
+      z-index: 1000;
+      cursor: pointer;
+    }
+    .back-to-top.show {
+      display: block;
+    }
+
+    /* Footer */
+    footer {
+      background: #1E2A44;
+      padding: 2rem;
+      color: #FFFFFF;
+      font-size: 0.9rem;
+    }
+    .contact-icons {
+      margin: 1rem 0;
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      font-size: 24px;
+    }
+    .contact-icons a {
+      color: #B0B7C0;
+      transition: color 0.3s;
+    }
+    .contact-icons a:hover {
+      color: #D1D5DB;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .menu-toggle {
+        display: block;
+        margin-left: auto;
+      }
+      nav {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        margin-top: 10px;
+      }
+      nav.show {
+        display: flex;
+      }
+      nav a {
+        margin: 10px 0;
+      }
+      .section {
+        padding: 2rem 1rem;
+      }
+      .portfolio-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+    @media (max-width: 600px) {
+      .portfolio-grid {
+        grid-template-columns: 1fr;
+      }
+      .section h2 {
+        font-size: 1.8rem;
+      }
+    }
+  </style>
 </head>
-<body class="dark-theme">
+<body class="light">
   <!-- WhatsApp Button -->
   <a href="https://wa.me/918440048355" class="btn btn-whatsapp" target="_blank" title="Chat on WhatsApp">
     <i class="fab fa-whatsapp"></i>
   </a>
 
-  <!-- Send SS on WhatsApp Button (Hidden Initially) -->
-  <a href="#" class="btn btn-send-ss" id="sendSSButton" style="display: none;" target="_blank" title="Send Screenshot on WhatsApp">
+  <!-- Send SS Button -->
+  <a href="#" id="sendSSButton" class="btn btn-send-ss" target="_blank" title="Send Screenshot on WhatsApp">
     <i class="fab fa-whatsapp"></i> Send SS
   </a>
 
@@ -36,7 +378,7 @@
   <button class="back-to-top" onclick="scrollToTop()"><i class="fas fa-arrow-up"></i></button>
 
   <!-- Header -->
-  <header class="section">
+  <header>
     <div class="logo">
       <img src="https://raw.githubusercontent.com/Abranddesigner/Mr.Kamal/refs/heads/main/k%20logo.png" alt="Kamal Meena Logo" />
       <div class="title">
@@ -44,7 +386,7 @@
         <div class="tagline">A Brand Designer</div>
       </div>
     </div>
-    <div class="menu-toggle" onclick="toggleMenu()" aria-expanded="false">☰</div>
+    <div class="menu-toggle" onclick="toggleMenu()">☰</div>
     <nav id="navbar">
       <a href="index.html">Home</a>
       <a href="gallery.html">Gallery</a>
@@ -58,40 +400,31 @@
   <main>
     <!-- CDR Section -->
     <section id="cdr" class="section">
-      <h2>Premium CDR Design Files</h2>
-      <p class="subtitle">Editable CorelDRAW files for professional use</p>
+      <h2>CDR Files</h2>
+      <p class="subtitle">Purchase High-Quality Design Resources</p>
       <div class="portfolio-grid">
         <div class="portfolio-card">
-          <img src="https://raw.githubusercontent.com/Abranddesigner/Mr.Kamal/refs/heads/main/002%20(1).jpeg" alt="School Admission CDR Design" loading="lazy" />
-          <h3>School Admission Design</h3>
-          <p>Fully editable CDR file for school admission posters.</p>
-          <p class="price">Price: ₹499</p>
-          <button class="btn btn-primary" onclick="handleBuyNow('School Admission Design', 499)" data-amount="499" data-product="School Admission Design">Buy Now</button>
+          <img src="https://raw.githubusercontent.com/ideogram682/Mr.Kamal/refs/heads/main/001%20(1).jpeg" alt="CDR Design 1" loading="lazy" />
+          <h3>Logo Design Pack</h3>
+          <p class="price">₹500</p>
+          <button class="btn btn-primary" onclick="handleBuyNow('Logo Design Pack', 500)">Buy Now</button>
         </div>
         <div class="portfolio-card">
-          <img src="https://raw.githubusercontent.com/Abranddesigner/Mr.Kamal/refs/heads/main/002%20(2).jpeg" alt="Election CDR Design" loading="lazy" />
-          <h3>Politician Election Design</h3>
-          <p>Customizable CDR file for election campaign banners.</p>
-          <p class="price">Price: ₹999</p>
-          <button class="btn btn-primary" onclick="handleBuyNow('Politician Election Design', 999)" data-amount="999" data-product="Politician Election Design">Buy Now</button>
+          <img src="https://raw.githubusercontent.com/ideogram682/Mr.Kamal/refs/heads/main/001%20(2).jpeg" alt="CDR Design 2" loading="lazy" />
+          <h3>Sports Branding Kit</h3>
+          <p class="price">₹800</p>
+          <button class="btn btn-primary" onclick="handleBuyNow('Sports Branding Kit', 800)">Buy Now</button>
         </div>
-        <!-- Placeholder for Future Design -->
-        <div class="design-card">
-          <img src="https://via.placeholder.com/200x150?text=Coming+Soon" alt="Upcoming CDR Design by Kamal Meena" loading="lazy" />
-          <h3>Coming Soon</h3>
-          <p>Stay tuned for more premium CDR designs!</p>
-          <p class="price">Price: TBD</p>
-          <button class="buy-btn" disabled aria-label="Coming Soon - Not Available Yet">Notify Me</button>
+        <div class="portfolio-card">
+          <img src="https://raw.githubusercontent.com/ideogram682/Mr.Kamal/refs/heads/main/001%20(3).jpeg" alt="CDR Design 3" loading="lazy" />
+          <h3>Social Media Graphics</h3>
+          <p class="price">₹600</p>
+          <button class="btn btn-primary" onclick="handleBuyNow('Social Media Graphics', 600)">Buy Now</button>
         </div>
       </div>
-      <!-- Improved Payment Instructions -->
       <div class="payment-info">
-        <h3>Payment & Delivery Process</h3>
-        <p><strong>Step 1:</strong> Click "Buy Now". On mobile, your UPI app will open. On PC, a QR code popup will appear.</p>
-        <p><strong>Step 2:</strong> Use UPI ID <strong>8440048355@ybl</strong> to pay via your UPI app (e.g., Google Pay, PhonePe).</p>
-        <p><strong>Step 3:</strong> After payment, wait 2 minutes for the "Send SS on WhatsApp" button to appear. Send the payment screenshot to +918440048355 on WhatsApp.</p>
-        <p><strong>Step 4:</strong> After verification (within 24 hours), you’ll receive the CDR file via WhatsApp or email.</p>
-        <p><strong>Notes:</strong> Files are editable in CorelDRAW for commercial use. No refunds after delivery. Contact us for support!</p>
+        <p>After making the payment, please send the screenshot to my WhatsApp (+918440048355).</p>
+        <p>You will receive the CDR files via email or WhatsApp within 24 hours.</p>
       </div>
     </section>
   </main>
@@ -99,23 +432,37 @@
   <!-- Footer -->
   <footer class="section">
     <div class="contact-icons">
-      <a href="/cdn-cgi/l/email-protection#7e151f131f123e1b061f130e121b501d1113" title="Email" aria-label="Email Kamal Meena"><i class="fas fa-envelope"></i></a>
+      <a href="mailto:kamalmeena1503@gmail.com" title="Email" aria-label="Email Kamal Meena"><i class="fas fa-envelope"></i></a>
       <a href="tel:+916350262865" title="Call" aria-label="Call Kamal Meena"><i class="fas fa-phone"></i></a>
       <a href="https://instagram.com/Kamal.prp" title="Instagram" target="_blank" aria-label="Kamal Meena’s Instagram"><i class="fab fa-instagram"></i></a>
     </div>
-    <button class="mode-toggle" onclick="toggleMode()">Switch to Light Mode</button>
+    <button class="mode-toggle" onclick="toggleMode()">Switch to Dark Mode</button>
     <p>© 2025 Kamal Meena. All rights reserved.</p>
   </footer>
 
-  <!-- QR Code Popup -->
+  <!-- Popup -->
+  <div class="popup" id="popup">
+    <span class="close" onclick="closePopup()">×</span>
+    <img id="popupImg" src="" alt="Selected Design" />
+  </div>
+
+  <!-- QR Popup -->
   <div class="popup qr-popup" id="qrPopup">
     <span class="close" onclick="closeQRPopup()">×</span>
     <h3>Scan to Pay</h3>
-    <img id="qrCodeImg" src="https://raw.githubusercontent.com/Abranddesigner/Mr.Kamal/refs/heads/main/QR%20Code.jpg" alt="UPI QR Code" />
-    <p>Use your UPI app to scan the QR code and pay.</p>
-    <p>UPI ID: <strong>8440048355@ybl</strong></p>
+    <img id="qrCodeImg" src="" alt="QR Code" />
+    <p>Use any UPI app to scan and pay.</p>
   </div>
 
-  <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="scripts.js"></script>
-<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'933c7b2da80b53b2',t:'MTc0NTIzNDMxMS4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
-</html>
+  <script>
+    function toggleMenu() {
+      const nav = document.getElementById('navbar');
+      nav.classList.toggle('show');
+      const menuToggle = document.querySelector('.menu-toggle');
+      menuToggle.setAttribute('aria-expanded', nav.classList.contains('show'));
+    }
+
+    function toggleMode() {
+      document.body.classList.toggle('dark-mode');
+      document.body.classList.toggle('light');
+      localStorage.setItem('theme', document.body.classList.contains('dark-mode') ?
