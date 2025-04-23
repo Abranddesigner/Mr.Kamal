@@ -227,10 +227,13 @@
     }
     .testimonials-container {
       display: flex;
-      overflow-x: hidden;
-      scroll-behavior: smooth;
+      justify-content: center;
+      align-items: center;
+      gap: 20px;
+      overflow: hidden;
       max-width: 1200px;
       margin: 0 auto;
+      position: relative;
     }
     .testimonials {
       display: flex;
@@ -247,14 +250,18 @@
       flex-direction: column;
       align-items: center;
       text-align: center;
-      transition: background 0.3s;
+      transition: all 0.3s ease;
+      opacity: 0.8;
+      filter: blur(2px);
+    }
+    .testimonial.active {
+      opacity: 1;
+      filter: none;
+      transform: scale(1.05);
+      border: 2px solid #B0B7C0;
     }
     .dark-mode .testimonial {
       background: #0F172A;
-    }
-    .testimonial.center {
-      transform: scale(1.05);
-      border: 2px solid #B0B7C0;
     }
     .testimonial:hover {
       background: #2F4156;
@@ -488,7 +495,7 @@
       .testimonial {
         flex: 0 0 50%;
       }
-      .testimonial.center {
+      .testimonial.active {
         transform: scale(1.03);
       }
     }
@@ -526,7 +533,7 @@
       .testimonial {
         flex: 0 0 100%;
       }
-      .testimonial.center {
+      .testimonial.active {
         transform: scale(1);
         border: none;
       }
@@ -598,9 +605,9 @@
       <div class="testimonials-wrapper">
         <h2>Client Testimonials</h2>
         <div class="testimonials-container">
-          <button class="arrow arrow-left" onclick="scrollTestimonials('left')">❮</button>
+          <button class="arrow arrow-left" onclick="slideLeft()">❮</button>
           <div class="testimonials">
-            <div class="testimonial">
+            <div class="testimonial" data-index="0">
               <p class="quote">Exceptional design skills and attention to detail are remarkable. Understands client needs with precision and creativity. Every project reflects a high level of professionalism. Highly recommended for branding and graphic design work.</p>
               <div class="client-info">
                 <img src="https://raw.githubusercontent.com/Abranddesigner/Mr.Kamal/refs/heads/main/Miss%20Aaru.png" alt="Miss Aaru" />
@@ -610,7 +617,7 @@
                 </div>
               </div>
             </div>
-            <div class="testimonial">
+            <div class="testimonial" data-index="1">
               <p class="quote">Innovative approach to branding transformed our outdated identity. Designs are modern and high-quality, reflecting dedication. Consistently exceeds expectations with professionalism. A reliable partner for any design project.</p>
               <div class="client-info">
                 <img src="https://raw.githubusercontent.com/Abranddesigner/Mr.Kamal/refs/heads/main/Dr.%20Bindeshwar.jpg" alt="Dr. Bindeshwar" />
@@ -620,7 +627,7 @@
                 </div>
               </div>
             </div>
-            <div class="testimonial center">
+            <div class="testimonial active" data-index="2">
               <p class="quote">Boundless creativity and strong work ethic shine in every design. Brings fresh perspectives to marketing campaigns. Delivers on time with impressive detail. A highly skilled and reliable designer to work with.</p>
               <div class="client-info">
                 <img src="https://raw.githubusercontent.com/Abranddesigner/Mr.Kamal/refs/heads/main/Kuldeep%20Poonia.jpg" alt="Kuldeep Poonia" />
@@ -630,7 +637,7 @@
                 </div>
               </div>
             </div>
-            <div class="testimonial">
+            <div class="testimonial" data-index="3">
               <p class="quote">Precision and stylish designs greatly enhance educational materials. Listens carefully to deliver beyond expectations. Strong sense of aesthetics in every project. A talented designer for creative solutions.</p>
               <div class="client-info">
                 <img src="https://raw.githubusercontent.com/Abranddesigner/Mr.Kamal/refs/heads/main/Dr%20Shyam.png" alt="Dr. Shyam" />
@@ -640,7 +647,7 @@
                 </div>
               </div>
             </div>
-            <div class="testimonial">
+            <div class="testimonial" data-index="4">
               <p class="quote">Fresh ideas elevate media presence significantly in every project. Designs are created with passion and exceptional results. Understands the media industry thoroughly. A creative genius for impactful visuals.</p>
               <div class="client-info">
                 <img src="https://raw.githubusercontent.com/Abranddesigner/Mr.Kamal/refs/heads/main/RDS.jpg" alt="RDS" />
@@ -651,7 +658,7 @@
               </div>
             </div>
           </div>
-          <button class="arrow arrow-right" onclick="scrollTestimonials('right')">❯</button>
+          <button class="arrow arrow-right" onclick="slideRight()">❯</button>
         </div>
       </div>
 
@@ -775,33 +782,35 @@
       }
     }
 
-    function scrollTestimonials(direction) {
-      const testimonials = document.querySelector('.testimonials');
-      const testimonialItems = document.querySelectorAll('.testimonial');
-      const testimonialWidth = testimonialItems[0].offsetWidth + 20; // Including margin
-      let currentScroll = testimonials.scrollLeft;
+    // Testimonials Slider
+    let currentIndex = 2; // Start with middle testimonial (Kuldeep Poonia)
+    const testimonials = document.querySelectorAll('.testimonial');
+    const totalTestimonials = testimonials.length;
 
-      if (direction === 'left') {
-        testimonials.scrollLeft -= testimonialWidth;
-      } else {
-        testimonials.scrollLeft += testimonialWidth;
-      }
-
-      // Infinite loop
-      if (testimonials.scrollLeft >= testimonials.scrollWidth - testimonials.clientWidth) {
-        testimonials.scrollLeft = 0;
-      } else if (testimonials.scrollLeft <= 0 && direction === 'left') {
-        testimonials.scrollLeft = testimonials.scrollWidth - testimonials.clientWidth;
-      }
-
-      // Update center class
-      const centerIndex = Math.round(testimonials.scrollLeft / testimonialWidth);
-      testimonialItems.forEach((item, index) => {
-        item.classList.remove('center');
-        if (index === centerIndex) {
-          item.classList.add('center');
+    function updateTestimonials() {
+      testimonials.forEach((card, index) => {
+        card.classList.remove('active');
+        const offset = (index - currentIndex + totalTestimonials) % totalTestimonials;
+        if (offset === 0) {
+          card.classList.add('active'); // Middle (clear)
+        } else if (offset === 1 || offset === totalTestimonials - 1) {
+          card.style.opacity = '0.8';
+          card.style.filter = 'blur(2px)';
+        } else {
+          card.style.opacity = '0';
+          card.style.filter = 'blur(2px)';
         }
       });
+    }
+
+    function slideLeft() {
+      currentIndex = (currentIndex - 1 + totalTestimonials) % totalTestimonials;
+      updateTestimonials();
+    }
+
+    function slideRight() {
+      currentIndex = (currentIndex + 1) % totalTestimonials;
+      updateTestimonials();
     }
 
     document.addEventListener('DOMContentLoaded', () => {
@@ -833,14 +842,8 @@
         menuToggle.setAttribute('aria-expanded', navbar.classList.contains('show'));
       });
 
-      // Set initial testimonial center class
-      const testimonialItems = document.querySelectorAll('.testimonial');
-      testimonialItems.forEach((item, index) => {
-        item.classList.remove('center');
-        if (index === 2) {
-          item.classList.add('center');
-        }
-      });
+      // Initialize testimonials
+      updateTestimonials();
     });
   </script>
 </body>
