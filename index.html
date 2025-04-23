@@ -59,29 +59,34 @@
     }
     .testimonials-wrapper {
       text-align: center;
-      padding: 50px 0;
+      padding: 50px 20px;
       background: rgba(255, 255, 255, 0.8);
-      overflow: hidden;
       position: relative;
+      overflow: hidden;
+    }
+    .testimonials-container {
+      display: flex;
+      overflow-x: hidden;
+      scroll-behavior: smooth;
+      max-width: 1200px;
+      margin: 0 auto;
     }
     .testimonials {
       display: flex;
-      animation: slideRightLeft 20s infinite linear;
-      width: max-content;
-    }
-    @keyframes slideRightLeft {
-      0% { transform: translateX(0); }
-      50% { transform: translateX(-50%); }
-      100% { transform: translateX(0); }
+      transition: transform 0.5s ease;
     }
     .testimonial {
-      flex: 0 0 300px;
+      flex: 0 0 33.33%;
       background: #fff;
       padding: 20px;
       border-radius: 12px;
       box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
       margin: 0 10px;
       transition: transform 0.3s, background 0.3s;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
     }
     .testimonial:hover {
       transform: scale(1.05);
@@ -98,7 +103,76 @@
     .testimonial:hover.dark-mode .quote {
       color: #333;
     }
-    .quote { color: #555; font-style: italic; margin: 10px 0; }
+    .quote {
+      color: #555;
+      font-style: italic;
+      font-size: 1.1rem;
+      margin: 10px 0;
+      position: relative;
+      padding: 10px 20px;
+    }
+    .quote::before {
+      content: '"';
+      font-size: 2rem;
+      color: #B0B7C0;
+      position: absolute;
+      left: 0;
+      top: -10px;
+    }
+    .quote::after {
+      content: '"';
+      font-size: 2rem;
+      color: #B0B7C0;
+      position: absolute;
+      right: 0;
+      bottom: -10px;
+    }
+    .client-info {
+      display: flex;
+      align-items: center;
+      margin-top: 10px;
+    }
+    .client-info img {
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      margin-right: 15px;
+    }
+    .client-details {
+      text-align: left;
+    }
+    .client-details h3 {
+      margin: 0;
+      font-size: 1.2rem;
+    }
+    .client-details p {
+      margin: 5px 0 0;
+      font-size: 0.9rem;
+      color: #777;
+    }
+    .arrow {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background: #2F4156;
+      color: #F5EFEB;
+      border: none;
+      padding: 10px 15px;
+      font-size: 1.5rem;
+      cursor: pointer;
+      border-radius: 50%;
+      transition: background 0.3s;
+      z-index: 10;
+    }
+    .arrow:hover {
+      background: #B0B7C0;
+    }
+    .arrow-left {
+      left: 10px;
+    }
+    .arrow-right {
+      right: 10px;
+    }
     .welcome p {
       font-size: 1rem;
       max-width: 800px;
@@ -143,6 +217,11 @@
       color: #F5EFEB;
     }
     .dark-mode .quote { color: #B0B7C0; }
+    @media (max-width: 992px) {
+      .testimonial {
+        flex: 0 0 50%;
+      }
+    }
     @media (max-width: 768px) {
       #navbar {
         display: none;
@@ -164,10 +243,9 @@
       .testimonial {
         flex: 0 0 100%;
       }
-      .testimonials {
-        animation: none;
-        flex-wrap: wrap;
-        justify-content: center;
+      .arrow {
+        padding: 8px 12px;
+        font-size: 1.2rem;
       }
     }
   </style>
@@ -227,52 +305,61 @@
       <!-- Testimonials -->
       <div class="testimonials-wrapper">
         <h2>Client Testimonials</h2>
-        <div class="testimonials">
-          <div class="testimonial">
-            <img src="https://raw.githubusercontent.com/Abranddesigner/Mr.Kamal/refs/heads/main/Miss%20Aaru.png" alt="Miss Aaru" />
-            <p class="quote">"Miss Aaru praises Kamal’s exceptional design skills and attention to detail."</p>
-            <p class="quote">"His ability to understand client needs is truly remarkable."</p>
-            <p class="quote">"Every project he undertakes reflects creativity and precision."</p>
-            <p class="quote">"Highly recommend him for any branding or graphic design work."</p>
-            <h3>Miss Aaru</h3>
-            <p class="company">Creative Director: Design Studio</p>
+        <div class="testimonials-container">
+          <button class="arrow arrow-left" onclick="scrollTestimonials('left')">&#10094;</button>
+          <div class="testimonials">
+            <div class="testimonial">
+              <p class="quote">Miss Aaru praises Kamal’s exceptional design skills and attention to detail.</p>
+              <div class="client-info">
+                <img src="https://raw.githubusercontent.com/Abranddesigner/Mr.Kamal/refs/heads/main/Miss%20Aaru.png" alt="Miss Aaru" />
+                <div class="client-details">
+                  <h3>Miss Aaru</h3>
+                  <p class="company">Creative Director: Design Studio</p>
+                </div>
+              </div>
+            </div>
+            <div class="testimonial">
+              <p class="quote">Dr. Bindeshwar admires Kamal’s innovative approach to branding.</p>
+              <div class="client-info">
+                <img src="https://raw.githubusercontent.com/Abranddesigner/Mr.Kamal/refs/heads/main/Dr.%20Bindeshwar.jpg" alt="Dr. Bindeshwar" />
+                <div class="client-details">
+                  <h3>Dr. Bindeshwar</h3>
+                  <p class="company">Sr. Consultant: Health Innovations</p>
+                </div>
+              </div>
+            </div>
+            <div class="testimonial">
+              <p class="quote">Kuldeep Poonia values Kamal’s boundless creativity and work ethic.</p>
+              <div class="client-info">
+                <img src="https://raw.githubusercontent.com/Abranddesigner/Mr.Kamal/refs/heads/main/Kuldeep%20Poonia.jpg" alt="Kuldeep Poonia" />
+                <div class="client-details">
+                  <h3>Kuldeep Poonia</h3>
+                  <p class="company">Marketing Lead: Tech Corp</p>
+                </div>
+              </div>
+            </div>
+            <div class="testimonial">
+              <p class="quote">Dr. Shyam appreciates Kamal’s precision and stylish designs.</p>
+              <div class="client-info">
+                <img src="https://raw.githubusercontent.com/Abranddesigner/Mr.Kamal/refs/heads/main/Dr%20Shyam.png" alt="Dr. Shyam" />
+                <div class="client-details">
+                  <h3>Dr. Shyam</h3>
+                  <p class="company">Lead Designer: Edu Ventures</p>
+                </div>
+              </div>
+            </div>
+            <div class="testimonial">
+              <p class="quote">RDS loves how Kamal brings fresh ideas to every project.</p>
+              <div class="client-info">
+                <img src="https://raw.githubusercontent.com/Abranddesigner/Mr.Kamal/refs/heads/main/RDS.jpg" alt="RDS" />
+                <div class="client-details">
+                  <h3>RDS</h3>
+                  <p class="company">Creative Head: Media Solutions</p>
+                </div>
+              </div>
+            </div>
           </div>
-          <div class="testimonial">
-            <img src="https://raw.githubusercontent.com/Abranddesigner/Mr.Kamal/refs/heads/main/Dr.%20Bindeshwar.jpg" alt="Dr. Bindeshwar" />
-            <p class="quote">"Dr. Bindeshwar admires Kamal’s innovative approach to branding."</p>
-            <p class="quote">"He transformed our outdated identity into something modern."</p>
-            <p class="quote">"His dedication to quality is evident in every design."</p>
-            <p class="quote">"A true professional who exceeds expectations every time."</p>
-            <h3>Dr. Bindeshwar</h3>
-            <p class="company">Sr. Consultant: Health Innovations</p>
-          </div>
-          <div class="testimonial">
-            <img src="https://raw.githubusercontent.com/Abranddesigner/Mr.Kamal/refs/heads/main/Kuldeep%20Poonia.jpg" alt="Kuldeep Poonia" />
-            <p class="quote">"Kuldeep Poonia values Kamal’s boundless creativity and work ethic."</p>
-            <p class="quote">"His designs always bring a fresh perspective to our campaigns."</p>
-            <p class="quote">"He delivers on time with an impressive level of detail."</p>
-            <p class="quote">"A pleasure to work with, highly skilled and reliable."</p>
-            <h3>Kuldeep Poonia</h3>
-            <p class="company">Marketing Lead: Tech Corp</p>
-          </div>
-          <div class="testimonial">
-            <img src="https://raw.githubusercontent.com/Abranddesigner/Mr.Kamal/refs/heads/main/Dr%20Shyam.png" alt="Dr. Shyam" />
-            <p class="quote">"Dr. Shyam appreciates Kamal’s precision and stylish designs."</p>
-            <p class="quote">"His work has greatly enhanced our educational materials."</p>
-            <p class="quote">"He listens carefully and delivers beyond our expectations."</p>
-            <p class="quote">"A talented designer with a strong sense of aesthetics."</p>
-            <h3>Dr. Shyam</h3>
-            <p class="company">Lead Designer: Edu Ventures</p>
-          </div>
-          <div class="testimonial">
-            <img src="https://raw.githubusercontent.com/Abranddesigner/Mr.Kamal/refs/heads/main/RDS.jpg" alt="RDS" />
-            <p class="quote">"RDS loves how Kamal brings fresh ideas to every project."</p>
-            <p class="quote">"His designs have significantly elevated our media presence."</p>
-            <p class="quote">"He works with passion and delivers exceptional results."</p>
-            <p class="quote">"A creative genius who understands the media industry well."</p>
-            <h3>RDS</h3>
-            <p class="company">Creative Head: Media Solutions</p>
-          </div>
+          <button class="arrow arrow-right" onclick="scrollTestimonials('right')">&#10095;</button>
         </div>
       </div>
 
@@ -345,6 +432,26 @@
       popup.style.display = 'none';
     }
 
+    function scrollTestimonials(direction) {
+      const testimonials = document.querySelector('.testimonials');
+      const testimonialWidth = document.querySelector('.testimonial').offsetWidth + 20; // Including margin
+      const scrollAmount = testimonialWidth * 3; // Scroll 3 testimonials at a time
+      let currentScroll = testimonials.scrollLeft;
+
+      if (direction === 'left') {
+        testimonials.scrollLeft -= scrollAmount;
+      } else {
+        testimonials.scrollLeft += scrollAmount;
+      }
+
+      // Reset scroll for infinite loop effect
+      if (testimonials.scrollLeft >= testimonials.scrollWidth - testimonials.clientWidth) {
+        testimonials.scrollLeft = 0;
+      } else if (testimonials.scrollLeft <= 0 && direction === 'left') {
+        testimonials.scrollLeft = testimonials.scrollWidth - testimonials.clientWidth;
+      }
+    }
+
     document.addEventListener('DOMContentLoaded', () => {
       const sections = document.querySelectorAll('.section');
       const observer = new IntersectionObserver((entries, observer) => {
@@ -374,5 +481,5 @@
       });
     });
   </script>
-<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'933c7b2d9fff677e',t:'MTc0NTIzNDMxMS4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</body>
 </html>
