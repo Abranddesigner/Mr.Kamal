@@ -3,25 +3,292 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="google-site-verification" content="D2kcy8KfcuZbNWKzvyXrQ4ukBy170cZU97H4cXsg0_8" />
   <title>Gallery – Mr. Kamal Designer</title>
-  <meta name="description" content="Explore the creative design gallery of Mr. Kamal, featuring sports branding, logos, and digital art.">
-  <meta name="keywords" content="Graphic Design Gallery, Sports Design, Logo Designer, Kamal Meena, Rajasthan Artist">
+  <meta name="description" content="Explore the creative gallery of Mr. Kamal – Graphic designer specializing in sports branding, logo design, and digital art.">
+  <meta name="keywords" content="Graphic Designer, Sports Design, Logo Designer, Kamal Designer, Rajasthan Artist">
   <meta name="author" content="Kamal Meena">
   <meta property="og:title" content="Gallery – Mr. Kamal Designer">
-  <meta property="og:description" content="Explore the creative design gallery of Mr. Kamal, featuring sports branding, logos, and digital art.">
+  <meta property="og:description" content="Explore the creative gallery of Mr. Kamal – Graphic designer specializing in sports branding, logo design, and digital art.">
   <meta property="og:image" content="https://abranddesigner.github.io/Mr.Kamal/assets/cover-image.jpg">
   <meta property="og:url" content="https://abranddesigner.github.io/Mr.Kamal/gallery.html">
   <meta property="og:type" content="website">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Gallery – Mr. Kamal Designer">
-  <meta name="twitter:description" content="Explore the creative design gallery of Mr. Kamal, featuring sports branding, logos, and digital art.">
+  <meta name="twitter:description" content="Explore the creative gallery of Mr. Kamal – Graphic designer specializing in sports branding, logo design, and digital art.">
   <meta name="twitter:image" content="https://abranddesigner.github.io/Mr.Kamal/assets/cover-image.jpg">
   <link rel="canonical" href="https://abranddesigner.github.io/Mr.Kamal/gallery.html" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
-  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    /* Reset and Base */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #F1F3F5;
+      color: #1E2A44;
+      line-height: 1.6;
+      transition: background-color 0.3s ease, color 0.3s ease;
+    }
+    .dark-mode {
+      background-color: #0F172A;
+      color: #FFFFFF;
+    }
+
+    /* Common Classes */
+    .btn {
+      display: inline-block;
+      padding: 10px 20px;
+      border-radius: 5px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: background-color 0.3s ease;
+    }
+    .btn-primary {
+      background-color: #B0B7C0;
+      color: #1E2A44;
+    }
+    .btn-primary:hover {
+      background-color: #9CA3AF;
+    }
+    .btn-whatsapp {
+      background-color: #25D366;
+      color: white;
+      padding: 12px;
+      border-radius: 50px;
+      font-size: 24px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      z-index: 1000;
+    }
+    .btn-whatsapp:hover {
+      background-color: #20b858;
+    }
+    .section {
+      padding: 3rem 1rem;
+      max-width: 1200px;
+      margin: auto;
+      text-align: center;
+    }
+    .section h2 {
+      color: #B0B7C0;
+      font-size: 2.2rem;
+      margin-bottom: 1rem;
+    }
+    .dark-mode .section h2 {
+      color: #D1D5DB;
+    }
+    .subtitle {
+      font-size: 1.1rem;
+      color: #1E2A44;
+      margin-bottom: 1.5rem;
+    }
+    .dark-mode .subtitle {
+      color: #E2E8F0;
+    }
+
+    /* Header */
+    header {
+      background: rgba(30, 42, 68, 0.7);
+      background-image: url('https://raw.githubusercontent.com/Abranddesigner/Mr.Kamal/refs/heads/main/Head.png');
+      background-size: cover;
+      background-position: center;
+      backdrop-filter: blur(20px);
+      padding: 1.5rem 1rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+    .dark-mode header {
+      background: rgba(30, 42, 68, 0.8);
+      background-image: url('https://raw.githubusercontent.com/Abranddesigner/Mr.Kamal/refs/heads/main/Head.png');
+      background-size: cover;
+      background-position: center;
+      backdrop-filter: blur(20px);
+    }
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 25px;
+      position: relative;
+      z-index: 1;
+    }
+    .logo img {
+      height: 60px;
+      border-radius: 50%;
+    }
+    .title h1 {
+      color: #B0B7C0;
+      font-size: 1.8rem;
+      margin: 0;
+      text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
+    }
+    .title .tagline {
+      font-size: 14px;
+      color: #FFFFFF;
+      text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
+    }
+
+    /* Navbar */
+    nav {
+      display: flex;
+      gap: 10px;
+    }
+    nav a {
+      color: #FFFFFF;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 1rem;
+      transition: color 0.3s ease;
+      position: relative;
+      z-index: 1;
+      text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
+    }
+    nav a:hover,
+    nav a.active {
+      color: #B0B7C0;
+    }
+    .menu-toggle {
+      display: none;
+      font-size: 24px;
+      cursor: pointer;
+      color: #B0B7C0;
+      position: relative;
+      z-index: 1;
+    }
+
+    /* Gallery */
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      margin-top: 2rem;
+    }
+    .gallery-grid img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 10px;
+      cursor: pointer;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    }
+
+    /* Popup */
+    .popup {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(30, 42, 68, 0.9);
+      display: none;
+      justify-content: center;
+      align-items: center;
+      z-index: 9999;
+    }
+    .popup img {
+      max-width: 90%;
+      max-height: 80%;
+      border-radius: 10px;
+    }
+    .popup .close {
+      position: absolute;
+      top: 20px;
+      right: 35px;
+      color: #FFFFFF;
+      font-size: 40px;
+      cursor: pointer;
+    }
+    .popup .close:hover {
+      color: #B0B7C0;
+    }
+
+    /* Back to Top */
+    .back-to-top {
+      position: fixed;
+      bottom: 80px;
+      right: 20px;
+      background-color: #B0B7C0;
+      color: #1E2A44;
+      padding: 10px;
+      border-radius: 50%;
+      font-size: 20px;
+      display: none;
+      z-index: 1000;
+      cursor: pointer;
+    }
+    .back-to-top.show {
+      display: block;
+    }
+
+    /* Footer */
+    footer {
+      background: #1E2A44;
+      padding: 2rem;
+      color: #FFFFFF;
+      font-size: 0.9rem;
+    }
+    .contact-icons {
+      margin: 1rem 0;
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      font-size: 24px;
+    }
+    .contact-icons a {
+      color: #B0B7C0;
+      transition: color 0.3s;
+    }
+    .contact-icons a:hover {
+      color: #D1D5DB;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .menu-toggle {
+        display: block;
+        margin-left: auto;
+      }
+      nav {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        margin-top: 10px;
+      }
+      nav.show {
+        display: flex;
+      }
+      nav a {
+        margin: 10px 0;
+      }
+      .section {
+        padding: 2rem 1rem;
+      }
+      .gallery-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+    @media (max-width: 600px) {
+      .gallery-grid {
+        grid-template-columns: 1fr;
+      }
+      .section h2 {
+        font-size: 1.8rem;
+      }
+    }
+  </style>
 </head>
-<body>
+<body class="light">
   <!-- WhatsApp Button -->
   <a href="https://wa.me/918440048355" class="btn btn-whatsapp" target="_blank" title="Chat on WhatsApp">
     <i class="fab fa-whatsapp"></i>
@@ -53,15 +320,17 @@
   <main>
     <!-- Gallery Section -->
     <section id="gallery" class="section">
-      <h2>My Design Gallery</h2>
-      <p class="subtitle">Explore a collection of my creative works</p>
+      <h2>Gallery</h2>
+      <p class="subtitle">Explore My Creative Works</p>
       <div class="gallery-grid">
-        <img src="https://raw.githubusercontent.com/Abranddesigner/Mr.Kamal/refs/heads/main/002%20(1).jpeg" alt="Sports Design 1" loading="lazy" onclick="openPopup(this.src)" />
-        <img src="https://raw.githubusercontent.com/Abranddesigner/Mr.Kamal/refs/heads/main/002%20(3).jpeg" alt="Logo Design 1" loading="lazy" onclick="openPopup(this.src)" />
-        <img src="https://raw.githubusercontent.com/Abranddesigner/Mr.Kamal/refs/heads/main/002%20(4).jpeg" alt="Banner Design 1" loading="lazy" onclick="openPopup(this.src)" />
-        <img src="https://raw.githubusercontent.com/Abranddesigner/Mr.Kamal/refs/heads/main/002%20(5).jpeg" alt="Sports Design 2" loading="lazy" onclick="openPopup(this.src)" />
-        <img src="https://raw.githubusercontent.com/Abranddesigner/Mr.Kamal/refs/heads/main/002%20(8).jpeg" alt="Logo Design 2" loading="lazy" onclick="openPopup(this.src)" />
-        <img src="https://raw.githubusercontent.com/Abranddesigner/Mr.Kamal/refs/heads/main/002%20(10).jpeg" alt="Banner Design 2" loading="lazy" onclick="openPopup(this.src)" />
+        <img src="https://raw.githubusercontent.com/ideogram682/Mr.Kamal/refs/heads/main/001%20(1).jpeg" alt="Design 1 by Kamal Meena" loading="lazy" onclick="openPopup(this.src)" />
+        <img src="https://raw.githubusercontent.com/ideogram682/Mr.Kamal/refs/heads/main/001%20(2).jpeg" alt="Design 2 by Kamal Meena" loading="lazy" onclick="openPopup(this.src)" />
+        <img src="https://raw.githubusercontent.com/ideogram682/Mr.Kamal/refs/heads/main/001%20(3).jpeg" alt="Design 3 by Kamal Meena" loading="lazy" onclick="openPopup(this.src)" />
+        <img src="https://raw.githubusercontent.com/ideogram682/Mr.Kamal/refs/heads/main/001%20(4).jpeg" alt="Design 4 by Kamal Meena" loading="lazy" onclick="openPopup(this.src)" />
+        <img src="https://raw.githubusercontent.com/ideogram682/Mr.Kamal/refs/heads/main/001%20(5).jpeg" alt="Design 5 by Kamal Meena" loading="lazy" onclick="openPopup(this.src)" />
+        <img src="https://raw.githubusercontent.com/ideogram682/Mr.Kamal/refs/heads/main/001%20(6).jpeg" alt="Design 6 by Kamal Meena" loading="lazy" onclick="openPopup(this.src)" />
+        <img src="https://raw.githubusercontent.com/ideogram682/Mr.Kamal/refs/heads/main/001%20(7).jpeg" alt="Design 7 by Kamal Meena" loading="lazy" onclick="openPopup(this.src)" />
+        <img src="https://raw.githubusercontent.com/ideogram682/Mr.Kamal/refs/heads/main/001%20(8).jpeg" alt="Design 8 by Kamal Meena" loading="lazy" onclick="openPopup(this.src)" />
       </div>
     </section>
   </main>
@@ -69,7 +338,7 @@
   <!-- Footer -->
   <footer class="section">
     <div class="contact-icons">
-      <a href="/cdn-cgi/l/email-protection#0d666c606c614d68756c607d6168236e6260" title="Email" aria-label="Email Kamal Meena"><i class="fas fa-envelope"></i></a>
+      <a href="mailto:kamalmeena1503@gmail.com" title="Email" aria-label="Email Kamal Meena"><i class="fas fa-envelope"></i></a>
       <a href="tel:+916350262865" title="Call" aria-label="Call Kamal Meena"><i class="fas fa-phone"></i></a>
       <a href="https://instagram.com/Kamal.prp" title="Instagram" target="_blank" aria-label="Kamal Meena’s Instagram"><i class="fab fa-instagram"></i></a>
     </div>
@@ -83,6 +352,73 @@
     <img id="popupImg" src="" alt="Selected Design" />
   </div>
 
-  <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="scripts.js"></script>
-<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'933c7b2d9901b0dc',t:'MTc0NTIzNDMxMS4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+  <script>
+    function toggleMenu() {
+      const nav = document.getElementById('navbar');
+      nav.classList.toggle('show');
+      const menuToggle = document.querySelector('.menu-toggle');
+      menuToggle.setAttribute('aria-expanded', nav.classList.contains('show'));
+    }
+
+    function toggleMode() {
+      document.body.classList.toggle('dark-mode');
+      document.body.classList.toggle('light');
+      localStorage.setItem('theme', document.body.classList.contains('dark-mode') ? 'dark' : 'light');
+      const button = document.querySelector('.mode-toggle');
+      button.textContent = document.body.classList.contains('dark-mode') ? 'Switch to Light Mode' : 'Switch to Dark Mode';
+    }
+
+    if (localStorage.getItem('theme') === 'dark') toggleMode();
+
+    function scrollToTop() {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    function openPopup(src) {
+      const popup = document.getElementById('popup');
+      const popupImg = document.getElementById('popupImg');
+      if (popup && popupImg) {
+        popupImg.src = src;
+        popup.style.display = 'flex';
+      }
+    }
+
+    function closePopup() {
+      const popup = document.getElementById('popup');
+      if (popup) {
+        popup.style.display = 'none';
+      }
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+      const sections = document.querySelectorAll('.section');
+      const observer = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('in-view');
+            observer.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.1 });
+
+      sections.forEach(section => {
+        observer.observe(section);
+      });
+
+      const backToTop = document.querySelector('.back-to-top');
+      window.addEventListener('scroll', () => {
+        if (window.scrollY > 300) backToTop.classList.add('show');
+        else backToTop.classList.remove('show');
+      });
+      backToTop.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+
+      const menuToggle = document.querySelector('.menu-toggle');
+      const navbar = document.getElementById('navbar');
+      menuToggle.addEventListener('click', () => {
+        navbar.classList.toggle('show');
+        menuToggle.setAttribute('aria-expanded', navbar.classList.contains('show'));
+      });
+    });
+  </script>
+</body>
 </html>
