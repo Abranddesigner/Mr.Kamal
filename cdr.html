@@ -46,6 +46,7 @@
       text-decoration: none;
       font-weight: bold;
       transition: background-color 0.3s ease;
+      cursor: pointer;
     }
     .btn-primary {
       background-color: #B0B7C0;
@@ -264,6 +265,7 @@
       border-radius: 10px;
       text-align: center;
       max-width: 300px;
+      z-index: 10000;
     }
     .dark-mode .qr-popup {
       background: #0F172A;
@@ -465,4 +467,131 @@
     function toggleMode() {
       document.body.classList.toggle('dark-mode');
       document.body.classList.toggle('light');
-      localStorage.setItem('theme', document.body.classList.contains('dark-mode') ?
+      localStorage.setItem('theme', document.body.classList.contains('dark-mode') ? 'dark' : 'light');
+      const button = document.querySelector('.mode-toggle');
+      button.textContent = document.body.classList.contains('dark-mode') ? 'Switch to Light Mode' : 'Switch to Dark Mode';
+    }
+
+    if (localStorage.getItem('theme') === 'dark') toggleMode();
+
+    function scrollToTop() {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    function openPopup(src) {
+      const popup = document.getElementById('popup');
+      const popupImg = document.getElementById('popupImg');
+      if (popup && popupImg) {
+        popupImg.src = src;
+        popup.style.display = 'flex';
+        console.log('Image popup opened:', src);
+      } else {
+        console.error('Image popup or image element not found');
+      }
+    }
+
+    function closePopup() {
+      const popup = document.getElementById('popup');
+      if (popup) {
+        popup.style.display = 'none';
+        console.log('Image popup closed');
+      }
+    }
+
+    function showQRPopup() {
+      console.log('Attempting to show QR popup');
+      const qrPopup = document.getElementById('qrPopup');
+      const qrCodeImg = document.getElementById('qrCodeImg');
+      if (qrPopup && qrCodeImg) {
+        qrCodeImg.src = 'https://raw.githubusercontent.com/Abranddesigner/Mr.Kamal/refs/heads/main/QR%20Code.jpg';
+        qrPopup.style.display = 'flex';
+        console.log('QR popup displayed');
+        alert('QR code displayed. Scan with any UPI app to pay.');
+      } else {
+        console.error('QR popup or image element not found');
+        alert('Error: Unable to display QR code. Please contact via WhatsApp.');
+      }
+    }
+
+    function closeQRPopup() {
+      console.log('Closing QR popup');
+      const qrPopup = document.getElementById('qrPopup');
+      if (qrPopup) {
+        qrPopup.style.display = 'none';
+        console.log('QR popup closed');
+      }
+    }
+
+    function handleBuyNow(product, amount) {
+      console.log(`Buy Now clicked for ${product} with amount ₹${amount}`);
+      const isMobile = /Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
+      const upiUrl = `upi://pay?pa=8440048355@ybl&pn=Kamal%20Meena&am=${amount}&cu=INR&tn=Purchase%20${encodeURIComponent(product)}`;
+      const fallbackUrl = `https://wa.me/918440048355?text=Hi%20Kamal,%20I%20want%20to%20pay%20₹${amount}%20for%20${encodeURIComponent(product)}.`;
+
+      if (isMobile) {
+        console.log('Mobile device detected, attempting UPI intent:', upiUrl);
+        const startTime = Date.now();
+        window.location.href = upiUrl;
+        setTimeout(() => {
+          if (Date.now() - startTime < 1000) {
+            console.log('UPI intent likely failed, redirecting to fallback');
+            alert('UPI app not found. Redirecting to WhatsApp for payment details.');
+            window.location.href = fallbackUrl;
+          }
+        }, 1500);
+      } else {
+        console.log('Desktop device detected, showing QR popup');
+        showQRPopup();
+      }
+      showSendSSButton(product);
+    }
+
+    function showSendSSButton(product) {
+      console.log(`Scheduling Send SS button for ${product}`);
+      const sendSSButton = document.getElementById('sendSSButton');
+      if (sendSSButton) {
+        sendSSButton.href = `https://wa.me/918440048355?text=Hi%20Kamal,%20here’s%20the%20payment%20screenshot%20for%20${encodeURIComponent(product)}.`;
+        setTimeout(() => {
+          sendSSButton.style.display = 'block';
+          console.log('Send SS button displayed');
+          alert('Send SS button is now visible. Please send the payment screenshot.');
+        }, 60000); // Reduced to 1 minute for testing
+      } else {
+        console.error('Send SS button element not found');
+        alert('Error: Send SS button not found. Please contact via WhatsApp.');
+      }
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+      console.log('Document loaded, initializing event listeners');
+      const sections = document.querySelectorAll('.section');
+      const observer = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('in-view');
+            observer.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.1 });
+
+      sections.forEach(section => {
+        observer.observe(section);
+      });
+
+      const backToTop = document.querySelector('.back-to-top');
+      window.addEventListener('scroll', () => {
+        if (window.scrollY > 300) backToTop.classList.add('show');
+        else backToTop.classList.remove('show');
+      });
+      backToTop.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+
+      const menuToggle = document.querySelector('.menu-toggle');
+      const navbar = document.getElementById('navbar');
+      menuToggle.addEventListener('click', () => {
+        navbar.classList.toggle('show');
+        menuToggle.setAttribute('aria-expanded', navbar.classList.contains('show'));
+      });
+    });
+  </script>
+</body>
+</html>
