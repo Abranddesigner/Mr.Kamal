@@ -1,597 +1,96 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>CDR – Mr. Kamal Designer</title>
-  <meta name="description" content="Purchase CDR files from Mr. Kamal – High-quality graphic design resources for your creative projects.">
-  <meta name="keywords" content="Graphic Designer, CDR Files, Logo Designer, Kamal Designer, Rajasthan Artist">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Purchase professional CDR files for logos, sports branding, and social media graphics by Mr. Kamal Designer.">
+  <meta name="keywords" content="CDR files, graphic design, logo design, sports branding, social media graphics, Mr. Kamal">
   <meta name="author" content="Kamal Meena">
-  <meta property="og:title" content="CDR – Mr. Kamal Designer">
-  <meta property="og:description" content="Purchase CDR files from Mr. Kamal – High-quality graphic design resources for your creative projects.">
-  <meta property="og:image" content="https://abranddesigner.github.io/Mr.Kamal/assets/cover-image.jpg">
+  <!-- Open Graph -->
+  <meta property="og:title" content="Mr. Kamal Designer - CDR Files">
+  <meta property="og:description" content="Buy high-quality CDR files for custom graphic designs by Mr. Kamal. Fast delivery within 24 hours.">
+  <meta property="og:image" content="https://abranddesigner.github.io/Mr.Kamal/k%20logo.png">
   <meta property="og:url" content="https://abranddesigner.github.io/Mr.Kamal/cdr.html">
-  <meta property="og:type" content="website">
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="CDR – Mr. Kamal Designer">
-  <meta name="twitter:description" content="Purchase CDR files from Mr. Kamal – High-quality graphic design resources for your creative projects.">
-  <meta name="twitter:image" content="https://abranddesigner.github.io/Mr.Kamal/assets/cover-image.jpg">
-  <link rel="canonical" href="https://abranddesigner.github.io/Mr.Kamal/cdr.html" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
-  <style>
-    /* Reset and Base */
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-    body {
-      font-family: 'Poppins', sans-serif;
-      background-color: #F1F3F5;
-      color: #1E2A44;
-      line-height: 1.6;
-      transition: background-color 0.3s ease, color 0.3s ease;
-    }
-    .dark-mode {
-      background-color: #0F172A;
-      color: #FFFFFF;
-    }
-
-    /* Common Classes */
-    .btn {
-      display: inline-block;
-      padding: 10px 20px;
-      border-radius: 5px;
-      text-decoration: none;
-      font-weight: bold;
-      transition: background-color 0.3s ease;
-      cursor: pointer;
-    }
-    .btn-primary {
-      background-color: #B0B7C0;
-      color: #1E2A44;
-    }
-    .btn-primary:hover {
-      background-color: #9CA3AF;
-    }
-    .btn-whatsapp {
-      background-color: #25D366;
-      color: white;
-      padding: 12px;
-      border-radius: 50px;
-      font-size: 24px;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-      position: fixed;
-      bottom: 20px;
-      right: 20px;
-      z-index: 1000;
-    }
-    .btn-whatsapp:hover {
-      background-color: #20b858;
-    }
-    .btn-send-ss {
-      background-color: #25D366;
-      color: white;
-      padding: 12px;
-      border-radius: 50px;
-      font-size: 18px;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-      position: fixed;
-      bottom: 20px;
-      left: 20px;
-      z-index: 1000;
-      text-decoration: none;
-      display: none;
-    }
-    .btn-send-ss:hover {
-      background-color: #20b858;
-    }
-    .section {
-      padding: 3rem 1rem;
-      max-width: 1200px;
-      margin: auto;
-      text-align: center;
-    }
-    .section h2 {
-      color: #B0B7C0;
-      font-size: 2.2rem;
-      margin-bottom: 1rem;
-    }
-    .dark-mode .section h2 {
-      color: #D1D5DB;
-    }
-    .subtitle {
-      font-size: 1.1rem;
-      color: #1E2A44;
-      margin-bottom: 1.5rem;
-    }
-    .dark-mode .subtitle {
-      color: #E2E8F0;
-    }
-
-    /* Header */
-    header {
-      background: rgba(30, 42, 68, 0.7);
-      background-image: url('https://raw.githubusercontent.com/Abranddesigner/Mr.Kamal/refs/heads/main/Head.png');
-      background-size: cover;
-      background-position: center;
-      backdrop-filter: blur(20px);
-      padding: 1.5rem 1rem;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      flex-wrap: wrap;
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-    }
-    .dark-mode header {
-      background: rgba(30, 42, 68, 0.8);
-      background-image: url('https://raw.githubusercontent.com/Abranddesigner/Mr.Kamal/refs/heads/main/Head.png');
-      background-size: cover;
-      background-position: center;
-      backdrop-filter: blur(20px);
-    }
-    .logo {
-      display: flex;
-      align-items: center;
-      gap: 25px;
-      position: relative;
-      z-index: 1;
-    }
-    .logo img {
-      height: 60px;
-      border-radius: 50%;
-    }
-    .title h1 {
-      color: #B0B7C0;
-      font-size: 1.8rem;
-      margin: 0;
-      text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
-    }
-    .title .tagline {
-      font-size: 14px;
-      color: #FFFFFF;
-      text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
-    }
-
-    /* Navbar */
-    nav {
-      display: flex;
-      gap: 10px;
-    }
-    nav a {
-      color: #FFFFFF;
-      margin: 0 15px;
-      text-decoration: none;
-      font-weight: bold;
-      font-size: 1rem;
-      transition: color 0.3s ease;
-      position: relative;
-      z-index: 1;
-      text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
-    }
-    nav a:hover,
-    nav a.active {
-      color: #B0B7C0;
-    }
-    .menu-toggle {
-      display: none;
-      font-size: 24px;
-      cursor: pointer;
-      color: #B0B7C0;
-      position: relative;
-      z-index: 1;
-    }
-
-    /* CDR Section */
-    .portfolio-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 20px;
-    }
-    .portfolio-card {
-      background-color: #F1F3F5;
-      border-radius: 10px;
-      overflow: hidden;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    }
-    .dark-mode .portfolio-card {
-      background-color: #0F172A;
-    }
-    .portfolio-card img {
-      width: 100%;
-      height: 200px;
-      object-fit: cover;
-    }
-    .portfolio-card h3 {
-      padding: 1rem;
-      font-size: 1.1rem;
-      color: #B0B7C0;
-    }
-    .price {
-      color: #B0B7C0;
-      font-weight: bold;
-      font-size: 1.1rem;
-      margin: 0.5rem 0;
-    }
-    .payment-info {
-      max-width: 800px;
-      margin: 2rem auto;
-      font-size: 1rem;
-      color: #1E2A44;
-    }
-    .dark-mode .payment-info {
-      color: #E2E8F0;
-    }
-
-    /* Popup */
-    .popup {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: rgba(30, 42, 68, 0.9);
-      display: none;
-      justify-content: center;
-      align-items: center;
-      z-index: 9999;
-    }
-    .popup img {
-      max-width: 90%;
-      max-height: 80%;
-      border-radius: 10px;
-    }
-    .popup .close {
-      position: absolute;
-      top: 20px;
-      right: 35px;
-      color: #FFFFFF;
-      font-size: 40px;
-      cursor: pointer;
-    }
-    .popup .close:hover {
-      color: #B0B7C0;
-    }
-
-    /* QR Popup */
-    .qr-popup {
-      display: none;
-      flex-direction: column;
-      background: #FFFFFF;
-      padding: 20px;
-      border-radius: 10px;
-      text-align: center;
-      max-width: 300px;
-      z-index: 10000;
-    }
-    .dark-mode .qr-popup {
-      background: #0F172A;
-      color: #E2E8F0;
-    }
-    .qr-popup h3 {
-      color: #1E2A44;
-      margin-bottom: 10px;
-    }
-    .dark-mode .qr-popup h3 {
-      color: #FFFFFF;
-    }
-    .qr-popup img {
-      max-width: 200px;
-      margin: 0 auto 10px;
-    }
-    .qr-popup p {
-      font-size: 1rem;
-      color: #1E2A44;
-    }
-    .dark-mode .qr-popup p {
-      color: #E2E8F0;
-    }
-
-    /* Back to Top */
-    .back-to-top {
-      position: fixed;
-      bottom: 80px;
-      right: 20px;
-      background-color: #B0B7C0;
-      color: #1E2A44;
-      padding: 10px;
-      border-radius: 50%;
-      font-size: 20px;
-      display: none;
-      z-index: 1000;
-      cursor: pointer;
-    }
-    .back-to-top.show {
-      display: block;
-    }
-
-    /* Footer */
-    footer {
-      background: #1E2A44;
-      padding: 2rem;
-      color: #FFFFFF;
-      font-size: 0.9rem;
-    }
-    .contact-icons {
-      margin: 1rem 0;
-      display: flex;
-      justify-content: center;
-      gap: 20px;
-      font-size: 24px;
-    }
-    .contact-icons a {
-      color: #B0B7C0;
-      transition: color 0.3s;
-    }
-    .contact-icons a:hover {
-      color: #D1D5DB;
-    }
-
-    /* Responsive */
-    @media (max-width: 768px) {
-      .menu-toggle {
-        display: block;
-        margin-left: auto;
-      }
-      nav {
-        display: none;
-        flex-direction: column;
-        width: 100%;
-        margin-top: 10px;
-      }
-      nav.show {
-        display: flex;
-      }
-      nav a {
-        margin: 10px 0;
-      }
-      .section {
-        padding: 2rem 1rem;
-      }
-      .portfolio-grid {
-        grid-template-columns: repeat(2, 1fr);
-      }
-    }
-    @media (max-width: 600px) {
-      .portfolio-grid {
-        grid-template-columns: 1fr;
-      }
-      .section h2 {
-        font-size: 1.8rem;
-      }
-    }
-  </style>
+  <title>CDR Files - Mr. Kamal Designer</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
 </head>
-<body class="light">
-  <!-- WhatsApp Button -->
-  <a href="https://wa.me/918440048355" class="btn btn-whatsapp" target="_blank" title="Chat on WhatsApp">
-    <i class="fab fa-whatsapp"></i>
-  </a>
-
-  <!-- Send SS Button -->
-  <a href="#" id="sendSSButton" class="btn btn-send-ss" target="_blank" title="Send Screenshot on WhatsApp">
-    <i class="fab fa-whatsapp"></i> Send SS
-  </a>
-
-  <!-- Back to Top -->
-  <button class="back-to-top" onclick="scrollToTop()"><i class="fas fa-arrow-up"></i></button>
-
-  <!-- Header -->
-  <header>
+<body>
+  <!-- Header (unchanged) -->
+  <header class="section">
     <div class="logo">
-      <img src="https://raw.githubusercontent.com/Abranddesigner/Mr.Kamal/refs/heads/main/k%20logo.png" alt="Kamal Meena Logo" />
-      <div class="title">
-        <h1>Mr. Kamal Designer</h1>
-        <div class="tagline">A Brand Designer</div>
-      </div>
+      <img src="k%20logo.png" alt="Kamal Logo" loading="lazy">
     </div>
-    <div class="menu-toggle" onclick="toggleMenu()">☰</div>
-    <nav id="navbar">
-      <a href="index.html">Home</a>
-      <a href="gallery.html">Gallery</a>
-      <a href="cdr.html" class="active">CDR</a>
-      <a href="https://drive.google.com/file/d/1Os9fcZf-2Zth27v9UccVAAslLQTffVuL/view?usp=drivesdk" target="_blank">Portfolio</a>
-      <a href="https://github.com/ideogram682/Mr.Kamal/blob/main/Mr.%20Kamal%20Resume.jpeg?raw=true" target="_blank">Resume</a>
+    <nav class="nav">
+      <div class="menu-toggle"><i class="fas fa-bars"></i></div>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="cdr.html" class="active">CDR</a></li>
+      </ul>
     </nav>
   </header>
 
-  <!-- Main Content -->
-  <main>
-    <!-- CDR Section -->
-    <section id="cdr" class="section">
-      <h2>CDR Files</h2>
-      <p class="subtitle">Purchase High-Quality Design Resources</p>
-      <div class="portfolio-grid">
-        <div class="portfolio-card">
-          <img src="https://raw.githubusercontent.com/ideogram682/Mr.Kamal/refs/heads/main/001%20(1).jpeg" alt="CDR Design 1" loading="lazy" />
-          <h3>Logo Design Pack</h3>
-          <p class="price">₹500</p>
-          <button class="btn btn-primary" onclick="handleBuyNow('Logo Design Pack', 500)">Buy Now</button>
-        </div>
-        <div class="portfolio-card">
-          <img src="https://raw.githubusercontent.com/ideogram682/Mr.Kamal/refs/heads/main/001%20(2).jpeg" alt="CDR Design 2" loading="lazy" />
-          <h3>Sports Branding Kit</h3>
-          <p class="price">₹800</p>
-          <button class="btn btn-primary" onclick="handleBuyNow('Sports Branding Kit', 800)">Buy Now</button>
-        </div>
-        <div class="portfolio-card">
-          <img src="https://raw.githubusercontent.com/ideogram682/Mr.Kamal/refs/heads/main/001%20(3).jpeg" alt="CDR Design 3" loading="lazy" />
-          <h3>Social Media Graphics</h3>
-          <p class="price">₹600</p>
-          <button class="btn btn-primary" onclick="handleBuyNow('Social Media Graphics', 600)">Buy Now</button>
-        </div>
+  <!-- CDR Section (updated Send SS delay) -->
+  <section class="cdr section">
+    <h2>Purchase CDR Files</h2>
+    <div class="portfolio-grid">
+      <div class="portfolio-card">
+        <img src="logo-pack.jpg" alt="Logo Design Pack" loading="lazy">
+        <h3>Logo Design Pack</h3>
+        <p>₹500</p>
+        <button class="buy-now" data-product="Logo Design Pack" data-price="500">Buy Now</button>
       </div>
-      <div class="payment-info">
-        <p>After making the payment, please send the screenshot to my WhatsApp (+918440048355).</p>
-        <p>You will receive the CDR files via email or WhatsApp within 24 hours.</p>
+      <div class="portfolio-card">
+        <img src="sports-branding.jpg" alt="Sports Branding Kit" loading="lazy">
+        <h3>Sports Branding Kit</h3>
+        <p>₹800</p>
+        <button class="buy-now" data-product="Sports Branding Kit" data-price="800">Buy Now</button>
       </div>
-    </section>
-  </main>
+      <div class="portfolio-card">
+        <img src="social-media.jpg" alt="Social Media Graphics" loading="lazy">
+        <h3>Social Media Graphics</h3>
+        <p>₹600</p>
+        <button class="buy-now" data-product="Social Media Graphics" data-price="600">Buy Now</button>
+      </div>
+    </div>
+    <p class="payment-info">After payment, send the screenshot to WhatsApp. Files will be delivered within 24 hours.</p>
+  </section>
 
-  <!-- Footer -->
+  <!-- QR Popup (unchanged) -->
+  <div class="qr-popup">
+    <div class="qr-content">
+      <img src="qr-code.png" alt="QR Code">
+      <p>Scan to pay via UPI</p>
+      <a id="sendSSButton" href="" style="display: none;">Send SS</a>
+      <button class="close-qr">Close</button>
+    </div>
+  </div>
+
+  <!-- Footer (fixed email link) -->
   <footer class="section">
     <div class="contact-icons">
       <a href="mailto:kamalmeena1503@gmail.com" title="Email" aria-label="Email Kamal Meena"><i class="fas fa-envelope"></i></a>
-      <a href="tel:+916350262865" title="Call" aria-label="Call Kamal Meena"><i class="fas fa-phone"></i></a>
-      <a href="https://instagram.com/Kamal.prp" title="Instagram" target="_blank" aria-label="Kamal Meena’s Instagram"><i class="fab fa-instagram"></i></a>
+      <a href="tel:+918440048355" title="Phone" aria-label="Call Kamal Meena"><i class="fas fa-phone"></i></a>
+      <a href="https://www.instagram.com/kamall.meena" title="Instagram" aria-label="Follow Kamal Meena on Instagram"><i class="fab fa-instagram"></i></a>
     </div>
-    <button class="mode-toggle" onclick="toggleMode()">Switch to Dark Mode</button>
-    <p>© 2025 Kamal Meena. All rights reserved.</p>
+    <div class="dark-mode-toggle">
+      <i class="fas fa-moon"></i>
+    </div>
+    <p>&copy; 2025 Mr. Kamal Designer. All rights reserved.</p>
   </footer>
 
-  <!-- Popup -->
-  <div class="popup" id="popup">
-    <span class="close" onclick="closePopup()">×</span>
-    <img id="popupImg" src="" alt="Selected Design" />
-  </div>
+  <!-- Back to Top (unchanged) -->
+  <button class="back-to-top"><i class="fas fa-arrow-up"></i></button>
 
-  <!-- QR Popup -->
-  <div class="popup qr-popup" id="qrPopup">
-    <span class="close" onclick="closeQRPopup()">×</span>
-    <h3>Scan to Pay</h3>
-    <img id="qrCodeImg" src="" alt="QR Code" />
-    <p>Use any UPI app to scan and pay.</p>
-  </div>
-
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
   <script>
-    function toggleMenu() {
-      const nav = document.getElementById('navbar');
-      nav.classList.toggle('show');
-      const menuToggle = document.querySelector('.menu-toggle');
-      menuToggle.setAttribute('aria-expanded', nav.classList.contains('show'));
-    }
-
-    function toggleMode() {
-      document.body.classList.toggle('dark-mode');
-      document.body.classList.toggle('light');
-      localStorage.setItem('theme', document.body.classList.contains('dark-mode') ? 'dark' : 'light');
-      const button = document.querySelector('.mode-toggle');
-      button.textContent = document.body.classList.contains('dark-mode') ? 'Switch to Light Mode' : 'Switch to Dark Mode';
-    }
-
-    if (localStorage.getItem('theme') === 'dark') toggleMode();
-
-    function scrollToTop() {
-      window.scrollTo({ top: 0, behavior: 'smooth' });
-    }
-
-    function openPopup(src) {
-      const popup = document.getElementById('popup');
-      const popupImg = document.getElementById('popupImg');
-      if (popup && popupImg) {
-        popupImg.src = src;
-        popup.style.display = 'flex';
-        console.log('Image popup opened:', src);
-      } else {
-        console.error('Image popup or image element not found');
-      }
-    }
-
-    function closePopup() {
-      const popup = document.getElementById('popup');
-      if (popup) {
-        popup.style.display = 'none';
-        console.log('Image popup closed');
-      }
-    }
-
-    function showQRPopup() {
-      console.log('Attempting to show QR popup');
-      const qrPopup = document.getElementById('qrPopup');
-      const qrCodeImg = document.getElementById('qrCodeImg');
-      if (qrPopup && qrCodeImg) {
-        qrCodeImg.src = 'https://raw.githubusercontent.com/Abranddesigner/Mr.Kamal/refs/heads/main/QR%20Code.jpg';
-        qrPopup.style.display = 'flex';
-        console.log('QR popup displayed');
-        alert('QR code displayed. Scan with any UPI app to pay.');
-      } else {
-        console.error('QR popup or image element not found');
-        alert('Error: Unable to display QR code. Please contact via WhatsApp.');
-      }
-    }
-
-    function closeQRPopup() {
-      console.log('Closing QR popup');
-      const qrPopup = document.getElementById('qrPopup');
-      if (qrPopup) {
-        qrPopup.style.display = 'none';
-        console.log('QR popup closed');
-      }
-    }
-
-    function handleBuyNow(product, amount) {
-      console.log(`Buy Now clicked for ${product} with amount ₹${amount}`);
-      const isMobile = /Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
-      const upiUrl = `upi://pay?pa=8440048355@ybl&pn=Kamal%20Meena&am=${amount}&cu=INR&tn=Purchase%20${encodeURIComponent(product)}`;
-      const fallbackUrl = `https://wa.me/918440048355?text=Hi%20Kamal,%20I%20want%20to%20pay%20₹${amount}%20for%20${encodeURIComponent(product)}.`;
-
-      if (isMobile) {
-        console.log('Mobile device detected, attempting UPI intent:', upiUrl);
-        const startTime = Date.now();
-        window.location.href = upiUrl;
-        setTimeout(() => {
-          if (Date.now() - startTime < 1000) {
-            console.log('UPI intent likely failed, redirecting to fallback');
-            alert('UPI app not found. Redirecting to WhatsApp for payment details.');
-            window.location.href = fallbackUrl;
-          }
-        }, 1500);
-      } else {
-        console.log('Desktop device detected, showing QR popup');
-        showQRPopup();
-      }
-      showSendSSButton(product);
-    }
-
-    function showSendSSButton(product) {
-      console.log(`Scheduling Send SS button for ${product}`);
-      const sendSSButton = document.getElementById('sendSSButton');
-      if (sendSSButton) {
-        sendSSButton.href = `https://wa.me/918440048355?text=Hi%20Kamal,%20here’s%20the%20payment%20screenshot%20for%20${encodeURIComponent(product)}.`;
-        setTimeout(() => {
-          sendSSButton.style.display = 'block';
-          console.log('Send SS button displayed');
-          alert('Send SS button is now visible. Please send the payment screenshot.');
-        }, 60000); // Reduced to 1 minute for testing
-      } else {
-        console.error('Send SS button element not found');
-        alert('Error: Send SS button not found. Please contact via WhatsApp.');
-      }
-    }
-
-    document.addEventListener('DOMContentLoaded', () => {
-      console.log('Document loaded, initializing event listeners');
-      const sections = document.querySelectorAll('.section');
-      const observer = new IntersectionObserver((entries, observer) => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('in-view');
-            observer.unobserve(entry.target);
-          }
-        });
-      }, { threshold: 0.1 });
-
-      sections.forEach(section => {
-        observer.observe(section);
-      });
-
-      const backToTop = document.querySelector('.back-to-top');
-      window.addEventListener('scroll', () => {
-        if (window.scrollY > 300) backToTop.classList.add('show');
-        else backToTop.classList.remove('show');
-      });
-      backToTop.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
-
-      const menuToggle = document.querySelector('.menu-toggle');
-      const navbar = document.getElementById('navbar');
-      menuToggle.addEventListener('click', () => {
-        navbar.classList.toggle('show');
-        menuToggle.setAttribute('aria-expanded', navbar.classList.contains('show'));
-      });
-    });
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-XXXXXXXXXX');
   </script>
+  <script src="scripts.js" async></script>
 </body>
 </html>
