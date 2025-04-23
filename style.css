@@ -52,15 +52,22 @@ header {
 .welcome {
   text-align: center;
   padding: 50px 20px;
+  min-height: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background: linear-gradient(to bottom, rgba(30, 42, 68, 0.8), rgba(245, 239, 235, 0.8));
 }
 .welcome h1 {
   font-size: 2.5rem;
   margin-bottom: 20px;
+  line-height: 1.2;
 }
 .welcome p {
   font-size: 1rem;
   max-width: 800px;
   margin: 0 auto 20px;
+  line-height: 1.6;
 }
 .btn {
   background: #1E2A44;
@@ -162,7 +169,6 @@ header {
   width: 150px;
   height: 150px;
   border-radius: 50%;
-  animation: glow 2s ease-in-out infinite alternate;
 }
 .bio p {
   max-width: 400px;
@@ -315,6 +321,21 @@ footer {
     flex-direction: column;
   }
 }
+@media (max-width: 600px) {
+  .welcome {
+    padding: 30px 15px;
+    min-height: 300px;
+  }
+  .welcome h1 {
+    font-size: 1.8rem;
+  }
+  .welcome p {
+    font-size: 0.9rem;
+  }
+  .section {
+    animation: fadeInUp 0.6s forwards 0.1s;
+  }
+}
 @keyframes fadeIn {
   0% { opacity: 0; }
   100% { opacity: 1; }
@@ -322,8 +343,4 @@ footer {
 @keyframes fadeInUp {
   0% { opacity: 0; transform: translateY(20px); }
   100% { opacity: 1; transform: translateY(0); }
-}
-@keyframes glow {
-  from { box-shadow: 0 0 5px #B0B7C0; }
-  to { box-shadow: 0 0 15px #B0B7C0; }
 }
