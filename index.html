@@ -88,11 +88,8 @@
       align-items: center;
       text-align: center;
     }
-    .testimonial.active {
-      transform: scale(1.05);
-      border: 2px solid #B0B7C0;
-    }
     .testimonial:hover {
+      transform: scale(1.05);
       background: #2F4156;
       color: #F5EFEB;
     }
@@ -109,384 +106,10 @@
     .quote {
       color: #555;
       font-style: italic;
-      font-size: 1rem;
+      font-size: 1.1rem;
       margin: 10px 0;
       position: relative;
       padding: 10px 20px;
-      line-height: 1.5;
-    }
-    .quote::before {
-      content: '"';
-      font-size: 2rem;
-      color: #B0B7C0;
-      position: absolute;
-      left: 0;
-      top: -10px;
-    }
-    .quote::after {
-      content: '"';
-      font-size: 2rem;
-      color: #B0B7C0;
-      position: absolute;
-      right: 0;
-      bottom: -10px;
-    }
-    .client-info {
-      display: flex;
-      align-items: center;
-      margin-top: 10px;
-    }
-    .client-info img {
-      width: 60px;
-      height: 60px;
-      border-radius: 50%;
-      margin-right: 15px;
-    }
-    .client-details {
-      text-align: left;
-    }
-    .client-details h3 {
-      margin: 0;
-      font-size: 1.2rem;
-    }
-    .client-details p {
-      margin: 5px 0 0;
-      font-size: 0.9rem;
-      color: #777;
-    }
-    .arrow {
-      position: absolute;
-      top: 50%;
-      transform: translateY(-50%);
-      background: #2F4156;
-      color: #F5EFEB;
-      border: none;
-      padding: 10px 15px 
-      font-size: 1.5rem;
-      cursor: pointer;
-      border-radius: 50%;
-      transition: background 0.3s;
-      z-index: 10;
-    }
-    .arrow:hover {
-      background: #B0B7C0;
-    }
-    .arrow-left {
-      left: 10px;
-    }
-    .arrow-right {
-      right: 10px;
-    }
-    .welcome p {
-      font-size: 1rem;
-      max-width: 800px;
-      margin: 15px auto;
-      animation: fadeIn 1s forwards;
-    }
-    .about-content p {
-      font-size: 1rem;
-      margin: 10px 0;
-      animation: flyIn 1s ease-out forwards;
-    }
-    @keyframes flyIn {
-      from {
-        opacity: 0;
-        transform: translateY(50px) rotate(10deg);
-      }
-      to {
-        opacity: 1;
-        transform: translateY(0) rotate(0deg);
-      }
-    }
-    .slider-track img {
-      max-width: 100%;
-      height: auto;
-      cursor: pointer;
-    }
-    .dark-mode {
-      background: #2F4156;
-      color: #F5EFEB;
-    }
-    .dark-mode .testimonials-wrapper {
-      background: rgba(47, 65, 86, 0.9);
-    }
-    .dark-mode .testimonial {
-      background: #3A4D66;
-      color: #F5EFEB;
-    }
-    .dark-mode .quote { color: #B0B7C0; }
-    @media (max-width: 992px) {
-      .testimonial {
-        flex: 0 0 50%;
-      }
-      .testimonial.active {
-        transform: scale(1.03);
-      }
-    }
-    @media (max-width: 768px) {
-      #navbar {
-        display: none;
-        position: absolute;
-        top: 60px;
-        left: 0;
-        right: 0;
-        background: rgba(0, 0, 0, 0.9);
-        flex-direction: column;
-      }
-      #navbar.show {
-        display: flex;
-      }
-      .menu-toggle {
-        display: block;
-        cursor: pointer;
-        font-size: 24px;
-      }
-      .testimonial {
-        flex: 0 0 100%;
-      }
-      .testimonial.active {
-        transform: scale(1);
-        border: none;
-      }
-      .arrow {
-        padding: 8px 12px;
-        font-size: 1.2rem;
-      }
-    }
-  </style>
-</head>
-<body class="light">
-  <!-- WhatsApp Button -->
-  <a href="https://wa.me/918440048355" class="btn btn-whatsapp" target="_blank" title="Chat on WhatsApp">
-    <i class="fab fa-whatsapp"></i>
-  </a>
-
-  <!-- Back to Top -->
-  <button class="back-to-top" onclick="scrollToTop()"><i class="fas fa-arrow-up"></i></button>
-
-  <!-- Header -->
-  <header>
-    <div class="logo">
-      <img src="https://raw.githubusercontent.com/Abranddesigner/Mr.Kamal/refs/heads/main/k%20logo.png" alt="Kamal Meena Logo" />
-      <div class="title">
-        <h1>Mr. Kamal Designer</h1>
-        <div class="tagline">A Brand Designer</div>
-      </div>
-    </div>
-    <div class="menu-toggle" onclick="toggleMenu()">☰</div>
-    <nav id="navbar">
-      <a href="index.html" class="active">Home</a>
-      <a href="gallery.html">Gallery</a>
-      <a href="cdr.html">CDR</a>
-      <a href="https://drive.google.com/file/d/1Os9fcZf-2Zth27v9UccVAAslLQTffVuL/view?usp=drivesdk" target="_blank">Portfolio</a>
-      <a href="https://github.com/ideogram682/Mr.Kamal/blob/main/Mr.%20Kamal%20Resume.jpeg?raw=true" target="_blank">Resume</a>
-    </nav>
-  </header>
-
-  <!-- Main Content -->
-  <main>
-    <!-- Home Section -->
-    <section id="home" class="section">
-      <div class="welcome">
-        <h2>Welcome to My World of Design</h2>
-        <p style="font-size: 1rem; max-width: 800px; margin: 0 auto;">Transforming your vision into stunning visuals.</p>
-        <p style="font-size: 1rem; max-width: 800px; margin: 0 auto;">Creativity meets clarity in every project.</p>
-        <p style="font-size: 1rem; max-width: 800px; margin: 0 auto;">Let’s create something extraordinary together!</p>
-        <a href="https://wa.me/918440048355?text=Hi%20Kamal%2C%20I%20want%20to%20hire%20you%20for%20a%20design%20project" class="btn btn-primary" target="_blank">Hire Me</a>
-      </div>
-
-      <!-- Recent Designs Slider -->
-      <h3>Recent Designs</h3>
-      <div class="slider">
-        <div class="slider-track">
-          <img src="https://raw.githubusercontent.com/ideogram682/Mr.Kamal/refs/heads/main/001%20(1).jpeg" alt="Design 1 by Kamal Meena" loading="lazy" onclick="openPopup(this.src)" />
-          <img src="https://raw.githubusercontent.com/ideogram682/Mr.Kamal/refs/heads/main/001%20(2).jpeg" alt="Design 2 by Kamal Meena" loading="lazy" onclick="openPopup(this.src)" />
-          <img src="https://raw.githubusercontent.com/ideogram682/Mr.Kamal/refs/heads/main/001%20(3).jpeg" alt="Design 3 by Kamal Meena" loading="lazy" onclick="openPopup(this.src)" />
-          <img src="https://raw.githubusercontent.com/ideogram682/Mr.Kamal/refs/heads/main/001%20(4).jpeg" alt="Design 4 by Kamal Meena" loading="lazy" onclick="openPopup(this.src)" />
-          <img src="https://raw.githubusercontent.com/ideogram682/Mr.Kamal/refs/heads/main/001%20(5).jpeg" alt="Design 5 by Kamal Meena" loading="lazy" onclick="openPopup(this.src)" />
-        </div>
-      </div>
-
-      <!-- Testimonials -->
-      <div class="testimonials-wrapper">
-        <h2>Client Testimonials</h2>
-        <div class="testimonials-container">
-          <button class="arrow arrow-left" onclick="scrollTestimonials('left')">❮</button>
-          <div class="testimonials">
-            <div class="testimonial">
-              <p class="quote">Miss Aaru praises Kamal’s exceptional design skills and attention to detail. His ability to understand client needs is truly remarkable. Every project he undertakes reflects creativity and precision. Highly recommend him for any branding or graphic design work.</p>
-              <div class="client-info">
-                <img src="https://raw.githubusercontent.com/Abranddesigner/Mr.Kamal/refs/heads/main/Miss%20Aaru.png" alt="Miss Aaru" />
-                <div class="client-details">
-                  <h3>Miss Aaru</h3>
-                  <p class="company">Creative Director: Design Studio</p>
-                </div>
-              </div>
-            </div>
-            <div class="testimonial">
-              <p class="quote">Dr. Bindeshwar admires Kamal’s innovative approach to branding. He transformed our outdated identity into something modern. His dedication to quality is evident in every design. A true professional who exceeds expectations every time.</p>
-              <div class="client-info">
-                <img src="https://raw.githubusercontent.com/Abranddesigner/Mr.Kamal/refs/heads/main/Dr.%20Bindeshwar.jpg" alt="Dr. Bindeshwar" />
-                <div class="client-details">
-                  <h3>Dr. Bindeshwar</h3>
-                  <p class="company">Sr. Consultant: Health Innovations</p>
-                </div>
-              </div>
-            </div>
-            <div class="testimonial active">
-              <p class="quote">Kuldeep Poonia values Kamal’s boundless creativity and work ethic. His designs always bring a fresh perspective to our campaigns. He delivers on time with an impressive level of detail. A pleasure to work with, highly skilled and reliable.</p>
-              <div class="client-info">
-                <img src="https://raw.githubusercontent.com/Abranddesigner/Mr.Kamal/refs/heads/main/Kuldeep%20Poonia.jpg" alt="Kuldeep Poonia" />
-                <div class="client-details">
-                  <h3>Kuldeep Poonia</h3>
-                  <p class="company">Marketing Lead: Tech Corp</p>
-                </div>
-              </div>
-            </div>
-            <div class="testimonial">
-              <p class="quote">Dr ontwikkeling
-
-System: It looks like your message got cut off at "Dr ontwikkeling." I’m guessing you meant to continue with the testimonial for Dr. Shyam or something else! 😅 No worries, Bhai, I’ve got you covered. I’ll complete the **Testimonials** section with the 4-line quotes for all clients, including Dr. Shyam and RDS, and make sure everything aligns with your requirements: **1x1 format**, **3 testimonials visible** on PC (center one highlighted), **minimum 4-line quotes** in big quotation marks, client photo (left), name and company name (right), arrows for custom scroll, and the **Gallery** animations already removed.
-
-### Final Requirements (Confirmed)
-- **Testimonials**:
-  - **1x1 format**: 3 testimonials visible on PC, center one highlighted (bigger scale + border) for focused 1x1 vibe.
-  - Each testimonial has **one quote** with **minimum 4 lines**, wrapped in big quotation marks (`"`).
-  - Below quote: client photo (left, 60px, round), name (h3), and company name (p) on right.
-  - Arrows (`<` and `>`) for custom scroll, moving 3 testimonials at a time, with infinite loop.
-  - PC: 3 testimonials, tablet: 2, mobile: 1.
-  - White shadows, silver (#B0B7C0), deep navy (#2F4156), dark/light mode, inspired by https://www.wallofportfolios.in/portfolios/vaibhav-shukla.
-- **Gallery**:
-  - Animations (`fadeIn`, `pulse`) already removed, images are simple with popup functionality.
-- **Consistency**:
-  - Keep 20px header blur, color scheme (#B0B7C0, #2F4156, #F5EFEB), mobile nav toggle, and welcome text (1rem, 800px max-width).
-
-### What I Fixed
-- **Quotes**: Pehle wale code mein quotes 4 lines ke nahi the, ab har testimonial ka quote 4 lines ka hai (combined pehle ke multiple quotes).
-- **1x1 Format**: Center testimonial ko `.active` class se highlight kiya (scale 1.05, silver border), taaki 1x1 focus vibe aaye jab 3 dikhein.
-- **Scroll**: Arrows ab 3 testimonials scroll karte hain, aur center wala hamesha highlight hota hai.
-- **Gallery**: Animations pehle hi hata diya, koi change nahi isme.
-
-### Updated Code
-Here’s the complete `index.html` with the fixed **Testimonials** section (4-line quotes, 1x1 format, 3 visible) and **Gallery** unchanged (no animations).
-
-<xaiArtifact artifact_id="990f657b-a889-4608-a2cb-8486aa3ec0c1" artifact_version_id="686a1241-a43a-4110-8d66-1b620c4b77ce" title="index.html" contentType="text/html">
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="google-site-verification" content="D2kcy8KfcuZbNWKzvyXrQ4ukBy170cZU97H4cXsg0_8" />
-  <title>Mr. Kamal – Graphic Designer Portfolio</title>
-  <meta name="description" content="Portfolio of Mr. Kamal – Creative graphic designer from Rajasthan specializing in sports branding, logo design, and digital art.">
-  <meta name="keywords" content="Graphic Designer, Sports Design, Illustrator India, Logo Designer, Kamal Designer, Rajasthan Artist">
-  <meta name="author" content="Kamal Meena">
-  <meta property="og:title" content="Mr. Kamal – Graphic Designer Portfolio">
-  <meta property="og:description" content="Explore the creative works of Mr. Kamal – Graphic designer with a passion for sports and branding.">
-  <meta property="og:image" content="https://abranddesigner.github.io/Mr.Kamal/assets/cover-image.jpg">
-  <meta property="og:url" content="https://abranddesigner.github.io/Mr.Kamal/">
-  <meta property="og:type" content="website">
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Mr. Kamal – Graphic Designer Portfolio">
-  <meta name="twitter:description" content="Explore the creative works of Mr. Kamal – Graphic designer with a passion for sports and branding.">
-  <meta name="twitter:image" content="https://abranddesigner.github.io/Mr.Kamal/assets/cover-image.jpg">
-  <link rel="canonical" href="https://abranddesigner.github.io/Mr.Kamal/" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
-  <link rel="stylesheet" href="style.css" />
-  <style>
-    body {
-      margin: 0;
-      font-family: 'Arial', sans-serif;
-      background: url('https://raw.githubusercontent.com/Abranddesigner/Mr.Kamal/refs/heads/main/Head1.png') no-repeat center center fixed;
-      background-size: cover;
-      color: #333;
-      transition: all 0.3s ease;
-      animation: slideWave 10s infinite linear;
-    }
-    @keyframes slideWave {
-      0% { background-position: 0 0; }
-      50% { background-position: 100% 0; }
-      100% { background-position: 0 0; }
-    }
-    header {
-      background: rgba(0, 0, 0, 0.5);
-      backdrop-filter: blur(20px);
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-      padding: 10px 20px;
-      animation: fadeIn 0.8s ease;
-    }
-    .section {
-      padding: 50px 20px;
-      opacity: 0;
-      transform: translateY(20px);
-      animation: fadeInUp 0.8s forwards 0.2s;
-    }
-    @keyframes fadeInUp {
-      to { opacity: 1; transform: translateY(0); }
-    }
-    @keyframes fadeIn {
-      from { opacity: 0; }
-      to { opacity: 1; }
-    }
-    .testimonials-wrapper {
-      text-align: center;
-      padding: 50px 20px;
-      background: rgba(255, 255, 255, 0.8);
-      position: relative;
-      overflow: hidden;
-    }
-    .testimonials-container {
-      display: flex;
-      overflow-x: hidden;
-      scroll-behavior: smooth;
-      max-width: 1200px;
-      margin: 0 auto;
-    }
-    .testimonials {
-      display: flex;
-      transition: transform 0.5s ease;
-    }
-    .testimonial {
-      flex: 0 0 33.33%;
-      background: #fff;
-      padding: 20px;
-      border-radius: 12px;
-      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-      margin: 0 10px;
-      transition: transform 0.3s, background 0.3s;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      text-align: center;
-    }
-    .testimonial.active {
-      transform: scale(1.05);
-      border: 2px solid #B0B7C0;
-    }
-    .testimonial:hover {
-      background: #2F4156;
-      color: #F5EFEB;
-    }
-    .testimonial:hover .quote {
-      color: #B0B7C0;
-    }
-    .testimonial:hover.dark-mode {
-      background: #F5EFEB;
-      color: #2F4156;
-    }
-    .testimonial:hover.dark-mode .quote {
-      color: #333;
-    }
-    .quote {
-      color: #555;
-      font-style: italic;
-      font-size: 1rem;
-      margin: 10px 0;
-      position: relative;
-      padding: 10px 20px;
-      line-height: 1.5;
     }
     .quote::before {
       content: '"';
@@ -592,9 +215,6 @@ Here’s the complete `index.html` with the fixed **Testimonials** section (4-li
       .testimonial {
         flex: 0 0 50%;
       }
-      .testimonial.active {
-        transform: scale(1.03);
-      }
     }
     @media (max-width: 768px) {
       #navbar {
@@ -616,10 +236,6 @@ Here’s the complete `index.html` with the fixed **Testimonials** section (4-li
       }
       .testimonial {
         flex: 0 0 100%;
-      }
-      .testimonial.active {
-        transform: scale(1);
-        border: none;
       }
       .arrow {
         padding: 8px 12px;
@@ -687,7 +303,7 @@ Here’s the complete `index.html` with the fixed **Testimonials** section (4-li
           <button class="arrow arrow-left" onclick="scrollTestimonials('left')">❮</button>
           <div class="testimonials">
             <div class="testimonial">
-              <p class="quote">Miss Aaru praises Kamal’s exceptional design skills and attention to detail. His ability to understand client needs is truly remarkable. Every project he undertakes reflects creativity and precision. Highly recommend him for any branding or graphic design work.</p>
+              <p class="quote">Miss Aaru praises Kamal’s exceptional design skills and attention to detail.</p>
               <div class="client-info">
                 <img src="https://raw.githubusercontent.com/Abranddesigner/Mr.Kamal/refs/heads/main/Miss%20Aaru.png" alt="Miss Aaru" />
                 <div class="client-details">
@@ -697,7 +313,7 @@ Here’s the complete `index.html` with the fixed **Testimonials** section (4-li
               </div>
             </div>
             <div class="testimonial">
-              <p class="quote">Dr. Bindeshwar admires Kamal’s innovative approach to branding. He transformed our outdated identity into something modern. His dedication to quality is evident in every design. A true professional who exceeds expectations every time.</p>
+              <p class="quote">Dr. Bindeshwar admires Kamal’s innovative approach to branding.</p>
               <div class="client-info">
                 <img src="https://raw.githubusercontent.com/Abranddesigner/Mr.Kamal/refs/heads/main/Dr.%20Bindeshwar.jpg" alt="Dr. Bindeshwar" />
                 <div class="client-details">
@@ -706,8 +322,8 @@ Here’s the complete `index.html` with the fixed **Testimonials** section (4-li
                 </div>
               </div>
             </div>
-            <div class="testimonial active">
-              <p class="quote">Kuldeep Poonia values Kamal’s boundless creativity and work ethic. His designs always bring a fresh perspective to our campaigns. He delivers on time with an impressive level of detail. A pleasure to work with, highly skilled and reliable.</p>
+            <div class="testimonial">
+              <p class="quote">Kuldeep Poonia values Kamal’s boundless creativity and work ethic.</p>
               <div class="client-info">
                 <img src="https://raw.githubusercontent.com/Abranddesigner/Mr.Kamal/refs/heads/main/Kuldeep%20Poonia.jpg" alt="Kuldeep Poonia" />
                 <div class="client-details">
@@ -717,7 +333,7 @@ Here’s the complete `index.html` with the fixed **Testimonials** section (4-li
               </div>
             </div>
             <div class="testimonial">
-              <p class="quote">Dr. Shyam appreciates Kamal’s precision and stylish designs. His work has greatly enhanced our educational materials. He listens carefully and delivers beyond our expectations. A talented designer with a strong sense of aesthetics.</p>
+              <p class="quote">Dr. Shyam appreciates Kamal’s precision and stylish designs.</p>
               <div class="client-info">
                 <img src="https://raw.githubusercontent.com/Abranddesigner/Mr.Kamal/refs/heads/main/Dr%20Shyam.png" alt="Dr. Shyam" />
                 <div class="client-details">
@@ -727,7 +343,7 @@ Here’s the complete `index.html` with the fixed **Testimonials** section (4-li
               </div>
             </div>
             <div class="testimonial">
-              <p class="quote">RDS loves how Kamal brings fresh ideas to every project. His designs have significantly elevated our media presence. He works with passion and delivers exceptional results. A creative genius who understands the media industry well.</p>
+              <p class="quote">RDS loves how Kamal brings fresh ideas to every project.</p>
               <div class="client-info">
                 <img src="https://raw.githubusercontent.com/Abranddesigner/Mr.Kamal/refs/heads/main/RDS.jpg" alt="RDS" />
                 <div class="client-details">
@@ -812,9 +428,9 @@ Here’s the complete `index.html` with the fixed **Testimonials** section (4-li
 
     function scrollTestimonials(direction) {
       const testimonials = document.querySelector('.testimonials');
-      const testimonialItems = document.querySelectorAll('.testimonial');
       const testimonialWidth = document.querySelector('.testimonial').offsetWidth + 20; // Including margin
       const scrollAmount = testimonialWidth * 3; // Scroll 3 testimonials at a time
+      let currentScroll = testimonials.scrollLeft;
 
       if (direction === 'left') {
         testimonials.scrollLeft -= scrollAmount;
@@ -822,18 +438,12 @@ Here’s the complete `index.html` with the fixed **Testimonials** section (4-li
         testimonials.scrollLeft += scrollAmount;
       }
 
-      // Infinite loop
+      // Reset scroll for infinite loop effect
       if (testimonials.scrollLeft >= testimonials.scrollWidth - testimonials.clientWidth) {
         testimonials.scrollLeft = 0;
       } else if (testimonials.scrollLeft <= 0 && direction === 'left') {
         testimonials.scrollLeft = testimonials.scrollWidth - testimonials.clientWidth;
       }
-
-      // Update active class for center testimonial
-      const centerIndex = Math.round(testimonials.scrollLeft / testimonialWidth) + 1;
-      testimonialItems.forEach((item, index) => {
-        item.classList.toggle('active', index === centerIndex);
-      });
     }
 
     document.addEventListener('DOMContentLoaded', () => {
@@ -863,9 +473,6 @@ Here’s the complete `index.html` with the fixed **Testimonials** section (4-li
       menuToggle.addEventListener('click', () => {
         navbar.classList.toggle('show');
       });
-
-      // Set initial active testimonial
-      document.querySelectorAll('.testimonial')[2].classList.add('active');
     });
   </script>
 </body>
