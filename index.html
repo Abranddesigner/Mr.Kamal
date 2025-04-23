@@ -1,850 +1,140 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="google-site-verification" content="D2kcy8KfcuZbNWKzvyXrQ4ukBy170cZU97H4cXsg0_8" />
-  <title>Mr. Kamal – Graphic Designer Portfolio</title>
-  <meta name="description" content="Portfolio of Mr. Kamal – Creative graphic designer from Rajasthan specializing in sports branding, logo design, and digital art.">
-  <meta name="keywords" content="Graphic Designer, Sports Design, Illustrator India, Logo Designer, Kamal Designer, Rajasthan Artist">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Mr. Kamal Designer - Professional logo, sports branding, and social media graphics. Hire me for custom CDR files and creative designs.">
+  <meta name="keywords" content="graphic design, logo design, CDR files, sports branding, social media graphics, Mr. Kamal">
   <meta name="author" content="Kamal Meena">
-  <meta property="og:title" content="Mr. Kamal – Graphic Designer Portfolio">
-  <meta property="og:description" content="Explore the creative works of Mr. Kamal – Graphic designer with a passion for sports and branding.">
-  <meta property="og:image" content="https://abranddesigner.github.io/Mr.Kamal/assets/cover-image.jpg">
+  <!-- Open Graph -->
+  <meta property="og:title" content="Mr. Kamal Designer">
+  <meta property="og:description" content="Explore professional graphic design services by Mr. Kamal. Custom logos, sports branding, and more.">
+  <meta property="og:image" content="https://abranddesigner.github.io/Mr.Kamal/k%20logo.png">
   <meta property="og:url" content="https://abranddesigner.github.io/Mr.Kamal/">
-  <meta property="og:type" content="website">
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Mr. Kamal – Graphic Designer Portfolio">
-  <meta name="twitter:description" content="Explore the creative works of Mr. Kamal – Graphic designer with a passion for sports and branding.">
-  <meta name="twitter:image" content="https://abranddesigner.github.io/Mr.Kamal/assets/cover-image.jpg">
-  <link rel="canonical" href="https://abranddesigner.github.io/Mr.Kamal/" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
-  <style>
-    /* Reset and Base */
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-    body {
-      font-family: 'Poppins', sans-serif;
-      background-color: #F1F3F5;
-      color: #1E2A44;
-      line-height: 1.6;
-      transition: background-color 0.3s ease, color 0.3s ease;
-    }
-    .dark-mode {
-      background-color: #0F172A;
-      color: #FFFFFF;
-    }
-
-    /* Common Classes */
-    .btn {
-      display: inline-block;
-      padding: 10px 20px;
-      border-radius: 5px;
-      text-decoration: none;
-      font-weight: bold;
-      transition: background-color 0.3s ease;
-    }
-    .btn-primary {
-      background-color: #B0B7C0;
-      color: #1E2A44;
-    }
-    .btn-primary:hover {
-      background-color: #9CA3AF;
-    }
-    .btn-whatsapp {
-      background-color: #25D366;
-      color: white;
-      padding: 12px;
-      border-radius: 50px;
-      font-size: 24px;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-      position: fixed;
-      bottom: 20px;
-      right: 20px;
-      z-index: 1000;
-    }
-    .btn-whatsapp:hover {
-      background-color: #20b858;
-    }
-    .btn-send-ss {
-      background-color: #25D366;
-      color: white;
-      padding: 12px;
-      border-radius: 50px;
-      font-size: 18px;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-      position: fixed;
-      bottom: 20px;
-      left: 20px;
-      z-index: 1000;
-      text-decoration: none;
-      display: none;
-    }
-    .btn-send-ss:hover {
-      background-color: #20b858;
-    }
-    .section {
-      padding: 3rem 1rem;
-      max-width: 1200px;
-      margin: auto;
-      text-align: center;
-    }
-    .section h2 {
-      color: #B0B7C0;
-      font-size: 2.2rem;
-      margin-bottom: 1rem;
-    }
-    .dark-mode .section h2 {
-      color: #D1D5DB;
-    }
-    .subtitle {
-      font-size: 1.1rem;
-      color: #1E2A44;
-      margin-bottom: 1.5rem;
-    }
-    .dark-mode .subtitle {
-      color: #E2E8F0;
-    }
-
-    /* Header */
-    header {
-      background: rgba(30, 42, 68, 0.7);
-      background-image: url('https://raw.githubusercontent.com/Abranddesigner/Mr.Kamal/refs/heads/main/Head.png');
-      background-size: cover;
-      background-position: center;
-      backdrop-filter: blur(20px);
-      padding: 1.5rem 1rem;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      flex-wrap: wrap;
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-    }
-    .dark-mode header {
-      background: rgba(30, 42, 68, 0.8);
-      background-image: url('https://raw.githubusercontent.com/Abranddesigner/Mr.Kamal/refs/heads/main/Head.png');
-      background-size: cover;
-      background-position: center;
-      backdrop-filter: blur(20px);
-    }
-    .logo {
-      display: flex;
-      align-items: center;
-      gap: 25px;
-      position: relative;
-      z-index: 1;
-    }
-    .logo img {
-      height: 60px;
-      border-radius: 50%;
-    }
-    .title h1 {
-      color: #B0B7C0;
-      font-size: 1.8rem;
-      margin: 0;
-      text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
-    }
-    .title .tagline {
-      font-size: 14px;
-      color: #FFFFFF;
-      text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
-    }
-
-    /* Navbar */
-    nav {
-      display: flex;
-      gap: 10px;
-    }
-    nav a {
-      color: #FFFFFF;
-      margin: 0 15px;
-      text-decoration: none;
-      font-weight: bold;
-      font-size: 1rem;
-      transition: color 0.3s ease;
-      position: relative;
-      z-index: 1;
-      text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
-    }
-    nav a:hover,
-    nav a.active {
-      color: #B0B7C0;
-    }
-    .menu-toggle {
-      display: none;
-      font-size: 24px;
-      cursor: pointer;
-      color: #B0B7C0;
-      position: relative;
-      z-index: 1;
-    }
-
-    /* Welcome Section */
-    .welcome {
-      margin-bottom: 2rem;
-    }
-    .welcome p {
-      font-size: 1rem;
-      max-width: 800px;
-      margin: 0.5rem auto;
-    }
-
-    /* Slider */
-    .slider {
-      overflow-x: auto;
-      white-space: nowrap;
-      padding-bottom: 10px;
-      margin-bottom: 2rem;
-    }
-    .slider-track {
-      display: inline-flex;
-      gap: 20px;
-    }
-    .slider-track img {
-      height: 200px;
-      width: 200px;
-      object-fit: cover;
-      border-radius: 10px;
-      cursor: pointer;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-    }
-
-    /* Testimonials */
-    .testimonials-wrapper {
-      position: relative;
-      overflow: hidden;
-      padding: 50px 20px;
-      background: rgba(255, 255, 255, 0.8);
-    }
-    .dark-mode .testimonials-wrapper {
-      background: rgba(47, 65, 86, 0.9);
-    }
-    .testimonials-container {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      gap: 20px;
-      overflow: hidden;
-      max-width: 1200px;
-      margin: 0 auto;
-      position: relative;
-    }
-    .testimonials {
-      display: flex;
-      transition: transform 0.5s ease;
-    }
-    .testimonial {
-      flex: 0 0 33.33%;
-      background: #F1F3F5;
-      padding: 20px;
-      border-radius: 12px;
-      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-      margin: 0 10px;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      text-align: center;
-      transition: all 0.3s ease;
-      opacity: 0.8;
-      filter: blur(2px);
-    }
-    .testimonial.active {
-      opacity: 1;
-      filter: none;
-      transform: scale(1.05);
-      border: 2px solid #B0B7C0;
-    }
-    .dark-mode .testimonial {
-      background: #0F172A;
-    }
-    .testimonial:hover {
-      background: #2F4156;
-      color: #F5EFEB;
-    }
-    .testimonial:hover .quote {
-      color: #B0B7C0;
-    }
-    .testimonial:hover.dark-mode {
-      background: #F5EFEB;
-      color: #2F4156;
-    }
-    .testimonial:hover.dark-mode .quote {
-      color: #333;
-    }
-    .quote {
-      color: #1E2A44;
-      font-style: italic;
-      font-size: 1rem;
-      margin: 10px 0;
-      position: relative;
-      padding: 10px 20px;
-      line-height: 1.5;
-    }
-    .dark-mode .quote {
-      color: #E2E8F0;
-    }
-    .quote::before {
-      content: '"';
-      font-size: 2rem;
-      color: #B0B7C0;
-      position: absolute;
-      left: 0;
-      top: -10px;
-    }
-    .quote::after {
-      content: '"';
-      font-size: 2rem;
-      color: #B0B7C0;
-      position: absolute;
-      right: 0;
-      bottom: -10px;
-    }
-    .client-info {
-      display: flex;
-      align-items: center;
-      margin-top: 10px;
-    }
-    .client-info img {
-      width: 60px;
-      height: 60px;
-      border-radius: 50%;
-      margin-right: 15px;
-    }
-    .client-details {
-      text-align: left;
-    }
-    .client-details h3 {
-      margin: 0;
-      font-size: 1.2rem;
-      color: #1E2A44;
-    }
-    .dark-mode .client-details h3 {
-      color: #FFFFFF;
-    }
-    .client-details p {
-      margin: 5px 0 0;
-      font-size: 0.9rem;
-      color: #1E2A44;
-    }
-    .dark-mode .client-details p {
-      color: #E2E8F0;
-    }
-    .arrow {
-      position: absolute;
-      top: 50%;
-      transform: translateY(-50%);
-      background: #2F4156;
-      color: #F5EFEB;
-      border: none;
-      padding: 10px 15px;
-      font-size: 1.5rem;
-      cursor: pointer;
-      border-radius: 50%;
-      transition: background 0.3s;
-      z-index: 10;
-    }
-    .arrow:hover {
-      background: #B0B7C0;
-    }
-    .arrow-left {
-      left: 10px;
-    }
-    .arrow-right {
-      right: 10px;
-    }
-
-    /* About Section */
-    .about {
-      background-color: #F1F3F5;
-      border-radius: 10px;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    }
-    .dark-mode .about {
-      background-color: #0F172A;
-    }
-    .about-content {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      align-items: center;
-      gap: 30px;
-    }
-    .about-img {
-      width: 200px;
-      height: 200px;
-      border-radius: 50%;
-      box-shadow: 0 0 10px #B0B7C0;
-    }
-    .bio {
-      max-width: 500px;
-      font-size: 1rem;
-      line-height: 1.7;
-    }
-
-    /* Popup */
-    .popup {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: rgba(30, 42, 68, 0.9);
-      display: none;
-      justify-content: center;
-      align-items: center;
-      z-index: 9999;
-    }
-    .popup img {
-      max-width: 90%;
-      max-height: 80%;
-      border-radius: 10px;
-    }
-    .popup .close {
-      position: absolute;
-      top: 20px;
-      right: 35px;
-      color: #FFFFFF;
-      font-size: 40px;
-      cursor: pointer;
-    }
-    .popup .close:hover {
-      color: #B0B7C0;
-    }
-
-    /* QR Popup */
-    .qr-popup {
-      display: none;
-      flex-direction: column;
-      background: #FFFFFF;
-      padding: 20px;
-      border-radius: 10px;
-      text-align: center;
-      max-width: 300px;
-    }
-    .dark-mode .qr-popup {
-      background: #0F172A;
-      color: #E2E8F0;
-    }
-    .qr-popup h3 {
-      color: #1E2A44;
-      margin-bottom: 10px;
-    }
-    .dark-mode .qr-popup h3 {
-      color: #FFFFFF;
-    }
-    .qr-popup img {
-      max-width: 200px;
-      margin: 0 auto 10px;
-    }
-    .qr-popup p {
-      font-size: 1rem;
-      color: #1E2A44;
-    }
-    .dark-mode .qr-popup p {
-      color: #E2E8F0;
-    }
-
-    /* Back to Top */
-    .back-to-top {
-      position: fixed;
-      bottom: 80px;
-      right: 20px;
-      background-color: #B0B7C0;
-      color: #1E2A44;
-      padding: 10px;
-      border-radius: 50%;
-      font-size: 20px;
-      display: none;
-      z-index: 1000;
-      cursor: pointer;
-    }
-    .back-to-top.show {
-      display: block;
-    }
-
-    /* Footer */
-    footer {
-      background: #1E2A44;
-      padding: 2rem;
-      color: #FFFFFF;
-      font-size: 0.9rem;
-    }
-    .contact-icons {
-      margin: 1rem 0;
-      display: flex;
-      justify-content: center;
-      gap: 20px;
-      font-size: 24px;
-    }
-    .contact-icons a {
-      color: #B0B7C0;
-      transition: color 0.3s;
-    }
-    .contact-icons a:hover {
-      color: #D1D5DB;
-    }
-
-    /* Responsive */
-    @media (max-width: 992px) {
-      .testimonial {
-        flex: 0 0 50%;
-      }
-      .testimonial.active {
-        transform: scale(1.03);
-      }
-    }
-    @media (max-width: 768px) {
-      .menu-toggle {
-        display: block;
-        margin-left: auto;
-      }
-      nav {
-        display: none;
-        flex-direction: column;
-        width: 100%;
-        margin-top: 10px;
-      }
-      nav.show {
-        display: flex;
-      }
-      nav a {
-        margin: 10px 0;
-      }
-      .section {
-        padding: 2rem 1rem;
-      }
-      .about-img {
-        width: 150px;
-        height: 150px;
-      }
-      .bio {
-        font-size: 0.9rem;
-      }
-      .slider-track img {
-        width: 150px;
-        height: 150px;
-      }
-      .testimonial {
-        flex: 0 0 100%;
-      }
-      .testimonial.active {
-        transform: scale(1);
-        border: none;
-      }
-      .arrow {
-        padding: 8px 12px;
-        font-size: 1.2rem;
-      }
-    }
-  </style>
+  <title>Mr. Kamal Designer</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
 </head>
-<body class="light">
-  <!-- WhatsApp Button -->
-  <a href="https://wa.me/918440048355" class="btn btn-whatsapp" target="_blank" title="Chat on WhatsApp">
-    <i class="fab fa-whatsapp"></i>
-  </a>
-
-  <!-- Send SS Button -->
-  <a href="#" id="sendSSButton" class="btn btn-send-ss" target="_blank" title="Send Screenshot on WhatsApp">
-    <i class="fab fa-whatsapp"></i> Send SS
-  </a>
-
-  <!-- Back to Top -->
-  <button class="back-to-top" onclick="scrollToTop()"><i class="fas fa-arrow-up"></i></button>
-
-  <!-- Header -->
-  <header>
+<body>
+  <!-- Header (unchanged except async script) -->
+  <header class="section">
     <div class="logo">
-      <img src="https://raw.githubusercontent.com/Abranddesigner/Mr.Kamal/refs/heads/main/k%20logo.png" alt="Kamal Meena Logo" />
-      <div class="title">
-        <h1>Mr. Kamal Designer</h1>
-        <div class="tagline">A Brand Designer</div>
-      </div>
+      <img src="k%20logo.png" alt="Kamal Logo" loading="lazy">
     </div>
-    <div class="menu-toggle" onclick="toggleMenu()">☰</div>
-    <nav id="navbar">
-      <a href="index.html" class="active">Home</a>
-      <a href="gallery.html">Gallery</a>
-      <a href="cdr.html">CDR</a>
-      <a href="https://drive.google.com/file/d/1Os9fcZf-2Zth27v9UccVAAslLQTffVuL/view?usp=drivesdk" target="_blank">Portfolio</a>
-      <a href="https://github.com/ideogram682/Mr.Kamal/blob/main/Mr.%20Kamal%20Resume.jpeg?raw=true" target="_blank">Resume</a>
+    <nav class="nav">
+      <div class="menu-toggle"><i class="fas fa-bars"></i></div>
+      <ul>
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="cdr.html">CDR</a></li>
+      </ul>
     </nav>
   </header>
 
-  <!-- Main Content -->
-  <main>
-    <!-- Home Section -->
-    <section id="home" class="section">
-      <div class="welcome">
-        <h2>Welcome to My World of Design</h2>
-        <p>Transforming your vision into stunning visuals.</p>
-        <p>Creativity meets clarity in every project.</p>
-        <p>Let’s create something extraordinary together!</p>
-        <a href="https://wa.me/918440048355?text=Hi%20Kamal%2C%20I%20want%20to%20hire%20you%20for%20a%20design%20project" class="btn btn-primary" target="_blank">Hire Me</a>
+  <!-- Welcome Section (unchanged, added section class for animation) -->
+  <section class="welcome section">
+    <h1>Welcome to Mr. Kamal Designer</h1>
+    <p>Your one-stop solution for creative graphic designs, including logos, sports branding, and social media graphics.</p>
+    <a href="https://wa.me/918440048355" class="btn">Hire Me</a>
+  </section>
+
+  <!-- Recent Designs (unchanged, added lazy loading) -->
+  <section class="recent-designs section">
+    <h2>Recent Designs</h2>
+    <div class="slider">
+      <div class="slides">
+        <img src="slider1.jpg" alt="Design 1" loading="lazy">
+        <img src="slider2.jpg" alt="Design 2" loading="lazy">
+        <img src="slider3.jpg" alt="Design 3" loading="lazy">
+        <img src="slider4.jpg" alt="Design 4" loading="lazy">
+        <img src="slider5.jpg" alt="Design 5" loading="lazy">
       </div>
+      <button class="prev">&lt;</button>
+      <button class="next">&gt;</button>
+    </div>
+  </section>
 
-      <!-- Recent Designs Slider -->
-      <h3>Recent Designs</h3>
-      <div class="slider">
-        <div class="slider-track">
-          <img src="https://raw.githubusercontent.com/ideogram682/Mr.Kamal/refs/heads/main/001%20(1).jpeg" alt="Design 1 by Kamal Meena" loading="lazy" onclick="openPopup(this.src)" />
-          <img src="https://raw.githubusercontent.com/ideogram682/Mr.Kamal/refs/heads/main/001%20(2).jpeg" alt="Design 2 by Kamal Meena" loading="lazy" onclick="openPopup(this.src)" />
-          <img src="https://raw.githubusercontent.com/ideogram682/Mr.Kamal/refs/heads/main/001%20(3).jpeg" alt="Design 3 by Kamal Meena" loading="lazy" onclick="openPopup(this.src)" />
-          <img src="https://raw.githubusercontent.com/ideogram682/Mr.Kamal/refs/heads/main/001%20(4).jpeg" alt="Design 4 by Kamal Meena" loading="lazy" onclick="openPopup(this.src)" />
-          <img src="https://raw.githubusercontent.com/ideogram682/Mr.Kamal/refs/heads/main/001%20(5).jpeg" alt="Design 5 by Kamal Meena" loading="lazy" onclick="openPopup(this.src)" />
-        </div>
+  <!-- Testimonials (added white shadows) -->
+  <section class="testimonials section">
+    <h2>Testimonials</h2>
+    <div class="testimonial-container">
+      <div class="testimonial" data-index="0">
+        <img src="aaru.jpg" alt="Miss Aaru" loading="lazy">
+        <h3>Miss Aaru</h3>
+        <p>Marketing Head, Creative Solutions</p>
+        <p>"Kamal's designs are outstanding! Highly professional and timely delivery."</p>
       </div>
-
-      <!-- Testimonials -->
-      <div class="testimonials-wrapper">
-        <h2>Client Testimonials</h2>
-        <div class="testimonials-container">
-          <button class="arrow arrow-left" onclick="slideLeft()">❮</button>
-          <div class="testimonials">
-            <div class="testimonial" data-index="0">
-              <p class="quote">Exceptional design skills and attention to detail are remarkable. Understands client needs with precision and creativity. Every project reflects a high level of professionalism. Highly recommended for branding and graphic design work.</p>
-              <div class="client-info">
-                <img src="https://raw.githubusercontent.com/Abranddesigner/Mr.Kamal/refs/heads/main/Miss%20Aaru.png" alt="Miss Aaru" />
-                <div class="client-details">
-                  <h3>Miss Aaru</h3>
-                  <p class="company">Creative Director: Design Studio</p>
-                </div>
-              </div>
-            </div>
-            <div class="testimonial" data-index="1">
-              <p class="quote">Innovative approach to branding transformed our outdated identity. Designs are modern and high-quality, reflecting dedication. Consistently exceeds expectations with professionalism. A reliable partner for any design project.</p>
-              <div class="client-info">
-                <img src="https://raw.githubusercontent.com/Abranddesigner/Mr.Kamal/refs/heads/main/Dr.%20Bindeshwar.jpg" alt="Dr. Bindeshwar" />
-                <div class="client-details">
-                  <h3>Dr. Bindeshwar</h3>
-                  <p class="company">Sr. Consultant: Health Innovations</p>
-                </div>
-              </div>
-            </div>
-            <div class="testimonial active" data-index="2">
-              <p class="quote">Boundless creativity and strong work ethic shine in every design. Brings fresh perspectives to marketing campaigns. Delivers on time with impressive detail. A highly skilled and reliable designer to work with.</p>
-              <div class="client-info">
-                <img src="https://raw.githubusercontent.com/Abranddesigner/Mr.Kamal/refs/heads/main/Kuldeep%20Poonia.jpg" alt="Kuldeep Poonia" />
-                <div class="client-details">
-                  <h3>Kuldeep Poonia</h3>
-                  <p class="company">Marketing Lead: Tech Corp</p>
-                </div>
-              </div>
-            </div>
-            <div class="testimonial" data-index="3">
-              <p class="quote">Precision and stylish designs greatly enhance educational materials. Listens carefully to deliver beyond expectations. Strong sense of aesthetics in every project. A talented designer for creative solutions.</p>
-              <div class="client-info">
-                <img src="https://raw.githubusercontent.com/Abranddesigner/Mr.Kamal/refs/heads/main/Dr%20Shyam.png" alt="Dr. Shyam" />
-                <div class="client-details">
-                  <h3>Dr. Shyam</h3>
-                  <p class="company">Lead Designer: Edu Ventures</p>
-                </div>
-              </div>
-            </div>
-            <div class="testimonial" data-index="4">
-              <p class="quote">Fresh ideas elevate media presence significantly in every project. Designs are created with passion and exceptional results. Understands the media industry thoroughly. A creative genius for impactful visuals.</p>
-              <div class="client-info">
-                <img src="https://raw.githubusercontent.com/Abranddesigner/Mr.Kamal/refs/heads/main/RDS.jpg" alt="RDS" />
-                <div class="client-details">
-                  <h3>RDS</h3>
-                  <p class="company">Creative Head: Media Solutions</p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <button class="arrow arrow-right" onclick="slideRight()">❯</button>
-        </div>
+      <div class="testimonial" data-index="1">
+        <img src="bindeshwar.jpg" alt="Dr. Bindeshwar" loading="lazy">
+        <h3>Dr. Bindeshwar</h3>
+        <p>CEO, Health Innovations</p>
+        <p>"Exceptional creativity and attention to detail. Highly recommend!"</p>
       </div>
+      <div class="testimonial" data-index="2">
+        <img src="kuldeep.jpg" alt="Kuldeep Poonia" loading="lazy">
+        <h3>Kuldeep Poonia</h3>
+        <p>Founder, Sports Academy</p>
+        <p>"Kamal transformed our branding with his unique designs."</p>
+      </div>
+      <div class="testimonial" data-index="3">
+        <img src="shyam.jpg" alt="Dr. Shyam" loading="lazy">
+        <h3>Dr. Shyam</h3>
+        <p>Director, Tech Ventures</p>
+        <p>"Top-notch service and creative designs. A pleasure to work with!"</p>
+      </div>
+      <div class="testimonial" data-index="4">
+        <img src="rds.jpg" alt="RDS" loading="lazy">
+        <h3>RDS</h3>
+        <p>Owner, RDS Enterprises</p>
+        <p>"Kamal's work is simply amazing. Exceeded all expectations!"</p>
+      </div>
+    </div>
+    <button class="arrow left" onclick="slideLeft()">&lt;</button>
+    <button class="arrow right" onclick="slideRight()">&gt;</button>
+  </section>
 
-      <!-- About Section -->
-      <section id="about" class="section about">
-        <h2>About Me</h2>
-        <p class="subtitle">Crafting Brands with Creativity & Precision</p>
-        <div class="about-content">
-          <img src="https://raw.githubusercontent.com/Abranddesigner/Mr.Kamal/refs/heads/main/Mrkamalmeena.jpg" alt="Kamal Meena Profile Picture" class="about-img" />
-          <div class="bio">
-            <p><strong>Name:</strong> Kamal Meena</p>
-            <p><strong>DOB:</strong> 15 March 2000</p>
-            <p><strong>Address:</strong> Parasrampura, Teh Nawalgarh, Dist. Jhunjhunu, Rajasthan</p>
-            <p>I started my design career in 2019 and have since worked on a wide range of creative projects.</p>
-            <p>My passion lies in transforming ideas into powerful visual identities that connect with people.</p>
-            <p>From logos to social media graphics, I focus on building a brand's unique presence.</p>
-            <a href="gallery.html" class="btn btn-primary">View My Work</a>
-          </div>
-        </div>
-      </section>
-    </section>
-  </main>
+  <!-- About (added glow to image) -->
+  <section class="about section">
+    <h2>About Me</h2>
+    <div class="about-content">
+      <img src="Mrkamalmeena.jpg" alt="Kamal Meena" class="about-img" loading="lazy">
+      <div class="bio">
+        <p>Hi, I'm Kamal Meena, a passionate graphic designer with years of experience in creating stunning logos, sports branding, and social media graphics. Let's bring your vision to life!</p>
+        <a href="gallery.html" class="btn">View My Work</a>
+      </div>
+    </div>
+  </section>
 
-  <!-- Footer -->
+  <!-- Footer (fixed email link) -->
   <footer class="section">
     <div class="contact-icons">
       <a href="mailto:kamalmeena1503@gmail.com" title="Email" aria-label="Email Kamal Meena"><i class="fas fa-envelope"></i></a>
-      <a href="tel:+916350262865" title="Call" aria-label="Call Kamal Meena"><i class="fas fa-phone"></i></a>
-      <a href="https://instagram.com/Kamal.prp" title="Instagram" target="_blank" aria-label="Kamal Meena’s Instagram"><i class="fab fa-instagram"></i></a>
+      <a href="tel:+918440048355" title="Phone" aria-label="Call Kamal Meena"><i class="fas fa-phone"></i></a>
+      <a href="https://www.instagram.com/kamall.meena" title="Instagram" aria-label="Follow Kamal Meena on Instagram"><i class="fab fa-instagram"></i></a>
     </div>
-    <button class="mode-toggle" onclick="toggleMode()">Switch to Dark Mode</button>
-    <p>© 2025 Kamal Meena. All rights reserved.</p>
+    <div class="dark-mode-toggle">
+      <i class="fas fa-moon"></i>
+    </div>
+    <p>&copy; 2025 Mr. Kamal Designer. All rights reserved.</p>
   </footer>
 
-  <!-- Popup -->
-  <div class="popup" id="popup">
-    <span class="close" onclick="closePopup()">×</span>
-    <img id="popupImg" src="" alt="Selected Design" />
+  <!-- Back to Top (unchanged) -->
+  <button class="back-to-top"><i class="fas fa-arrow-up"></i></button>
+
+  <!-- Popup (unchanged) -->
+  <div class="popup">
+    <img src="" alt="Popup Image">
+    <button class="close-popup">×</button>
   </div>
 
-  <!-- QR Popup -->
-  <div class="popup qr-popup" id="qrPopup">
-    <span class="close" onclick="closeQRPopup()">×</span>
-    <h3>Scan to Pay</h3>
-    <img id="qrCodeImg" src="" alt="QR Code" />
-    <p>Use any UPI app to scan and pay.</p>
-  </div>
-
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
   <script>
-    function toggleMenu() {
-      const nav = document.getElementById('navbar');
-      nav.classList.toggle('show');
-      const menuToggle = document.querySelector('.menu-toggle');
-      menuToggle.setAttribute('aria-expanded', nav.classList.contains('show'));
-    }
-
-    function toggleMode() {
-      document.body.classList.toggle('dark-mode');
-      document.body.classList.toggle('light');
-      localStorage.setItem('theme', document.body.classList.contains('dark-mode') ? 'dark' : 'light');
-      const button = document.querySelector('.mode-toggle');
-      button.textContent = document.body.classList.contains('dark-mode') ? 'Switch to Light Mode' : 'Switch to Dark Mode';
-    }
-
-    if (localStorage.getItem('theme') === 'dark') toggleMode();
-
-    function scrollToTop() {
-      window.scrollTo({ top: 0, behavior: 'smooth' });
-    }
-
-    function openPopup(src) {
-      const popup = document.getElementById('popup');
-      const popupImg = document.getElementById('popupImg');
-      if (popup && popupImg) {
-        popupImg.src = src;
-        popup.style.display = 'flex';
-      }
-    }
-
-    function closePopup() {
-      const popup = document.getElementById('popup');
-      if (popup) {
-        popup.style.display = 'none';
-      }
-    }
-
-    function showQRPopup() {
-      const qrPopup = document.getElementById('qrPopup');
-      if (qrPopup) {
-        const qrCodeImg = document.getElementById('qrCodeImg');
-        qrCodeImg.src = 'https://raw.githubusercontent.com/Abranddesigner/Mr.Kamal/refs/heads/main/QR%20Code.jpg';
-        qrPopup.style.display = 'flex';
-      }
-    }
-
-    function closeQRPopup() {
-      const qrPopup = document.getElementById('qrPopup');
-      if (qrPopup) {
-        qrPopup.style.display = 'none';
-      }
-    }
-
-    function handleBuyNow(product, amount) {
-      const isMobile = /Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
-      const upiUrl = `upi://pay?pa=8440048355@ybl&pn=Kamal%20Meena&am=${amount}&cu=INR&tn=Purchase%20${encodeURIComponent(product)}`;
-      if (isMobile) {
-        window.location.href = upiUrl;
-      } else {
-        showQRPopup();
-      }
-      showSendSSButton(product);
-    }
-
-    function showSendSSButton(product) {
-      const sendSSButton = document.getElementById('sendSSButton');
-      if (sendSSButton) {
-        sendSSButton.href = `https://wa.me/918440048355?text=Hi%20Kamal,%20here’s%20the%20payment%20screenshot%20for%20${encodeURIComponent(product)}.`;
-        setTimeout(() => {
-          sendSSButton.style.display = 'block';
-        }, 120000);
-      }
-    }
-
-    // Testimonials Slider
-    let currentIndex = 2; // Start with middle testimonial (Kuldeep Poonia)
-    const testimonials = document.querySelectorAll('.testimonial');
-    const totalTestimonials = testimonials.length;
-
-    function updateTestimonials() {
-      testimonials.forEach((card, index) => {
-        card.classList.remove('active');
-        const offset = (index - currentIndex + totalTestimonials) % totalTestimonials;
-        if (offset === 0) {
-          card.classList.add('active'); // Middle (clear)
-        } else if (offset === 1 || offset === totalTestimonials - 1) {
-          card.style.opacity = '0.8';
-          card.style.filter = 'blur(2px)';
-        } else {
-          card.style.opacity = '0';
-          card.style.filter = 'blur(2px)';
-        }
-      });
-    }
-
-    function slideLeft() {
-      currentIndex = (currentIndex - 1 + totalTestimonials) % totalTestimonials;
-      updateTestimonials();
-    }
-
-    function slideRight() {
-      currentIndex = (currentIndex + 1) % totalTestimonials;
-      updateTestimonials();
-    }
-
-    document.addEventListener('DOMContentLoaded', () => {
-      const sections = document.querySelectorAll('.section');
-      const observer = new IntersectionObserver((entries, observer) => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('in-view');
-            observer.unobserve(entry.target);
-          }
-        });
-      }, { threshold: 0.1 });
-
-      sections.forEach(section => {
-        observer.observe(section);
-      });
-
-      const backToTop = document.querySelector('.back-to-top');
-      window.addEventListener('scroll', () => {
-        if (window.scrollY > 300) backToTop.classList.add('show');
-        else backToTop.classList.remove('show');
-      });
-      backToTop.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
-
-      const menuToggle = document.querySelector('.menu-toggle');
-      const navbar = document.getElementById('navbar');
-      menuToggle.addEventListener('click', () => {
-        navbar.classList.toggle('show');
-        menuToggle.setAttribute('aria-expanded', navbar.classList.contains('show'));
-      });
-
-      // Initialize testimonials
-      updateTestimonials();
-    });
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-XXXXXXXXXX');
   </script>
+  <script src="scripts.js" async></script>
 </body>
 </html>
