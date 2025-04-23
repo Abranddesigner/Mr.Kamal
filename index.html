@@ -19,50 +19,211 @@
   <meta name="twitter:image" content="https://abranddesigner.github.io/Mr.Kamal/assets/cover-image.jpg">
   <link rel="canonical" href="https://abranddesigner.github.io/Mr.Kamal/" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
-  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
   <style>
-    body {
+    /* Reset and Base */
+    * {
       margin: 0;
-      font-family: 'Arial', sans-serif;
-      background: url('https://raw.githubusercontent.com/Abranddesigner/Mr.Kamal/refs/heads/main/Head1.png') no-repeat center center fixed;
-      background-size: cover;
-      color: #333;
-      transition: all 0.3s ease;
-      animation: slideWave 10s infinite linear;
+      padding: 0;
+      box-sizing: border-box;
     }
-    @keyframes slideWave {
-      0% { background-position: 0 0; }
-      50% { background-position: 100% 0; }
-      100% { background-position: 0 0; }
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #F1F3F5;
+      color: #1E2A44;
+      line-height: 1.6;
+      transition: background-color 0.3s ease, color 0.3s ease;
     }
+    .dark-mode {
+      background-color: #0F172A;
+      color: #FFFFFF;
+    }
+
+    /* Common Classes */
+    .btn {
+      display: inline-block;
+      padding: 10px 20px;
+      border-radius: 5px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: background-color 0.3s ease;
+    }
+    .btn-primary {
+      background-color: #B0B7C0;
+      color: #1E2A44;
+    }
+    .btn-primary:hover {
+      background-color: #9CA3AF;
+    }
+    .btn-whatsapp {
+      background-color: #25D366;
+      color: white;
+      padding: 12px;
+      border-radius: 50px;
+      font-size: 24px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      z-index: 1000;
+    }
+    .btn-whatsapp:hover {
+      background-color: #20b858;
+    }
+    .btn-send-ss {
+      background-color: #25D366;
+      color: white;
+      padding: 12px;
+      border-radius: 50px;
+      font-size: 18px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+      position: fixed;
+      bottom: 20px;
+      left: 20px;
+      z-index: 1000;
+      text-decoration: none;
+      display: none;
+    }
+    .btn-send-ss:hover {
+      background-color: #20b858;
+    }
+    .section {
+      padding: 3rem 1rem;
+      max-width: 1200px;
+      margin: auto;
+      text-align: center;
+    }
+    .section h2 {
+      color: #B0B7C0;
+      font-size: 2.2rem;
+      margin-bottom: 1rem;
+    }
+    .dark-mode .section h2 {
+      color: #D1D5DB;
+    }
+    .subtitle {
+      font-size: 1.1rem;
+      color: #1E2A44;
+      margin-bottom: 1.5rem;
+    }
+    .dark-mode .subtitle {
+      color: #E2E8F0;
+    }
+
+    /* Header */
     header {
-      background: rgba(0, 0, 0, 0.5);
+      background: rgba(30, 42, 68, 0.7);
+      background-image: url('https://raw.githubusercontent.com/Abranddesigner/Mr.Kamal/refs/heads/main/Head.png');
+      background-size: cover;
+      background-position: center;
       backdrop-filter: blur(20px);
+      padding: 1.5rem 1rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
       position: sticky;
       top: 0;
       z-index: 1000;
-      padding: 10px 20px;
-      animation: fadeIn 0.8s ease;
     }
-    .section {
-      padding: 50px 20px;
-      opacity: 0;
-      transform: translateY(20px);
-      animation: fadeInUp 0.8s forwards 0.2s;
+    .dark-mode header {
+      background: rgba(30, 42, 68, 0.8);
+      background-image: url('https://raw.githubusercontent.com/Abranddesigner/Mr.Kamal/refs/heads/main/Head.png');
+      background-size: cover;
+      background-position: center;
+      backdrop-filter: blur(20px);
     }
-    @keyframes fadeInUp {
-      to { opacity: 1; transform: translateY(0); }
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 25px;
+      position: relative;
+      z-index: 1;
     }
-    @keyframes fadeIn {
-      from { opacity: 0; }
-      to { opacity: 1; }
+    .logo img {
+      height: 60px;
+      border-radius: 50%;
     }
+    .title h1 {
+      color: #B0B7C0;
+      font-size: 1.8rem;
+      margin: 0;
+      text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
+    }
+    .title .tagline {
+      font-size: 14px;
+      color: #FFFFFF;
+      text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
+    }
+
+    /* Navbar */
+    nav {
+      display: flex;
+      gap: 10px;
+    }
+    nav a {
+      color: #FFFFFF;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 1rem;
+      transition: color 0.3s ease;
+      position: relative;
+      z-index: 1;
+      text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
+    }
+    nav a:hover,
+    nav a.active {
+      color: #B0B7C0;
+    }
+    .menu-toggle {
+      display: none;
+      font-size: 24px;
+      cursor: pointer;
+      color: #B0B7C0;
+      position: relative;
+      z-index: 1;
+    }
+
+    /* Welcome Section */
+    .welcome {
+      margin-bottom: 2rem;
+    }
+    .welcome p {
+      font-size: 1rem;
+      max-width: 800px;
+      margin: 0.5rem auto;
+    }
+
+    /* Slider */
+    .slider {
+      overflow-x: auto;
+      white-space: nowrap;
+      padding-bottom: 10px;
+      margin-bottom: 2rem;
+    }
+    .slider-track {
+      display: inline-flex;
+      gap: 20px;
+    }
+    .slider-track img {
+      height: 200px;
+      width: 200px;
+      object-fit: cover;
+      border-radius: 10px;
+      cursor: pointer;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    }
+
+    /* Testimonials */
     .testimonials-wrapper {
-      text-align: center;
-      padding: 50px 20px;
-      background: rgba(255, 255, 255, 0.8);
       position: relative;
       overflow: hidden;
+      padding: 50px 20px;
+      background: rgba(255, 255, 255, 0.8);
+    }
+    .dark-mode .testimonials-wrapper {
+      background: rgba(47, 65, 86, 0.9);
     }
     .testimonials-container {
       display: flex;
@@ -77,19 +238,25 @@
     }
     .testimonial {
       flex: 0 0 33.33%;
-      background: #fff;
+      background: #F1F3F5;
       padding: 20px;
       border-radius: 12px;
       box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
       margin: 0 10px;
-      transition: transform 0.3s, background 0.3s;
       display: flex;
       flex-direction: column;
       align-items: center;
       text-align: center;
+      transition: background 0.3s;
+    }
+    .dark-mode .testimonial {
+      background: #0F172A;
+    }
+    .testimonial.center {
+      transform: scale(1.05);
+      border: 2px solid #B0B7C0;
     }
     .testimonial:hover {
-      transform: scale(1.05);
       background: #2F4156;
       color: #F5EFEB;
     }
@@ -104,12 +271,16 @@
       color: #333;
     }
     .quote {
-      color: #555;
+      color: #1E2A44;
       font-style: italic;
-      font-size: 1.1rem;
+      font-size: 1rem;
       margin: 10px 0;
       position: relative;
       padding: 10px 20px;
+      line-height: 1.5;
+    }
+    .dark-mode .quote {
+      color: #E2E8F0;
     }
     .quote::before {
       content: '"';
@@ -144,11 +315,18 @@
     .client-details h3 {
       margin: 0;
       font-size: 1.2rem;
+      color: #1E2A44;
+    }
+    .dark-mode .client-details h3 {
+      color: #FFFFFF;
     }
     .client-details p {
       margin: 5px 0 0;
       font-size: 0.9rem;
-      color: #777;
+      color: #1E2A44;
+    }
+    .dark-mode .client-details p {
+      color: #E2E8F0;
     }
     .arrow {
       position: absolute;
@@ -173,69 +351,184 @@
     .arrow-right {
       right: 10px;
     }
-    .welcome p {
+
+    /* About Section */
+    .about {
+      background-color: #F1F3F5;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+    .dark-mode .about {
+      background-color: #0F172A;
+    }
+    .about-content {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      gap: 30px;
+    }
+    .about-img {
+      width: 200px;
+      height: 200px;
+      border-radius: 50%;
+      box-shadow: 0 0 10px #B0B7C0;
+    }
+    .bio {
+      max-width: 500px;
       font-size: 1rem;
-      max-width: 800px;
-      margin: 15px auto;
-      animation: fadeIn 1s forwards;
+      line-height: 1.7;
     }
-    .about-content p {
-      font-size: 1rem;
-      margin: 10px 0;
-      animation: flyIn 1s ease-out forwards;
+
+    /* Popup */
+    .popup {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(30, 42, 68, 0.9);
+      display: none;
+      justify-content: center;
+      align-items: center;
+      z-index: 9999;
     }
-    @keyframes flyIn {
-      from {
-        opacity: 0;
-        transform: translateY(50px) rotate(10deg);
-      }
-      to {
-        opacity: 1;
-        transform: translateY(0) rotate(0deg);
-      }
+    .popup img {
+      max-width: 90%;
+      max-height: 80%;
+      border-radius: 10px;
     }
-    .slider-track img {
-      max-width: 100%;
-      height: auto;
+    .popup .close {
+      position: absolute;
+      top: 20px;
+      right: 35px;
+      color: #FFFFFF;
+      font-size: 40px;
       cursor: pointer;
     }
-    .dark-mode {
-      background: #2F4156;
-      color: #F5EFEB;
+    .popup .close:hover {
+      color: #B0B7C0;
     }
-    .dark-mode .testimonials-wrapper {
-      background: rgba(47, 65, 86, 0.9);
+
+    /* QR Popup */
+    .qr-popup {
+      display: none;
+      flex-direction: column;
+      background: #FFFFFF;
+      padding: 20px;
+      border-radius: 10px;
+      text-align: center;
+      max-width: 300px;
     }
-    .dark-mode .testimonial {
-      background: #3A4D66;
-      color: #F5EFEB;
+    .dark-mode .qr-popup {
+      background: #0F172A;
+      color: #E2E8F0;
     }
-    .dark-mode .quote { color: #B0B7C0; }
+    .qr-popup h3 {
+      color: #1E2A44;
+      margin-bottom: 10px;
+    }
+    .dark-mode .qr-popup h3 {
+      color: #FFFFFF;
+    }
+    .qr-popup img {
+      max-width: 200px;
+      margin: 0 auto 10px;
+    }
+    .qr-popup p {
+      font-size: 1rem;
+      color: #1E2A44;
+    }
+    .dark-mode .qr-popup p {
+      color: #E2E8F0;
+    }
+
+    /* Back to Top */
+    .back-to-top {
+      position: fixed;
+      bottom: 80px;
+      right: 20px;
+      background-color: #B0B7C0;
+      color: #1E2A44;
+      padding: 10px;
+      border-radius: 50%;
+      font-size: 20px;
+      display: none;
+      z-index: 1000;
+      cursor: pointer;
+    }
+    .back-to-top.show {
+      display: block;
+    }
+
+    /* Footer */
+    footer {
+      background: #1E2A44;
+      padding: 2rem;
+      color: #FFFFFF;
+      font-size: 0.9rem;
+    }
+    .contact-icons {
+      margin: 1rem 0;
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      font-size: 24px;
+    }
+    .contact-icons a {
+      color: #B0B7C0;
+      transition: color 0.3s;
+    }
+    .contact-icons a:hover {
+      color: #D1D5DB;
+    }
+
+    /* Responsive */
     @media (max-width: 992px) {
       .testimonial {
         flex: 0 0 50%;
       }
+      .testimonial.center {
+        transform: scale(1.03);
+      }
     }
     @media (max-width: 768px) {
-      #navbar {
-        display: none;
-        position: absolute;
-        top: 60px;
-        left: 0;
-        right: 0;
-        background: rgba(0, 0, 0, 0.9);
-        flex-direction: column;
-      }
-      #navbar.show {
-        display: flex;
-      }
       .menu-toggle {
         display: block;
-        cursor: pointer;
-        font-size: 24px;
+        margin-left: auto;
+      }
+      nav {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        margin-top: 10px;
+      }
+      nav.show {
+        display: flex;
+      }
+      nav a {
+        margin: 10px 0;
+      }
+      .section {
+        padding: 2rem 1rem;
+      }
+      .about-img {
+        width: 150px;
+        height: 150px;
+      }
+      .bio {
+        font-size: 0.9rem;
+      }
+      .slider-track img {
+        width: 150px;
+        height: 150px;
       }
       .testimonial {
         flex: 0 0 100%;
+      }
+      .testimonial.center {
+        transform: scale(1);
+        border: none;
       }
       .arrow {
         padding: 8px 12px;
@@ -248,6 +541,11 @@
   <!-- WhatsApp Button -->
   <a href="https://wa.me/918440048355" class="btn btn-whatsapp" target="_blank" title="Chat on WhatsApp">
     <i class="fab fa-whatsapp"></i>
+  </a>
+
+  <!-- Send SS Button -->
+  <a href="#" id="sendSSButton" class="btn btn-send-ss" target="_blank" title="Send Screenshot on WhatsApp">
+    <i class="fab fa-whatsapp"></i> Send SS
   </a>
 
   <!-- Back to Top -->
@@ -278,9 +576,9 @@
     <section id="home" class="section">
       <div class="welcome">
         <h2>Welcome to My World of Design</h2>
-        <p style="font-size: 1rem; max-width: 800px; margin: 0 auto;">Transforming your vision into stunning visuals.</p>
-        <p style="font-size: 1rem; max-width: 800px; margin: 0 auto;">Creativity meets clarity in every project.</p>
-        <p style="font-size: 1rem; max-width: 800px; margin: 0 auto;">Let’s create something extraordinary together!</p>
+        <p>Transforming your vision into stunning visuals.</p>
+        <p>Creativity meets clarity in every project.</p>
+        <p>Let’s create something extraordinary together!</p>
         <a href="https://wa.me/918440048355?text=Hi%20Kamal%2C%20I%20want%20to%20hire%20you%20for%20a%20design%20project" class="btn btn-primary" target="_blank">Hire Me</a>
       </div>
 
@@ -303,7 +601,7 @@
           <button class="arrow arrow-left" onclick="scrollTestimonials('left')">❮</button>
           <div class="testimonials">
             <div class="testimonial">
-              <p class="quote">Miss Aaru praises Kamal’s exceptional design skills and attention to detail.</p>
+              <p class="quote">Exceptional design skills and attention to detail are remarkable. Understands client needs with precision and creativity. Every project reflects a high level of professionalism. Highly recommended for branding and graphic design work.</p>
               <div class="client-info">
                 <img src="https://raw.githubusercontent.com/Abranddesigner/Mr.Kamal/refs/heads/main/Miss%20Aaru.png" alt="Miss Aaru" />
                 <div class="client-details">
@@ -313,7 +611,7 @@
               </div>
             </div>
             <div class="testimonial">
-              <p class="quote">Dr. Bindeshwar admires Kamal’s innovative approach to branding.</p>
+              <p class="quote">Innovative approach to branding transformed our outdated identity. Designs are modern and high-quality, reflecting dedication. Consistently exceeds expectations with professionalism. A reliable partner for any design project.</p>
               <div class="client-info">
                 <img src="https://raw.githubusercontent.com/Abranddesigner/Mr.Kamal/refs/heads/main/Dr.%20Bindeshwar.jpg" alt="Dr. Bindeshwar" />
                 <div class="client-details">
@@ -322,8 +620,8 @@
                 </div>
               </div>
             </div>
-            <div class="testimonial">
-              <p class="quote">Kuldeep Poonia values Kamal’s boundless creativity and work ethic.</p>
+            <div class="testimonial center">
+              <p class="quote">Boundless creativity and strong work ethic shine in every design. Brings fresh perspectives to marketing campaigns. Delivers on time with impressive detail. A highly skilled and reliable designer to work with.</p>
               <div class="client-info">
                 <img src="https://raw.githubusercontent.com/Abranddesigner/Mr.Kamal/refs/heads/main/Kuldeep%20Poonia.jpg" alt="Kuldeep Poonia" />
                 <div class="client-details">
@@ -333,7 +631,7 @@
               </div>
             </div>
             <div class="testimonial">
-              <p class="quote">Dr. Shyam appreciates Kamal’s precision and stylish designs.</p>
+              <p class="quote">Precision and stylish designs greatly enhance educational materials. Listens carefully to deliver beyond expectations. Strong sense of aesthetics in every project. A talented designer for creative solutions.</p>
               <div class="client-info">
                 <img src="https://raw.githubusercontent.com/Abranddesigner/Mr.Kamal/refs/heads/main/Dr%20Shyam.png" alt="Dr. Shyam" />
                 <div class="client-details">
@@ -343,7 +641,7 @@
               </div>
             </div>
             <div class="testimonial">
-              <p class="quote">RDS loves how Kamal brings fresh ideas to every project.</p>
+              <p class="quote">Fresh ideas elevate media presence significantly in every project. Designs are created with passion and exceptional results. Understands the media industry thoroughly. A creative genius for impactful visuals.</p>
               <div class="client-info">
                 <img src="https://raw.githubusercontent.com/Abranddesigner/Mr.Kamal/refs/heads/main/RDS.jpg" alt="RDS" />
                 <div class="client-details">
@@ -380,7 +678,7 @@
   <!-- Footer -->
   <footer class="section">
     <div class="contact-icons">
-      <a href="/cdn-cgi/l/email-protection#b2d9d3dfd3def2d7cad3dfc2ded79cd1dddf" title="Email" aria-label="Email Kamal Meena"><i class="fas fa-envelope"></i></a>
+      <a href="mailto:kamalmeena1503@gmail.com" title="Email" aria-label="Email Kamal Meena"><i class="fas fa-envelope"></i></a>
       <a href="tel:+916350262865" title="Call" aria-label="Call Kamal Meena"><i class="fas fa-phone"></i></a>
       <a href="https://instagram.com/Kamal.prp" title="Instagram" target="_blank" aria-label="Kamal Meena’s Instagram"><i class="fab fa-instagram"></i></a>
     </div>
@@ -394,10 +692,20 @@
     <img id="popupImg" src="" alt="Selected Design" />
   </div>
 
+  <!-- QR Popup -->
+  <div class="popup qr-popup" id="qrPopup">
+    <span class="close" onclick="closeQRPopup()">×</span>
+    <h3>Scan to Pay</h3>
+    <img id="qrCodeImg" src="" alt="QR Code" />
+    <p>Use any UPI app to scan and pay.</p>
+  </div>
+
   <script>
     function toggleMenu() {
       const nav = document.getElementById('navbar');
       nav.classList.toggle('show');
+      const menuToggle = document.querySelector('.menu-toggle');
+      menuToggle.setAttribute('aria-expanded', nav.classList.contains('show'));
     }
 
     function toggleMode() {
@@ -417,33 +725,83 @@
     function openPopup(src) {
       const popup = document.getElementById('popup');
       const popupImg = document.getElementById('popupImg');
-      popupImg.src = src;
-      popup.style.display = 'flex';
+      if (popup && popupImg) {
+        popupImg.src = src;
+        popup.style.display = 'flex';
+      }
     }
 
     function closePopup() {
       const popup = document.getElementById('popup');
-      popup.style.display = 'none';
+      if (popup) {
+        popup.style.display = 'none';
+      }
+    }
+
+    function showQRPopup() {
+      const qrPopup = document.getElementById('qrPopup');
+      if (qrPopup) {
+        const qrCodeImg = document.getElementById('qrCodeImg');
+        qrCodeImg.src = 'https://raw.githubusercontent.com/Abranddesigner/Mr.Kamal/refs/heads/main/QR%20Code.jpg';
+        qrPopup.style.display = 'flex';
+      }
+    }
+
+    function closeQRPopup() {
+      const qrPopup = document.getElementById('qrPopup');
+      if (qrPopup) {
+        qrPopup.style.display = 'none';
+      }
+    }
+
+    function handleBuyNow(product, amount) {
+      const isMobile = /Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
+      const upiUrl = `upi://pay?pa=8440048355@ybl&pn=Kamal%20Meena&am=${amount}&cu=INR&tn=Purchase%20${encodeURIComponent(product)}`;
+      if (isMobile) {
+        window.location.href = upiUrl;
+      } else {
+        showQRPopup();
+      }
+      showSendSSButton(product);
+    }
+
+    function showSendSSButton(product) {
+      const sendSSButton = document.getElementById('sendSSButton');
+      if (sendSSButton) {
+        sendSSButton.href = `https://wa.me/918440048355?text=Hi%20Kamal,%20here’s%20the%20payment%20screenshot%20for%20${encodeURIComponent(product)}.`;
+        setTimeout(() => {
+          sendSSButton.style.display = 'block';
+        }, 120000);
+      }
     }
 
     function scrollTestimonials(direction) {
       const testimonials = document.querySelector('.testimonials');
-      const testimonialWidth = document.querySelector('.testimonial').offsetWidth + 20; // Including margin
-      const scrollAmount = testimonialWidth * 3; // Scroll 3 testimonials at a time
+      const testimonialItems = document.querySelectorAll('.testimonial');
+      const testimonialWidth = testimonialItems[0].offsetWidth + 20; // Including margin
       let currentScroll = testimonials.scrollLeft;
 
       if (direction === 'left') {
-        testimonials.scrollLeft -= scrollAmount;
+        testimonials.scrollLeft -= testimonialWidth;
       } else {
-        testimonials.scrollLeft += scrollAmount;
+        testimonials.scrollLeft += testimonialWidth;
       }
 
-      // Reset scroll for infinite loop effect
+      // Infinite loop
       if (testimonials.scrollLeft >= testimonials.scrollWidth - testimonials.clientWidth) {
         testimonials.scrollLeft = 0;
       } else if (testimonials.scrollLeft <= 0 && direction === 'left') {
         testimonials.scrollLeft = testimonials.scrollWidth - testimonials.clientWidth;
       }
+
+      // Update center class
+      const centerIndex = Math.round(testimonials.scrollLeft / testimonialWidth);
+      testimonialItems.forEach((item, index) => {
+        item.classList.remove('center');
+        if (index === centerIndex) {
+          item.classList.add('center');
+        }
+      });
     }
 
     document.addEventListener('DOMContentLoaded', () => {
@@ -472,6 +830,16 @@
       const navbar = document.getElementById('navbar');
       menuToggle.addEventListener('click', () => {
         navbar.classList.toggle('show');
+        menuToggle.setAttribute('aria-expanded', navbar.classList.contains('show'));
+      });
+
+      // Set initial testimonial center class
+      const testimonialItems = document.querySelectorAll('.testimonial');
+      testimonialItems.forEach((item, index) => {
+        item.classList.remove('center');
+        if (index === 2) {
+          item.classList.add('center');
+        }
       });
     });
   </script>
