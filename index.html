@@ -1,51 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="google-site-verification" content="D2kcy8KfcuZbNWKzvyXrQ4ukBy170cZU97H4cXsg0_8" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Mr. Kamal – Graphic Designer Portfolio</title>
   <meta name="description" content="Portfolio of Mr. Kamal – Creative graphic designer from Rajasthan specializing in sports branding, logo design, and digital art.">
   <meta name="keywords" content="Graphic Designer, Sports Design, Illustrator India, Logo Designer, Kamal Designer, Rajasthan Artist">
   <meta name="author" content="Kamal Meena">
-  <meta property="og:title" content="Mr. Kamal – Graphic Designer Portfolio">
-  <meta property="og:description" content="Explore the creative works of Mr. Kamal – Graphic designer with a passion for sports and branding.">
-  <meta property="og:image" content="https://abranddesigner.github.io/Mr.Kamal/assets/cover-image.jpg">
-  <meta property="og:url" content="https://abranddesigner.github.io/Mr.Kamal/">
-  <meta property="og:type" content="website">
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Mr. Kamal – Graphic Designer Portfolio">
-  <meta name="twitter:description" content="Explore the creative works of Mr. Kamal – Graphic designer with a passion for sports and branding.">
-  <meta name="twitter:image" content="https://abranddesigner.github.io/Mr.Kamal/assets/cover-image.jpg">
-  <link rel="canonical" href="https://abranddesigner.github.io/Mr.Kamal/" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css" />
 </head>
 <body class="light">
+
   <!-- WhatsApp Button -->
   <a href="https://wa.me/918440048355" class="btn btn-whatsapp" target="_blank" title="Chat on WhatsApp">
     <i class="fab fa-whatsapp"></i>
   </a>
 
-  <!-- Send SS Button -->
-  <a href="#" id="sendSSButton" class="btn btn-send-ss" style="display: none;" target="_blank" title="Send Screenshot on WhatsApp">
-    <i class="fab fa-whatsapp"></i> Send SS
-  </a>
-
   <!-- Back to Top -->
-  <button class="back-to-top"><i class="fas fa-arrow-up"></i></button>
+  <button class="back-to-top" onclick="scrollToTop()"><i class="fas fa-arrow-up"></i></button>
 
   <!-- Header -->
   <header>
     <div class="logo">
-      <img src="https://raw.githubusercontent.com/Abranddesigner/Mr.Kamal/refs/heads/main/k%20logo.png?raw=true" alt="Kamal Meena Logo" />
+      <img src="https://raw.githubusercontent.com/Abranddesigner/Mr.Kamal/refs/heads/main/k%20logo.png" alt="Kamal Meena Logo">
       <div class="title">
         <h1>Mr. Kamal Designer</h1>
         <div class="tagline">A Brand Designer</div>
       </div>
     </div>
-    <div class="menu-toggle">☰</div>
+    <div class="menu-toggle" onclick="toggleMenu()">☰</div>
     <nav id="navbar">
       <a href="index.html" class="active">Home</a>
       <a href="gallery.html">Gallery</a>
@@ -55,136 +40,90 @@
     </nav>
   </header>
 
-  <!-- Main Content -->
-  <main>
-    <!-- Home Section -->
-    <section id="home" class="section">
-      <div class="welcome">
-        <h2>Welcome to My World of Design</h2>
-        <p>Transforming your vision into stunning visuals.</p>
-        <p>Creativity meets clarity in every project.</p>
-        <p>Let’s create something extraordinary together!</p>
-        <a href="https://wa.me/918440048355?text=Hi%20Kamal%2C%20I%20want%20to%20hire%20you%20for%20a%20design%20project" class="btn btn-primary" target="_blank">Hire Me</a>
-      </div>
+  <!-- Welcome Section -->
+  <section class="section welcome">
+    <h2>Welcome to My World of Design</h2>
+    <p class="subtitle">Transforming your vision into stunning visuals.</p>
+    <p>Creativity meets clarity in every project.</p>
+    <p>Let’s create something extraordinary together!</p>
+    <a href="https://wa.me/918440048355?text=Hi%20Kamal%2C%20I%20want%20to%20hire%20you%20for%20a%20design%20project" class="btn btn-primary" target="_blank">Hire Me</a>
+  </section>
 
-      <!-- Recent Designs Slider -->
-      <h3>Recent Designs</h3>
-      <div class="slider">
-        <div class="slider-track">
-          <img src="https://raw.githubusercontent.com/ideogram682/Mr.Kamal/refs/heads/main/001%20(1).jpeg?raw=true" alt="Design 1 by Kamal Meena" loading="lazy" onclick="openPopup(this.src)" />
-          <img src="https://raw.githubusercontent.com/ideogram682/Mr.Kamal/refs/heads/main/001%20(2).jpeg?raw=true" alt="Design 2 by Kamal Meena" loading="lazy" onclick="openPopup(this.src)" />
-          <img src="https://raw.githubusercontent.com/ideogram682/Mr.Kamal/refs/heads/main/001%20(3).jpeg?raw=true" alt="Design 3 by Kamal Meena" loading="lazy" onclick="openPopup(this.src)" />
-          <img src="https://raw.githubusercontent.com/ideogram682/Mr.Kamal/refs/heads/main/001%20(4).jpeg?raw=true" alt="Design 4 by Kamal Meena" loading="lazy" onclick="openPopup(this.src)" />
-          <img src="https://raw.githubusercontent.com/ideogram682/Mr.Kamal/refs/heads/main/001%20(5).jpeg?raw=true" alt="Design 5 by Kamal Meena" loading="lazy" onclick="openPopup(this.src)" />
+  <!-- Slider Section -->
+  <section class="section">
+    <h2>Recent Designs</h2>
+    <div class="slider">
+      <div class="slider-track">
+        <img src="https://raw.githubusercontent.com/ideogram682/Mr.Kamal/refs/heads/main/001%20(1).jpeg" alt="Design 1" onclick="openPopup(this.src)">
+        <img src="https://raw.githubusercontent.com/ideogram682/Mr.Kamal/refs/heads/main/001%20(2).jpeg" alt="Design 2" onclick="openPopup(this.src)">
+        <img src="https://raw.githubusercontent.com/ideogram682/Mr.Kamal/refs/heads/main/001%20(3).jpeg" alt="Design 3" onclick="openPopup(this.src)">
+        <img src="https://raw.githubusercontent.com/ideogram682/Mr.Kamal/refs/heads/main/001%20(4).jpeg" alt="Design 4" onclick="openPopup(this.src)">
+        <img src="https://raw.githubusercontent.com/ideogram682/Mr.Kamal/refs/heads/main/001%20(5).jpeg" alt="Design 5" onclick="openPopup(this.src)">
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section class="section about">
+    <h2>About Me</h2>
+    <div class="about-content">
+      <img class="about-img" src="https://raw.githubusercontent.com/Abranddesigner/Mr.Kamal/refs/heads/main/k%20logo.png" alt="Kamal Meena">
+      <p class="bio">I'm Kamal Meena, a passionate graphic designer from Rajasthan with expertise in sports branding, logo design, and digital illustration. Since 2019, I’ve helped brands find their voice through stunning visuals.</p>
+    </div>
+  </section>
+
+  <!-- Testimonials Section -->
+  <section class="section">
+    <h2>What Clients Say</h2>
+    <div class="carousel-wrapper">
+      <div class="testimonials">
+        <div class="testimonial">
+          <img src="https://raw.githubusercontent.com/Abranddesigner/Mr.Kamal/refs/heads/main/Miss%20Aaru.png" alt="Miss Aaru">
+          <h3>Miss Aaru</h3>
+          <p class="company">Creative Director</p>
+          <p>“Exceptional design skills and attention to detail.”</p>
+        </div>
+        <div class="testimonial">
+          <img src="https://raw.githubusercontent.com/Abranddesigner/Mr.Kamal/refs/heads/main/Dr.%20Bindeshwar.jpg" alt="Dr. Bindeshwar">
+          <h3>Dr. Bindeshwar</h3>
+          <p class="company">Sr. Consultant</p>
+          <p>“Designs are modern and reflect professionalism.”</p>
+        </div>
+        <div class="testimonial">
+          <img src="https://raw.githubusercontent.com/Abranddesigner/Mr.Kamal/refs/heads/main/Kuldeep%20Poonia.jpg" alt="Kuldeep">
+          <h3>Kuldeep Poonia</h3>
+          <p class="company">Marketing Lead</p>
+          <p>“Boundless creativity with impressive results.”</p>
         </div>
       </div>
-
-      <!-- Testimonials -->
-      <div class="testimonials-wrapper">
-        <h2>Client Testimonials</h2>
-        <div class="testimonials-container">
-          <button class="arrow arrow-left">❮</button>
-          <div class="testimonials">
-            <div class="testimonial" data-index="0">
-              <p class="quote">Exceptional design skills and attention to detail are remarkable. Understands client needs with precision and creativity. Every project reflects a high level of professionalism. Highly recommended for branding and graphic design work.</p>
-              <div class="client-info">
-                <img src="https://raw.githubusercontent.com/Abranddesigner/Mr.Kamal/refs/heads/main/Miss%20Aaru.png?raw=true" alt="Miss Aaru" />
-                <div class="client-details">
-                  <h3>Miss Aaru</h3>
-                  <p class="company">Creative Director: Design Studio</p>
-                </div>
-              </div>
-            </div>
-            <div class="testimonial" data-index="1">
-              <p class="quote">Innovative approach to branding transformed our outdated identity. Designs are modern and high-quality, reflecting dedication. Consistently exceeds expectations with professionalism. A reliable partner for any design project.</p>
-              <div class="client-info">
-                <img src="https://raw.githubusercontent.com/Abranddesigner/Mr.Kamal/refs/heads/main/Dr.%20Bindeshwar.jpg?raw=true" alt="Dr. Bindeshwar" />
-                <div class="client-details">
-                  <h3>Dr. Bindeshwar</h3>
-                  <p class="company">Sr. Consultant: Health Innovations</p>
-                </div>
-              </div>
-            </div>
-            <div class="testimonial active" data-index="2">
-              <p class="quote">Boundless creativity and strong work ethic shine in every design. Brings fresh perspectives to marketing campaigns. Delivers on time with impressive detail. A highly skilled and reliable designer to work with.</p>
-              <div class="client-info">
-                <img src="https://raw.githubusercontent.com/Abranddesigner/Mr.Kamal/refs/heads/main/Kuldeep%20Poonia.jpg?raw=true" alt="Kuldeep Poonia" />
-                <div class="client-details">
-                  <h3>Kuldeep Poonia</h3>
-                  <p class="company">Marketing Lead: Tech Corp</p>
-                </div>
-              </div>
-            </div>
-            <div class="testimonial" data-index="3">
-              <p class="quote">Precision and stylish designs greatly enhance educational materials. Listens carefully to deliver beyond expectations. Strong sense of aesthetics in every project. A talented designer for creative solutions.</p>
-              <div class="client-info">
-                <img src="https://raw.githubusercontent.com/Abranddesigner/Mr.Kamal/refs/heads/main/Dr%20Shyam.png?raw=true" alt="Dr. Shyam" />
-                <div class="client-details">
-                  <h3>Dr. Shyam</h3>
-                  <p class="company">Lead Designer: Edu Ventures</p>
-                </div>
-              </div>
-            </div>
-            <div class="testimonial" data-index="4">
-              <p class="quote">Fresh ideas elevate media presence significantly in every project. Designs are created with passion and exceptional results. Understands the media industry thoroughly. A creative genius for impactful visuals.</p>
-              <div class="client-info">
-                <img src="https://raw.githubusercontent.com/Abranddesigner/Mr.Kamal/refs/heads/main/RDS.jpg?raw=true" alt="RDS" />
-                <div class="client-details">
-                  <h3>RDS</h3>
-                  <p class="company">Creative Head: Media Solutions</p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <button class="arrow arrow-right">❯</button>
-        </div>
-      </div>
-
-      <!-- About Section -->
-      <section id="about" class="section about">
-        <h2>About Me</h2>
-        <p class="subtitle">Crafting Brands with Creativity & Precision</p>
-        <div class="about-content">
-          <img src="https://raw.githubusercontent.com/Abranddesigner/Mr.Kamal/refs/heads/main/Mrkamalmeena.jpg?raw=true" alt="Kamal Meena Profile Picture" class="about-img" />
-          <div class="bio">
-            <p><strong>Name:</strong> Kamal Meena</p>
-            <p><strong>DOB:</strong> 15 March 2000</p>
-            <p><strong>Address:</strong> Parasrampura, Teh Nawalgarh, Dist. Jhunjhunu, Rajasthan</p>
-            <p>I started my design career in 2019 and have since worked on a wide range of creative projects.</p>
-            <p>My passion lies in transforming ideas into powerful visual identities that connect with people.</p>
-            <p>From logos to social media graphics, I focus on building a brand's unique presence.</p>
-            <a href="gallery.html" class="btn btn-primary">View My Work</a>
-          </div>
-        </div>
-      </section>
-    </section>
-  </main>
+    </div>
+  </section>
 
   <!-- Footer -->
   <footer class="section">
     <div class="contact-icons">
-      <a href="mailto:kamalmeena682@gmail.com" title="Email" aria-label="Email Kamal Meena"><i class="fas fa-envelope"></i></a>
-      <a href="tel:+916350262865" title="Call" aria-label="Call Kamal Meena"><i class="fas fa-phone"></i></a>
-      <a href="https://instagram.com/Kamal.prp" title="Instagram" target="_blank" aria-label="Kamal Meena’s Instagram"><i class="fab fa-instagram"></i></a>
+      <a href="mailto:kamalmeena1503@gmail.com"><i class="fas fa-envelope"></i></a>
+      <a href="tel:+916350262865"><i class="fas fa-phone"></i></a>
+      <a href="https://instagram.com/Kamal.prp" target="_blank"><i class="fab fa-instagram"></i></a>
     </div>
-    <button class="mode-toggle">Switch to Dark Mode</button>
+    <button class="mode-toggle" onclick="toggleMode()">Switch to Dark Mode</button>
     <p>© 2025 Kamal Meena. All rights reserved.</p>
   </footer>
 
   <!-- Popup -->
   <div class="popup" id="popup">
     <span class="close" onclick="closePopup()">×</span>
-    <img id="popupImg" src="" alt="Selected Design" />
+    <img id="popupImg" src="" alt="Popup Image">
   </div>
 
   <!-- QR Popup -->
   <div class="popup qr-popup" id="qrPopup">
     <span class="close" onclick="closeQRPopup()">×</span>
     <h3>Scan to Pay</h3>
-    <img id="qrCodeImg" src="" alt="QR Code" />
+    <img id="qrCodeImg" src="https://raw.githubusercontent.com/Abranddesigner/Mr.Kamal/refs/heads/main/QR%20Code.jpg" alt="QR Code">
     <p>Use any UPI app to scan and pay.</p>
   </div>
 
-  <script src="scripts.js" defer></script>
+  <script src="scripts.js"></script>
 </body>
 </html>
