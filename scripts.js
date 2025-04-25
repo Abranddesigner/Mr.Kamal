@@ -13,12 +13,11 @@ document.addEventListener('DOMContentLoaded', () => {
     observer.observe(section);
   });
 
-  // Menu Toggle
+  // Mobile Menu Toggle
   const menuToggle = document.querySelector('.menu-toggle');
-  const navbar = document.querySelector('#navbar');
+  const heroBar = document.getElementById('hero-bar');
   menuToggle.addEventListener('click', () => {
-    navbar.classList.toggle('show');
-    menuToggle.setAttribute('aria-expanded', navbar.classList.contains('show'));
+    heroBar.classList.toggle('show');
   });
 
   // Handle Buy Now Click
@@ -83,44 +82,4 @@ document.addEventListener('DOMContentLoaded', () => {
       popup.style.display = 'none';
     }
   }
-
-  // Testimonials Slider
-  let currentIndex = 2;
-  const testimonials = document.querySelectorAll('.testimonial');
-  const totalTestimonials = testimonials.length;
-  const testimonialsSlider = document.getElementById('testimonials-slider');
-
-  function updateTestimonials() {
-    testimonials.forEach((card, index) => {
-      card.classList.remove('active');
-      const offset = (index - currentIndex + totalTestimonials) % totalTestimonials;
-      if (offset === 0) {
-        card.classList.add('active');
-      }
-    });
-
-    if (testimonialsSlider) {
-      const testimonialWidth = testimonials[0].offsetWidth + 20; // Include gap
-      const centerOffset = (testimonialsSlider.offsetWidth - testimonialWidth) / 2;
-      testimonialsSlider.style.transform = `translateX(${centerOffset - (currentIndex * testimonialWidth)}px)`;
-    }
-  }
-
-  window.slideLeft = function() {
-    currentIndex = (currentIndex - 1 + totalTestimonials) % totalTestimonials;
-    updateTestimonials();
-  }
-
-  window.slideRight = function() {
-    currentIndex = (currentIndex + 1) % totalTestimonials;
-    updateTestimonials();
-  }
-
-  // Initialize testimonials
-  updateTestimonials();
-
-  // Auto-slide every 5 seconds
-  setInterval(() => {
-    slideRight();
-  }, 5000);
 });
