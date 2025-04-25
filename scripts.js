@@ -44,9 +44,11 @@ document.addEventListener('DOMContentLoaded', () => {
   if (headerTitle) {
     headerTitle.addEventListener('mouseenter', () => {
       headerTitle.textContent = 'कमल डिज़ाइनर';
+      headerTitle.style.color = '#DC2626';
     });
     headerTitle.addEventListener('mouseleave', () => {
       headerTitle.textContent = 'Mr. Kamal Designer';
+      headerTitle.style.color = '#DC2626';
     });
   }
 
@@ -58,16 +60,17 @@ document.addEventListener('DOMContentLoaded', () => {
     if (isMobile) {
       window.location.href = upiUrl;
     } else {
-      showQRPopup();
+      showQRPopup(product, amount);
     }
 
     showSendSSButton(product);
   }
 
   // Show QR Code Popup
-  function showQRPopup() {
+  function showQRPopup(product, amount) {
     const qrPopup = document.getElementById('qrPopup');
-    if (qrPopup) {
+    const qrCodeImg = document.getElementById('qrCodeImg');
+    if (qrPopup && qrCodeImg) {
       qrPopup.style.display = 'flex';
     }
   }
@@ -96,9 +99,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const popup = document.getElementById('popup');
     const popupImg = document.getElementById('popupImg');
     if (popup && popupImg) {
-      // Fix GitHub URL by replacing encoded spaces and ensuring raw access
       let cleanSrc = src.replace(/%20/g, ' ').replace('?raw=true', '');
-      popupImg.src = cleanSrc;
+      popupImg.src = cleanSrc.includes('github.com') ? cleanSrc + '?raw=true' : cleanSrc;
       popup.style.display = 'flex';
     }
   }
@@ -114,6 +116,7 @@ document.addEventListener('DOMContentLoaded', () => {
   let currentIndex = 2;
   const testimonials = document.querySelectorAll('.testimonial');
   const totalTestimonials = testimonials.length;
+  const testimonialsSlider = document.getElementById('testimonials-slider');
 
   function updateTestimonials() {
     testimonials.forEach((card, index) => {
@@ -125,12 +128,8 @@ document.addEventListener('DOMContentLoaded', () => {
         card.classList.remove('active');
       }
     });
-    const testimonialsContainer = document.querySelector('.testimonials');
-    if (testimonialsContainer) {
-      testimonialsContainer.scrollTo({
-        left: currentIndex * (300 + 20), // 300px card width + 20px gap
-        behavior: 'smooth'
-      });
+    if (testimonialsSlider) {
+      testimonialsSlider.style.transform = `translateX(-${currentIndex * (300 + 20)}px)`;
     }
   }
 
