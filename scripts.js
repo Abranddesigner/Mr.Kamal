@@ -39,6 +39,17 @@ document.addEventListener('DOMContentLoaded', () => {
   }
   if (localStorage.getItem('theme') === 'dark') toggleMode();
 
+  // Header Title Hover Effect
+  const headerTitle = document.getElementById('header-title');
+  if (headerTitle) {
+    headerTitle.addEventListener('mouseenter', () => {
+      headerTitle.textContent = 'श्री कमल डिज़ाइनर';
+    });
+    headerTitle.addEventListener('mouseleave', () => {
+      headerTitle.textContent = 'Mr. Kamal Designer';
+    });
+  }
+
   // Handle Buy Now Click
   function handleBuyNow(product, amount) {
     const isMobile = /Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
