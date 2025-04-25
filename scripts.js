@@ -71,6 +71,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const qrPopup = document.getElementById('qrPopup');
     const qrCodeImg = document.getElementById('qrCodeImg');
     if (qrPopup && qrCodeImg) {
+      qrCodeImg.src = 'https://raw.githubusercontent.com/Abranddesigner/Mr.Kamal/refs/heads/main/QR%20Code.jpg';
       qrPopup.style.display = 'flex';
     }
   }
