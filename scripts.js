@@ -35,7 +35,7 @@ document.addEventListener('DOMContentLoaded', () => {
     document.body.classList.toggle('light');
     localStorage.setItem('theme', document.body.classList.contains('dark-mode') ? 'dark' : 'light');
     const button = document.querySelector('.mode-toggle');
-    button.textContent = document　　    document.body.classList.contains('dark-mode') ? 'Switch to Light Mode' : 'Switch to Dark Mode';
+    button.textContent = document.body.classList.contains('dark-mode') ? 'Switch to Light Mode' : 'Switch to Dark Mode';
   }
   if (localStorage.getItem('theme') === 'dark') toggleMode();
 
