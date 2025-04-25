@@ -1,10 +1,10 @@
 /* Import Font */
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap');
 
-/* Gradient Theme Variables for Header and Styling */
+/* Theme Variables for Header and Styling */
 :root {
-  --gradient-primary: linear-gradient(90deg, #005BEA, #00C4FF);
-  --gradient-secondary: linear-gradient(90deg, #E0F7FA, #B2EBF2);
+  --primary-bg: linear-gradient(90deg, #005BEA, #00C4FF);
+  --secondary-bg: linear-gradient(90deg, #E0F7FA, #B2EBF2);
 }
 
 /* Reset and Base */
@@ -117,7 +117,7 @@ body {
 
 /* Header */
 header {
-  background: var(--gradient-primary);
+  background: var(--primary-bg);
   padding: 20px 40px;
   display: flex;
   align-items: center;
@@ -130,7 +130,7 @@ header {
 }
 
 .dark-mode header {
-  background: var(--gradient-primary);
+  background: var(--primary-bg);
 }
 
 .logo {
@@ -149,12 +149,14 @@ header {
   transform: rotate(10deg) scale(1.1);
 }
 
+.title {
+  color: #FFFFFF;
+  transition: color 0.3s ease;
+}
+
 .title h1 {
   font-size: 1.8rem;
   font-weight: 700;
-  color: #FFFFFF;
-  position: relative;
-  transition: color 0.3s ease;
 }
 
 .title h1:hover {
@@ -234,7 +236,7 @@ nav a.active {
 
 .slider-track img:hover {
   transform: scale(1.1) rotate(5deg);
-  border-image: var(--gradient-primary) 1;
+  border-image: var(--primary-bg) 1;
 }
 
 @keyframes slide {
@@ -294,7 +296,7 @@ nav a.active {
 
 .gallery-grid img:hover {
   transform: scale(1.05) rotate(3deg);
-  border-image: var(--gradient-primary) 1;
+  border-image: var(--primary-bg) 1;
 }
 
 .portfolio-card {
@@ -352,10 +354,6 @@ nav a.active {
 }
 
 .testimonials-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 16px;
   max-width: 1200px;
   margin: 0 auto;
   position: relative;
@@ -363,103 +361,67 @@ nav a.active {
 
 .testimonials {
   display: flex;
-  transition: transform 0.5s ease;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  overflow: hidden;
 }
 
 .testimonial {
-  flex: 0 0 33.33%;
-  background-color: #FFFFFF;
+  flex: 0 0 30%;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
   padding: 24px;
   border-radius: 12px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  margin: 0 8px;
-  opacity: 0.8;
-  filter: blur(2px);
-  border: 2px solid transparent;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  color: #111827;
+  opacity: 0.7;
+  transform: translateY(20px);
+  transition: all 0.5s ease;
 }
 
 .dark-mode .testimonial {
-  background-color: #1F2937;
+  background: rgba(31, 41, 55, 0.1);
+  color: #FFFFFF;
 }
 
 .testimonial.active {
   opacity: 1;
-  filter: none;
-  transform: scale(1.05);
-  border-image: var(--gradient-primary) 1;
+  transform: translateY(0);
+  box-shadow: 0 8px 24px rgba(255, 255, 255, 0.3);
 }
 
-.dark-mode .testimonial.active {
-  border-image: var(--gradient-secondary) 1;
-}
-
-.testimonial:hover {
-  background: var(--gradient-primary);
-  color: #FFFFFF;
-}
-
-.testimonial:hover .quote {
-  color: #F9FAFB;
-}
-
-.quote {
+.testimonial p {
   font-size: 1rem;
   font-style: italic;
-  color: #6B7280;
-  margin: 16px 0;
-  position: relative;
+  margin-bottom: 16px;
+  line-height: 1.5;
 }
 
-.dark-mode .quote {
-  color: #D1D5DB;
-}
-
-.quote::before, .quote::after {
-  font-size: 1.5rem;
-  color: #DC2626;
-  position: absolute;
-}
-
-.dark-mode .quote::before, .dark-mode .quote::after {
-  color: #FCA5A5;
-}
-
-.quote::before {
-  content: '"';
-  left: -8px;
-  top: -8px;
-}
-
-.quote::after {
-  content: '"';
-  right: -8px;
-  bottom: -8px;
-}
-
-.client-info {
+.testimonial .client-info {
   display: flex;
   align-items: center;
-  margin-top: 16px;
+  gap: 12px;
 }
 
-.client-info img {
-  width: 64px;
-  height: 64px;
+.testimonial .client-info img {
+  width: 50px;
+  height: 50px;
   border-radius: 50%;
-  margin-right: 16px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
-.client-details h3 {
+.testimonial .client-info h3 {
   font-size: 1.1rem;
   font-weight: 600;
 }
 
-.client-details p {
+.testimonial .client-info p {
   font-size: 0.9rem;
   color: #6B7280;
 }
 
-.dark-mode .client-details p {
+.dark-mode .testimonial .client-info p {
   color: #D1D5DB;
 }
 
@@ -473,6 +435,7 @@ nav a.active {
   border-radius: 50%;
   cursor: pointer;
   transition: background-color 0.3s ease;
+  z-index: 10;
 }
 
 .arrow:hover {
@@ -480,11 +443,26 @@ nav a.active {
 }
 
 .arrow-left {
-  left: 16px;
+  left: 10px;
 }
 
 .arrow-right {
-  right: 16px;
+  right: 10px;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.testimonial.active {
+  animation: fadeInUp 0.5s ease forwards;
 }
 
 /* CDR Section */
@@ -518,7 +496,7 @@ nav a.active {
   max-height: 80%;
   border-radius: 12px;
   border: 2px solid transparent;
-  border-image: var(--gradient-primary) 1;
+  border-image: var(--primary-bg) 1;
 }
 
 .popup .close {
@@ -546,7 +524,7 @@ nav a.active {
   max-width: 300px;
   z-index: 50;
   border: 2px solid transparent;
-  border-image: var(--gradient-primary) 1;
+  border-image: var(--primary-bg) 1;
 }
 
 .dark-mode .qr-popup {
@@ -653,7 +631,7 @@ footer {
     grid-template-columns: 1fr;
   }
   .testimonial {
-    flex: 0 0 100%;
+    flex: 0 0 80%;
   }
 }
 
