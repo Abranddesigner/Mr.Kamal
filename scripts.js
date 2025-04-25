@@ -68,8 +68,6 @@ document.addEventListener('DOMContentLoaded', () => {
   function showQRPopup() {
     const qrPopup = document.getElementById('qrPopup');
     if (qrPopup) {
-      const qrCodeImg = document.getElementById('qrCodeImg');
-      qrCodeImg.src = 'https://raw.githubusercontent.com/Abranddesigner/Mr.Kamal/refs/heads/main/QR%20Code.jpg';
       qrPopup.style.display = 'flex';
     }
   }
@@ -98,7 +96,9 @@ document.addEventListener('DOMContentLoaded', () => {
     const popup = document.getElementById('popup');
     const popupImg = document.getElementById('popupImg');
     if (popup && popupImg) {
-      popupImg.src = src;
+      // Fix GitHub URL by replacing encoded spaces and ensuring raw access
+      let cleanSrc = src.replace(/%20/g, ' ').replace('?raw=true', '');
+      popupImg.src = cleanSrc;
       popup.style.display = 'flex';
     }
   }
@@ -125,6 +125,13 @@ document.addEventListener('DOMContentLoaded', () => {
         card.classList.remove('active');
       }
     });
+    const testimonialsContainer = document.querySelector('.testimonials');
+    if (testimonialsContainer) {
+      testimonialsContainer.scrollTo({
+        left: currentIndex * (300 + 20), // 300px card width + 20px gap
+        behavior: 'smooth'
+      });
+    }
   }
 
   function slideLeft() {
