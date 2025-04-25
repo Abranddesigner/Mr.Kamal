@@ -1,7 +1,7 @@
 /* Import Font */
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap');
 
-/* Gradient Theme Variables */
+/* Gradient Theme Variables for Header and Styling */
 :root {
   --gradient-primary: linear-gradient(90deg, #005BEA, #00C4FF);
   --gradient-secondary: linear-gradient(90deg, #E0F7FA, #B2EBF2);
@@ -153,6 +153,12 @@ header {
   font-size: 1.8rem;
   font-weight: 700;
   color: #FFFFFF;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+.title h1:hover {
+  color: #FCA5A5;
 }
 
 .title .tagline {
