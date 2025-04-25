@@ -22,9 +22,58 @@ body {
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-.dark-mode {
-  background-color: #111827;
-  color: #FFFFFF;
+/* System-based Dark Mode */
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: #111827;
+    color: #FFFFFF;
+  }
+  header {
+    background-color: #1F2937;
+  }
+  .section h2 {
+    color: #FCA5A5;
+  }
+  .subtitle {
+    color: #D1D5DB;
+  }
+  .title {
+    color: #FCA5A5;
+  }
+  .title .tagline {
+    color: #D1D5DB;
+  }
+  .about {
+    background-color: #1F2937;
+  }
+  .portfolio-card {
+    background-color: #1F2937;
+  }
+  .portfolio-card h3 {
+    color: #FCA5A5;
+  }
+  .price {
+    color: #FCA5A5;
+  }
+  .testimonials-wrapper {
+    background-color: #1F2937;
+  }
+  .testimonial {
+    background: rgba(31, 41, 55, 0.1);
+    color: #FFFFFF;
+  }
+  .testimonial .client-info p {
+    color: #D1D5DB;
+  }
+  .payment-info {
+    color: #D1D5DB;
+  }
+  .qr-popup {
+    background-color: #1F2937;
+  }
+  .qr-popup p {
+    color: #D1D5DB;
+  }
 }
 
 /* Common Classes */
@@ -54,13 +103,16 @@ body {
   background-color: #25D366;
   color: #FFFFFF;
   padding: 16px;
-  border-radius: 50%;
+  border-radius: 50%; /* Already circular */
   position: fixed;
   bottom: 24px;
   right: 24px;
   z-index: 50;
   font-size: 28px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .btn-whatsapp:hover {
@@ -95,24 +147,16 @@ body {
 }
 
 .section h2 {
-  font-size: 2rem; /* Reduced from 2.5rem */
+  font-size: 2rem;
   font-weight: 700;
   color: #DC2626;
   margin-bottom: 16px;
-}
-
-.dark-mode .section h2 {
-  color: #FCA5A5;
 }
 
 .subtitle {
   font-size: 1.2rem;
   color: #6B7280;
   margin-bottom: 24px;
-}
-
-.dark-mode .subtitle {
-  color: #D1D5DB;
 }
 
 /* Header */
@@ -126,10 +170,6 @@ header {
   top: 0;
   z-index: 50;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-.dark-mode header {
-  background-color: #1F2937;
 }
 
 .header-container {
@@ -205,7 +245,7 @@ nav a.active {
 
 .title h1 {
   font-size: 2rem;
-  font-weight: 400;
+  font-weight: 700;
 }
 
 .title h1:hover {
@@ -217,14 +257,6 @@ nav a.active {
   color: #111827;
 }
 
-.dark-mode .title {
-  color: #FCA5A5;
-}
-
-.dark-mode .title .tagline {
-  color: #D1D5DB;
-}
-
 /* Welcome Section */
 .welcome {
   margin-bottom: 40px;
@@ -232,8 +264,8 @@ nav a.active {
 
 .welcome p {
   font-size: 1.1rem;
-  max-width: 350px;
-  margin: 4px auto; /* Reduced margin between lines */
+  max-width: 600px;
+  margin: 4px auto;
 }
 
 /* Slider */
@@ -269,10 +301,6 @@ nav a.active {
   border-radius: 12px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   padding: 40px;
-}
-
-.dark-mode .about {
-  background-color: #1F2937;
 }
 
 .about-content {
@@ -323,10 +351,6 @@ img[onclick] {
   transition: transform 0.3s ease;
 }
 
-.dark-mode .portfolio-card {
-  background-color: #1F2937;
-}
-
 .portfolio-card:hover {
   transform: translateY(-8px);
 }
@@ -338,10 +362,6 @@ img[onclick] {
   color: #DC2626;
 }
 
-.dark-mode .portfolio-card h3 {
-  color: #FCA5A5;
-}
-
 .price {
   font-size: 1.2rem;
   font-weight: 700;
@@ -349,18 +369,10 @@ img[onclick] {
   margin-bottom: 12px;
 }
 
-.dark-mode .price {
-  color: #FCA5A5;
-}
-
 /* Testimonials */
 .testimonials-wrapper {
   padding: 60px 20px;
   background-color: #F9FAFB;
-}
-
-.dark-mode .testimonials-wrapper {
-  background-color: #1F2937;
 }
 
 .testimonials-container {
@@ -390,18 +402,13 @@ img[onclick] {
   min-width: 300px;
 }
 
-.dark-mode .testimonial {
-  background: rgba(31, 41, 55, 0.1);
-  color: #FFFFFF;
-}
-
 .testimonial.active {
   opacity: 1;
   box-shadow: 0 8px 24px rgba(255, 255, 255, 0.3);
 }
 
 .testimonial:not(.active) {
-  filter: blur(2px);
+  /* Removed blur effect */
 }
 
 .testimonial p {
@@ -432,10 +439,6 @@ img[onclick] {
 .testimonial .client-info p {
   font-size: 0.9rem;
   color: #6B7280;
-}
-
-.dark-mode .testimonial .client-info p {
-  color: #D1D5DB;
 }
 
 .arrow {
@@ -486,10 +489,6 @@ img[onclick] {
   color: #6B7280;
 }
 
-.dark-mode .payment-info {
-  color: #D1D5DB;
-}
-
 /* Popup */
 .popup {
   position: fixed;
@@ -536,10 +535,6 @@ img[onclick] {
   z-index: 50;
 }
 
-.dark-mode .qr-popup {
-  background-color: #1F2937;
-}
-
 .qr-popup h3 {
   font-size: 1.2rem;
   font-weight: 600;
@@ -554,34 +549,6 @@ img[onclick] {
 .qr-popup p {
   font-size: 1rem;
   color: #6B7280;
-}
-
-.dark-mode .qr-popup p {
-  color: #D1D5DB;
-}
-
-/* Back to Top */
-.back-to-top {
-  position: fixed;
-  bottom: 80px;
-  right: 24px;
-  background-color: #DC2626;
-  color: #FFFFFF;
-  padding: 12px;
-  border-radius: 50%;
-  font-size: 1.2rem;
-  display: none;
-  z-index: 50;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-.back-to-top.show {
-  display: block;
-}
-
-.back-to-top:hover {
-  background-color: #B91C1C;
 }
 
 /* Footer */
@@ -656,7 +623,7 @@ footer {
 
 @media (max-width: 600px) {
   .section h2 {
-    font-size: 1.5rem; /* Further reduced for smaller screens */
+    font-size: 1.5rem;
   }
   .slider-track img {
     width: 150px;
