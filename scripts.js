@@ -21,16 +21,6 @@ document.addEventListener('DOMContentLoaded', () => {
     menuToggle.setAttribute('aria-expanded', navbar.classList.contains('show'));
   });
 
-  // Dark/Light Mode Toggle
-  function toggleMode() {
-    document.body.classList.toggle('dark-mode');
-    document.body.classList.toggle('light');
-    localStorage.setItem('theme', document.body.classList.contains('dark-mode') ? 'dark' : 'light');
-    const button = document.querySelector('.mode-toggle');
-    button.textContent = document.body.classList.contains('dark-mode') ? 'Switch to Light Mode' : 'Switch to Dark Mode';
-  }
-  if (localStorage.getItem('theme') === 'dark') toggleMode();
-
   // Handle Buy Now Click
   window.handleBuyNow = function(product, amount) {
     const isMobile = /Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
@@ -128,6 +118,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Initialize testimonials
   updateTestimonials();
+
+  // Auto-slide every 5 seconds
   setInterval(() => {
     slideRight();
   }, 5000);
