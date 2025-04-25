@@ -39,19 +39,6 @@ document.addEventListener('DOMContentLoaded', () => {
   }
   if (localStorage.getItem('theme') === 'dark') toggleMode();
 
-  // Header Title Hover Effect
-  const headerTitle = document.getElementById('header-title');
-  if (headerTitle) {
-    headerTitle.addEventListener('mouseenter', () => {
-      headerTitle.textContent = 'कमल डिज़ाइनर';
-      headerTitle.style.color = '#DC2626';
-    });
-    headerTitle.addEventListener('mouseleave', () => {
-      headerTitle.textContent = 'Mr. Kamal Designer';
-      headerTitle.style.color = '#DC2626';
-    });
-  }
-
   // Handle Buy Now Click
   window.handleBuyNow = function(product, amount) {
     const isMobile = /Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
