@@ -43,7 +43,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const headerTitle = document.getElementById('header-title');
   if (headerTitle) {
     headerTitle.addEventListener('mouseenter', () => {
-      headerTitle.textContent = 'श्री कमल डिज़ाइनर';
+      headerTitle.textContent = 'कमल डिज़ाइनर';
     });
     headerTitle.addEventListener('mouseleave', () => {
       headerTitle.textContent = 'Mr. Kamal Designer';
@@ -56,9 +56,9 @@ document.addEventListener('DOMContentLoaded', () => {
     const upiUrl = `upi://pay?pa=8440048355@ybl&pn=Kamal%20Meena&am=${amount}&cu=INR&tn=Purchase%20${encodeURIComponent(product)}`;
 
     if (isMobile) {
-      window.location.href = upiUrl; // Direct UPI app open on mobile
+      window.location.href = upiUrl;
     } else {
-      showQRPopup(); // QR popup on PC
+      showQRPopup();
     }
 
     showSendSSButton(product);
@@ -89,11 +89,11 @@ document.addEventListener('DOMContentLoaded', () => {
       sendSSButton.href = `https://wa.me/918440048355?text=Hi%20Kamal,%20here’s%20the%20payment%20screenshot%20for%20${encodeURIComponent(product)}.`;
       setTimeout(() => {
         sendSSButton.style.display = 'block';
-      }, 120000); // 2 minutes
+      }, 120000);
     }
   }
 
-  // Open Popup for Gallery Images
+  // Open Popup for Images
   function openPopup(src) {
     const popup = document.getElementById('popup');
     const popupImg = document.getElementById('popupImg');
@@ -111,7 +111,7 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   // Testimonials Slider
-  let currentIndex = 2; // Start with middle testimonial (Kuldeep Poonia)
+  let currentIndex = 2;
   const testimonials = document.querySelectorAll('.testimonial');
   const totalTestimonials = testimonials.length;
 
@@ -120,13 +120,9 @@ document.addEventListener('DOMContentLoaded', () => {
       card.classList.remove('active');
       const offset = (index - currentIndex + totalTestimonials) % totalTestimonials;
       if (offset === 0) {
-        card.classList.add('active'); // Middle (clear)
-      } else if (offset === 1 || offset === totalTestimonials - 1) {
-        card.style.opacity = '0.8';
-        card.style.filter = 'blur(2px)';
+        card.classList.add('active');
       } else {
-        card.style.opacity = '0';
-        card.style.filter = 'blur(2px)';
+        card.classList.remove('active');
       }
     });
   }
@@ -143,4 +139,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Initialize testimonials
   updateTestimonials();
+  setInterval(() => {
+    slideRight();
+  }, 5000);
 });
