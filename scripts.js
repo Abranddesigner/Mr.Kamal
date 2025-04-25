@@ -53,7 +53,7 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   // Handle Buy Now Click
-  function handleBuyNow(product, amount) {
+  window.handleBuyNow = function(product, amount) {
     const isMobile = /Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
     const upiUrl = `upi://pay?pa=8440048355@ybl&pn=Kamal%20Meena&am=${amount}&cu=INR&tn=Purchase%20${encodeURIComponent(product)}`;
 
@@ -67,7 +67,7 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   // Show QR Code Popup
-  function showQRPopup(product, amount) {
+  window.showQRPopup = function(product, amount) {
     const qrPopup = document.getElementById('qrPopup');
     const qrCodeImg = document.getElementById('qrCodeImg');
     if (qrPopup && qrCodeImg) {
@@ -77,7 +77,7 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   // Close QR Code Popup
-  function closeQRPopup() {
+  window.closeQRPopup = function() {
     const qrPopup = document.getElementById('qrPopup');
     if (qrPopup) {
       qrPopup.style.display = 'none';
@@ -85,7 +85,7 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   // Show Send SS on WhatsApp Button after 2 minutes
-  function showSendSSButton(product) {
+  window.showSendSSButton = function(product) {
     const sendSSButton = document.getElementById('sendSSButton');
     if (sendSSButton) {
       sendSSButton.href = `https://wa.me/918440048355?text=Hi%20Kamal,%20here’s%20the%20payment%20screenshot%20for%20${encodeURIComponent(product)}.`;
@@ -96,17 +96,19 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   // Open Popup for Images
-  function openPopup(src) {
+  window.openPopup = function(src) {
     const popup = document.getElementById('popup');
     const popupImg = document.getElementById('popupImg');
     if (popup && popupImg) {
       let cleanSrc = src.replace(/%20/g, ' ').replace('?raw=true', '');
       popupImg.src = cleanSrc.includes('github.com') ? cleanSrc + '?raw=true' : cleanSrc;
       popup.style.display = 'flex';
+    } else {
+      console.error('Popup or popupImg element not found!');
     }
   }
 
-  function closePopup() {
+  window.closePopup = function() {
     const popup = document.getElementById('popup');
     if (popup) {
       popup.style.display = 'none';
@@ -125,21 +127,22 @@ document.addEventListener('DOMContentLoaded', () => {
       const offset = (index - currentIndex + totalTestimonials) % totalTestimonials;
       if (offset === 0) {
         card.classList.add('active');
-      } else {
-        card.classList.remove('active');
       }
     });
+
     if (testimonialsSlider) {
-      testimonialsSlider.style.transform = `translateX(-${currentIndex * (300 + 20)}px)`;
+      const testimonialWidth = testimonials[0].offsetWidth + 20; // Include gap
+      const centerOffset = (testimonialsSlider.offsetWidth - testimonialWidth) / 2;
+      testimonialsSlider.style.transform = `translateX(${centerOffset - (currentIndex * testimonialWidth)}px)`;
     }
   }
 
-  function slideLeft() {
+  window.slideLeft = function() {
     currentIndex = (currentIndex - 1 + totalTestimonials) % totalTestimonials;
     updateTestimonials();
   }
 
-  function slideRight() {
+  window.slideRight = function() {
     currentIndex = (currentIndex + 1) % totalTestimonials;
     updateTestimonials();
   }
