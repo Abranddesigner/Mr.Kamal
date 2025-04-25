@@ -15,9 +15,19 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Mobile Menu Toggle
   const menuToggle = document.querySelector('.menu-toggle');
-  const heroBar = document.getElementById('hero-bar');
+  const navbar = document.querySelector('#navbar');
   menuToggle.addEventListener('click', () => {
-    heroBar.classList.toggle('show');
+    navbar.classList.toggle('show');
+    menuToggle.setAttribute('aria-expanded', navbar.classList.contains('show'));
+  });
+
+  // Hover Conversion for Title
+  const headerTitle = document.getElementById('header-title');
+  headerTitle.addEventListener('mouseover', () => {
+    headerTitle.textContent = headerTitle.getAttribute('data-hover-text');
+  });
+  headerTitle.addEventListener('mouseout', () => {
+    headerTitle.textContent = 'Mr. Kamal Designer';
   });
 
   // Handle Buy Now Click
@@ -82,4 +92,35 @@ document.addEventListener('DOMContentLoaded', () => {
       popup.style.display = 'none';
     }
   }
+
+  // Testimonials Slider
+  let currentIndex = 0;
+  const testimonials = document.querySelectorAll('.testimonial');
+  const totalTestimonials = testimonials.length;
+  const testimonialsSlider = document.getElementById('testimonials-slider');
+
+  function updateTestimonials() {
+    testimonials.forEach((card, index) => {
+      card.style.transform = `translateX(-${currentIndex * 100}%)`;
+    });
+  }
+
+  window.slideLeft = function() {
+    currentIndex = Math.max(0, currentIndex - 1);
+    updateTestimonials();
+  }
+
+  window.slideRight = function() {
+    currentIndex = Math.min(totalTestimonials - 1, currentIndex + 1);
+    updateTestimonials();
+  }
+
+  // Auto-slide every 5 seconds
+  setInterval(() => {
+    currentIndex = (currentIndex + 1) % totalTestimonials;
+    updateTestimonials();
+  }, 5000);
+
+  // Initialize testimonials
+  updateTestimonials();
 });
