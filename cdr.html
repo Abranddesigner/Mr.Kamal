@@ -36,21 +36,25 @@
 
   <!-- Header -->
   <header>
-    <div class="logo">
-      <img src="https://github.com/Abranddesigner/Mr.Kamal/blob/main/logo%20kd.png?raw=true" alt="Kamal Meena Logo" />
+    <div class="header-container">
+      <div class="logo">
+        <img src="https://github.com/Abranddesigner/Mr.Kamal/blob/main/logo%20kd.png?raw=true" alt="Kamal Meena Logo" />
+      </div>
+      <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+    </div>
+    <div class="nav-container">
+      <nav id="navbar">
+        <a href="index.html">Home</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="cdr.html" class="active">CDR</a>
+        <a href="https://drive.google.com/file/d/1Os9fcZf-2Zth27v9UccVAAslLQTffVuL/view?usp=drivesdk" target="_blank">Portfolio</a>
+        <a href="https://github.com/ideogram682/Mr.Kamal/blob/main/Mr.%20Kamal%20Resume.jpeg?raw=true" target="_blank">Resume</a>
+      </nav>
       <div class="title">
         <h1 id="header-title">Mr. Kamal Designer</h1>
         <div class="tagline">A Brand Designer</div>
       </div>
     </div>
-    <div class="menu-toggle" onclick="toggleMenu()">☰</div>
-    <nav id="navbar">
-      <a href="index.html">Home</a>
-      <a href="gallery.html">Gallery</a>
-      <a href="cdr.html" class="active">CDR</a>
-      <a href="https://drive.google.com/file/d/1Os9fcZf-2Zth27v9UccVAAslLQTffVuL/view?usp=drivesdk" target="_blank">Portfolio</a>
-      <a href="https://github.com/ideogram682/Mr.Kamal/blob/main/Mr.%20Kamal%20Resume.jpeg?raw=true" target="_blank">Resume</a>
-    </nav>
   </header>
 
   <!-- Main Content -->
@@ -64,13 +68,13 @@
           <img src="https://raw.githubusercontent.com/Abranddesigner/Mr.Kamal/refs/heads/main/logobg.jpg" alt="Logo Design Pack" loading="lazy" onclick="openPopup(this.src)" />
           <h3>Logo Design Pack</h3>
           <p class="price">₹999</p>
-          <button class="btn btn-primary" onclick="handleBuyNow('Logo Design Pack', 500)">Buy Now</button>
+          <button class="btn btn-primary" onclick="handleBuyNow('Logo Design Pack', 999)">Buy Now</button>
         </div>
         <div class="portfolio-card">
           <img src="https://raw.githubusercontent.com/Abranddesigner/Mr.Kamal/refs/heads/main/Adbg.jpg" alt="Sports Branding Kit" loading="lazy" onclick="openPopup(this.src)" />
           <h3>Admission Open Designs</h3>
           <p class="price">₹800</p>
-          <button class="btn btn-primary" onclick="handleBuyNow('Sports Branding Kit', 800)">Buy Now</button>
+          <button class="btn btn-primary" onclick="handleBuyNow('Admission Open Designs', 800)">Buy Now</button>
         </div>
         <div class="portfolio-card">
           <img src="https://raw.githubusercontent.com/ideogram682/Mr.Kamal/refs/heads/main/001%20(3).jpeg" alt="Social Media Graphics" loading="lazy" onclick="openPopup(this.src)" />
@@ -107,7 +111,7 @@
   <div class="popup qr-popup" id="qrPopup">
     <span class="close" onclick="closeQRPopup()">×</span>
     <h3>Scan to Pay</h3>
-    <img id="qrCodeImg" src="" alt="QR Code" />
+    <img id="qrCodeImg" src="https://raw.githubusercontent.com/Abranddesigner/Mr.Kamal/refs/heads/main/QR%20Code.jpg" alt="QR Code" />
     <p>Use any UPI app to scan and pay.</p>
   </div>
 
