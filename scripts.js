@@ -35,13 +35,17 @@ document.addEventListener('DOMContentLoaded', () => {
     const isMobile = /Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
     const upiUrl = `upi://pay?pa=8440048355@ybl&pn=Kamal%20Meena&am=${amount}&cu=INR&tn=Purchase%20${encodeURIComponent(product)}`;
 
-    if (isMobile) {
-      window.location.href = upiUrl;
-    } else {
-      showQRPopup(product, amount);
+    try {
+      if (isMobile) {
+        window.location.href = upiUrl;
+      } else {
+        showQRPopup(product, amount);
+      }
+      showSendSSButton(product);
+    } catch (error) {
+      alert('Payment initiation failed. Please try again or contact support at +918440048355.');
+      console.error(error);
     }
-
-    showSendSSButton(product);
   }
 
   // Show QR Code Popup
@@ -49,7 +53,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const qrPopup = document.getElementById('qrPopup');
     const qrCodeImg = document.getElementById('qrCodeImg');
     if (qrPopup && qrCodeImg) {
-      qrCodeImg.src = 'https://raw.githubusercontent.com/Abranddesigner/Mr.Kamal/refs/heads/main/QR%20Code.jpg';
+      qrCodeImg.src = 'https://raw.githubusercontent.com/Abranddesigner/Mr.Kamal/main/QR%20Code.jpg';
       qrPopup.style.display = 'flex';
     }
   }
@@ -62,14 +66,12 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   }
 
-  // Show Send SS on WhatsApp Button after 2 minutes
+  // Show Send SS on WhatsApp Button
   window.showSendSSButton = function(product) {
     const sendSSButton = document.getElementById('sendSSButton');
     if (sendSSButton) {
       sendSSButton.href = `https://wa.me/918440048355?text=Hi%20Kamal,%20here’s%20the%20payment%20screenshot%20for%20${encodeURIComponent(product)}.`;
-      setTimeout(() => {
-        sendSSButton.style.display = 'block';
-      }, 120000);
+      sendSSButton.style.display = 'block';
     }
   }
 
@@ -78,19 +80,57 @@ document.addEventListener('DOMContentLoaded', () => {
     const popup = document.getElementById('popup');
     const popupImg = document.getElementById('popupImg');
     if (popup && popupImg) {
-      let cleanSrc = src.replace(/%20/g, ' ').replace('?raw=true', '');
-      popupImg.src = cleanSrc.includes('github.com') ? cleanSrc + '?raw=true' : cleanSrc;
+      popupImg.src = src;
       popup.style.display = 'flex';
     } else {
       console.error('Popup or popupImg element not found!');
     }
   }
 
+  // Close Popup
   window.closePopup = function() {
     const popup = document.getElementById('popup');
     if (popup) {
       popup.style.display = 'none';
     }
+  }
+
+  // Contact Form Submission
+  const contactForm = document.getElementById('contactForm');
+  if (contactForm) {
+    contactForm.addEventListener('submit', (event) => {
+      event.preventDefault();
+
+      // Collect form data
+      const name = document.getElementById('name').value;
+      const address = document.getElementById('address').value;
+      const mobile = document.getElementById('mobile').value;
+      const email = document.getElementById('email').value;
+      const content = document.getElementById('content').value;
+      const photos = document.getElementById('photos').files;
+
+      // Create message for WhatsApp
+      let message = `New Contact Form Submission:\n\n` +
+                    `Name: ${name}\n` +
+                    `Address: ${address}\n` +
+                    `Mobile: ${mobile}\n` +
+                    `Email: ${email}\n` +
+                    `Content: ${content}\n` +
+                    `Photos: ${photos.length} file(s) uploaded`;
+
+      // Encode message for WhatsApp
+      const encodedMessage = encodeURIComponent(message);
+      const whatsappUrl = `https://wa.me/918440048355?text=${encodedMessage}`;
+
+      // Open WhatsApp
+      window.open(whatsappUrl, '_blank');
+
+      // Alert user to send photos separately
+      alert('Form submitted! Please send the uploaded photos directly via WhatsApp to +918440048355.');
+
+      // Reset form
+      contactForm.reset();
+    });
   }
 
   // Testimonials Slider
