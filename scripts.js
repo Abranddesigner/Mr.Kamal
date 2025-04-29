@@ -115,42 +115,69 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Contact Form Submit Button
   const submitButton = document.getElementById('submitButton');
-  if (submitButton) {
+  const form = document.getElementById('contactForm');
+  const formMessage = document.getElementById('formMessage');
+
+  if (submitButton && form && formMessage) {
     submitButton.addEventListener('click', () => {
-      const form = document.getElementById('contactForm');
-      const formMessage = document.getElementById('formMessage');
+      console.log('Submit button clicked'); // Debug log
       if (form.checkValidity()) {
-        const name = document.getElementById('name').value;
-        const address = document.getElementById('address').value;
-        const mobile = document.getElementById('mobile').value;
-        const email = document.getElementById('email').value;
-        const content = document.getElementById('content').value;
-        const photos = document.getElementById('photos').files;
+        try {
+          // Get form values
+          const name = document.getElementById('name').value.trim();
+          const address = document.getElementById('address').value.trim();
+          const mobile = document.getElementById('mobile').value.trim();
+          const email = document.getElementById('email').value.trim();
+          const content = document.getElementById('content').value.trim();
+          const photos = document.getElementById('photos').files;
 
-        let message = `New Contact Form Submission:\n\n` +
-                      `Name: ${name}\n` +
-                      `Address: ${address}\n` +
-                      `Mobile: ${mobile}\n` +
-                      `Email: ${email}\n` +
-                      `Content: ${content}\n` +
-                      `Photos: ${photos.length} file(s) uploaded`;
+          // Validate fields
+          if (!name || !address || !mobile || !email || !content || photos.length === 0) {
+            throw new Error('All fields are required.');
+          }
 
-        const encodedMessage = encodeURIComponent(message);
-        const whatsappUrl = `https://wa.me/918440048355?text=${encodedMessage}`;
+          // Create message
+          let message = `New Contact Form Submission:\n\n` +
+                        `Name: ${name}\n` +
+                        `Address: ${address}\n` +
+                        `Mobile: ${mobile}\n` +
+                        `Email: ${email}\n` +
+                        `Content: ${content}\n` +
+                        `Photos: ${photos.length} file(s) uploaded`;
 
-        window.open(whatsappUrl, '_blank');
-        alert('Form data sent to WhatsApp! Please send the uploaded photos directly via WhatsApp to +918440048355.');
-        formMessage.style.display = 'block';
-        formMessage.textContent = 'Form submitted successfully!';
-        formMessage.style.color = '#25D366';
-        form.reset();
+          // Encode message for WhatsApp URL
+          const encodedMessage = encodeURIComponent(message);
+          const whatsappUrl = `https://wa.me/918440048355?text=${encodedMessage}`;
+
+          console.log('WhatsApp URL:', whatsappUrl); // Debug log
+
+          // Open WhatsApp
+          window.open(whatsappUrl, '_blank');
+
+          // Show success message and alert for photos
+          formMessage.style.display = 'block';
+          formMessage.textContent = 'Form submitted successfully! Check WhatsApp.';
+          formMessage.style.color = '#25D366';
+          alert('Form data sent to WhatsApp! Please send the uploaded photos directly via WhatsApp to +918440048355.');
+
+          // Reset form
+          form.reset();
+        } catch (error) {
+          console.error('Form submission error:', error);
+          formMessage.style.display = 'block';
+          formMessage.textContent = 'Error sending data to WhatsApp. Please try again.';
+          formMessage.style.color = '#DC2626';
+        }
       } else {
+        console.log('Form validation failed'); // Debug log
         formMessage.style.display = 'block';
         formMessage.textContent = 'Please fill all required fields correctly.';
         formMessage.style.color = '#DC2626';
         form.reportValidity();
       }
     });
+  } else {
+    console.error('Form elements not found: submitButton, form, or formMessage');
   }
 
   // Testimonials Slider
