@@ -136,7 +136,7 @@
       <section class="about section">
         <h2>About Me</h2>
         <div class="about-content">
-          <img src="https://raw.githubusercontent.com/Abranddesigner/Mr.Kamal/refs/heads/main/Mrkamalmeena.jpg" alt="Kamal Meena" class="about-img" />
+          <img src="https://raw.githubusercontent.com/Abranddesigner/Mr.Kamal/main/kamal-meena.jpg" alt="Kamal Meena" class="about-img" />
           <p class="bio">I’m Kamal Meena, a creative designer based in Rajasthan, India. With a passion for vibrant colors and modern aesthetics, I’ve been crafting visual stories since 2019. I specialize in branding, logo design, and digital art, helping businesses create impactful identities. My design journey is fueled by creativity, precision, and a deep love for bringing ideas to life. Let’s work together to make your brand stand out!</p>
         </div>
       </section>
@@ -189,25 +189,25 @@
             <h3>1 Month</h3>
             <p>20 posts | 4 reels</p>
             <p class="price">₹4,599</p>
-            <button class="btn btn-buy-now" onclick="handleBuyNow('1 Month Plan', 4599)">buy now</button>
+            <button class="btn btn-buy-now" onclick="showQR('1 Month Plan', 4599)">buy now</button>
           </div>
           <div class="plan-item light-green">
             <h3>3 Months</h3>
             <p>60 posts | 12 reels</p>
             <p class="price">₹13,599</p>
-            <button class="btn btn-buy-now" onclick="handleBuyNow('3 Month Plan', 13599)">buy now</button>
+            <button class="btn btn-buy-now" onclick="showQR('3 Month Plan', 13599)">buy now</button>
           </div>
           <div class="plan-item light-blue">
             <h3>6 Months</h3>
             <p>120 posts | 24 reels</p>
             <p class="price">₹24,599</p>
-            <button class="btn btn-buy-now" onclick="handleBuyNow('6 Month Plan', 24599)">buy now</button>
+            <button class="btn btn-buy-now" onclick="showQR('6 Month Plan', 24599)">buy now</button>
           </div>
           <div class="plan-item light-green">
             <h3>12 Months</h3>
             <p>240 posts | 48 reels</p>
             <p class="price">₹47,599</p>
-            <button class="btn btn-buy-now" onclick="handleBuyNow('12 Month Plan', 47599)">buy now</button>
+            <button class="btn btn-buy-now" onclick="showQR('12 Month Plan', 47599)">buy now</button>
           </div>
         </div>
         <ul class="plan-note">
@@ -230,18 +230,24 @@
     <p>© 2025 Kamal Meena. All rights reserved.</p>
   </footer>
 
+  <!-- QR Popups -->
+  <div class="popup qr-popup-left" id="qrPopupLeft">
+    <span class="close" onclick="closeQR()">×</span>
+    <h3>Scan to Pay</h3>
+    <img id="qrCodeImgLeft" src="https://upload.wikimedia.org/wikipedia/commons/d/d0/Qr_code_for_mobile_en.svg" alt="QR Code Left" />
+    <p>Use any UPI app to scan and pay for your plan.</p>
+  </div>
+  <div class="popup qr-popup-right" id="qrPopupRight">
+    <span class="close" onclick="closeQR()">×</span>
+    <h3>Scan to Pay</h3>
+    <img id="qrCodeImgRight" src="https://upload.wikimedia.org/wikipedia/commons/d/d0/Qr_code_for_mobile_en.svg" alt="QR Code Right" />
+    <p>Use any UPI app to scan and pay for your plan.</p>
+  </div>
+
   <!-- Popup -->
   <div class="popup" id="popup">
     <span class="close" onclick="closePopup()">×</span>
     <img id="popupImg" src="" alt="Selected Design" />
-  </div>
-
-  <!-- QR Popup -->
-  <div class="popup qr-popup" id="qrPopup">
-    <span class="close" onclick="closeQRPopup()">×</span>
-    <h3>Scan to Pay</h3>
-    <img id="qrCodeImg" src="" alt="QR Code" />
-    <p>Use any UPI app to scan and pay.</p>
   </div>
 
   <script src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
