@@ -120,47 +120,37 @@ document.addEventListener('DOMContentLoaded', () => {
 
   if (submitButton && form && formMessage) {
     submitButton.addEventListener('click', () => {
-      console.log('Submit button clicked'); // Debug log
+      console.log('Submit button clicked');
       if (form.checkValidity()) {
         try {
-          // Get form values
           const name = document.getElementById('name').value.trim();
           const address = document.getElementById('address').value.trim();
           const mobile = document.getElementById('mobile').value.trim();
           const email = document.getElementById('email').value.trim();
           const content = document.getElementById('content').value.trim();
-          const photos = document.getElementById('photos').files;
 
-          // Validate fields
-          if (!name || !address || !mobile || !email || !content || photos.length === 0) {
+          if (!name || !address || !mobile || !email || !content) {
             throw new Error('All fields are required.');
           }
 
-          // Create message
           let message = `New Contact Form Submission:\n\n` +
                         `Name: ${name}\n` +
                         `Address: ${address}\n` +
                         `Mobile: ${mobile}\n` +
                         `Email: ${email}\n` +
                         `Content: ${content}\n` +
-                        `Photos: ${photos.length} file(s) uploaded`;
-
-          // Encode message for WhatsApp URL
+                        `Note: Photos/documents must be sent via WhatsApp in PDF or document format to +918440048355.`;
           const encodedMessage = encodeURIComponent(message);
           const whatsappUrl = `https://wa.me/918440048355?text=${encodedMessage}`;
 
-          console.log('WhatsApp URL:', whatsappUrl); // Debug log
-
-          // Open WhatsApp
+          console.log('WhatsApp URL:', whatsappUrl);
           window.open(whatsappUrl, '_blank');
 
-          // Show success message and alert for photos
           formMessage.style.display = 'block';
-          formMessage.textContent = 'Form submitted successfully! Check WhatsApp.';
+          formMessage.textContent = 'Form submitted successfully! Check WhatsApp for details.';
           formMessage.style.color = '#25D366';
-          alert('Form data sent to WhatsApp! Please send the uploaded photos directly via WhatsApp to +918440048355.');
+          alert('Form data sent to WhatsApp! Please send photos/documents in PDF or document format to +918440048355.');
 
-          // Reset form
           form.reset();
         } catch (error) {
           console.error('Form submission error:', error);
@@ -169,7 +159,7 @@ document.addEventListener('DOMContentLoaded', () => {
           formMessage.style.color = '#DC2626';
         }
       } else {
-        console.log('Form validation failed'); // Debug log
+        console.log('Form validation failed');
         formMessage.style.display = 'block';
         formMessage.textContent = 'Please fill all required fields correctly.';
         formMessage.style.color = '#DC2626';
@@ -179,35 +169,4 @@ document.addEventListener('DOMContentLoaded', () => {
   } else {
     console.error('Form elements not found: submitButton, form, or formMessage');
   }
-
-  // Testimonials Slider
-  let currentIndex = 0;
-  const testimonials = document.querySelectorAll('.testimonial');
-  const totalTestimonials = testimonials.length;
-  const testimonialsSlider = document.getElementById('testimonials-slider');
-
-  function updateTestimonials() {
-    testimonials.forEach((card, index) => {
-      card.style.transform = `translateX(-${currentIndex * 100}%)`;
-    });
-  }
-
-  window.slideLeft = function() {
-    currentIndex = Math.max(0, currentIndex - 1);
-    updateTestimonials();
-  }
-
-  window.slideRight = function() {
-    currentIndex = Math.min(totalTestimonials - 1, currentIndex + 1);
-    updateTestimonials();
-  }
-
-  // Auto-slide every 5 seconds
-  setInterval(() => {
-    currentIndex = (currentIndex + 1) % totalTestimonials;
-    updateTestimonials();
-  }, 5000);
-
-  // Initialize testimonials
-  updateTestimonials();
 });
