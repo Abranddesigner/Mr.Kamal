@@ -60,10 +60,12 @@ document.addEventListener('DOMContentLoaded', () => {
       qrCodeImg.src = 'https://raw.githubusercontent.com/Abranddesigner/Mr.Kamal/main/QR%20Code.jpg';
       qrCodeImg.onerror = () => {
         alert('Failed to load QR code. Please contact +918440048355 to complete payment.');
+        console.error('QR Code failed to load');
       };
       qrPopup.style.display = 'flex';
     } else {
       alert('QR Popup not found. Please contact +918440048355 to complete payment.');
+      console.error('QR Popup elements missing');
     }
   }
 
@@ -81,6 +83,8 @@ document.addEventListener('DOMContentLoaded', () => {
     if (sendSSButton) {
       sendSSButton.href = `https://wa.me/918440048355?text=Hi%20Kamal,%20here’s%20the%20payment%20screenshot%20for%20${encodeURIComponent(product)}.`;
       sendSSButton.style.display = 'block';
+    } else {
+      console.error('Send SS button not found');
     }
   }
 
@@ -91,13 +95,13 @@ document.addEventListener('DOMContentLoaded', () => {
     if (popup && popupImg) {
       popupImg.src = src;
       popupImg.onerror = () => {
-        console.error('Failed to load image:', src);
         alert('Failed to load image. Please try again.');
+        console.error('Image failed to load:', src);
       };
       popup.style.display = 'flex';
     } else {
-      console.error('Popup or popupImg element not found!');
       alert('Image popup not available. Please try again.');
+      console.error('Popup or popupImg element not found');
     }
   }
 
@@ -109,10 +113,10 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   }
 
-  // Contact Form WhatsApp Button
-  const sendWhatsAppButton = document.getElementById('sendWhatsAppButton');
-  if (sendWhatsAppButton) {
-    sendWhatsAppButton.addEventListener('click', () => {
+  // Contact Form Submit Button
+  const submitButton = document.getElementById('submitButton');
+  if (submitButton) {
+    submitButton.addEventListener('click', () => {
       const form = document.getElementById('contactForm');
       const formMessage = document.getElementById('formMessage');
       if (form.checkValidity()) {
@@ -136,10 +140,14 @@ document.addEventListener('DOMContentLoaded', () => {
 
         window.open(whatsappUrl, '_blank');
         alert('Form data sent to WhatsApp! Please send the uploaded photos directly via WhatsApp to +918440048355.');
+        formMessage.style.display = 'block';
+        formMessage.textContent = 'Form submitted successfully!';
+        formMessage.style.color = '#25D366';
         form.reset();
-        formMessage.style.display = 'none';
       } else {
         formMessage.style.display = 'block';
+        formMessage.textContent = 'Please fill all required fields correctly.';
+        formMessage.style.color = '#DC2626';
         form.reportValidity();
       }
     });
