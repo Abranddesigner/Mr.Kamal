@@ -103,6 +103,15 @@ body {
   .qr-popup p {
     color: #D1D5DB;
   }
+  .form-group label {
+    color: #D1D5DB;
+  }
+  .form-group input,
+  .form-group textarea {
+    background-color: #1F2937;
+    color: #FFFFFF;
+    border-color: #4B5563;
+  }
 }
 
 /* Common Classes */
@@ -131,6 +140,22 @@ body {
 .btn-whatsapp {
   background-color: #25D366;
   color: #FFFFFF;
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-size: 16px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.btn-whatsapp:hover {
+  background-color: #128C7E;
+  transform: scale(1.1);
+}
+
+.btn-whatsapp.fixed {
   padding: 16px;
   border-radius: 50%;
   position: fixed;
@@ -138,15 +163,6 @@ body {
   right: 24px;
   z-index: 50;
   font-size: 28px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.btn-whatsapp:hover {
-  background-color: #128C7E;
-  transform: scale(1.1);
 }
 
 .btn-send-ss {
@@ -536,7 +552,7 @@ img[onclick] {
   display: none;
   justify-content: center;
   align-items: center;
-  z-index: 1000;
+  z-index: 10000; /* Increased z-index */
 }
 
 .popup img {
@@ -568,7 +584,7 @@ img[onclick] {
   border-radius: 12px;
   text-align: center;
   max-width: 300px;
-  z-index: 50;
+  z-index: 1000;
 }
 
 .qr-popup h3 {
@@ -650,18 +666,6 @@ footer {
 
 .form-group input[type="file"] {
   padding: 8px;
-}
-
-@media (prefers-color-scheme: dark) {
-  .form-group label {
-    color: #D1D5DB;
-  }
-  .form-group input,
-  .form-group textarea {
-    background-color: #1F2937;
-    color: #FFFFFF;
-    border-color: #4B5563;
-  }
 }
 
 /* Responsive */
