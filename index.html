@@ -81,60 +81,56 @@
       <div class="testimonials-wrapper">
         <h2>Client Testimonials</h2>
         <div class="testimonials-container">
-          <button class="arrow arrow-left" onclick="slideLeft()">❮</button>
-          <div class="testimonials" id="testimonials-slider">
-            <div class="testimonial">
-              <p>Kamal’s designs are a burst of creativity. His precision is unmatched. Highly recommended for branding. A true artist at work!</p>
-              <div class="client-info">
-                <img src="https://raw.githubusercontent.com/Abranddesigner/Mr.Kamal/main/Miss%20Aaru.png" alt="Miss Aaru" />
-                <div class="client-details">
-                  <h3>Miss Aaru</h3>
-                  <p>Creative Director</p>
-                </div>
+          <div class="testimonial-card">
+            <div class="client-info">
+              <img src="https://raw.githubusercontent.com/Abranddesigner/Mr.Kamal/main/Miss%20Aaru.png" alt="Miss Aaru" />
+              <div class="client-details">
+                <h3>Miss Aaru</h3>
+                <p>Creative Director</p>
               </div>
             </div>
-            <div class="testimonial">
-              <p>Innovative ideas transformed our brand. Modern and professional touch. Delivered on time every time. Excellent collaboration!</p>
-              <div class="client-info">
-                <img src="https://raw.githubusercontent.com/Abranddesigner/Mr.Kamal/main/Dr.%20Bindeshwar.jpg" alt="Dr. Bindeshwar" />
-                <div class="client-details">
-                  <h3>Dr. Bindeshwar</h3>
-                  <p>Sr. Consultant</p>
-                </div>
-              </div>
-            </div>
-            <div class="testimonial">
-              <p>Creativity shines in every design. Timely delivery with detail. Stunning visual impact. Highly satisfied client!</p>
-              <div class="client-info">
-                <img src="https://raw.githubusercontent.com/Abranddesigner/Mr.Kamal/main/Kuldeep%20Poonia.jpg" alt="Kuldeep Poonia" />
-                <div class="client-details">
-                  <h3>Kuldeep Poonia</h3>
-                  <p>Marketing Lead</p>
-                </div>
-              </div>
-            </div>
-            <div class="testimonial">
-              <p>Enhanced our materials with style. Precision in every stroke. Passion for design evident. Great experience overall!</p>
-              <div class="client-info">
-                <img src="https://raw.githubusercontent.com/Abranddesigner/Mr.Kamal/main/Dr%20Shyam.png" alt="Dr. Shyam" />
-                <div class="client-details">
-                  <h3>Dr. Shyam</h3>
-                  <p>Lead Designer</p>
-                </div>
-              </div>
-            </div>
-            <div class="testimonial">
-              <p>Elevated our media presence. Dynamic and impactful designs. Passion drives his work. Top-notch service!</p>
-              <div class="client-info">
-                <img src="https://raw.githubusercontent.com/Abranddesigner/Mr.Kamal/main/RDS.jpg" alt="RDS" />
-                <div class="client-details">
-                  <h3>RDS</h3>
-                  <p>Creative Head</p>
-                </div>
-              </div>
-            </div>
+            <p>Kamal’s designs are a burst of creativity. His precision is unmatched. Highly recommended for branding. A true artist at work!</p>
           </div>
-          <button class="arrow arrow-right" onclick="slideRight()">❯</button>
+          <div class="testimonial-card">
+            <div class="client-info">
+              <img src="https://raw.githubusercontent.com/Abranddesigner/Mr.Kamal/main/Dr.%20Bindeshwar.jpg" alt="Dr. Bindeshwar" />
+              <div class="client-details">
+                <h3>Dr. Bindeshwar</h3>
+                <p>Sr. Consultant</p>
+              </div>
+            </div>
+            <p>Innovative ideas transformed our brand. Modern and professional touch. Delivered on time every time. Excellent collaboration!</p>
+          </div>
+          <div class="testimonial-card">
+            <div class="client-info">
+              <img src="https://raw.githubusercontent.com/Abranddesigner/Mr.Kamal/main/Kuldeep%20Poonia.jpg" alt="Kuldeep Poonia" />
+              <div class="client-details">
+                <h3>Kuldeep Poonia</h3>
+                <p>Marketing Lead</p>
+              </div>
+            </div>
+            <p>Creativity shines in every design. Timely delivery with detail. Stunning visual impact. Highly satisfied client!</p>
+          </div>
+          <div class="testimonial-card">
+            <div class="client-info">
+              <img src="https://raw.githubusercontent.com/Abranddesigner/Mr.Kamal/main/Dr%20Shyam.png" alt="Dr. Shyam" />
+              <div class="client-details">
+                <h3>Dr. Shyam</h3>
+                <p>Lead Designer</p>
+              </div>
+            </div>
+            <p>Enhanced our materials with style. Precision in every stroke. Passion for design evident. Great experience overall!</p>
+          </div>
+          <div class="testimonial-card">
+            <div class="client-info">
+              <img src="https://raw.githubusercontent.com/Abranddesigner/Mr.Kamal/main/RDS.jpg" alt="RDS" />
+              <div class="client-details">
+                <h3>RDS</h3>
+                <p>Creative Head</p>
+              </div>
+            </div>
+            <p>Elevated our media presence. Dynamic and impactful designs. Passion drives his work. Top-notch service!</p>
+          </div>
         </div>
       </div>
 
@@ -180,9 +176,15 @@
               <label for="content">Content:</label>
               <textarea id="content" name="content" required></textarea>
             </div>
-            <div class="form-group">
-              <label for="photos">Upload Photos (Minimum 1):</label>
-              <input type="file" id="photos" name="photos[]" accept="image/*" multiple required />
+            <div class="form-note">
+              <h4>Important Notes:</h4>
+              <ul>
+                <li>Design will be delivered within 24 hours.</li>
+                <li>Photos/documents must be sent via WhatsApp in PDF or document format.</li>
+                <li>CDR files will incur an additional charge.</li>
+                <li>Orders below ₹1000 require 100% advance payment.</li>
+                <li>Orders above ₹1000 require 75% advance payment.</li>
+              </ul>
             </div>
             <button type="button" class="btn btn-primary" id="submitButton">Submit</button>
           </form>
@@ -218,5 +220,5 @@
 
   <script src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
   <script src="scripts.js"></script>
-<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'937c9bc69998bfa0',t:'MTc0NTkwNjczNS4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</body>
 </html>
