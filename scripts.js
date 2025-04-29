@@ -133,7 +133,7 @@ document.addEventListener('DOMContentLoaded', () => {
             throw new Error('All fields are required.');
           }
 
-          let message = `New Contact Form Submission:\n\n` +
+          let message = `New Order Submission:\n\n` +
                         `Name: ${name}\n` +
                         `Address: ${address}\n` +
                         `Mobile: ${mobile}\n` +
@@ -147,15 +147,15 @@ document.addEventListener('DOMContentLoaded', () => {
           window.open(whatsappUrl, '_blank');
 
           formMessage.style.display = 'block';
-          formMessage.textContent = 'Form submitted successfully! Check WhatsApp for details.';
+          formMessage.textContent = 'Order submitted successfully! Check WhatsApp for details.';
           formMessage.style.color = '#25D366';
-          alert('Form data sent to WhatsApp! Please send photos/documents in PDF or document format to +918440048355.');
+          alert('Order data sent to WhatsApp! Please send photos/documents in PDF or document format to +918440048355.');
 
           form.reset();
         } catch (error) {
           console.error('Form submission error:', error);
           formMessage.style.display = 'block';
-          formMessage.textContent = 'Error sending data to WhatsApp. Please try again.';
+          formMessage.textContent = 'Error sending order to WhatsApp. Please try again.';
           formMessage.style.color = '#DC2626';
         }
       } else {
