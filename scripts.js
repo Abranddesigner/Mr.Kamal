@@ -16,19 +16,23 @@ document.addEventListener('DOMContentLoaded', () => {
   // Mobile Menu Toggle
   const menuToggle = document.querySelector('.menu-toggle');
   const navbar = document.querySelector('#navbar');
-  menuToggle.addEventListener('click', () => {
-    navbar.classList.toggle('show');
-    menuToggle.setAttribute('aria-expanded', navbar.classList.contains('show'));
-  });
+  if (menuToggle && navbar) {
+    menuToggle.addEventListener('click', () => {
+      navbar.classList.toggle('show');
+      menuToggle.setAttribute('aria-expanded', navbar.classList.contains('show'));
+    });
+  }
 
   // Hover Conversion for Title
   const headerTitle = document.getElementById('header-title');
-  headerTitle.addEventListener('mouseover', () => {
-    headerTitle.textContent = headerTitle.getAttribute('data-hover-text');
-  });
-  headerTitle.addEventListener('mouseout', () => {
-    headerTitle.textContent = 'Mr. Kamal Designer';
-  });
+  if (headerTitle) {
+    headerTitle.addEventListener('mouseover', () => {
+      headerTitle.textContent = headerTitle.getAttribute('data-hover-text');
+    });
+    headerTitle.addEventListener('mouseout', () => {
+      headerTitle.textContent = 'Mr. Kamal Designer';
+    });
+  }
 
   // Handle Buy Now Click
   window.handleBuyNow = function(product, amount) {
@@ -44,7 +48,7 @@ document.addEventListener('DOMContentLoaded', () => {
       showSendSSButton(product);
     } catch (error) {
       alert('Payment initiation failed. Please try again or contact support at +918440048355.');
-      console.error(error);
+      console.error('Buy Now Error:', error);
     }
   }
 
@@ -54,7 +58,12 @@ document.addEventListener('DOMContentLoaded', () => {
     const qrCodeImg = document.getElementById('qrCodeImg');
     if (qrPopup && qrCodeImg) {
       qrCodeImg.src = 'https://raw.githubusercontent.com/Abranddesigner/Mr.Kamal/main/QR%20Code.jpg';
+      qrCodeImg.onerror = () => {
+        alert('Failed to load QR code. Please contact +918440048355 to complete payment.');
+      };
       qrPopup.style.display = 'flex';
+    } else {
+      alert('QR Popup not found. Please contact +918440048355 to complete payment.');
     }
   }
 
@@ -81,9 +90,14 @@ document.addEventListener('DOMContentLoaded', () => {
     const popupImg = document.getElementById('popupImg');
     if (popup && popupImg) {
       popupImg.src = src;
+      popupImg.onerror = () => {
+        console.error('Failed to load image:', src);
+        alert('Failed to load image. Please try again.');
+      };
       popup.style.display = 'flex';
     } else {
       console.error('Popup or popupImg element not found!');
+      alert('Image popup not available. Please try again.');
     }
   }
 
@@ -95,41 +109,39 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   }
 
-  // Contact Form Submission
-  const contactForm = document.getElementById('contactForm');
-  if (contactForm) {
-    contactForm.addEventListener('submit', (event) => {
-      event.preventDefault();
+  // Contact Form WhatsApp Button
+  const sendWhatsAppButton = document.getElementById('sendWhatsAppButton');
+  if (sendWhatsAppButton) {
+    sendWhatsAppButton.addEventListener('click', () => {
+      const form = document.getElementById('contactForm');
+      const formMessage = document.getElementById('formMessage');
+      if (form.checkValidity()) {
+        const name = document.getElementById('name').value;
+        const address = document.getElementById('address').value;
+        const mobile = document.getElementById('mobile').value;
+        const email = document.getElementById('email').value;
+        const content = document.getElementById('content').value;
+        const photos = document.getElementById('photos').files;
 
-      // Collect form data
-      const name = document.getElementById('name').value;
-      const address = document.getElementById('address').value;
-      const mobile = document.getElementById('mobile').value;
-      const email = document.getElementById('email').value;
-      const content = document.getElementById('content').value;
-      const photos = document.getElementById('photos').files;
+        let message = `New Contact Form Submission:\n\n` +
+                      `Name: ${name}\n` +
+                      `Address: ${address}\n` +
+                      `Mobile: ${mobile}\n` +
+                      `Email: ${email}\n` +
+                      `Content: ${content}\n` +
+                      `Photos: ${photos.length} file(s) uploaded`;
 
-      // Create message for WhatsApp
-      let message = `New Contact Form Submission:\n\n` +
-                    `Name: ${name}\n` +
-                    `Address: ${address}\n` +
-                    `Mobile: ${mobile}\n` +
-                    `Email: ${email}\n` +
-                    `Content: ${content}\n` +
-                    `Photos: ${photos.length} file(s) uploaded`;
+        const encodedMessage = encodeURIComponent(message);
+        const whatsappUrl = `https://wa.me/918440048355?text=${encodedMessage}`;
 
-      // Encode message for WhatsApp
-      const encodedMessage = encodeURIComponent(message);
-      const whatsappUrl = `https://wa.me/918440048355?text=${encodedMessage}`;
-
-      // Open WhatsApp
-      window.open(whatsappUrl, '_blank');
-
-      // Alert user to send photos separately
-      alert('Form submitted! Please send the uploaded photos directly via WhatsApp to +918440048355.');
-
-      // Reset form
-      contactForm.reset();
+        window.open(whatsappUrl, '_blank');
+        alert('Form data sent to WhatsApp! Please send the uploaded photos directly via WhatsApp to +918440048355.');
+        form.reset();
+        formMessage.style.display = 'none';
+      } else {
+        formMessage.style.display = 'block';
+        form.reportValidity();
+      }
     });
   }
 
