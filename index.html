@@ -23,7 +23,7 @@
 </head>
 <body>
   <!-- WhatsApp Button -->
-  <a href="https://wa.me/918440048355" class="btn btn-whatsapp" target="_blank" title="Chat on WhatsApp">
+  <a href="https://wa.me/918440048355" class="btn btn-whatsapp fixed" target="_blank" title="Chat on WhatsApp">
     <i class="fab fa-whatsapp"></i>
   </a>
 
@@ -50,7 +50,6 @@
   <main>
     <!-- Home Section -->
     <section id="home" class="section">
-      <!-- Title Moved Here -->
       <div class="title">
         <h1 id="header-title" data-hover-text="कमल डिज़ाइनर">Mr. Kamal Designer</h1>
         <div class="tagline">A Brand Designer</div>
@@ -185,9 +184,9 @@
               <label for="photos">Upload Photos (Minimum 1):</label>
               <input type="file" id="photos" name="photos[]" accept="image/*" multiple required />
             </div>
-            <button type="button" class="btn btn-whatsapp" id="sendWhatsAppButton"><i class="fab fa-whatsapp"></i> Send via WhatsApp</button>
+            <button type="button" class="btn btn-primary" id="submitButton">Submit</button>
           </form>
-          <p id="formMessage" style="display: none; color: #DC2626; margin-top: 10px;">Please fill the form and click Send via WhatsApp to submit.</p>
+          <p id="formMessage" style="display: none; color: #DC2626; margin-top: 10px;"></p>
         </section>
       </section>
     </section>
