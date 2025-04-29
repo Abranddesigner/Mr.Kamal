@@ -57,7 +57,7 @@
 
       <div class="welcome">
         <h2>Welcome to My Design World</h2>
-       <p>I’m Kamal Meena, a passionate designer from Rajasthan, crafting visual stories since 2019. My designs blend vibrant colors with modern aesthetics to bring your vision to life. Specializing in branding, logos, and digital art, I create impactful identities for businesses. Every project is a journey of creativity, precision, and a deep love for design. Let’s collaborate to turn your ideas into stunning realities—your brand deserves the best!</p>
+        <p>I’m Kamal Meena, a passionate designer from Rajasthan, crafting visual stories since 2019. My designs blend vibrant colors with modern aesthetics to bring your vision to life. I specialize in branding, logos, and digital art, creating impactful identities for businesses. Every project is a journey of creativity, precision, and a deep love for design. Let’s collaborate to turn your ideas into stunning realities—your brand deserves the best!</p>
         <a href="https://wa.me/918440048355?text=Hi%20Kamal%2C%20I%20want%20to%20hire%20you%20for%20a%20design%20project" class="btn btn-primary" target="_blank">Hire Me</a>
       </div>
 
@@ -85,7 +85,7 @@
               <img src="https://raw.githubusercontent.com/Abranddesigner/Mr.Kamal/main/Miss%20Aaru.png" alt="Miss Aaru" />
               <div class="client-details">
                 <h3>Miss Aaru</h3>
-                <p>Director of AD Quick India, Delhi</p>
+                <p>Creative Director</p>
               </div>
             </div>
           </div>
@@ -94,8 +94,8 @@
             <div class="client-info">
               <img src="https://raw.githubusercontent.com/Abranddesigner/Mr.Kamal/main/Dr.%20Bindeshwar.jpg" alt="Dr. Bindeshwar" />
               <div class="client-details">
-                <h3>Dr. Bindeshwar Rao</h3>
-                <p>Director of Seven Star Acadamy, Ranchi</p>
+                <h3>Dr. Bindeshwar</h3>
+                <p>Sr. Consultant</p>
               </div>
             </div>
           </div>
@@ -112,82 +112,101 @@
           <div class="testimonial-card">
             <p>Enhanced our materials with style. Precision in every stroke. Passion for design evident. Great experience overall!</p>
             <div class="client-info">
-              <img src="https://raw.githubusercontent.com/Abranddesigner/Mr.Kamal/refs/heads/main/Arpan%20Saini.jpg" alt="Arpan Saini" />
+              <img src="https://raw.githubusercontent.com/Abranddesigner/Mr.Kamal/main/Dr%20Shyam.png" alt="Dr. Shyam" />
               <div class="client-details">
-                <h3>Arpan Saini</h3>
-                <p>Managing Director of Arpan School, UP</p>
+                <h3>Dr. Shyam</h3>
+                <p>Lead Designer</p>
               </div>
             </div>
           </div>
           <div class="testimonial-card">
             <p>Elevated our media presence. Dynamic and impactful designs. Passion drives his work. Top-notch service!</p>
             <div class="client-info">
-              <img src="https://raw.githubusercontent.com/Abranddesigner/Mr.Kamal/main/RDS.jpg" alt="Radhe Shyam" />
+              <img src="https://raw.githubusercontent.com/Abranddesigner/Mr.Kamal/main/RDS.jpg" alt="RDS" />
               <div class="client-details">
-                <h3>Radhe Shyam</h3>
-                <p>Principal of Subhash School, Sikar</p>
+                <h3>RDS</h3>
+                <p>Creative Head</p>
               </div>
             </div>
           </div>
         </div>
       </div>
 
-      <!-- About Section -->
-      <section id="about" class="section about">
-        <h2>About Me</h2>
-        <p class="subtitle">Crafting Brands with Creativity</p>
-        <div class="about-content">
-          <img src="https://raw.githubusercontent.com/Abranddesigner/Mr.Kamal/main/Mrkamalmeena.jpg" alt="Kamal Meena Profile Picture" class="about-img" />
-          <div class="bio">
-            <p><strong>Name:</strong> Kamal Meena</p>
-            <p><strong>DOB:</strong> 15 March 2000</p>
-            <p><strong>Address:</strong> Parasrampura, Teh Nawalgarh, Dist. Jhunjhunu, Rajasthan</p>
-            <p>I started my design career in 2019, specializing in vibrant designs.</p>
-            <p>My passion is creating powerful visual identities with dynamic colors.</p>
-            <p>From logos to social media graphics, I build unique brand presence.</p>
-            <a href="gallery.html" class="btn btn-primary">View My Work</a>
+      <!-- Order Now Section -->
+      <section id="contact-form" class="section">
+        <h2>Order Now</h2>
+        <p class="subtitle">Place Your Design Order Today</p>
+        <form id="contactForm" enctype="multipart/form-data">
+          <div class="form-group">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required />
+          </div>
+          <div class="form-group">
+            <label for="address">Address:</label>
+            <textarea id="address" name="address" required></textarea>
+          </div>
+          <div class="form-group">
+            <label for="mobile">Mobile Number:</label>
+            <input type="tel" id="mobile" name="mobile" pattern="[0-9]{10}" required />
+          </div>
+          <div class="form-group">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required />
+          </div>
+          <div class="form-group">
+            <label for="content">Content:</label>
+            <textarea id="content" name="content" required></textarea>
+          </div>
+          <div class="form-note">
+            <h4>Important Notes:</h4>
+            <ul>
+              <li>Design will be delivered within 24 hours.</li>
+              <li>Photos/documents must be sent via WhatsApp in PDF or document format.</li>
+              <li>CDR files will incur an additional charge.</li>
+              <li>Orders below ₹1000 require 100% advance payment.</li>
+              <li>Orders above ₹1000 require 75% advance payment.</li>
+            </ul>
+          </div>
+          <button type="button" class="btn btn-primary" id="submitButton">Place Order</button>
+        </form>
+        <p id="formMessage" style="display: none; color: #DC2626; margin-top: 10px;"></p>
+      </section>
+
+      <!-- Digital Marketing Plan Section -->
+      <section id="digital-marketing-plan" class="section">
+        <h2>Digital Marketing Plan</h2>
+        <div class="plan-container">
+          <div class="plan-item silver">
+            <h3>1 Month</h3>
+            <p>20 posts | 4 reels</p>
+            <p class="price">₹4,599</p>
+            <button class="btn btn-buy-now" onclick="handleBuyNow('1 Month Plan', 4599)">buy now</button>
+          </div>
+          <div class="plan-item gray">
+            <h3>3 Months</h3>
+            <p>60 posts | 12 reels</p>
+            <p class="price">₹13,599</p>
+            <button class="btn btn-buy-now" onclick="handleBuyNow('3 Month Plan', 13599)">buy now</button>
+          </div>
+          <div class="plan-item silver">
+            <h3>6 Months</h3>
+            <p>120 posts | 24 reels</p>
+            <p class="price">₹24,599</p>
+            <button class="btn btn-buy-now" onclick="handleBuyNow('6 Month Plan', 24599)">buy now</button>
+          </div>
+          <div class="plan-item gray">
+            <h3>12 Months</h3>
+            <p>240 posts | 48 reels</p>
+            <p class="price">₹47,599</p>
+            <button class="btn btn-buy-now" onclick="handleBuyNow('12 Month Plan', 47599)">buy now</button>
           </div>
         </div>
-
-        <!-- Contact Form -->
-        <section id="contact-form" class="section">
-          <h2>Order Now</h2>
-          <p class="subtitle">Submit your details and project requirements</p>
-          <form id="contactForm" enctype="multipart/form-data">
-            <div class="form-group">
-              <label for="name">Name:</label>
-              <input type="text" id="name" name="name" required />
-            </div>
-            <div class="form-group">
-              <label for="address">Address:</label>
-              <textarea id="address" name="address" required></textarea>
-            </div>
-            <div class="form-group">
-              <label for="mobile">Mobile Number:</label>
-              <input type="tel" id="mobile" name="mobile" pattern="[0-9]{10}" required />
-            </div>
-            <div class="form-group">
-              <label for="email">Email:</label>
-              <input type="email" id="email" name="email" required />
-            </div>
-            <div class="form-group">
-              <label for="content">Content:</label>
-              <textarea id="content" name="content" required></textarea>
-            </div>
-            <div class="form-note">
-              <h4>Important Notes:</h4>
-              <ul>
-                <li>Design will be delivered within 24 hours.</li>
-                <li>Photos/documents must be sent via WhatsApp in PDF or document format.</li>
-                <li>CDR files will incur an additional charge.</li>
-                <li>Orders below ₹1000 require 100% advance payment.</li>
-                <li>Orders above ₹1000 require 75% advance payment.</li>
-              </ul>
-            </div>
-            <button type="button" class="btn btn-primary" id="submitButton">Submit</button>
-          </form>
-          <p id="formMessage" style="display: none; color: #DC2626; margin-top: 10px;"></p>
-        </section>
+        <ul class="plan-note">
+          <li>24/7 hours WhatsApp support</li>
+          <li>Social media platform updating and uploading (Facebook, Instagram, X)</li>
+          <li>Trending hashtags and captions</li>
+          <li>Sunday not included (if any important day, it will be scheduled on a prior day)</li>
+        </ul>
       </section>
     </section>
   </main>
