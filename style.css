@@ -47,7 +47,7 @@ body {
   animation: slideUp 1s ease forwards;
 }
 
-.btn, .title h1, .recent-designs h3, .testimonial-card, .marketing-card {
+.btn, .title h1, .recent-designs h3, .testimonial-card, .marketing-card, .cdr-item {
   animation: fadeIn 0.5s ease forwards;
 }
 
@@ -102,6 +102,19 @@ body {
     color: #FFFFFF;
   }
   .marketing-card p {
+    color: #D1D5DB;
+  }
+  .cdr-plan {
+    background-color: #1F2937;
+  }
+  .cdr-list {
+    background: rgba(31, 41, 55, 0.1);
+  }
+  .cdr-item {
+    border-bottom: 1px solid #4B5563;
+    color: #FFFFFF;
+  }
+  .cdr-details p {
     color: #D1D5DB;
   }
   .payment-info {
@@ -534,6 +547,50 @@ img[onclick] {
 }
 
 /* CDR Section */
+.cdr-plan {
+  padding: 20px;
+  border-radius: 12px;
+}
+
+.cdr-list {
+  list-style: none;
+  max-width: 600px;
+  margin: 0 auto;
+  background: #FFFFFF;
+  border: 1px solid #E5E7EB;
+  border-radius: 8px;
+}
+
+.cdr-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px;
+  border-bottom: 1px solid #E5E7EB;
+  color: #111827;
+}
+
+.cdr-item:last-child {
+  border-bottom: none;
+}
+
+.cdr-details {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.cdr-details h3 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #DC2626;
+}
+
+.cdr-details p {
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
 .payment-info {
   max-width: 600px;
   margin: 32px auto;
@@ -753,6 +810,15 @@ footer {
   .marketing-card {
     width: 100%;
     max-width: 350px;
+  }
+  .cdr-item {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+  .cdr-details {
+    flex-direction: column;
+    align-items: flex-start;
   }
 }
 
