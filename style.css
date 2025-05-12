@@ -1,11 +1,14 @@
 /* Import Font with Hindi support */
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari:wght@400;600;700&display=swap');
 
 /* Theme Variables */
 :root {
   --primary-bg: linear-gradient(90deg, #005BEA, #00C4FF);
   --secondary-bg: linear-gradient(90deg, #E0F7FA, #B2EBF2);
+  --tile-gradient: linear-gradient(135deg, #F9FAFB, #E5E7EB);
+  --button-gradient: linear-gradient(90deg, #D32F2F, #B71C1C);
+  --button-gradient-hover: linear-gradient(90deg, #B71C1C, #D32F2F);
 }
 
 /* Reset and Base */
@@ -16,9 +19,9 @@
 }
 
 body {
-  font-family: 'Montserrat', 'Noto Sans Devanagari', sans-serif;
+  font-family: 'Roboto', 'Noto Sans Devanagari', sans-serif;
   background-color: #FFFFFF;
-  color: #111827;
+  color: #1A202C;
   line-height: 1.6;
   transition: background-color 0.3s ease, color 0.3s ease;
 }
@@ -35,7 +38,7 @@ body {
 }
 
 .section {
-  padding: 60px 20px;
+  padding: 80px 20px;
   max-width: 1200px;
   margin: 0 auto;
   text-align: center;
@@ -54,29 +57,29 @@ body {
 /* System-based Dark Mode */
 @media (prefers-color-scheme: dark) {
   body {
-    background-color: #111827;
-    color: #FFFFFF;
+    background-color: #1A202C;
+    color: #E2E8F0;
   }
   header {
-    background-color: #1F2937;
+    background-color: #2D3748;
   }
   .section h2 {
     color: #FCA5A5;
   }
   .subtitle {
-    color: #D1D5DB;
+    color: #A0AEC0;
   }
   .title {
     color: #FCA5A5;
   }
   .title .tagline {
-    color: #D1D5DB;
+    color: #A0AEC0;
   }
   .about {
-    background-color: #1F2937;
+    background-color: #2D3748;
   }
   .portfolio-card {
-    background-color: #1F2937;
+    background-color: #2D3748;
   }
   .portfolio-card h3 {
     color: #FCA5A5;
@@ -85,56 +88,56 @@ body {
     color: #FCA5A5;
   }
   .testimonials-wrapper {
-    background-color: #1F2937;
+    background-color: #2D3748;
   }
   .testimonial-card {
-    background: rgba(31, 41, 55, 0.1);
-    color: #FFFFFF;
+    background: rgba(45, 55, 72, 0.1);
+    color: #E2E8F0;
   }
   .client-info p {
-    color: #D1D5DB;
+    color: #A0AEC0;
   }
   .marketing-plan {
-    background-color: #1F2937;
+    background-color: #2D3748;
   }
   .marketing-card {
-    background: rgba(31, 41, 55, 0.1);
-    color: #FFFFFF;
+    background: rgba(45, 55, 72, 0.1);
+    color: #E2E8F0;
   }
   .marketing-card p {
-    color: #D1D5DB;
+    color: #A0AEC0;
   }
   .cdr-plan {
-    background-color: #1F2937;
+    background: linear-gradient(135deg, #2D3748, #1A202C);
   }
   .cdr-tile {
-    background: rgba(31, 41, 55, 0.1);
-    border-color: #4B5563;
-    color: #FFFFFF;
+    background: linear-gradient(135deg, #4A5568, #2D3748);
+    border-color: #4A5568;
+    color: #E2E8F0;
   }
   .cdr-tile p {
-    color: #D1D5DB;
+    color: #A0AEC0;
   }
   .payment-info {
-    color: #D1D5DB;
+    color: #A0AEC0;
   }
   .qr-popup {
-    background-color: #1F2937;
+    background-color: #2D3748;
   }
   .qr-popup p {
-    color: #D1D5DB;
+    color: #A0AEC0;
   }
   .form-group label {
-    color: #D1D5DB;
+    color: #A0AEC0;
   }
   .form-group input,
   .form-group textarea {
-    background-color: #1F2937;
-    color: #FFFFFF;
-    border-color: #4B5563;
+    background-color: #2D3748;
+    color: #E2E8F0;
+    border-color: #4A5568;
   }
   .form-note {
-    background: rgba(31, 41, 55, 0.1);
+    background: rgba(45, 55, 72, 0.1);
     border-color: #FCA5A5;
   }
   .form-note h4 {
@@ -147,22 +150,23 @@ body {
   display: inline-block;
   padding: 12px 24px;
   border-radius: 8px;
-  font-weight: 600;
+  font-weight: 500;
   text-transform: uppercase;
   text-decoration: none;
   transition: all 0.3s ease;
 }
 
 .btn-primary {
-  background-color: #DC2626;
+  background: var(--button-gradient);
   color: #FFFFFF;
-  border: 2px solid #DC2626;
+  border: none;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
 }
 
 .btn-primary:hover {
-  background-color: #FFFFFF;
-  color: #DC2626;
-  transform: scale(1.05) rotate(2deg);
+  background: var(--button-gradient-hover);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
 
 .btn-whatsapp {
@@ -206,16 +210,17 @@ body {
 }
 
 .section h2 {
-  font-size: 2rem;
+  font-size: 2.5rem;
   font-weight: 700;
-  color: #DC2626;
-  margin-bottom: 16px;
+  color: #D32F2F;
+  margin-bottom: 20px;
 }
 
 .subtitle {
-  font-size: 1.2rem;
-  color: #6B7280;
-  margin-bottom: 24px;
+  font-size: 1.3rem;
+  font-weight: 300;
+  color: #4A5568;
+  margin-bottom: 40px;
 }
 
 /* Header */
@@ -270,8 +275,8 @@ nav {
 }
 
 nav a {
-  color: #111827;
-  font-weight: 600;
+  color: #1A202C;
+  font-weight: 500;
   font-size: 1rem;
   text-decoration: none;
   text-transform: uppercase;
@@ -279,24 +284,24 @@ nav a {
 }
 
 nav a:hover {
-  color: #DC2626;
+  color: #D32F2F;
 }
 
 nav a.active {
-  color: #DC2626;
-  border-bottom: 2px solid #DC2626;
+  color: #D32F2F;
+  border-bottom: 2px solid #D32F2F;
 }
 
 .menu-toggle {
   display: none;
   font-size: 1.8rem;
   cursor: pointer;
-  color: #111827;
+  color: #1A202C;
 }
 
 /* Title */
 .title {
-  color: #DC2626;
+  color: #D32F2F;
   text-align: center;
   transition: color 0.3s ease;
   margin-bottom: 20px;
@@ -308,12 +313,12 @@ nav a.active {
 }
 
 .title h1:hover {
-  color: #DC2626;
+  color: #D32F2F;
 }
 
 .title .tagline {
   font-size: 1rem;
-  color: #111827;
+  color: #1A202C;
 }
 
 /* Welcome Section */
@@ -335,7 +340,7 @@ nav a.active {
 .recent-designs h3 {
   font-size: 1.5rem;
   font-weight: 700;
-  color: #DC2626;
+  color: #D32F2F;
   background-color: #FFFFFF;
   padding: 10px 20px;
   border-radius: 5px;
@@ -426,13 +431,13 @@ img[onclick] {
   padding: 16px;
   font-size: 1.2rem;
   font-weight: 600;
-  color: #DC2626;
+  color: #D32F2F;
 }
 
 .price {
-  font-size: 1.2rem;
-  font-weight: 700;
-  color: #DC2626;
+  font-size: 1.4rem;
+  font-weight: 500;
+  color: #D32F2F;
   margin-bottom: 12px;
 }
 
@@ -456,7 +461,7 @@ img[onclick] {
   padding: 24px;
   border-radius: 12px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-  color: #111827;
+  color: #1A202C;
   width: 300px;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
@@ -493,7 +498,7 @@ img[onclick] {
 
 .testimonial-card .client-info p {
   font-size: 0.9rem;
-  color: #6B7280;
+  color: #4A5568;
 }
 
 /* Digital Marketing Plan Section */
@@ -517,7 +522,7 @@ img[onclick] {
   padding: 24px;
   border-radius: 12px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-  color: #111827;
+  color: #1A202C;
   width: 250px;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
@@ -530,7 +535,7 @@ img[onclick] {
 .marketing-card h3 {
   font-size: 1.2rem;
   font-weight: 600;
-  color: #DC2626;
+  color: #D32F2F;
   margin-bottom: 12px;
 }
 
@@ -546,55 +551,60 @@ img[onclick] {
 
 /* CDR Section */
 .cdr-plan {
-  padding: 20px;
-  border-radius: 12px;
+  padding: 40px;
+  border-radius: 16px;
+  background: linear-gradient(135deg, #F7FAFC, #EDF2F7);
 }
 
 .cdr-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 20px;
-  max-width: 800px;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 30px;
+  max-width: 900px;
   margin: 0 auto;
 }
 
 .cdr-tile {
-  background: #FFFFFF;
-  border: 1px solid #E5E7EB;
-  border-radius: 8px;
-  padding: 20px;
+  background: var(--tile-gradient);
+  border: 1px solid #E2E8F0;
+  border-radius: 12px;
+  padding: 30px 20px;
   text-align: center;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .cdr-tile:hover {
   transform: translateY(-5px);
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
 }
 
 .cdr-tile h3 {
-  font-size: 1.2rem;
-  font-weight: 600;
-  color: #DC2626;
-  margin-bottom: 8px;
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: #D32F2F;
+  margin-bottom: 12px;
 }
 
 .cdr-tile p {
-  font-size: 1rem;
-  margin-bottom: 12px;
-  line-height: 1.5;
+  font-size: 1.4rem;
+  font-weight: 500;
+  color: #2D3748;
+  margin-bottom: 20px;
 }
 
 .cdr-tile button {
   width: 100%;
+  padding: 12px;
+  font-size: 1rem;
 }
 
 .payment-info {
   max-width: 600px;
-  margin: 32px auto;
-  font-size: 1rem;
-  color: #6B7280;
+  margin: 40px auto 0;
+  font-size: 1.1rem;
+  font-weight: 300;
+  color: #4A5568;
 }
 
 /* Popup */
@@ -628,7 +638,7 @@ img[onclick] {
 }
 
 .popup .close:hover {
-  color: #DC2626;
+  color: #D32F2F;
 }
 
 /* QR Popup */
@@ -656,13 +666,13 @@ img[onclick] {
 
 .qr-popup p {
   font-size: 1rem;
-  color: #6B7280;
+  color: #4A5568;
 }
 
 /* Footer */
 footer {
-  background-color: #111827;
-  color: #FFFFFF;
+  background-color: #1A202C;
+  color: #E2E8F0;
   padding: 40px 20px;
 }
 
@@ -675,12 +685,12 @@ footer {
 }
 
 .contact-icons a {
-  color: #D1D5DB;
+  color: #A0AEC0;
   transition: color 0.3s ease;
 }
 
 .contact-icons a:hover {
-  color: #DC2626;
+  color: #D32F2F;
 }
 
 /* Form Styling */
@@ -696,14 +706,14 @@ footer {
   display: block;
   font-weight: 600;
   margin-bottom: 8px;
-  color: #111827;
+  color: #1A202C;
 }
 
 .form-group input,
 .form-group textarea {
   width: 100%;
   padding: 12px;
-  border: 2px solid #E5E7EB;
+  border: 2px solid #E2E8F0;
   border-radius: 8px;
   font-size: 1rem;
   transition: border-color 0.3s ease;
@@ -711,7 +721,7 @@ footer {
 
 .form-group input:focus,
 .form-group textarea:focus {
-  border-color: #DC2626;
+  border-color: #D32F2F;
   outline: none;
 }
 
@@ -722,7 +732,7 @@ footer {
 
 .form-note {
   background: #FFF1F1;
-  border: 2px solid #DC2626;
+  border: 2px solid #D32F2F;
   border-radius: 8px;
   padding: 15px;
   margin-bottom: 20px;
@@ -731,7 +741,7 @@ footer {
 .form-note h4 {
   font-size: 1.2rem;
   font-weight: 600;
-  color: #DC2626;
+  color: #D32F2F;
   margin-bottom: 10px;
 }
 
@@ -742,7 +752,7 @@ footer {
 
 .form-note li {
   font-size: 1rem;
-  color: #111827;
+  color: #1A202C;
   margin-bottom: 5px;
 }
 
@@ -778,7 +788,13 @@ footer {
     margin-right: 0;
   }
   .section {
-    padding: 40px 16px;
+    padding: 60px 16px;
+  }
+  .section h2 {
+    font-size: 2rem;
+  }
+  .subtitle {
+    font-size: 1.1rem;
   }
   .about-img {
     width: 150px;
@@ -813,11 +829,23 @@ footer {
   .cdr-grid {
     grid-template-columns: 1fr;
   }
+  .cdr-tile {
+    padding: 20px 15px;
+  }
+  .cdr-tile h3 {
+    font-size: 1.3rem;
+  }
+  .cdr-tile p {
+    font-size: 1.2rem;
+  }
+  .payment-info {
+    font-size: 1rem;
+  }
 }
 
 @media (max-width: 600px) {
   .section h2 {
-    font-size: 1.5rem;
+    font-size: 1.8rem;
   }
   .logo img {
     height: 24px;
