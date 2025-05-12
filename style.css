@@ -119,6 +119,15 @@ body {
   .form-note h4 {
     color: #FCA5A5;
   }
+  .marketing-plan table {
+    background-color: #1F2937;
+  }
+  .marketing-plan table th {
+    color: #FCA5A5;
+  }
+  .marketing-plan table td {
+    color: #D1D5DB;
+  }
 }
 
 /* Common Classes */
@@ -225,7 +234,7 @@ header {
 }
 
 .logo img {
-  height: 100px;
+  height: 40px;
   border-radius: 50%;
   transition: transform 0.3s ease;
 }
@@ -483,6 +492,34 @@ img[onclick] {
   color: #6B7280;
 }
 
+/* Digital Marketing Plan Section */
+.marketing-plan table {
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto 20px;
+  border-collapse: collapse;
+  background-color: #D4F7DC;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.marketing-plan table th,
+.marketing-plan table td {
+  padding: 16px;
+  text-align: center;
+  border: 1px solid #E5E7EB;
+}
+
+.marketing-plan table th {
+  background-color: #F9FAFB;
+  color: #DC2626;
+  font-weight: 700;
+}
+
+.marketing-plan table td {
+  font-size: 1rem;
+  color: #111827;
+}
+
 /* Popup */
 .popup {
   position: fixed;
@@ -695,6 +732,6 @@ footer {
     font-size: 1.5rem;
   }
   .logo img {
-    height: 80px;
+    height: 30px;
   }
 }
