@@ -47,7 +47,7 @@ body {
   animation: slideUp 1s ease forwards;
 }
 
-.btn, .title h1, .recent-designs h3, .testimonial-card {
+.btn, .title h1, .recent-designs h3, .testimonial-card, .marketing-card {
   animation: fadeIn 0.5s ease forwards;
 }
 
@@ -94,6 +94,16 @@ body {
   .client-info p {
     color: #D1D5DB;
   }
+  .marketing-plan {
+    background-color: #1F2937;
+  }
+  .marketing-card {
+    background: rgba(31, 41, 55, 0.1);
+    color: #FFFFFF;
+  }
+  .marketing-card p {
+    color: #D1D5DB;
+  }
   .payment-info {
     color: #D1D5DB;
   }
@@ -118,15 +128,6 @@ body {
   }
   .form-note h4 {
     color: #FCA5A5;
-  }
-  .marketing-plan table {
-    background-color: #1F2937;
-  }
-  .marketing-plan table th {
-    color: #FCA5A5;
-  }
-  .marketing-plan table td {
-    color: #D1D5DB;
   }
 }
 
@@ -234,7 +235,7 @@ header {
 }
 
 .logo img {
-  height: 40px;
+  height: 32px;
   border-radius: 50%;
   transition: transform 0.3s ease;
 }
@@ -427,7 +428,7 @@ img[onclick] {
 /* Testimonials */
 .testimonials-wrapper {
   padding: 60px 20px;
-  background-color: #F9FAFB;
+  background-color: #E0F7FA;
 }
 
 .testimonials-container {
@@ -484,40 +485,60 @@ img[onclick] {
   color: #6B7280;
 }
 
+/* Digital Marketing Plan Section */
+.marketing-plan {
+  background-color: #FFF8E1;
+  padding: 20px;
+  border-radius: 12px;
+}
+
+.marketing-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.marketing-card {
+  background: #FFFFFF;
+  padding: 24px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  color: #111827;
+  width: 250px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.marketing-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+}
+
+.marketing-card h3 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #DC2626;
+  margin-bottom: 12px;
+}
+
+.marketing-card p {
+  font-size: 1rem;
+  margin-bottom: 8px;
+  line-height: 1.5;
+}
+
+.marketing-card button {
+  margin-top: 12px;
+}
+
 /* CDR Section */
 .payment-info {
   max-width: 600px;
   margin: 32px auto;
   font-size: 1rem;
   color: #6B7280;
-}
-
-/* Digital Marketing Plan Section */
-.marketing-plan table {
-  width: 100%;
-  max-width: 800px;
-  margin: 0 auto 20px;
-  border-collapse: collapse;
-  background-color: #D4F7DC;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-.marketing-plan table th,
-.marketing-plan table td {
-  padding: 16px;
-  text-align: center;
-  border: 1px solid #E5E7EB;
-}
-
-.marketing-plan table th {
-  background-color: #F9FAFB;
-  color: #DC2626;
-  font-weight: 700;
-}
-
-.marketing-plan table td {
-  font-size: 1rem;
-  color: #111827;
 }
 
 /* Popup */
@@ -725,6 +746,14 @@ footer {
     width: 100%;
     max-width: 350px;
   }
+  .marketing-container {
+    flex-direction: column;
+    align-items: center;
+  }
+  .marketing-card {
+    width: 100%;
+    max-width: 350px;
+  }
 }
 
 @media (max-width: 600px) {
@@ -732,6 +761,6 @@ footer {
     font-size: 1.5rem;
   }
   .logo img {
-    height: 30px;
+    height: 24px;
   }
 }
