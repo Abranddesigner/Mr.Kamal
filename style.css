@@ -251,7 +251,7 @@ header {
 }
 
 .logo img {
-  height: 32px;
+  height: 45px;
   border-radius: 50%;
   transition: transform 0.3s ease;
 }
@@ -848,6 +848,6 @@ footer {
     font-size: 1.8rem;
   }
   .logo img {
-    height: 24px;
+    height: 32px;
   }
 }
