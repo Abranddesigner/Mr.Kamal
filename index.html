@@ -1,228 +1,268 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Mr. Kamal Designer</title>
-  <link rel="stylesheet" href="style (9).css">
-  <script src="scripts (6).js" defer></script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="google-site-verification" content="D2kcy8KfcuZbNWKzvyXrQ4ukBy170cZU97H4cXsg0_8" />
+  <title>Mr. Kamal – Designer</title>
+  <meta name="description" content="Portfolio of Mr. Kamal – Creative designer from Rajasthan specializing in vibrant branding and digital art.">
+  <meta name="keywords" content="Graphic Designer, Color Design, Illustrator India, Logo Designer, Kamal Designer, Rajasthan Artist">
+  <meta name="author" content="Kamal Meena">
+  <meta property="og:title" content="Mr. Kamal – Designer">
+  <meta property="og:description" content="Explore the vibrant works of Mr. Kamal – Designer with a passion for branding.">
+  <meta property="og:image" content="https://abranddesigner.github.io/Mr.Kamal/assets/cover-image.jpg">
+  <meta property="og:url" content="https://abranddesigner.github.io/Mr.Kamal/">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Mr. Kamal – Designer">
+  <meta name="twitter:description" content="Explore the vibrant works of Mr. Kamal – Designer with a passion for branding.">
+  <meta name="twitter:image" content="https://abranddesigner.github.io/Mr.Kamal/assets/cover-image.jpg">
+  <link rel="canonical" href="https://abranddesigner.github.io/Mr.Kamal/" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <a href="https://wa.me/918440048355?text=Hi%20Kamal,%20I%20have%20sent%20the%20payment%20screenshot." target="_blank" class="btn btn-send-ss" id="sendSSButton">
-    <img src="https://img.icons8.com/color/20/000000/whatsapp.png" alt="Send SS">
+  <!-- WhatsApp Button -->
+  <a href="https://wa.me/918440048355" class="btn btn-whatsapp fixed" target="_blank" title="Chat on WhatsApp">
+    <i class="fab fa-whatsapp"></i>
   </a>
-  <a href="https://wa.me/918440048355" target="_blank" class="btn btn-whatsapp">
-    <img src="https://img.icons8.com/color/24/000000/whatsapp.png" alt="WhatsApp">
+
+  <!-- Send SS Button -->
+  <a href="#" id="sendSSButton" class="btn btn-send-ss" target="_blank" title="Send Screenshot on WhatsApp">
+    <i class="fab fa-whatsapp"></i> Send SS
   </a>
+
+  <!-- Header -->
   <header>
     <div class="header-container">
       <div class="logo">
-        <img src="https://raw.githubusercontent.com/Abranddesigner/Mr.Kamal/main/logo.png" alt="Kamal Designer Logo">
+        <a href="index.html"><img src="https://raw.githubusercontent.com/Abranddesigner/Mr.Kamal/main/logo%20kd.png" alt="Kamal Meena Logo" /></a>
       </div>
       <div class="hero-bar">
+        <div class="menu-toggle" onclick="toggleMenu()">☰</div>
         <nav id="navbar">
-          <a href="index (9).html" class="active">Home</a>
-          <a href="gallery (5).html">Gallery</a>
-          <a href="cdr (7).html">CDR</a>
-          <a href="#">Portfolio</a>
-          <a href="#">Resume</a>
+          <a href="index.html" class="active">Home</a>
+          <a href="gallery.html">Gallery</a>
+          <a href="cdr.html">CDR</a>
+          <a href="https://drive.google.com/file/d/1Os9fcZf-2Zth27v9UccVAAslLQTffVuL/view?usp=drivesdk" target="_blank">Portfolio</a>
+          <a href="https://raw.githubusercontent.com/ideogram682/Mr.Kamal/main/Mr.%20Kamal%20Resume.jpeg" target="_blank">Resume</a>
         </nav>
       </div>
-      <span class="menu-toggle" aria-label="Toggle Menu">☰</span>
     </div>
   </header>
+
+  <!-- Main Content -->
   <main>
-    <section class="section title">
+    <!-- Home Section -->
+    <section id="home" class="section">
       <div class="title">
         <h1 id="header-title" data-hover-text="कमल डिज़ाइनर">Mr. Kamal Designer</h1>
-        <p class="tagline">A Brand Designer</p>
+        <div class="tagline">A Brand Designer</div>
       </div>
-    </section>
-    <section class="section welcome">
-      <h2>Welcome to My Design World</h2>
-      <p>I’m Kamal Meena, a passionate designer from Rajasthan, crafting visual stories since 2019. My designs blend vibrant colors with modern aesthetics to bring your vision to life. Specializing in branding, logos, and digital art, I create impactful identities for businesses. Every project is a journey of creativity, precision, and a deep love for design. Let’s collaborate to turn your ideas into stunning realities—your brand deserves the best!</p>
-      <a href="https://wa.me/918440048355" class="btn btn-primary">Hire Me</a>
-    </section>
-    <section class="section recent-designs">
-      <h3>Recent Designs</h3>
-      <div class="slider">
-        <div class="slider-track">
-          <img src="https://raw.githubusercontent.com/Abranddesigner/Mr.Kamal/main/recent/recent1.jpg" alt="Recent Design 1" onclick="openPopup(this.src)">
-          <img src="https://raw.githubusercontent.com/Abranddesigner/Mr.Kamal/main/recent/recent2.jpg" alt="Recent Design 2" onclick="openPopup(this.src)">
-          <img src="https://raw.githubusercontent.com/Abranddesigner/Mr.Kamal/main/recent/recent3.jpg" alt="Recent Design 3" onclick="openPopup(this.src)">
-          <img src="https://raw.githubusercontent.com/Abranddesigner/Mr.Kamal/main/recent/recent4.jpg" alt="Recent Design 4" onclick="openPopup(this.src)">
-          <img src="https://raw.githubusercontent.com/Abranddesigner/Mr.Kamal/main/recent/recent5.jpg" alt="Recent Design 5" onclick="openPopup(this.src)">
-        </div>
+
+      <div class="welcome">
+        <h2>Welcome to My Design World</h2>
+       <p>I’m Kamal Meena, a passionate designer from Rajasthan, crafting visual stories since 2019. My designs blend vibrant colors with modern aesthetics to bring your vision to life. Specializing in branding, logos, and digital art, I create impactful identities for businesses. Every project is a journey of creativity, precision, and a deep love for design. Let’s collaborate to turn your ideas into stunning realities—your brand deserves the best!</p>
+        <a href="https://wa.me/918440048355?text=Hi%20Kamal%2C%20I%20want%20to%20hire%20you%20for%20a%20design%20project" class="btn btn-primary" target="_blank">Hire Me</a>
       </div>
-    </section>
-    <section class="section testimonials-wrapper">
-      <h2>Client Testimonials</h2>
-      <div class="testimonials-container">
-        <div class="testimonial-card">
-          <p>Kamal’s designs are a burst of creativity. His precision is unmatched. Highly recommended for branding. A true artist at work!</p>
-          <div class="client-info">
-            <img src="https://raw.githubusercontent.com/Abranddesigner/Mr.Kamal/main/testimonials/aaru.jpg" alt="Miss Aaru">
-            <div>
-              <h3>Miss Aaru</h3>
-              <p>Director of AD Quick India, Delhi</p>
-            </div>
-          </div>
-        </div>
-        <div class="testimonial-card">
-          <p>Innovative ideas transformed our brand. Modern and professional touch. Delivered on time every time. Excellent collaboration!</p>
-          <div class="client-info">
-            <img src="https://raw.githubusercontent.com/Abranddesigner/Mr.Kamal/main/testimonials/bindeshwar.jpg" alt="Dr. Bindeshwar Rao">
-            <div>
-              <h3>Dr. Bindeshwar Rao</h3>
-              <p>Director of Seven Star Acadamy, Ranchi</p>
-            </div>
-          </div>
-        </div>
-        <div class="testimonial-card">
-          <p>Creativity shines in every design. Timely delivery with detail. Stunning visual impact. Highly satisfied client!</p>
-          <div class="client-info">
-            <img src="https://raw.githubusercontent.com/Abranddesigner/Mr.Kamal/main/testimonials/kuldeep.jpg" alt="Kuldeep Poonia">
-            <div>
-              <h3>Kuldeep Poonia</h3>
-              <p>Marketing Lead</p>
-            </div>
-          </div>
-        </div>
-        <div class="testimonial-card">
-          <p>Enhanced our materials with style. Precision in every stroke. Passion for design evident. Great experience overall!</p>
-          <div class="client-info">
-            <img src="https://raw.githubusercontent.com/Abranddesigner/Mr.Kamal/main/testimonials/arpan.jpg" alt="Arpan Saini">
-            <div>
-              <h3>Arpan Saini</h3>
-              <p>Managing Director of Arpan School, UP</p>
-            </div>
-          </div>
-        </div>
-        <div class="testimonial-card">
-          <p>Elevated our media presence. Dynamic and impactful designs. Passion drives his work. Top-notch service!</p>
-          <div class="client-info">
-            <img src="https://raw.githubusercontent.com/Abranddesigner/Mr.Kamal/main/testimonials/radhe.jpg" alt="Radhe Shyam">
-            <div>
-              <h3>Radhe Shyam</h3>
-              <p>Principal of Subhash School, Sikar</p>
-            </div>
+
+      <!-- Recent Designs Slider -->
+      <div class="recent-designs">
+        <h3>Recent Designs</h3>
+        <div class="slider">
+          <div class="slider-track">
+            <img src="https://raw.githubusercontent.com/ideogram682/Mr.Kamal/main/001%20(1).jpeg" alt="Design 1 by Kamal Meena" loading="lazy" onclick="openPopup(this.src)" />
+            <img src="https://raw.githubusercontent.com/ideogram682/Mr.Kamal/main/001%20(2).jpeg" alt="Design 2 by Kamal Meena" loading="lazy" onclick="openPopup(this.src)" />
+            <img src="https://raw.githubusercontent.com/ideogram682/Mr.Kamal/main/001%20(3).jpeg" alt="Design 3 by Kamal Meena" loading="lazy" onclick="openPopup(this.src)" />
+            <img src="https://raw.githubusercontent.com/ideogram682/Mr.Kamal/main/001%20(4).jpeg" alt="Design 4 by Kamal Meena" loading="lazy" onclick="openPopup(this.src)" />
+            <img src="https://raw.githubusercontent.com/ideogram682/Mr.Kamal/main/001%20(5).jpeg" alt="Design 5 by Kamal Meena" loading="lazy" onclick="openPopup(this.src)" />
           </div>
         </div>
       </div>
-    </section>
-    <section class="section about">
-      <h2>About Me</h2>
-      <h3>Crafting Brands with Creativity</h3>
-      <div class="about-content">
-        <img src="https://raw.githubusercontent.com/Abranddesigner/Mr.Kamal/main/about.jpg" alt="Kamal Meena" class="about-img">
-        <div class="bio">
-          <p><strong>Name:</strong> Kamal Meena</p>
-          <p><strong>DOB:</strong> 15 March 2000</p>
-          <p><strong>Address:</strong> Parasrampura, Teh Nawalgarh, Dist. Jhunjhunu, Rajasthan</p>
-          <p>I started my design career in 2019, specializing in vibrant designs.</p>
-          <p>My passion is creating powerful visual identities with dynamic colors.</p>
-          <p>From logos to social media graphics, I build unique brand presence.</p>
-          <a href="gallery (5).html" class="btn btn-primary">View My Work</a>
+
+      <!-- Testimonials -->
+      <div class="testimonials-wrapper">
+        <h2>Client Testimonials</h2>
+        <div class="testimonials-container">
+          <div class="testimonial-card">
+            <p>Kamal’s designs are a burst of creativity. His precision is unmatched. Highly recommended for branding. A true artist at work!</p>
+            <div class="client-info">
+              <img src="https://raw.githubusercontent.com/Abranddesigner/Mr.Kamal/main/Miss%20Aaru.png" alt="Miss Aaru" />
+              <div class="client-details">
+                <h3>Miss Aaru</h3>
+                <p>Director of AD Quick India, Delhi</p>
+              </div>
+            </div>
+          </div>
+          <div class="testimonial-card">
+            <p>Innovative ideas transformed our brand. Modern and professional touch. Delivered on time every time. Excellent collaboration!</p>
+            <div class="client-info">
+              <img src="https://raw.githubusercontent.com/Abranddesigner/Mr.Kamal/main/Dr.%20Bindeshwar.jpg" alt="Dr. Bindeshwar" />
+              <div class="client-details">
+                <h3>Dr. Bindeshwar Rao</h3>
+                <p>Director of Seven Star Acadamy, Ranchi</p>
+              </div>
+            </div>
+          </div>
+          <div class="testimonial-card">
+            <p>Creativity shines in every design. Timely delivery with detail. Stunning visual impact. Highly satisfied client!</p>
+            <div class="client-info">
+              <img src="https://raw.githubusercontent.com/Abranddesigner/Mr.Kamal/main/Kuldeep%20Poonia.jpg" alt="Kuldeep Poonia" />
+              <div class="client-details">
+                <h3>Kuldeep Poonia</h3>
+                <p>Marketing Lead</p>
+              </div>
+            </div>
+          </div>
+          <div class="testimonial-card">
+            <p>Enhanced our materials with style. Precision in every stroke. Passion for design evident. Great experience overall!</p>
+            <div class="client-info">
+              <img src="https://raw.githubusercontent.com/Abranddesigner/Mr.Kamal/refs/heads/main/Arpan%20Saini.jpg" alt="Arpan Saini" />
+              <div class="client-details">
+                <h3>Arpan Saini</h3>
+                <p>Managing Director of Arpan School, UP</p>
+              </div>
+            </div>
+          </div>
+          <div class="testimonial-card">
+            <p>Elevated our media presence. Dynamic and impactful designs. Passion drives his work. Top-notch service!</p>
+            <div class="client-info">
+              <img src="https://ik.imagekit.io/kamalprp/RDS.jpg?updatedAt=1747038856999" alt="Radhe Shyam" />
+              <div class="client-details">
+                <h3>Radhe Shyam</h3>
+                <p>Principal of Subhash School, Sikar</p>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
-    </section>
-    <section class="section">
-      <h2>Order Now</h2>
-      <p>Submit your details and project requirements</p>
-      <form id="contactForm">
-        <div class="form-group">
-          <label for="name">Name:</label>
-          <input type="text" id="name" required>
+
+      <!-- About Section -->
+      <section id="about" class="section about">
+        <h2>About Me</h2>
+        <p class="subtitle">Crafting Brands with Creativity</p>
+        <div class="about-content">
+          <img src="https://ik.imagekit.io/kamalprp/Mrkamalmeena.jpg?updatedAt=1747038223957" alt="Kamal Meena Profile Picture" class="about-img" />
+          <div class="bio">
+            <p><strong>Name:</strong> Kamal Meena</p>
+            <p><strong>DOB:</strong> 15 March 2000</p>
+            <p><strong>Address:</strong> Parasrampura, Teh Nawalgarh, Dist. Jhunjhunu, Rajasthan</p>
+            <p>I started my design career in 2019, specializing in vibrant designs.</p>
+            <p>My passion is creating powerful visual identities with dynamic colors.</p>
+            <p>From logos to social media graphics, I build unique brand presence.</p>
+            <a href="gallery.html" class="btn btn-primary">View My Work</a>
+          </div>
         </div>
-        <div class="form-group">
-          <label for="address">Address:</label>
-          <input type="text" id="address" required>
-        </div>
-        <div class="form-group">
-          <label for="mobile">Mobile Number:</label>
-          <input type="tel" id="mobile" required>
-        </div>
-        <div class="form-group">
-          <label for="email">Email:</label>
-          <input type="email" id="email" required>
-        </div>
-        <div class="form-group">
-          <label for="content">Content:</label>
-          <textarea id="content" required></textarea>
-        </div>
-        <div class="form-note">
-          <h4>Important Notes:</h4>
-          <ul>
-            <li>Design will be delivered within 24 hours.</li>
-            <li>Photos/documents must be sent via WhatsApp in PDF or document format.</li>
-            <li>CDR files will incur an additional charge.</li>
-            <li>Orders below ₹1000 require 100% advance payment.</li>
-            <li>Orders above ₹1000 require 75% advance payment.</li>
-          </ul>
-        </div>
-        <button type="button" id="submitButton" class="btn btn-primary">Submit</button>
-        <p id="formMessage" style="display: none;"></p>
-      </form>
-    </section>
-    <section class="section marketing-plan">
-      <h2>Digital Marketing Plan</h2>
-      <p>Choose Your Marketing Package</p>
-      <div class="marketing-container">
-        <div class="marketing-card">
-          <h3>1 Month</h3>
-          <p>Posts: 20</p>
-          <p>Reels: 4</p>
-          <p>Price: ₹4,590</p>
-          <button class="btn btn-primary" onclick="handleBuyNow('1 Month Marketing Plan', 4590)">Buy Now</button>
-        </div>
-        <div class="marketing-card">
-          <h3>3 Months</h3>
-          <p>Posts: 60</p>
-          <p>Reels: 12</p>
-          <p>Price: ₹13,590</p>
-          <button class="btn btn-primary" onclick="handleBuyNow('3 Months Marketing Plan', 13590)">Buy Now</button>
-        </div>
-        <div class="marketing-card">
-          <h3>6 Months</h3>
-          <p>Posts: 120</p>
-          <p>Reels: 24</p>
-          <p>Price: ₹24,590</p>
-          <button class="btn btn-primary" onclick="handleBuyNow('6 Months Marketing Plan', 24590)">Buy Now</button>
-        </div>
-        <div class="marketing-card">
-          <h3>12 Months</h3>
-          <p>Posts: 240</p>
-          <p>Reels: 48</p>
-          <p>Price: ₹47,590</p>
-          <button class="btn btn-primary" onclick="handleBuyNow('12 Months Marketing Plan', 47590)">Buy Now</button>
-        </div>
-      </div>
-      <p class="payment-info">Click 'Buy Now' to proceed with payment. For mobile, UPI will open; for desktop, scan the QR code.</p>
+
+        <!-- Contact Form -->
+        <section id="contact-form" class="section">
+          <h2>Order Now</h2>
+          <p class="subtitle">Submit your details and project requirements</p>
+          <form id="contactForm" enctype="multipart/form-data">
+            <div class="form-group">
+              <label for="name">Name:</label>
+              <input type="text" id="name" name="name" required />
+            </div>
+            <div class="form-group">
+              <label for="address">Address:</label>
+              <textarea id="address" name="address" required></textarea>
+            </div>
+            <div class="form-group">
+              <label for="mobile">Mobile Number:</label>
+              <input type="tel" id="mobile" name="mobile" pattern="[0-9]{10}" required />
+            </div>
+            <div class="form-group">
+              <label for="email">Email:</label>
+              <input type="email" id="email" name="email" required />
+            </div>
+            <div class="form-group">
+              <label for="content">Content:</label>
+              <textarea id="content" name="content" required></textarea>
+            </div>
+            <div class="form-note">
+              <h4>Important Notes:</h4>
+              <ul>
+                <li>Design will be delivered within 24 hours.</li>
+                <li>Photos/documents must be sent via WhatsApp in PDF or document format.</li>
+                <li>CDR files will incur an additional charge.</li>
+                <li>Orders below ₹1000 require 100% advance payment.</li>
+                <li>Orders above ₹1000 require 75% advance payment.</li>
+              </ul>
+            </div>
+            <button type="button" class="btn btn-primary" id="submitButton">Submit</button>
+          </form>
+          <p id="formMessage" style="display: none; color: #DC2626; margin-top: 10px;"></p>
+        </section>
+
+        <!-- Digital Marketing Plan Section -->
+        <section id="digital-marketing" class="section">
+          <h2>Digital Marketing Plan</h2>
+          <p class="subtitle">Choose Your Marketing Package</p>
+          <div class="marketing-plan">
+            <div class="marketing-container">
+              <div class="marketing-card">
+                <h3>1 Month</h3>
+                <p><strong>Posts:</strong> 20</p>
+                <p><strong>Reels:</strong> 4</p>
+                <p><strong>Price:</strong> ₹4,590</p>
+                <button class="btn btn-primary" onclick="handleBuyNow('1 Month Digital Marketing Plan', 4590)">Buy Now</button>
+              </div>
+              <div class="marketing-card">
+                <h3>3 Months</h3>
+                <p><strong>Posts:</strong> 60</p>
+                <p><strong>Reels:</strong> 12</p>
+                <p><strong>Price:</strong> ₹13,590</p>
+                <button class="btn btn-primary" onclick="handleBuyNow('3 Months Digital Marketing Plan', 13590)">Buy Now</button>
+              </div>
+              <div class="marketing-card">
+                <h3>6 Months</h3>
+                <p><strong>Posts:</strong> 120</p>
+                <p><strong>Reels:</strong> 24</p>
+                <p><strong>Price:</strong> ₹24,590</p>
+                <button class="btn btn-primary" onclick="handleBuyNow('6 Months Digital Marketing Plan', 24590)">Buy Now</button>
+              </div>
+              <div class="marketing-card">
+                <h3>12 Months</h3>
+                <p><strong>Posts:</strong> 240</p>
+                <p><strong>Reels:</strong> 48</p>
+                <p><strong>Price:</strong> ₹47,590</p>
+                <button class="btn btn-primary" onclick="handleBuyNow('12 Months Digital Marketing Plan', 47590)">Buy Now</button>
+              </div>
+            </div>
+            <div class="payment-info">
+              <p>Click 'Buy Now' to proceed with payment. For mobile, UPI will open; for desktop, scan the QR code.</p>
+            </div>
+          </div>
+        </section>
+      </section>
     </section>
   </main>
-  <footer>
-    <p>© 2025 Kamal Meena. All rights reserved.</p>
+
+  <!-- Footer -->
+  <footer class="section">
     <div class="contact-icons">
-      <a href="https://wa.me/918440048355" target="_blank" title="WhatsApp">
-        <img src="https://img.icons8.com/color/32/000000/whatsapp.png" alt="WhatsApp">
-      </a>
-      <a href="https://www.facebook.com/fbkamalprp" target="_blank" title="Facebook">
-        <img src="https://img.icons8.com/color/32/000000/facebook-new.png" alt="Facebook">
-      </a>
-      <a href="https://www.instagram.com/" target="_blank" title="Instagram">
-        <img src="https://img.icons8.com/color/32/000000/instagram-new.png" alt="Instagram">
-      </a>
+      <a href="/cdn-cgi/l/email-protection#c1aaa0acada4b2a9aab4aca0b3aba8aa81a6aca0a8adefa2aeac" title="Email" aria-label="Email Kamal Meena"><i class="fas fa-envelope"></i></a>
+      <a href="tel:+916350262865" title="Call" aria-label="Call Kamal Meena"><i class="fas fa-phone"></i></a>
+      <a href="https://instagram.com/Kamal.prp" title="Instagram" target="_blank" aria-label="Kamal Meena’s Instagram"><i class="fab fa-instagram"></i></a>
     </div>
+    <p>© 2025 Kamal Meena. All rights reserved.</p>
   </footer>
-  <div id="popup" class="popup">
+
+  <!-- Popup -->
+  <div class="popup" id="popup">
     <span class="close" onclick="closePopup()">×</span>
-    <img id="popupImg" src="" alt="Popup Image">
+    <img id="popupImg" src="" alt="Selected Design" />
   </div>
-  <div id="qrPopup" class="qr-popup">
+
+  <!-- QR Popup -->
+  <div class="popup qr-popup" id="qrPopup">
     <span class="close" onclick="closeQRPopup()">×</span>
     <h3>Scan to Pay</h3>
-    <img id="qrCodeImg" src="" alt="QR Code">
+    <img id="qrCodeImg" src="" alt="QR Code" />
     <p>Use any UPI app to scan and pay.</p>
   </div>
-</body>
+
+  <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+  <script src="scripts.js"></script>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'93e89f7d8c14673d',t:'MTc0NzAzOTM0OS4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script><script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'93efdecfab3aa7e6',t:'MTc0NzExNTM0My4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
 </html>
