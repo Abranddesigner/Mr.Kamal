@@ -37,7 +37,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // Handle Buy Now Click
   window.handleBuyNow = function(product, amount) {
     const isMobile = /Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
-    const upiUrl = `upi://pay?pa=8440048355@ybl&pn=Kamal%20Meena&am=${amount}&cu=INR&tn=Purchase%20${encodeURIComponent(product)}`;
+    const upiUrl = `upi://pay?pa=8440048355-4@ybl&pn=Kamal%20Meena&am=${amount}&cu=INR&tn=Purchase%20${encodeURIComponent(product)}`;
 
     try {
       if (isMobile) {
