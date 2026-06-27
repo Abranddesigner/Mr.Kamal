@@ -57,7 +57,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const qrPopup = document.getElementById('qrPopup');
     const qrCodeImg = document.getElementById('qrCodeImg');
     if (qrPopup && qrCodeImg) {
-      qrCodeImg.src = 'https://raw.githubusercontent.com/Abranddesigner/Mr.Kamal/main/QR%20Code.jpg';
+      qrCodeImg.src = 'https://raw.githubusercontent.com/Abranddesigner/Mr.Kamal/refs/heads/main/QR%20Code.jpeg';
       qrCodeImg.onerror = () => {
         alert('Failed to load QR code. Please contact +918440048355 to complete payment.');
         console.error('QR Code failed to load');
